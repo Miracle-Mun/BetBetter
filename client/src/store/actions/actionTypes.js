@@ -1,0 +1,5 @@
+export const GOT_ALL_BOOKMARKS = 'GOT_ALL_BOOKMARKS';
+export const GOT_ALL_SPORTS = 'GOT_ALL_SPORTS';
+
+export const LOGIN_SUCCESSFUL = 'LOGIN_SUCCESSFUL';
+export const LOGOUT_USER = 'LOGOUT_USER';
