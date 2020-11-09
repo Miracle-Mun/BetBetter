@@ -383,9 +383,9 @@ process.umask = function() { return 0; };
 
 
 
-var base64 = __webpack_require__(255)
-var ieee754 = __webpack_require__(256)
-var isArray = __webpack_require__(257)
+var base64 = __webpack_require__(238)
+var ieee754 = __webpack_require__(239)
+var isArray = __webpack_require__(240)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2163,10 +2163,35 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) {
+  var ReactIs = require('react-is');
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = require('./factoryWithTypeCheckers')(ReactIs.isElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(180)();
+}
+
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2190,31 +2215,6 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) {
-  var ReactIs = require('react-is');
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = require('./factoryWithTypeCheckers')(ReactIs.isElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(180)();
-}
 
 
 /***/ }),
@@ -2244,7 +2244,7 @@ assert.equal = function assertEqual(l, r, msg) {
 var utils = exports;
 var BN = __webpack_require__(11);
 var minAssert = __webpack_require__(7);
-var minUtils = __webpack_require__(138);
+var minUtils = __webpack_require__(136);
 
 utils.assert = minAssert;
 utils.toArray = minUtils.toArray;
@@ -2367,8 +2367,8 @@ utils.intFromLE = intFromLE;
 "use strict";
 
 
-var bind = __webpack_require__(159);
-var isBuffer = __webpack_require__(377);
+var bind = __webpack_require__(157);
+var isBuffer = __webpack_require__(360);
 
 /*global toString:true*/
 
@@ -3011,7 +3011,7 @@ exports.shr64_lo = shr64_lo;
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(324).Buffer;
+    Buffer = __webpack_require__(307).Buffer;
   } catch (e) {
   }
 
@@ -6393,7 +6393,7 @@ exports.shr64_lo = shr64_lo;
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
 /* 12 */
@@ -6522,11 +6522,28 @@ module.exports = invariant;
 
 /***/ }),
 /* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(209);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* unused harmony reexport createProvider */
+/* unused harmony reexport connectAdvanced */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
+
+
+
+
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
-var Transform = __webpack_require__(34).Transform
-var StringDecoder = __webpack_require__(19).StringDecoder
+var Transform = __webpack_require__(35).Transform
+var StringDecoder = __webpack_require__(20).StringDecoder
 var inherits = __webpack_require__(1)
 
 function CipherBase (hashMode) {
@@ -6626,7 +6643,7 @@ module.exports = CipherBase
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -6654,7 +6671,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6665,7 +6682,7 @@ module.exports = function(module) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return locationsAreEqual; });
 /* unused harmony export parsePath */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createPath; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_resolve_pathname__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_value_equal__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tiny_warning__ = __webpack_require__(184);
@@ -7592,7 +7609,7 @@ function createMemoryHistory(props) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8075,7 +8092,7 @@ function once(emitter, name) {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8109,7 +8126,7 @@ function once(emitter, name) {
 
 /*<replacement>*/
 
-var pna = __webpack_require__(35);
+var pna = __webpack_require__(36);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -8124,11 +8141,11 @@ var objectKeys = Object.keys || function (obj) {
 module.exports = Duplex;
 
 /*<replacement>*/
-var util = Object.create(__webpack_require__(27));
+var util = Object.create(__webpack_require__(28));
 util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
-var Readable = __webpack_require__(100);
+var Readable = __webpack_require__(98);
 var Writable = __webpack_require__(51);
 
 util.inherits(Duplex, Readable);
@@ -8212,7 +8229,7 @@ Duplex.prototype._destroy = function (err, cb) {
 };
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8514,23 +8531,6 @@ function simpleEnd(buf) {
 }
 
 /***/ }),
-/* 20 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(209);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* unused harmony reexport createProvider */
-/* unused harmony reexport connectAdvanced */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
-
-
-
-
-
-/***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8586,7 +8586,7 @@ function randomBytes (size, cb) {
   return bytes
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
 /* 22 */
@@ -8768,9 +8768,9 @@ var objectKeys = Object.keys || function (obj) {
 
 module.exports = Duplex;
 
-var Readable = __webpack_require__(106);
+var Readable = __webpack_require__(104);
 
-var Writable = __webpack_require__(110);
+var Writable = __webpack_require__(108);
 
 __webpack_require__(1)(Duplex, Readable);
 
@@ -9135,9 +9135,9 @@ var objectKeys = Object.keys || function (obj) {
 
 module.exports = Duplex;
 
-var Readable = __webpack_require__(132);
+var Readable = __webpack_require__(130);
 
-var Writable = __webpack_require__(136);
+var Writable = __webpack_require__(134);
 
 __webpack_require__(1)(Duplex, Readable);
 
@@ -9237,6 +9237,38 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
 
 /***/ }),
 /* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return is_session; });
+/* unused harmony export checkUserUniqueness */
+/* unused harmony export userSignupRequest */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return userLoginRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return userLogoutRequest; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__history__ = __webpack_require__(93);
+var options=function options(data){return{headers:{'Content-Type':'application/json'},method:'post',baseURL:'http://localhost:3000',body:JSON.stringify(data)};};var is_session=function is_session(){if(localStorage['jwtToken']&&localStorage['jwtToken']!=="undefined"){return true;}else{return false;}};var checkUserUniqueness=function checkUserUniqueness(_ref){var field=_ref.field,value=_ref.value;return function(dispatch){return fetch('/api/users/validate',options({field:field,value:value}));};};var userSignupRequest=function userSignupRequest(userSignupDetails){return function(dispatch){return fetch('/api/users/signup',options(userSignupDetails));};};var userLoginRequest=function userLoginRequest(userLoginDetails){return function(dispatch){__WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/api/users/login',JSON.stringify(userLoginDetails),{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:3000'}).then(function(res){res=res.data;if(res.status){var token=res.token;delete res.token;localStorage.setItem('jwtToken',token);dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["c" /* LOGIN_SUCCESSFUL */],authorizationToken:token,authenticatedUsername:__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default.a.decode(token).username});__WEBPACK_IMPORTED_MODULE_3__history__["a" /* history */].push("/public");}else{alert(res.errors);}});};// return dispatch => {
+//     return fetch('/api/users/login', options(userLoginDetails))
+//     .then(res => res.json())
+//     .then(res => {
+//         console.log(res)
+//         if (res.success) {
+//             const token = res.token;
+//             delete res.token;
+//             localStorage.setItem('jwtToken', token);
+//             dispatch({ type: actionTypes.LOGIN_SUCCESSFUL, authorizationToken: token, authenticatedUsername: jwt.decode(token).username });
+//         }
+//         return res;
+//     })
+// }   
+};var userLogoutRequest=function userLogoutRequest(){return function(dispatch){localStorage.removeItem('jwtToken');localStorage.removeItem('BasicMERNStackAppMyArticles');dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["d" /* LOGOUT_USER */]});};};
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {// Copyright Joyent, Inc. and other Node contributors.
@@ -9350,7 +9382,7 @@ function objectToString(o) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9359,7 +9391,7 @@ var inherits = __webpack_require__(1)
 var MD5 = __webpack_require__(53)
 var RIPEMD160 = __webpack_require__(55)
 var sha = __webpack_require__(56)
-var Base = __webpack_require__(14)
+var Base = __webpack_require__(15)
 
 function Hash (hash) {
   Base.call(this, 'digest')
@@ -9387,7 +9419,7 @@ module.exports = function createHash (alg) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {module.exports = function xor (a, b) {
@@ -9404,7 +9436,7 @@ module.exports = function createHash (alg) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9503,7 +9535,7 @@ BlockHash.prototype._pad = function pad() {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9663,7 +9695,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9687,7 +9719,7 @@ function _extends() {
 }
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9698,7 +9730,7 @@ function _extends() {
 var GOT_ALL_BOOKMARKS='GOT_ALL_BOOKMARKS';var GOT_ALL_SPORTS='GOT_ALL_SPORTS';var LOGIN_SUCCESSFUL='LOGIN_SUCCESSFUL';var LOGOUT_USER='LOGOUT_USER';
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -9724,15 +9756,15 @@ var GOT_ALL_BOOKMARKS='GOT_ALL_BOOKMARKS';var GOT_ALL_SPORTS='GOT_ALL_SPORTS';va
 
 module.exports = Stream;
 
-var EE = __webpack_require__(17).EventEmitter;
+var EE = __webpack_require__(18).EventEmitter;
 var inherits = __webpack_require__(1);
 
 inherits(Stream, EE);
 Stream.Readable = __webpack_require__(50);
-Stream.Writable = __webpack_require__(265);
-Stream.Duplex = __webpack_require__(266);
-Stream.Transform = __webpack_require__(267);
-Stream.PassThrough = __webpack_require__(268);
+Stream.Writable = __webpack_require__(248);
+Stream.Duplex = __webpack_require__(249);
+Stream.Transform = __webpack_require__(250);
+Stream.PassThrough = __webpack_require__(251);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
@@ -9831,7 +9863,7 @@ Stream.prototype.pipe = function(dest, options) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9884,7 +9916,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -10422,7 +10454,7 @@ function isPrimitive(arg) {
 }
 exports.isPrimitive = isPrimitive;
 
-exports.isBuffer = __webpack_require__(269);
+exports.isBuffer = __webpack_require__(252);
 
 function objectToString(o) {
   return Object.prototype.toString.call(o);
@@ -10466,7 +10498,7 @@ exports.log = function() {
  *     prototype.
  * @param {function} superCtor Constructor function to inherit prototype from.
  */
-exports.inherits = __webpack_require__(270);
+exports.inherits = __webpack_require__(253);
 
 exports._extend = function(origin, add) {
   // Don't do anything if add isn't an object
@@ -10594,7 +10626,7 @@ exports.callbackify = callbackify;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // based on the aes implimentation in triple sec
@@ -10828,7 +10860,7 @@ module.exports.AES = AES
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
@@ -10879,7 +10911,7 @@ module.exports = EVP_BytesToKey
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11262,14 +11294,14 @@ BasePoint.prototype.dblp = function dblp(k) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asn1 = __webpack_require__(343)
-var aesid = __webpack_require__(351)
-var fixProc = __webpack_require__(352)
+var asn1 = __webpack_require__(326)
+var aesid = __webpack_require__(334)
+var fixProc = __webpack_require__(335)
 var ciphers = __webpack_require__(58)
-var compat = __webpack_require__(117)
+var compat = __webpack_require__(115)
 var Buffer = __webpack_require__(2).Buffer
 module.exports = parseKeys
 
@@ -11375,7 +11407,7 @@ function decrypt (data, password) {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 var JsonWebTokenError = function (message, error) {
@@ -11395,7 +11427,7 @@ module.exports = JsonWebTokenError;
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11492,18 +11524,18 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(45);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__["a" /* default */]);
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11513,7 +11545,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -11622,7 +11654,7 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11702,7 +11734,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11733,7 +11765,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11754,44 +11786,12 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 /***/ }),
-/* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return is_session; });
-/* unused harmony export checkUserUniqueness */
-/* unused harmony export userSignupRequest */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return userLoginRequest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return userLogoutRequest; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__history__ = __webpack_require__(93);
-var options=function options(data){return{headers:{'Content-Type':'application/json'},method:'post',baseURL:'http://localhost:5000',body:JSON.stringify(data)};};var is_session=function is_session(){if(localStorage['jwtToken']&&localStorage['jwtToken']!=="undefined"){return true;}else{return false;}};var checkUserUniqueness=function checkUserUniqueness(_ref){var field=_ref.field,value=_ref.value;return function(dispatch){return fetch('/api/users/validate',options({field:field,value:value}));};};var userSignupRequest=function userSignupRequest(userSignupDetails){return function(dispatch){return fetch('/api/users/signup',options(userSignupDetails));};};var userLoginRequest=function userLoginRequest(userLoginDetails){return function(dispatch){__WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/api/users/login',JSON.stringify(userLoginDetails),{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:5000'}).then(function(res){res=res.data;if(res.status){var token=res.token;delete res.token;localStorage.setItem('jwtToken',token);dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["c" /* LOGIN_SUCCESSFUL */],authorizationToken:token,authenticatedUsername:__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default.a.decode(token).username});__WEBPACK_IMPORTED_MODULE_3__history__["a" /* history */].push("/");}else{alert(res.errors);}});};// return dispatch => {
-//     return fetch('/api/users/login', options(userLoginDetails))
-//     .then(res => res.json())
-//     .then(res => {
-//         console.log(res)
-//         if (res.success) {
-//             const token = res.token;
-//             delete res.token;
-//             localStorage.setItem('jwtToken', token);
-//             dispatch({ type: actionTypes.LOGIN_SUCCESSFUL, authorizationToken: token, authenticatedUsername: jwt.decode(token).username });
-//         }
-//         return res;
-//     })
-// }   
-};var userLogoutRequest=function userLogoutRequest(){return function(dispatch){localStorage.removeItem('jwtToken');localStorage.removeItem('BasicMERNStackAppMyArticles');dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["d" /* LOGOUT_USER */]});};};
-
-/***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global exports*/
-var SignStream = __webpack_require__(254);
-var VerifyStream = __webpack_require__(364);
+var SignStream = __webpack_require__(237);
+var VerifyStream = __webpack_require__(347);
 
 var ALGORITHMS = [
   'HS256', 'HS384', 'HS512',
@@ -11817,13 +11817,13 @@ exports.createVerify = function createVerify(opts) {
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(100);
+exports = module.exports = __webpack_require__(98);
 exports.Stream = exports;
 exports.Readable = exports;
 exports.Writable = __webpack_require__(51);
-exports.Duplex = __webpack_require__(18);
-exports.Transform = __webpack_require__(103);
-exports.PassThrough = __webpack_require__(264);
+exports.Duplex = __webpack_require__(19);
+exports.Transform = __webpack_require__(101);
+exports.PassThrough = __webpack_require__(247);
 
 
 /***/ }),
@@ -11860,7 +11860,7 @@ exports.PassThrough = __webpack_require__(264);
 
 /*<replacement>*/
 
-var pna = __webpack_require__(35);
+var pna = __webpack_require__(36);
 /*</replacement>*/
 
 module.exports = Writable;
@@ -11897,7 +11897,7 @@ var Duplex;
 Writable.WritableState = WritableState;
 
 /*<replacement>*/
-var util = Object.create(__webpack_require__(27));
+var util = Object.create(__webpack_require__(28));
 util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
@@ -11908,7 +11908,7 @@ var internalUtil = {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(101);
+var Stream = __webpack_require__(99);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -11924,14 +11924,14 @@ function _isUint8Array(obj) {
 
 /*</replacement>*/
 
-var destroyImpl = __webpack_require__(102);
+var destroyImpl = __webpack_require__(100);
 
 util.inherits(Writable, Stream);
 
 function nop() {}
 
 function WritableState(options, stream) {
-  Duplex = Duplex || __webpack_require__(18);
+  Duplex = Duplex || __webpack_require__(19);
 
   options = options || {};
 
@@ -12081,7 +12081,7 @@ if (typeof Symbol === 'function' && Symbol.hasInstance && typeof Function.protot
 }
 
 function Writable(options) {
-  Duplex = Duplex || __webpack_require__(18);
+  Duplex = Duplex || __webpack_require__(19);
 
   // Writable ctor is applied to Duplexes, too.
   // `realHasInstance` is necessary because using plain `instanceof`
@@ -12518,7 +12518,7 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(262).setImmediate, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(245).setImmediate, __webpack_require__(6)))
 
 /***/ }),
 /* 52 */
@@ -12592,7 +12592,7 @@ function config (name) {
   return String(val).toLowerCase() === 'true';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 53 */
@@ -12601,7 +12601,7 @@ function config (name) {
 "use strict";
 
 var inherits = __webpack_require__(1)
-var HashBase = __webpack_require__(105)
+var HashBase = __webpack_require__(103)
 var Buffer = __webpack_require__(2).Buffer
 
 var ARRAY16 = new Array(16)
@@ -12865,7 +12865,7 @@ module.exports = eos;
 
 var Buffer = __webpack_require__(4).Buffer
 var inherits = __webpack_require__(1)
-var HashBase = __webpack_require__(105)
+var HashBase = __webpack_require__(103)
 
 var ARRAY16 = new Array(16)
 
@@ -13040,12 +13040,12 @@ var exports = module.exports = function SHA (algorithm) {
   return new Algorithm()
 }
 
-exports.sha = __webpack_require__(282)
-exports.sha1 = __webpack_require__(283)
-exports.sha224 = __webpack_require__(284)
-exports.sha256 = __webpack_require__(112)
-exports.sha384 = __webpack_require__(285)
-exports.sha512 = __webpack_require__(113)
+exports.sha = __webpack_require__(265)
+exports.sha1 = __webpack_require__(266)
+exports.sha224 = __webpack_require__(267)
+exports.sha256 = __webpack_require__(110)
+exports.sha384 = __webpack_require__(268)
+exports.sha512 = __webpack_require__(111)
 
 
 /***/ }),
@@ -13200,9 +13200,9 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ciphers = __webpack_require__(294)
-var deciphers = __webpack_require__(302)
-var modes = __webpack_require__(126)
+var ciphers = __webpack_require__(277)
+var deciphers = __webpack_require__(285)
+var modes = __webpack_require__(124)
 
 function getCiphers () {
   return Object.keys(modes)
@@ -13220,17 +13220,17 @@ exports.listCiphers = exports.getCiphers = getCiphers
 /***/ (function(module, exports, __webpack_require__) {
 
 var modeModules = {
-  ECB: __webpack_require__(295),
-  CBC: __webpack_require__(296),
-  CFB: __webpack_require__(297),
-  CFB8: __webpack_require__(298),
-  CFB1: __webpack_require__(299),
-  OFB: __webpack_require__(300),
-  CTR: __webpack_require__(124),
-  GCM: __webpack_require__(124)
+  ECB: __webpack_require__(278),
+  CBC: __webpack_require__(279),
+  CFB: __webpack_require__(280),
+  CFB8: __webpack_require__(281),
+  CFB1: __webpack_require__(282),
+  OFB: __webpack_require__(283),
+  CTR: __webpack_require__(122),
+  GCM: __webpack_require__(122)
 }
 
-var modes = __webpack_require__(126)
+var modes = __webpack_require__(124)
 
 for (var key in modes) {
   modes[key].module = modeModules[modes[key].mode]
@@ -13298,7 +13298,7 @@ if (typeof self === 'object') {
 } else {
   // Node.js or Web worker with no crypto support
   try {
-    var crypto = __webpack_require__(308);
+    var crypto = __webpack_require__(291);
     if (typeof crypto.randomBytes !== 'function')
       throw new Error('Not supported');
 
@@ -13495,7 +13495,7 @@ module.exports = eos;
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var bn = __webpack_require__(321);
+/* WEBPACK VAR INJECTION */(function(Buffer) {var bn = __webpack_require__(304);
 var randomBytes = __webpack_require__(21);
 module.exports = crt;
 function blind(priv) {
@@ -13547,15 +13547,15 @@ function getr(priv) {
 
 var elliptic = exports;
 
-elliptic.version = __webpack_require__(323).version;
+elliptic.version = __webpack_require__(306).version;
 elliptic.utils = __webpack_require__(8);
 elliptic.rand = __webpack_require__(60);
-elliptic.curve = __webpack_require__(139);
+elliptic.curve = __webpack_require__(137);
 elliptic.curves = __webpack_require__(65);
 
 // Protocols
-elliptic.ec = __webpack_require__(335);
-elliptic.eddsa = __webpack_require__(339);
+elliptic.ec = __webpack_require__(318);
+elliptic.eddsa = __webpack_require__(322);
 
 
 /***/ }),
@@ -13568,7 +13568,7 @@ elliptic.eddsa = __webpack_require__(339);
 var curves = exports;
 
 var hash = __webpack_require__(66);
-var curve = __webpack_require__(139);
+var curve = __webpack_require__(137);
 var utils = __webpack_require__(8);
 
 var assert = utils.assert;
@@ -13733,7 +13733,7 @@ defineCurve('ed25519', {
 
 var pre;
 try {
-  pre = __webpack_require__(334);
+  pre = __webpack_require__(317);
 } catch (e) {
   pre = undefined;
 }
@@ -13778,10 +13778,10 @@ defineCurve('secp256k1', {
 var hash = exports;
 
 hash.utils = __webpack_require__(10);
-hash.common = __webpack_require__(30);
-hash.sha = __webpack_require__(328);
-hash.ripemd = __webpack_require__(332);
-hash.hmac = __webpack_require__(333);
+hash.common = __webpack_require__(31);
+hash.sha = __webpack_require__(311);
+hash.ripemd = __webpack_require__(315);
+hash.hmac = __webpack_require__(316);
 
 // Proxy hash functions to the main object
 hash.sha1 = hash.sha.sha1;
@@ -13885,8 +13885,8 @@ module.exports = safer
 
 
 const Reporter = __webpack_require__(69).Reporter;
-const EncoderBuffer = __webpack_require__(31).EncoderBuffer;
-const DecoderBuffer = __webpack_require__(31).DecoderBuffer;
+const EncoderBuffer = __webpack_require__(32).EncoderBuffer;
+const DecoderBuffer = __webpack_require__(32).DecoderBuffer;
 const assert = __webpack_require__(7);
 
 // Supported tags
@@ -14773,7 +14773,7 @@ exports.tagByName = reverse(exports.tag);
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(359).Buffer;
+    Buffer = __webpack_require__(342).Buffer;
   } catch (e) {
   }
 
@@ -18155,13 +18155,13 @@ exports.tagByName = reverse(exports.tag);
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(376);
+module.exports = __webpack_require__(359);
 
 /***/ }),
 /* 73 */
@@ -18171,7 +18171,7 @@ module.exports = __webpack_require__(376);
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(9);
-var normalizeHeaderName = __webpack_require__(379);
+var normalizeHeaderName = __webpack_require__(362);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -18187,10 +18187,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(160);
+    adapter = __webpack_require__(158);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(160);
+    adapter = __webpack_require__(158);
   }
   return adapter;
 }
@@ -18508,7 +18508,7 @@ function doResolve(fn, promise) {
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(77);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(44);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(195);
 /* unused harmony reexport StaticRouter */
@@ -18556,11 +18556,11 @@ function doResolve(fn, promise) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(17);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -18688,9 +18688,9 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(46);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19327,7 +19327,7 @@ function _inheritsLoose(subClass, superClass) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subscriptionShape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return storeShape; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
 
 var subscriptionShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
@@ -19350,8 +19350,8 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_assertThisInitialized__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_extends__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_extends__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_invariant__ = __webpack_require__(13);
@@ -20208,7 +20208,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 "use strict";
 /* unused harmony export default */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(47);
 
 
 function verifyPlainObject(value, displayName, methodName) {
@@ -20223,7 +20223,7 @@ function verifyPlainObject(value, displayName, methodName) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return history; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history__ = __webpack_require__(17);
 var history=Object(__WEBPACK_IMPORTED_MODULE_0_history__["a" /* createBrowserHistory */])();
 
 /***/ }),
@@ -20234,35 +20234,20 @@ var history=Object(__WEBPACK_IMPORTED_MODULE_0_history__["a" /* createBrowserHis
 
 /***/ }),
 /* 95 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 96 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Compile=function(_Component){_inherits(Compile,_Component);function Compile(){_classCallCheck(this,Compile);return _possibleConstructorReturn(this,(Compile.__proto__||Object.getPrototypeOf(Compile)).apply(this,arguments));}_createClass(Compile,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{role:"dialog","aria-live":"polite","aria-label":"cookieconsent","aria-describedby":"cookieconsent:desc",className:"cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-color-override-688238583 cc-invisible",style:{display:"none"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{id:"cookieconsent:desc",className:"cc-message"},"We use cookies and other technologies to ensure you get the best experience on our website. More info",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-label":"learn more about cookies",role:"button",tabIndex:"0",className:"cc-link",href:"https://www.betburger.com/privacy",rel:"noopener noreferrer nofollow",target:"_blank"},"here")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"cc-compliance cc-highlight"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"\xA0"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-label":"allow cookies",role:"button",tabIndex:"0",className:"cc-btn cc-allow"},"Got it!")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-label":"dismiss cookie message",role:"button",tabIndex:"0",className:"cc-close"},"\u274C"));}}]);return Compile;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Compile);
-
-/***/ }),
-/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  decode: __webpack_require__(98),
-  verify: __webpack_require__(365),
-  sign: __webpack_require__(368),
-  JsonWebTokenError: __webpack_require__(41),
-  NotBeforeError: __webpack_require__(155),
-  TokenExpiredError: __webpack_require__(156),
+  decode: __webpack_require__(96),
+  verify: __webpack_require__(348),
+  sign: __webpack_require__(351),
+  JsonWebTokenError: __webpack_require__(42),
+  NotBeforeError: __webpack_require__(153),
+  TokenExpiredError: __webpack_require__(154),
 };
 
 
 /***/ }),
-/* 98 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var jws = __webpack_require__(49);
@@ -20298,13 +20283,13 @@ module.exports = function (jwt, options) {
 
 
 /***/ }),
-/* 99 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/*global module, process*/
 var Buffer = __webpack_require__(2).Buffer;
-var Stream = __webpack_require__(34);
-var util = __webpack_require__(36);
+var Stream = __webpack_require__(35);
+var util = __webpack_require__(37);
 
 function DataStream(data) {
   this.buffer = null;
@@ -20360,7 +20345,7 @@ module.exports = DataStream;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 100 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20389,13 +20374,13 @@ module.exports = DataStream;
 
 /*<replacement>*/
 
-var pna = __webpack_require__(35);
+var pna = __webpack_require__(36);
 /*</replacement>*/
 
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(258);
+var isArray = __webpack_require__(241);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -20405,7 +20390,7 @@ var Duplex;
 Readable.ReadableState = ReadableState;
 
 /*<replacement>*/
-var EE = __webpack_require__(17).EventEmitter;
+var EE = __webpack_require__(18).EventEmitter;
 
 var EElistenerCount = function (emitter, type) {
   return emitter.listeners(type).length;
@@ -20413,7 +20398,7 @@ var EElistenerCount = function (emitter, type) {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(101);
+var Stream = __webpack_require__(99);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -20430,12 +20415,12 @@ function _isUint8Array(obj) {
 /*</replacement>*/
 
 /*<replacement>*/
-var util = Object.create(__webpack_require__(27));
+var util = Object.create(__webpack_require__(28));
 util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(259);
+var debugUtil = __webpack_require__(242);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -20444,8 +20429,8 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(260);
-var destroyImpl = __webpack_require__(102);
+var BufferList = __webpack_require__(243);
+var destroyImpl = __webpack_require__(100);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -20465,7 +20450,7 @@ function prependListener(emitter, event, fn) {
 }
 
 function ReadableState(options, stream) {
-  Duplex = Duplex || __webpack_require__(18);
+  Duplex = Duplex || __webpack_require__(19);
 
   options = options || {};
 
@@ -20535,14 +20520,14 @@ function ReadableState(options, stream) {
   this.decoder = null;
   this.encoding = null;
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
 }
 
 function Readable(options) {
-  Duplex = Duplex || __webpack_require__(18);
+  Duplex = Duplex || __webpack_require__(19);
 
   if (!(this instanceof Readable)) return new Readable(options);
 
@@ -20691,7 +20676,7 @@ Readable.prototype.isPaused = function () {
 
 // backwards compatibility.
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
   return this;
@@ -21383,17 +21368,17 @@ function indexOf(xs, x) {
   }
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 101 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(17).EventEmitter;
+module.exports = __webpack_require__(18).EventEmitter;
 
 
 /***/ }),
-/* 102 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21401,7 +21386,7 @@ module.exports = __webpack_require__(17).EventEmitter;
 
 /*<replacement>*/
 
-var pna = __webpack_require__(35);
+var pna = __webpack_require__(36);
 /*</replacement>*/
 
 // undocumented cb() API, needed for core, not for public API
@@ -21473,7 +21458,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 103 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21544,10 +21529,10 @@ module.exports = {
 
 module.exports = Transform;
 
-var Duplex = __webpack_require__(18);
+var Duplex = __webpack_require__(19);
 
 /*<replacement>*/
-var util = Object.create(__webpack_require__(27));
+var util = Object.create(__webpack_require__(28));
 util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
@@ -21693,14 +21678,14 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 104 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var bufferEqual = __webpack_require__(271);
+var bufferEqual = __webpack_require__(254);
 var Buffer = __webpack_require__(2).Buffer;
-var crypto = __webpack_require__(272);
-var formatEcdsa = __webpack_require__(362);
-var util = __webpack_require__(36);
+var crypto = __webpack_require__(255);
+var formatEcdsa = __webpack_require__(345);
+var util = __webpack_require__(37);
 
 var MSG_INVALID_ALGORITHM = '"%s" is not a valid algorithm.\n  Supported algorithms are:\n  "HS256", "HS384", "HS512", "RS256", "RS384", "RS512", "PS256", "PS384", "PS512", "ES256", "ES384", "ES512" and "none".'
 var MSG_INVALID_SECRET = 'secret must be a string or buffer';
@@ -21951,13 +21936,13 @@ module.exports = function jwa(algorithm) {
 
 
 /***/ }),
-/* 105 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var Buffer = __webpack_require__(273).Buffer
-var Transform = __webpack_require__(274).Transform
+var Buffer = __webpack_require__(256).Buffer
+var Transform = __webpack_require__(257).Transform
 var inherits = __webpack_require__(1)
 
 function throwIfNotStringOrBuffer (val, prefix) {
@@ -22053,7 +22038,7 @@ module.exports = HashBase
 
 
 /***/ }),
-/* 106 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22088,7 +22073,7 @@ var Duplex;
 Readable.ReadableState = ReadableState;
 /*<replacement>*/
 
-var EE = __webpack_require__(17).EventEmitter;
+var EE = __webpack_require__(18).EventEmitter;
 
 var EElistenerCount = function EElistenerCount(emitter, type) {
   return emitter.listeners(type).length;
@@ -22098,7 +22083,7 @@ var EElistenerCount = function EElistenerCount(emitter, type) {
 /*<replacement>*/
 
 
-var Stream = __webpack_require__(107);
+var Stream = __webpack_require__(105);
 /*</replacement>*/
 
 
@@ -22116,7 +22101,7 @@ function _isUint8Array(obj) {
 /*<replacement>*/
 
 
-var debugUtil = __webpack_require__(275);
+var debugUtil = __webpack_require__(258);
 
 var debug;
 
@@ -22128,11 +22113,11 @@ if (debugUtil && debugUtil.debuglog) {
 /*</replacement>*/
 
 
-var BufferList = __webpack_require__(276);
+var BufferList = __webpack_require__(259);
 
-var destroyImpl = __webpack_require__(108);
+var destroyImpl = __webpack_require__(106);
 
-var _require = __webpack_require__(109),
+var _require = __webpack_require__(107),
     getHighWaterMark = _require.getHighWaterMark;
 
 var _require$codes = __webpack_require__(22).codes,
@@ -22219,7 +22204,7 @@ function ReadableState(options, stream, isDuplex) {
   this.encoding = null;
 
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
@@ -22381,7 +22366,7 @@ Readable.prototype.isPaused = function () {
 
 
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
   var decoder = new StringDecoder(enc);
   this._readableState.decoder = decoder; // If setEncoding(null), decoder.encoding equals utf8
 
@@ -23065,7 +23050,7 @@ Readable.prototype.wrap = function (stream) {
 if (typeof Symbol === 'function') {
   Readable.prototype[Symbol.asyncIterator] = function () {
     if (createReadableStreamAsyncIterator === undefined) {
-      createReadableStreamAsyncIterator = __webpack_require__(278);
+      createReadableStreamAsyncIterator = __webpack_require__(261);
     }
 
     return createReadableStreamAsyncIterator(this);
@@ -23167,7 +23152,7 @@ function endReadableNT(state, stream) {
 if (typeof Symbol === 'function') {
   Readable.from = function (iterable, opts) {
     if (from === undefined) {
-      from = __webpack_require__(279);
+      from = __webpack_require__(262);
     }
 
     return from(Readable, iterable, opts);
@@ -23181,17 +23166,17 @@ function indexOf(xs, x) {
 
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 107 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(17).EventEmitter;
+module.exports = __webpack_require__(18).EventEmitter;
 
 
 /***/ }),
-/* 108 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23303,7 +23288,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 109 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23336,7 +23321,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 110 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23405,7 +23390,7 @@ var internalUtil = {
 
 /*<replacement>*/
 
-var Stream = __webpack_require__(107);
+var Stream = __webpack_require__(105);
 /*</replacement>*/
 
 
@@ -23421,9 +23406,9 @@ function _isUint8Array(obj) {
   return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
 }
 
-var destroyImpl = __webpack_require__(108);
+var destroyImpl = __webpack_require__(106);
 
-var _require = __webpack_require__(109),
+var _require = __webpack_require__(107),
     getHighWaterMark = _require.getHighWaterMark;
 
 var _require$codes = __webpack_require__(22).codes,
@@ -24037,10 +24022,10 @@ Writable.prototype._undestroy = destroyImpl.undestroy;
 Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 111 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24247,7 +24232,7 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 112 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -24388,7 +24373,7 @@ module.exports = Sha256
 
 
 /***/ }),
-/* 113 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(1)
@@ -24654,16 +24639,16 @@ module.exports = Sha512
 
 
 /***/ }),
-/* 114 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inherits = __webpack_require__(1)
-var Legacy = __webpack_require__(286)
-var Base = __webpack_require__(14)
+var Legacy = __webpack_require__(269)
+var Base = __webpack_require__(15)
 var Buffer = __webpack_require__(2).Buffer
-var md5 = __webpack_require__(115)
+var md5 = __webpack_require__(113)
 var RIPEMD160 = __webpack_require__(55)
 
 var sha = __webpack_require__(56)
@@ -24723,7 +24708,7 @@ module.exports = function createHmac (alg, key) {
 
 
 /***/ }),
-/* 115 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MD5 = __webpack_require__(53)
@@ -24734,21 +24719,21 @@ module.exports = function (buffer) {
 
 
 /***/ }),
-/* 116 */
+/* 114 */
 /***/ (function(module, exports) {
 
 module.exports = {"sha224WithRSAEncryption":{"sign":"rsa","hash":"sha224","id":"302d300d06096086480165030402040500041c"},"RSA-SHA224":{"sign":"ecdsa/rsa","hash":"sha224","id":"302d300d06096086480165030402040500041c"},"sha256WithRSAEncryption":{"sign":"rsa","hash":"sha256","id":"3031300d060960864801650304020105000420"},"RSA-SHA256":{"sign":"ecdsa/rsa","hash":"sha256","id":"3031300d060960864801650304020105000420"},"sha384WithRSAEncryption":{"sign":"rsa","hash":"sha384","id":"3041300d060960864801650304020205000430"},"RSA-SHA384":{"sign":"ecdsa/rsa","hash":"sha384","id":"3041300d060960864801650304020205000430"},"sha512WithRSAEncryption":{"sign":"rsa","hash":"sha512","id":"3051300d060960864801650304020305000440"},"RSA-SHA512":{"sign":"ecdsa/rsa","hash":"sha512","id":"3051300d060960864801650304020305000440"},"RSA-SHA1":{"sign":"rsa","hash":"sha1","id":"3021300906052b0e03021a05000414"},"ecdsa-with-SHA1":{"sign":"ecdsa","hash":"sha1","id":""},"sha256":{"sign":"ecdsa","hash":"sha256","id":""},"sha224":{"sign":"ecdsa","hash":"sha224","id":""},"sha384":{"sign":"ecdsa","hash":"sha384","id":""},"sha512":{"sign":"ecdsa","hash":"sha512","id":""},"DSA-SHA":{"sign":"dsa","hash":"sha1","id":""},"DSA-SHA1":{"sign":"dsa","hash":"sha1","id":""},"DSA":{"sign":"dsa","hash":"sha1","id":""},"DSA-WITH-SHA224":{"sign":"dsa","hash":"sha224","id":""},"DSA-SHA224":{"sign":"dsa","hash":"sha224","id":""},"DSA-WITH-SHA256":{"sign":"dsa","hash":"sha256","id":""},"DSA-SHA256":{"sign":"dsa","hash":"sha256","id":""},"DSA-WITH-SHA384":{"sign":"dsa","hash":"sha384","id":""},"DSA-SHA384":{"sign":"dsa","hash":"sha384","id":""},"DSA-WITH-SHA512":{"sign":"dsa","hash":"sha512","id":""},"DSA-SHA512":{"sign":"dsa","hash":"sha512","id":""},"DSA-RIPEMD160":{"sign":"dsa","hash":"rmd160","id":""},"ripemd160WithRSA":{"sign":"rsa","hash":"rmd160","id":"3021300906052b2403020105000414"},"RSA-RIPEMD160":{"sign":"rsa","hash":"rmd160","id":"3021300906052b2403020105000414"},"md5WithRSAEncryption":{"sign":"rsa","hash":"md5","id":"3020300c06082a864886f70d020505000410"},"RSA-MD5":{"sign":"rsa","hash":"md5","id":"3020300c06082a864886f70d020505000410"}}
 
 /***/ }),
-/* 117 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.pbkdf2 = __webpack_require__(288)
-exports.pbkdf2Sync = __webpack_require__(120)
+exports.pbkdf2 = __webpack_require__(271)
+exports.pbkdf2Sync = __webpack_require__(118)
 
 
 /***/ }),
-/* 118 */
+/* 116 */
 /***/ (function(module, exports) {
 
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -24773,7 +24758,7 @@ module.exports = function (iterations, keylen) {
 
 
 /***/ }),
-/* 119 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var defaultEncoding
@@ -24792,17 +24777,17 @@ module.exports = defaultEncoding
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 120 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var md5 = __webpack_require__(115)
+var md5 = __webpack_require__(113)
 var RIPEMD160 = __webpack_require__(55)
 var sha = __webpack_require__(56)
 var Buffer = __webpack_require__(2).Buffer
 
-var checkParameters = __webpack_require__(118)
-var defaultEncoding = __webpack_require__(119)
-var toBuffer = __webpack_require__(121)
+var checkParameters = __webpack_require__(116)
+var defaultEncoding = __webpack_require__(117)
+var toBuffer = __webpack_require__(119)
 
 var ZEROS = Buffer.alloc(128)
 var sizes = {
@@ -24903,7 +24888,7 @@ module.exports = pbkdf2
 
 
 /***/ }),
-/* 121 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
@@ -24922,7 +24907,7 @@ module.exports = function (thing, encoding, name) {
 
 
 /***/ }),
-/* 122 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25185,7 +25170,7 @@ exports.padSplit = function padSplit(num, size, group) {
 
 
 /***/ }),
-/* 123 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25194,7 +25179,7 @@ exports.padSplit = function padSplit(num, size, group) {
 var assert = __webpack_require__(7);
 var inherits = __webpack_require__(1);
 
-var utils = __webpack_require__(122);
+var utils = __webpack_require__(120);
 var Cipher = __webpack_require__(57);
 
 function DESState() {
@@ -25334,12 +25319,12 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
 
 
 /***/ }),
-/* 124 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var xor = __webpack_require__(29)
+var xor = __webpack_require__(30)
 var Buffer = __webpack_require__(2).Buffer
-var incr32 = __webpack_require__(125)
+var incr32 = __webpack_require__(123)
 
 function getBlock (self) {
   var out = self._cipher.encryptBlockRaw(self._prev)
@@ -25370,7 +25355,7 @@ exports.encrypt = function (self, chunk) {
 
 
 /***/ }),
-/* 125 */
+/* 123 */
 /***/ (function(module, exports) {
 
 function incr32 (iv) {
@@ -25391,22 +25376,22 @@ module.exports = incr32
 
 
 /***/ }),
-/* 126 */
+/* 124 */
 /***/ (function(module, exports) {
 
 module.exports = {"aes-128-ecb":{"cipher":"AES","key":128,"iv":0,"mode":"ECB","type":"block"},"aes-192-ecb":{"cipher":"AES","key":192,"iv":0,"mode":"ECB","type":"block"},"aes-256-ecb":{"cipher":"AES","key":256,"iv":0,"mode":"ECB","type":"block"},"aes-128-cbc":{"cipher":"AES","key":128,"iv":16,"mode":"CBC","type":"block"},"aes-192-cbc":{"cipher":"AES","key":192,"iv":16,"mode":"CBC","type":"block"},"aes-256-cbc":{"cipher":"AES","key":256,"iv":16,"mode":"CBC","type":"block"},"aes128":{"cipher":"AES","key":128,"iv":16,"mode":"CBC","type":"block"},"aes192":{"cipher":"AES","key":192,"iv":16,"mode":"CBC","type":"block"},"aes256":{"cipher":"AES","key":256,"iv":16,"mode":"CBC","type":"block"},"aes-128-cfb":{"cipher":"AES","key":128,"iv":16,"mode":"CFB","type":"stream"},"aes-192-cfb":{"cipher":"AES","key":192,"iv":16,"mode":"CFB","type":"stream"},"aes-256-cfb":{"cipher":"AES","key":256,"iv":16,"mode":"CFB","type":"stream"},"aes-128-cfb8":{"cipher":"AES","key":128,"iv":16,"mode":"CFB8","type":"stream"},"aes-192-cfb8":{"cipher":"AES","key":192,"iv":16,"mode":"CFB8","type":"stream"},"aes-256-cfb8":{"cipher":"AES","key":256,"iv":16,"mode":"CFB8","type":"stream"},"aes-128-cfb1":{"cipher":"AES","key":128,"iv":16,"mode":"CFB1","type":"stream"},"aes-192-cfb1":{"cipher":"AES","key":192,"iv":16,"mode":"CFB1","type":"stream"},"aes-256-cfb1":{"cipher":"AES","key":256,"iv":16,"mode":"CFB1","type":"stream"},"aes-128-ofb":{"cipher":"AES","key":128,"iv":16,"mode":"OFB","type":"stream"},"aes-192-ofb":{"cipher":"AES","key":192,"iv":16,"mode":"OFB","type":"stream"},"aes-256-ofb":{"cipher":"AES","key":256,"iv":16,"mode":"OFB","type":"stream"},"aes-128-ctr":{"cipher":"AES","key":128,"iv":16,"mode":"CTR","type":"stream"},"aes-192-ctr":{"cipher":"AES","key":192,"iv":16,"mode":"CTR","type":"stream"},"aes-256-ctr":{"cipher":"AES","key":256,"iv":16,"mode":"CTR","type":"stream"},"aes-128-gcm":{"cipher":"AES","key":128,"iv":12,"mode":"GCM","type":"auth"},"aes-192-gcm":{"cipher":"AES","key":192,"iv":12,"mode":"GCM","type":"auth"},"aes-256-gcm":{"cipher":"AES","key":256,"iv":12,"mode":"GCM","type":"auth"}}
 
 /***/ }),
-/* 127 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var aes = __webpack_require__(37)
+var aes = __webpack_require__(38)
 var Buffer = __webpack_require__(2).Buffer
-var Transform = __webpack_require__(14)
+var Transform = __webpack_require__(15)
 var inherits = __webpack_require__(1)
-var GHASH = __webpack_require__(301)
-var xor = __webpack_require__(29)
-var incr32 = __webpack_require__(125)
+var GHASH = __webpack_require__(284)
+var xor = __webpack_require__(30)
+var incr32 = __webpack_require__(123)
 
 function xorTest (a, b) {
   var out = 0
@@ -25520,12 +25505,12 @@ module.exports = StreamCipher
 
 
 /***/ }),
-/* 128 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var aes = __webpack_require__(37)
+var aes = __webpack_require__(38)
 var Buffer = __webpack_require__(2).Buffer
-var Transform = __webpack_require__(14)
+var Transform = __webpack_require__(15)
 var inherits = __webpack_require__(1)
 
 function StreamCipher (mode, key, iv, decrypt) {
@@ -25553,16 +25538,16 @@ module.exports = StreamCipher
 
 
 /***/ }),
-/* 129 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var randomBytes = __webpack_require__(21);
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
 findPrime.fermatTest = fermatTest;
-var BN = __webpack_require__(130);
+var BN = __webpack_require__(128);
 var TWENTYFOUR = new BN(24);
-var MillerRabin = __webpack_require__(131);
+var MillerRabin = __webpack_require__(129);
 var millerRabin = new MillerRabin();
 var ONE = new BN(1);
 var TWO = new BN(2);
@@ -25664,7 +25649,7 @@ function findPrime(bits, gen) {
 
 
 /***/ }),
-/* 130 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -25719,7 +25704,7 @@ function findPrime(bits, gen) {
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(305).Buffer;
+    Buffer = __webpack_require__(288).Buffer;
   } catch (e) {
   }
 
@@ -29101,13 +29086,13 @@ function findPrime(bits, gen) {
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 131 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var bn = __webpack_require__(306);
+var bn = __webpack_require__(289);
 var brorand = __webpack_require__(60);
 
 function MillerRabin(rand) {
@@ -29225,7 +29210,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
 
 
 /***/ }),
-/* 132 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29260,7 +29245,7 @@ var Duplex;
 Readable.ReadableState = ReadableState;
 /*<replacement>*/
 
-var EE = __webpack_require__(17).EventEmitter;
+var EE = __webpack_require__(18).EventEmitter;
 
 var EElistenerCount = function EElistenerCount(emitter, type) {
   return emitter.listeners(type).length;
@@ -29270,7 +29255,7 @@ var EElistenerCount = function EElistenerCount(emitter, type) {
 /*<replacement>*/
 
 
-var Stream = __webpack_require__(133);
+var Stream = __webpack_require__(131);
 /*</replacement>*/
 
 
@@ -29288,7 +29273,7 @@ function _isUint8Array(obj) {
 /*<replacement>*/
 
 
-var debugUtil = __webpack_require__(313);
+var debugUtil = __webpack_require__(296);
 
 var debug;
 
@@ -29300,11 +29285,11 @@ if (debugUtil && debugUtil.debuglog) {
 /*</replacement>*/
 
 
-var BufferList = __webpack_require__(314);
+var BufferList = __webpack_require__(297);
 
-var destroyImpl = __webpack_require__(134);
+var destroyImpl = __webpack_require__(132);
 
-var _require = __webpack_require__(135),
+var _require = __webpack_require__(133),
     getHighWaterMark = _require.getHighWaterMark;
 
 var _require$codes = __webpack_require__(25).codes,
@@ -29391,7 +29376,7 @@ function ReadableState(options, stream, isDuplex) {
   this.encoding = null;
 
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
@@ -29553,7 +29538,7 @@ Readable.prototype.isPaused = function () {
 
 
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
   var decoder = new StringDecoder(enc);
   this._readableState.decoder = decoder; // If setEncoding(null), decoder.encoding equals utf8
 
@@ -30237,7 +30222,7 @@ Readable.prototype.wrap = function (stream) {
 if (typeof Symbol === 'function') {
   Readable.prototype[Symbol.asyncIterator] = function () {
     if (createReadableStreamAsyncIterator === undefined) {
-      createReadableStreamAsyncIterator = __webpack_require__(316);
+      createReadableStreamAsyncIterator = __webpack_require__(299);
     }
 
     return createReadableStreamAsyncIterator(this);
@@ -30339,7 +30324,7 @@ function endReadableNT(state, stream) {
 if (typeof Symbol === 'function') {
   Readable.from = function (iterable, opts) {
     if (from === undefined) {
-      from = __webpack_require__(317);
+      from = __webpack_require__(300);
     }
 
     return from(Readable, iterable, opts);
@@ -30353,17 +30338,17 @@ function indexOf(xs, x) {
 
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 133 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(17).EventEmitter;
+module.exports = __webpack_require__(18).EventEmitter;
 
 
 /***/ }),
-/* 134 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30475,7 +30460,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 135 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30508,7 +30493,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 136 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30577,7 +30562,7 @@ var internalUtil = {
 
 /*<replacement>*/
 
-var Stream = __webpack_require__(133);
+var Stream = __webpack_require__(131);
 /*</replacement>*/
 
 
@@ -30593,9 +30578,9 @@ function _isUint8Array(obj) {
   return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
 }
 
-var destroyImpl = __webpack_require__(134);
+var destroyImpl = __webpack_require__(132);
 
-var _require = __webpack_require__(135),
+var _require = __webpack_require__(133),
     getHighWaterMark = _require.getHighWaterMark;
 
 var _require$codes = __webpack_require__(25).codes,
@@ -31209,10 +31194,10 @@ Writable.prototype._undestroy = destroyImpl.undestroy;
 Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 137 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31419,7 +31404,7 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 138 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31484,7 +31469,7 @@ utils.encode = function encode(arr, enc) {
 
 
 /***/ }),
-/* 139 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31492,14 +31477,14 @@ utils.encode = function encode(arr, enc) {
 
 var curve = exports;
 
-curve.base = __webpack_require__(39);
-curve.short = __webpack_require__(325);
-curve.mont = __webpack_require__(326);
-curve.edwards = __webpack_require__(327);
+curve.base = __webpack_require__(40);
+curve.short = __webpack_require__(308);
+curve.mont = __webpack_require__(309);
+curve.edwards = __webpack_require__(310);
 
 
 /***/ }),
-/* 140 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31555,15 +31540,15 @@ exports.g1_256 = g1_256;
 
 
 /***/ }),
-/* 141 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(10);
-var common = __webpack_require__(30);
-var shaCommon = __webpack_require__(140);
+var common = __webpack_require__(31);
+var shaCommon = __webpack_require__(138);
 var assert = __webpack_require__(7);
 
 var sum32 = utils.sum32;
@@ -31667,14 +31652,14 @@ SHA256.prototype._digest = function digest(enc) {
 
 
 /***/ }),
-/* 142 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(10);
-var common = __webpack_require__(30);
+var common = __webpack_require__(31);
 var assert = __webpack_require__(7);
 
 var rotr64_hi = utils.rotr64_hi;
@@ -32004,7 +31989,7 @@ function g1_512_lo(xh, xl) {
 
 
 /***/ }),
-/* 143 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -32059,7 +32044,7 @@ function g1_512_lo(xh, xl) {
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(342).Buffer;
+    Buffer = __webpack_require__(325).Buffer;
   } catch (e) {
   }
 
@@ -35548,10 +35533,10 @@ function g1_512_lo(xh, xl) {
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 144 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35559,17 +35544,17 @@ function g1_512_lo(xh, xl) {
 
 const asn1 = exports;
 
-asn1.bignum = __webpack_require__(145);
+asn1.bignum = __webpack_require__(143);
 
-asn1.define = __webpack_require__(345).define;
-asn1.base = __webpack_require__(348);
-asn1.constants = __webpack_require__(349);
-asn1.decoders = __webpack_require__(148);
-asn1.encoders = __webpack_require__(146);
+asn1.define = __webpack_require__(328).define;
+asn1.base = __webpack_require__(331);
+asn1.constants = __webpack_require__(332);
+asn1.decoders = __webpack_require__(146);
+asn1.encoders = __webpack_require__(144);
 
 
 /***/ }),
-/* 145 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -35624,7 +35609,7 @@ asn1.encoders = __webpack_require__(146);
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(344).Buffer;
+    Buffer = __webpack_require__(327).Buffer;
   } catch (e) {
   }
 
@@ -39006,10 +38991,10 @@ asn1.encoders = __webpack_require__(146);
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 146 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39017,12 +39002,12 @@ asn1.encoders = __webpack_require__(146);
 
 const encoders = exports;
 
-encoders.der = __webpack_require__(147);
-encoders.pem = __webpack_require__(346);
+encoders.der = __webpack_require__(145);
+encoders.pem = __webpack_require__(329);
 
 
 /***/ }),
-/* 147 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39324,7 +39309,7 @@ function encodeTag(tag, primitive, cls, reporter) {
 
 
 /***/ }),
-/* 148 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39332,12 +39317,12 @@ function encodeTag(tag, primitive, cls, reporter) {
 
 const decoders = exports;
 
-decoders.der = __webpack_require__(149);
-decoders.pem = __webpack_require__(347);
+decoders.der = __webpack_require__(147);
+decoders.pem = __webpack_require__(330);
 
 
 /***/ }),
-/* 149 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39345,8 +39330,8 @@ decoders.pem = __webpack_require__(347);
 
 const inherits = __webpack_require__(1);
 
-const bignum = __webpack_require__(145);
-const DecoderBuffer = __webpack_require__(31).DecoderBuffer;
+const bignum = __webpack_require__(143);
+const DecoderBuffer = __webpack_require__(32).DecoderBuffer;
 const Node = __webpack_require__(68);
 
 // Import DER constants
@@ -39679,16 +39664,16 @@ function derDecodeLen(buf, primitive, fail) {
 
 
 /***/ }),
-/* 150 */
+/* 148 */
 /***/ (function(module, exports) {
 
 module.exports = {"1.3.132.0.10":"secp256k1","1.3.132.0.33":"p224","1.2.840.10045.3.1.1":"p192","1.2.840.10045.3.1.7":"p256","1.3.132.0.34":"p384","1.3.132.0.35":"p521"}
 
 /***/ }),
-/* 151 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createHash = __webpack_require__(28)
+var createHash = __webpack_require__(29)
 var Buffer = __webpack_require__(2).Buffer
 
 module.exports = function (seed, len) {
@@ -39710,7 +39695,7 @@ function i2ops (c) {
 
 
 /***/ }),
-/* 152 */
+/* 150 */
 /***/ (function(module, exports) {
 
 module.exports = function xor (a, b) {
@@ -39724,7 +39709,7 @@ module.exports = function xor (a, b) {
 
 
 /***/ }),
-/* 153 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var BN = __webpack_require__(71)
@@ -39742,7 +39727,7 @@ module.exports = withPublic
 
 
 /***/ }),
-/* 154 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module*/
@@ -39758,10 +39743,10 @@ module.exports = function toString(obj) {
 
 
 /***/ }),
-/* 155 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var JsonWebTokenError = __webpack_require__(41);
+var JsonWebTokenError = __webpack_require__(42);
 
 var NotBeforeError = function (message, date) {
   JsonWebTokenError.call(this, message);
@@ -39776,10 +39761,10 @@ NotBeforeError.prototype.constructor = NotBeforeError;
 module.exports = NotBeforeError;
 
 /***/ }),
-/* 156 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var JsonWebTokenError = __webpack_require__(41);
+var JsonWebTokenError = __webpack_require__(42);
 
 var TokenExpiredError = function (message, expiredAt) {
   JsonWebTokenError.call(this, message);
@@ -39794,10 +39779,10 @@ TokenExpiredError.prototype.constructor = TokenExpiredError;
 module.exports = TokenExpiredError;
 
 /***/ }),
-/* 157 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ms = __webpack_require__(366);
+var ms = __webpack_require__(349);
 
 module.exports = function (time, iat) {
   var timestamp = iat || Math.floor(Date.now() / 1000);
@@ -39817,17 +39802,17 @@ module.exports = function (time, iat) {
 };
 
 /***/ }),
-/* 158 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process) {var semver = __webpack_require__(367);
+/* WEBPACK VAR INJECTION */(function(process) {var semver = __webpack_require__(350);
 
 module.exports = semver.satisfies(process.version, '^6.12.0 || >=8.0.0');
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 159 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39845,18 +39830,18 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 160 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(9);
-var settle = __webpack_require__(380);
-var buildURL = __webpack_require__(382);
-var parseHeaders = __webpack_require__(383);
-var isURLSameOrigin = __webpack_require__(384);
-var createError = __webpack_require__(161);
+var settle = __webpack_require__(363);
+var buildURL = __webpack_require__(365);
+var parseHeaders = __webpack_require__(366);
+var isURLSameOrigin = __webpack_require__(367);
+var createError = __webpack_require__(159);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -39936,7 +39921,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(385);
+      var cookies = __webpack_require__(368);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -40014,13 +39999,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 161 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(381);
+var enhanceError = __webpack_require__(364);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -40039,7 +40024,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 162 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40051,7 +40036,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 163 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40075,6 +40060,21 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 163 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Compile=function(_Component){_inherits(Compile,_Component);function Compile(){_classCallCheck(this,Compile);return _possibleConstructorReturn(this,(Compile.__proto__||Object.getPrototypeOf(Compile)).apply(this,arguments));}_createClass(Compile,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{role:"dialog","aria-live":"polite","aria-label":"cookieconsent","aria-describedby":"cookieconsent:desc",className:"cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-color-override-688238583 cc-invisible",style:{display:"none"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{id:"cookieconsent:desc",className:"cc-message"},"We use cookies and other technologies to ensure you get the best experience on our website. More info",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-label":"learn more about cookies",role:"button",tabIndex:"0",className:"cc-link",href:"https://www.betburger.com/privacy",rel:"noopener noreferrer nofollow",target:"_blank"},"here")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"cc-compliance cc-highlight"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"\xA0"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-label":"allow cookies",role:"button",tabIndex:"0",className:"cc-btn cc-allow"},"Got it!")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-label":"dismiss cookie message",role:"button",tabIndex:"0",className:"cc-close"},"\u274C"));}}]);return Compile;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Compile);
 
 /***/ }),
 /* 164 */
@@ -40121,7 +40121,7 @@ __webpack_require__(170);
 
 // Object.assign() is commonly used with React.
 // It will use the native implementation if it's present and isn't buggy.
-Object.assign = __webpack_require__(42);
+Object.assign = __webpack_require__(43);
 
 // In tests, polyfill requestAnimationFrame since jsdom doesn't provide it yet.
 // We don't polyfill it in the browser--this is user's responsibility.
@@ -40478,7 +40478,7 @@ rawAsap.makeRequestCallFromTimer = makeRequestCallFromTimer;
 // back into ASAP proper.
 // https://github.com/tildeio/rsvp.js/blob/cddf7232546a9cf858524b75cde6f9edf72620a7/lib/rsvp/asap.js
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 169 */
@@ -41075,7 +41075,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__index_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App__ = __webpack_require__(178);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_redux__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_redux_thunk__ = __webpack_require__(429);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_redux__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__store_reducers_betReducer__ = __webpack_require__(430);
@@ -41097,7 +41097,7 @@ var rootReducer=Object(__WEBPACK_IMPORTED_MODULE_7_redux__["c" /* combineReducer
  * LICENSE file in the root directory of this source tree.
  */
 
-var l=__webpack_require__(42),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.forward_ref"):60112,y=n?Symbol.for("react.suspense"):60113,z=n?Symbol.for("react.memo"):60115,A=n?Symbol.for("react.lazy"):
+var l=__webpack_require__(43),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.forward_ref"):60112,y=n?Symbol.for("react.suspense"):60113,z=n?Symbol.for("react.memo"):60115,A=n?Symbol.for("react.lazy"):
 60116,B="function"===typeof Symbol&&Symbol.iterator;function C(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 var D={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},E={};function F(a,b,c){this.props=a;this.context=b;this.refs=E;this.updater=c||D}F.prototype.isReactComponent={};F.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(C(85));this.updater.enqueueSetState(this,a,b,"setState")};F.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function G(){}G.prototype=F.prototype;function H(a,b,c){this.props=a;this.context=b;this.refs=E;this.updater=c||D}var I=H.prototype=new G;I.constructor=H;l(I,F.prototype);I.isPureReactComponent=!0;var J={current:null},K=Object.prototype.hasOwnProperty,L={key:!0,ref:!0,__self:!0,__source:!0};
@@ -41177,7 +41177,7 @@ if (true) {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),n=__webpack_require__(42),r=__webpack_require__(175);function u(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(u(227));
+var aa=__webpack_require__(0),n=__webpack_require__(43),r=__webpack_require__(175);function u(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(u(227));
 function ba(a,b,c,d,e,f,g,h,k){var l=Array.prototype.slice.call(arguments,3);try{b.apply(c,l)}catch(m){this.onError(m)}}var da=!1,ea=null,fa=!1,ha=null,ia={onError:function(a){da=!0;ea=a}};function ja(a,b,c,d,e,f,g,h,k){da=!1;ea=null;ba.apply(ia,arguments)}function ka(a,b,c,d,e,f,g,h,k){ja.apply(this,arguments);if(da){if(da){var l=ea;da=!1;ea=null}else throw Error(u(198));fa||(fa=!0,ha=l)}}var la=null,ma=null,na=null;
 function oa(a,b,c){var d=a.type||"unknown-event";a.currentTarget=na(c);ka(d,b,void 0,a);a.currentTarget=null}var pa=null,qa={};
 function ra(){if(pa)for(var a in qa){var b=qa[a],c=pa.indexOf(a);if(!(-1<c))throw Error(u(96,a));if(!sa[c]){if(!b.extractEvents)throw Error(u(97,a));sa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;if(ta.hasOwnProperty(h))throw Error(u(99,h));ta[h]=f;var k=f.phasedRegistrationNames;if(k){for(e in k)k.hasOwnProperty(e)&&ua(k[e],g,h);e=!0}else f.registrationName?(ua(f.registrationName,g,h),e=!0):e=!1;if(!e)throw Error(u(98,d,a));}}}}
@@ -41515,16 +41515,16 @@ exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__history__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_public__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_valuebets__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_valuebets__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home__ = __webpack_require__(391);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_pricing__ = __webpack_require__(398);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_sureBet__ = __webpack_require__(406);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_SignIn__ = __webpack_require__(428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__store_actions_usersActions__ = __webpack_require__(48);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var RequireAuth=function RequireAuth(data){console.log('is_session',Object(__WEBPACK_IMPORTED_MODULE_10__store_actions_usersActions__["a" /* is_session */])());if(!Object(__WEBPACK_IMPORTED_MODULE_10__store_actions_usersActions__["a" /* is_session */])()){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Redirect */],{to:'/signin'});}return data.children;};var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);return _possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).apply(this,arguments));}_createClass(App,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Router */],{history:__WEBPACK_IMPORTED_MODULE_3__history__["a" /* history */]},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Switch */],null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_9__components_SignIn__["a" /* default */],path:'/signin'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(RequireAuth,null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_6__components_Home__["a" /* default */],path:'/',exact:true}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_4__components_public__["a" /* default */],path:'/public'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_5__components_valuebets__["a" /* default */],path:'/valuebets'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_7__components_pricing__["a" /* default */],path:'/pricing'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_8__components_sureBet__["a" /* default */],path:'/bet'}))));}}]);return App;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);var mapStateToProps=function mapStateToProps(state){return{isAuthenticated:state.users.isAuthenticated};};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps)(App));
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__store_actions_usersActions__ = __webpack_require__(27);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var RequireAuth=function RequireAuth(data){if(!Object(__WEBPACK_IMPORTED_MODULE_10__store_actions_usersActions__["a" /* is_session */])()){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Redirect */],{to:'/'});}return data.children;};var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);return _possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).apply(this,arguments));}_createClass(App,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Router */],{history:__WEBPACK_IMPORTED_MODULE_3__history__["a" /* history */]},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Switch */],null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_9__components_SignIn__["a" /* default */],path:'/signin'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_6__components_Home__["a" /* default */],path:'/',exact:true}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(RequireAuth,null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_4__components_public__["a" /* default */],path:'/public'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_5__components_valuebets__["a" /* default */],path:'/valuebets'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_7__components_pricing__["a" /* default */],path:'/pricing'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */],{component:__WEBPACK_IMPORTED_MODULE_8__components_sureBet__["a" /* default */],path:'/bet'}))));}}]);return App;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);var mapStateToProps=function mapStateToProps(state){return{isAuthenticated:state.users.isAuthenticated};};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps)(App));
 
 /***/ }),
 /* 179 */
@@ -41535,10 +41535,10 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(44);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -41863,10 +41863,10 @@ function invariant(condition, message) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(44);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -41939,10 +41939,10 @@ HashRouter.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(45);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -42003,7 +42003,7 @@ MemoryRouter.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(76);
@@ -42109,7 +42109,7 @@ module.exports = Array.isArray || function (arr) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
@@ -42211,13 +42211,13 @@ Prompt.contextTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__generatePath__ = __webpack_require__(80);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -42355,10 +42355,10 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(45);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -42528,13 +42528,13 @@ StaticRouter.childContextTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(46);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -42629,7 +42629,7 @@ Switch.propTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(46);
 // Written in this round about way for babel-transform-imports
 
 
@@ -42653,7 +42653,7 @@ Switch.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
@@ -42779,10 +42779,10 @@ module.exports = hoistNonReactStatics;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_PropTypes__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_warning__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_warning__ = __webpack_require__(47);
 
 
 
@@ -43104,8 +43104,8 @@ function () {
 
 "use strict";
 /* unused harmony export createConnect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_connectAdvanced__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_shallowEqual__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mapDispatchToProps__ = __webpack_require__(211);
@@ -43341,7 +43341,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
 /* 215 */
@@ -43524,7 +43524,7 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5), __webpack_require__(221)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6), __webpack_require__(221)(module)))
 
 /***/ }),
 /* 221 */
@@ -43882,7 +43882,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
 /* unused harmony export whenMergePropsIsOmitted */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_verifyPlainObject__ = __webpack_require__(92);
 
 
@@ -43929,7 +43929,7 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(230);
 
 
@@ -44025,7 +44025,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 
 "use strict";
 /* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(47);
 
 
 function verify(selector, methodName, displayName) {
@@ -44060,13 +44060,13 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__myaccount_part_sidebar_js__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__myaccount_part_footer_js__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__myaccount_part_header_js__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__myaccount_part_maximum_sidebar_js__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__myaccount_part_myaccount_dashboard_pages_dashboard_js__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myaccount_part_myaccount_multifilter_multifilter_js__ = __webpack_require__(241);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__myaccount_part_myaccount_payment_page_payment_js__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__myaccount_part_myaccount_accounting_page_accounting_js__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__myaccount_part_myaccount_settings_pages_setting_js__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__myaccount_part_myaccount_api_myaccapi_js__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__myaccount_part_maximum_sidebar_js__ = __webpack_require__(376);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__myaccount_part_myaccount_dashboard_pages_dashboard_js__ = __webpack_require__(377);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myaccount_part_myaccount_multifilter_multifilter_js__ = __webpack_require__(380);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__myaccount_part_myaccount_payment_page_payment_js__ = __webpack_require__(381);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__myaccount_part_myaccount_accounting_page_accounting_js__ = __webpack_require__(382);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__myaccount_part_myaccount_settings_pages_setting_js__ = __webpack_require__(383);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__myaccount_part_myaccount_api_myaccapi_js__ = __webpack_require__(388);
 var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Public=function(_Component){_inherits(Public,_Component);function Public(){_classCallCheck(this,Public);return _possibleConstructorReturn(this,(Public.__proto__||Object.getPrototypeOf(Public)).apply(this,arguments));}_createClass(Public,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__myaccount_part_header_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__myaccount_part_sidebar_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container-holder'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container',id:'profileMainComponent'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container-wrapper wrap',id:'content'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'row'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__myaccount_part_maximum_sidebar_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'tab-content'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__myaccount_part_myaccount_dashboard_pages_dashboard_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__myaccount_part_myaccount_multifilter_multifilter_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__myaccount_part_myaccount_payment_page_payment_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__myaccount_part_myaccount_accounting_page_accounting_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__myaccount_part_myaccount_settings_pages_setting_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__myaccount_part_myaccount_api_myaccapi_js__["a" /* default */],null)))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__myaccount_part_footer_js__["a" /* default */],null));}}]);return Public;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Public);
 
 /***/ }),
@@ -44106,191 +44106,21 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Header=function(_Component){_inherits(Header,_Component);function Header(){_classCallCheck(this,Header);return _possibleConstructorReturn(this,(Header.__proto__||Object.getPrototypeOf(Header)).apply(this,arguments));}_createClass(Header,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header",{className:"navbar navbar-inverse normal",role:"banner",style:{display:"block"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"container"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"navbar-header"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{className:"navbar-toggle","data-target":".bs-navbar-collapse","data-toggle":"collapse",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"drop-lang dropdown drop-lang-mobile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"dropdown-toggle drop-language-button","data-toggle":"dropdown",id:"drop-language-mobile",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"},"drop")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"drop-language-mobile",className:"dropdown-menu dropdown-language"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"actual",href:"https://www.betburger.com/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"English")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gb/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"Great Britain")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/es/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"es flags-lang"}),"Espa\xF1a")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/co/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"co flags-lang"}),"Colombia")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/de/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"de flags-lang"}),"Deutschland")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/at/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"at flags-lang"}),"\xD6sterreich")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gr/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"gr flags-lang"}),"\u0395\u03BB\u03BB\u03AC\u03B4\u03B1")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/it/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"it flags-lang"}),"Italy")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/fr/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"fr flags-lang"}),"France")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/pt/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"pt flags-lang"}),"Portugal")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/cn/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"cn flags-lang"}),"China")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/ro/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"ro flags-lang"}),"Romania")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{alt:"Arbitrage betting service \u21161",className:"bb_brand2 logo navbar-brand",href:"/",title:"BetBurger"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{alt:"Arbitrage betting service \u21161",className:"navbar-brand",href:"/",title:"BetBurger"},"BetBurger")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav",{className:"collapse navbar-collapse bs-navbar-collapse",role:"navigation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav navbar-nav navbar-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"drop-pricing-button dropdown-toggle logo_white","data-hover":"dropdown","data-toggle":"dropdown",id:"arbs_dropdown",type:"button"},"Surebets"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"arbs_dropdown",className:"dropdown-menu dropdown-prising"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"/pricing"},"Surebets pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"/bet"},"Surebets Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"/bet"},"Surebets Live"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"drop-pricing-button dropdown-toggle logo_white","data-hover":"dropdown","data-toggle":"dropdown",id:"valuebets_dropdown",type:"button"},"Valuebets"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"valuebets_dropdown",className:"dropdown-menu dropdown-prising"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/prices-valuebets"},"Valuebets pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/valuebets"},"Valuebets Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/valuebets/live"},"Valuebets Live"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"drop-pricing-button dropdown-toggle logo_white","data-hover":"dropdown","data-toggle":"dropdown",id:"api_dropdown",type:"button"},"API"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"api_dropdown",className:"dropdown-menu dropdown-prising"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/prices-api"},"API pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/api"},"API Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/api/live"},"API Live"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:""},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/help"},"Help Center")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"signup logo_white ",href:"/public"},"My Account")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown language-select drop-lang"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"dropdown-toggle drop-language-button","data-toggle":"dropdown",id:"drop-language",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"},"drop")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"drop-language",className:"dropdown-menu dropdown-language"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"actual",href:"https://www.betburger.com/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"English")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gb/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"Great Britain")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/es/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"es flags-lang"}),"Espa\xF1a")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/co/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"co flags-lang"}),"Colombia")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/de/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"de flags-lang"}),"Deutschland")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/at/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"at flags-lang"}),"\xD6sterreich")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gr/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"gr flags-lang"}),"\u0395\u03BB\u03BB\u03AC\u03B4\u03B1")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/it/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"it flags-lang"}),"Italy")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/fr/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"fr flags-lang"}),"France")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/pt/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"pt flags-lang"}),"Portugal")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/cn/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"cn flags-lang"}),"China")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/ro/profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"ro flags-lang"}),"Romania")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"signup",rel:"nofollow","data-method":"delete",href:"https://www.betburger.com/users/sign_out"},"Sign out"))))));}}]);return Header;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Header);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__ = __webpack_require__(27);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Header=function(_Component){_inherits(Header,_Component);function Header(){_classCallCheck(this,Header);return _possibleConstructorReturn(this,(Header.__proto__||Object.getPrototypeOf(Header)).apply(this,arguments));}_createClass(Header,[{key:'render',value:function render(){var _this2=this;return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('header',{className:'navbar navbar-inverse normal',role:'banner',style:{display:"block"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'navbar-header'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'navbar-toggle','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'drop-lang dropdown drop-lang-mobile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{'aria-expanded':'false','aria-haspopup':'true',className:'dropdown-toggle drop-language-button','data-toggle':'dropdown',id:'drop-language-mobile',type:'button'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'en flags-lang'},'drop')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'drop-language-mobile',className:'dropdown-menu dropdown-language'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'actual',href:'https://www.betburger.com/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'en flags-lang'}),'English')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gb/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'en flags-lang'}),'Great Britain')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/es/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'es flags-lang'}),'Espa\xF1a')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/co/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'co flags-lang'}),'Colombia')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/de/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'de flags-lang'}),'Deutschland')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/at/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'at flags-lang'}),'\xD6sterreich')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gr/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'gr flags-lang'}),'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/it/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'it flags-lang'}),'Italy')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/fr/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'fr flags-lang'}),'France')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/pt/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'pt flags-lang'}),'Portugal')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/cn/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'cn flags-lang'}),'China')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/ro/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'ro flags-lang'}),'Romania')))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'bb_brand2 logo navbar-brand',href:'/',title:'BetBurger'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'navbar-brand',href:'/',title:'BetBurger'},'BetBurger')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('nav',{className:'collapse navbar-collapse bs-navbar-collapse',role:'navigation'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'nav navbar-nav navbar-right'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{'aria-expanded':'false','aria-haspopup':'true',className:'drop-pricing-button dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'arbs_dropdown',type:'button'},'Surebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'arbs_dropdown',className:'dropdown-menu dropdown-prising'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/pricing'},'Surebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Live'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{'aria-expanded':'false','aria-haspopup':'true',className:'drop-pricing-button dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'valuebets_dropdown',type:'button'},'Valuebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'valuebets_dropdown',className:'dropdown-menu dropdown-prising'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-valuebets'},'Valuebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets'},'Valuebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets/live'},'Valuebets Live'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{'aria-expanded':'false','aria-haspopup':'true',className:'drop-pricing-button dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'api_dropdown',type:'button'},'API'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'api_dropdown',className:'dropdown-menu dropdown-prising'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-api'},'API pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api'},'API Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api/live'},'API Live'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:''},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/help'},'Help Center')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'active'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'signup logo_white ',href:'/public'},'My Account')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown language-select drop-lang'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{'aria-expanded':'false','aria-haspopup':'true',className:'dropdown-toggle drop-language-button','data-toggle':'dropdown',id:'drop-language',type:'button'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'en flags-lang'},'drop')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'drop-language',className:'dropdown-menu dropdown-language'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'actual',href:'https://www.betburger.com/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'en flags-lang'}),'English')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gb/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'en flags-lang'}),'Great Britain')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/es/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'es flags-lang'}),'Espa\xF1a')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/co/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'co flags-lang'}),'Colombia')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/de/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'de flags-lang'}),'Deutschland')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/at/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'at flags-lang'}),'\xD6sterreich')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gr/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'gr flags-lang'}),'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/it/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'it flags-lang'}),'Italy')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/fr/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'fr flags-lang'}),'France')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/pt/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'pt flags-lang'}),'Portugal')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/cn/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'cn flags-lang'}),'China')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/ro/profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'ro flags-lang'}),'Romania')))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'signup',rel:'nofollow','data-method':'delete',href:'javascript:void(0)',onClick:function onClick(){return _this2.props.userLogoutRequest();}},'Sign out'))))));}}]);return Header;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);var mapDispatchToProps={userLogoutRequest:__WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__["c" /* userLogoutRequest */]};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(null,mapDispatchToProps)(Header));
 
 /***/ }),
 /* 237 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var MaxmumSidebar=function(_Component){_inherits(MaxmumSidebar,_Component);function MaxmumSidebar(){_classCallCheck(this,MaxmumSidebar);return _possibleConstructorReturn(this,(MaxmumSidebar.__proto__||Object.getPrototypeOf(MaxmumSidebar)).apply(this,arguments));}_createClass(MaxmumSidebar,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-2 col-md-3 col-sm-10 col-xs-12",id:"sidebar1"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"bs-docs-sidebar sidebar-content hidden-xs hidden-sm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav nav-list sidebar bs-docs-sidenav affix-top"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dashboard","data-toggle":"pill",href:"https://www.betburger.com/profile#main"},"Dashboard")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"bookmakers","data-toggle":"pill",href:"https://www.betburger.com/profile#bookmakers"},"Bookmakers")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"exchanges","data-toggle":"pill",href:"https://www.betburger.com/profile#exchanges"},"Exchanges")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"currencies","data-toggle":"pill",href:"https://www.betburger.com/profile#currencies"},"Currencies")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"multifilter"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"multi","data-toggle":"pill",href:"https://www.betburger.com/profile#multi_filters"},"Multifilters")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"payments","data-toggle":"pill",href:"https://www.betburger.com/profile#payments"},"Payments")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"accounting","data-toggle":"pill",href:"https://www.betburger.com/profile#accounting"},"Accounting")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"password","data-toggle":"pill",href:"https://www.betburger.com/profile#settings_tab"},"Settings")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"api","data-toggle":"pill",href:"https://www.betburger.com/profile#api_tab"},"API"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"bitcoin-banners-cabinet"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/prices-api"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"",className:"img-responsive",src:"./myaccount/api_banner_bb-fcae8f07cbc06941f551a6f93c1e87357611e89a7adcaeb57a7d8d93c8bb9483.png"})))));}}]);return MaxmumSidebar;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (MaxmumSidebar);
-
-/***/ }),
-/* 238 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard_firstpart_js__ = __webpack_require__(239);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_secondpart_js__ = __webpack_require__(240);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Dashboard=function(_Component){_inherits(Dashboard,_Component);function Dashboard(){_classCallCheck(this,Dashboard);return _possibleConstructorReturn(this,(Dashboard.__proto__||Object.getPrototypeOf(Dashboard)).apply(this,arguments));}_createClass(Dashboard,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'active fade in tab-pane',id:'main'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'margin dashboardComponent',id:'cta'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert hidden flashAlert forAlerts',role:'alert',style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-hidden':'true',className:'glyphicon glyphicon-exclamation-sign'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert alert-danger fade hide',style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-hidden':'true',className:'glyphicon glyphicon-exclamation-sign'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'page-header title font'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h1',null,'My account'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{id:'margin-sm'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__dashboard_firstpart_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__dashboard_secondpart_js__["a" /* default */],null))));}}]);return Dashboard;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
-
-/***/ }),
-/* 239 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var DashboardFirstPart=function(_Component){_inherits(DashboardFirstPart,_Component);function DashboardFirstPart(){_classCallCheck(this,DashboardFirstPart);return _possibleConstructorReturn(this,(DashboardFirstPart.__proto__||Object.getPrototypeOf(DashboardFirstPart)).apply(this,arguments));}_createClass(DashboardFirstPart,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-sm-12 col-xs-12 feature",id:"isUnfrozen"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{id:"frozenAccount"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",null,"Account is frozen"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"During this time our service won\u2019t be available to you, but on resuming your subscription you will be able to use our service again. Your assets will stay untouched."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"counts row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"used"},"Used:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"0 day"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"left"},"Left:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"28 days")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row withForm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder col-static"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn btn-md btn-success",id:"unfreezButton",rel:"nofollow","data-method":"put",href:"https://www.betburger.com/profile/unfreeze"},"UnFreeze Account"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{acceptCharset:"UTF-8",action:"https://www.betburger.com/profile/freeze",id:"freezAccount",method:"post",onSubmit:"return false;"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"_method",type:"hidden",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"authenticity_token",type:"hidden",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",{className:"title-small"},"Freeze Account"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"You have an opportunity to \u201Cfreeze\u201D your subscription for a certain period during the year without losing any money.",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),"Minimum \u201Cfreezing\u201D period of your account is 1 week, maximum - 4 weeks.",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),"During this time our service won\u2019t be available to you, but on resuming your subscription you will be able to use our service again. Your assets will stay untouched."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-container"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"hide noFreezeAvailable row withForm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("b",null,"You have used all freezings")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"freezeFormAndCounts"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"counts row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"used"},"Used:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"0 day"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"left"},"Left:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"28 days")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row withForm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.dashboard.period"},"Period")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",_defineProperty({className:"freeze_days",id:"freeze_days"},"className","form-control"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"7"},"7 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"8"},"8 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"9"},"9 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"10"},"10 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"11"},"11 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"12"},"12 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"13"},"13 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"14"},"14 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"15"},"15 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"16"},"16 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"17"},"17 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"18"},"18 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"19"},"19 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"20"},"20 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"21"},"21 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"22"},"22 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"23"},"23 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"24"},"24 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"25"},"25 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"26"},"26 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"27"},"27 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"28"},"28 days"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn btn-md green",name:"commit",type:"submit",value:"Freeze Account"})))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"If you unfreeze your account before the stated time, you'll be additionally charged a one day subscription price."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped frozenLogs",id:"noRows"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{style:{width:"35%"}},"Frozen At"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Frozen Till"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Unfrozen At"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null)));}}]);return DashboardFirstPart;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (DashboardFirstPart);
-
-/***/ }),
-/* 240 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var DashboardSecondPart=function(_Component){_inherits(DashboardSecondPart,_Component);function DashboardSecondPart(){_classCallCheck(this,DashboardSecondPart);return _possibleConstructorReturn(this,(DashboardSecondPart.__proto__||Object.getPrototypeOf(DashboardSecondPart)).apply(this,arguments));}_createClass(DashboardSecondPart,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-sm-12 col-xs-12 feature"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",{className:"title-small"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.dashboard.my_subscription"},"My Subscription")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"active tab-pane",id:"main"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder paidInfo"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav nav-tabs paid-info-tabs",role:"tablist"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active",role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"arbsSubscription","data-toggle":"tab",href:"https://www.betburger.com/profile#arbsSubscription",role:"tab"},"Surebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"valuebetsSubscription","data-toggle":"tab",href:"https://www.betburger.com/profile#valuebetsSubscription",role:"tab"},"Valuebets"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-content"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane active fade in",id:"arbsSubscription",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped payment-info-table"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",null,"Package")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Pay Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Active till")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Prematch 30"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("time",{dateTime:"2020-10-30T07:20:45Z","data-local":"time","data-format":"%Y-%m-%d %H:%M:%S",title:"October 30, 2020 at 10:20am MST","data-localized":"","aria-label":"2020-10-30 10:20:45"},"2020-10-30 10:20:45")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"liveArbsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Free"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"liveArbsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn green btn-md marginTop10-xs",href:"https://www.betburger.com/prices?live_tariff_id=169&prematch_tariff_id=20"},"Extend subscription")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"valuebetsSubscription",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped payment-info-table"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",null,"Package")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Pay Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Active till")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Free"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"prematchValuebetsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Free"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"liveValuebetsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn green btn-md marginTop10-xs",href:"https://www.betburger.com/prices-valuebets"},"Change subscription"))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",{className:"title-small"},"Promo Codes"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"active tab-pane",id:"main"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder paidInfo promo-code"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{onSubmit:"return false;",className:"form-horizontal promocode-form",role:"form",action:"https://www.betburger.com/profile/promocode",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{colSpan:"2"},"Input your promocode for bonus / subscription activation")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"text",name:"promocode",id:"promocode",value:"",className:"form-control",style:{font_size:"small"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"with_active_button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{className:"btn green btn-md marginTop10-xs"},"Activate code")))))))));}}]);return DashboardSecondPart;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (DashboardSecondPart);
-
-/***/ }),
-/* 241 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var MultiFilter=function(_Component){_inherits(MultiFilter,_Component);function MultiFilter(){_classCallCheck(this,MultiFilter);return _possibleConstructorReturn(this,(MultiFilter.__proto__||Object.getPrototypeOf(MultiFilter)).apply(this,arguments));}_createClass(MultiFilter,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"fade tab-pane",id:"multi_filters"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"margin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert hidden staticTop",role:"alert"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert hidden flashAlert",role:"alert"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,"Multifilters"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav nav-tabs",role:"tablist"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active",role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"prematchMultiFilters","data-toggle":"tab",href:"https://www.betburger.com/profile#prematchMultiFilters",role:"tab"},"Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"liveMultiFilters","data-toggle":"tab",href:"https://www.betburger.com/profile#liveMultiFilters",role:"tab"},"Live")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"valuebetFilters","data-toggle":"tab",href:"https://www.betburger.com/profile#valuebetFilters",role:"tab"},"Valuebet"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-content"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane active fade in",id:"prematchMultiFilters",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"ID"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"width200"},"Filter Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Edit"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Delete"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_411062"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"411062"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/prematch/411062/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder right addFilter"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue","data-type":"prematch","data-singe_filter":"false",name:"commit",type:"button",value:"Add filter"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"liveMultiFilters",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"ID"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"width200"},"Filter Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Edit"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Delete"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_370063"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"370063"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/live/370063/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue addFilter","data-type":"live","data-singe_filter":"false",name:"commit",type:"button",value:"Add filter"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"valuebetFilters",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"ID"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"width200"},"Filter Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Type"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Edit"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Delete"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",{id:"valuebet-live"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_102591"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"102591"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"Live")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/live/102591/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",{id:"valuebet-prematch"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_116271"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"116271"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/prematch/116271/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn green addFilter","data-type":"valuebet-prematch","data-singe_filter":"false",name:"commit",type:"button",value:"Add Prematch filter"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue addFilter","data-type":"valuebet-live","data-singe_filter":"false",name:"commit",type:"button",value:"Add Live filter"})))))));}}]);return MultiFilter;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (MultiFilter);
-
-/***/ }),
-/* 242 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Payments=function(_Component){_inherits(Payments,_Component);function Payments(){_classCallCheck(this,Payments);return _possibleConstructorReturn(this,(Payments.__proto__||Object.getPrototypeOf(Payments)).apply(this,arguments));}_createClass(Payments,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"payments"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"margin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert alert-danger fade hide",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,"Payments")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped",id:"profilePayments"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Payment Details"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Payment Method"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Amount"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{colSpan:"5",style:{text_align:"center"}},"You have never paid for our services.")))))))));}}]);return Payments;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Payments);
-
-/***/ }),
-/* 243 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Accounting=function(_Component){_inherits(Accounting,_Component);function Accounting(){_classCallCheck(this,Accounting);return _possibleConstructorReturn(this,(Accounting.__proto__||Object.getPrototypeOf(Accounting)).apply(this,arguments));}_createClass(Accounting,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"accounting"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert alert-danger fade hide",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"Accounting"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icomoon-expand toggle-screen-size"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"Accessable for paid users only")));}}]);return Accounting;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Accounting);
-
-/***/ }),
-/* 244 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__settings_js__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personalsettings_js__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__changecurrent_js__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__loginbutton_js__ = __webpack_require__(248);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Setting=function(_Component){_inherits(Setting,_Component);function Setting(){_classCallCheck(this,Setting);return _possibleConstructorReturn(this,(Setting.__proto__||Object.getPrototypeOf(Setting)).apply(this,arguments));}_createClass(Setting,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'tab-pane fade',id:'settings_tab'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'margin',id:'cta'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert hidden flashAlert forAlerts',role:'alert'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-hidden':'',className:'glyphicon glyphicon-exclamation-sign'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert alert-danger fade flashAlert hide'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'close','data-dismiss':'alert'},'\xD7'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'page-header title font'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h1',null,'Settings')))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__settings_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__personalsettings_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__changecurrent_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__loginbutton_js__["a" /* default */],null)));}}]);return Setting;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Setting);
-
-/***/ }),
-/* 245 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Settings=function(_Component){_inherits(Settings,_Component);function Settings(){_classCallCheck(this,Settings);return _possibleConstructorReturn(this,(Settings.__proto__||Object.getPrototypeOf(Settings)).apply(this,arguments));}_createClass(Settings,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"package settings row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group direct_link_content info-holder col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"locale_en with_description",htmlFor:"#"},"Use a direct link"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"small"},"(Remove the checkmark if you do not want to move on to the bookmaker automatically)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"open-direct-links",action:"https://www.betburger.com/profile/direct_link",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"checkbox",name:"open_direct_links",id:"open_direct_links",value:"1",checked:"checked"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group zoom_content info-holder col-sm-6 col-md-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"#"},"Zoom settings"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"small"},"(Applying on arbs page)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"update-zoom",action:"https://www.betburger.com/profile/zoom",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",{name:"zoom",id:"zoom_settings",className:"form-control"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{selected:"selected",value:"100"},"100%"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"110"},"110%"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"120"},"120%")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group koef_format_content info-holder col-sm-6 col-md-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"#"},"Odds type"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"small"},"(Applying on arbs page)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"update-koef-format",action:"https://www.betburger.com/profile/koef_format",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",{name:"koef_format",id:"koef_format_settings",className:"form-control"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{selected:"selected",value:"decimal"},"Decimal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"hongkong"},"Hong Kong")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group email_me_content info-holder col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"locale_en",htmlFor:"#"},"Get email notifications on promos, discounts and news")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"email_me_form",action:"https://www.betburger.com/profile/email_me",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"checkbox",name:"email_me",id:"email_me",value:"1",checked:"checked"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))));}}]);return Settings;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Settings);
-
-/***/ }),
-/* 246 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var PersonalSettings=function(_Component){_inherits(PersonalSettings,_Component);function PersonalSettings(){_classCallCheck(this,PersonalSettings);return _possibleConstructorReturn(this,(PersonalSettings.__proto__||Object.getPrototypeOf(PersonalSettings)).apply(this,arguments));}_createClass(PersonalSettings,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"change-password-title"},"Personal Settings"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr",{className:"password-form-hr"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"editUserPersonal row",id:"edit_user",action:"https://www.betburger.com/profile/personal_settings",acceptCharset:"UTF-8","data-remote":"true",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 required"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"user_full_name"},"Full Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"enter your surname and first name")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"form-control",value:"Alex K",type:"text",name:"user[full_name]",id:"user_full_name"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 required"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"user_country_id"},"Country"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"choose your country of permanent residence")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",{className:"form-control",disabled:"disabled",value:"28",name:"user[country_id]",id:"user_country_id"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"123"},"Afghanistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"74"},"Albania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"92"},"Algeria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"124"},"American Samoa"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"116"},"Andorra"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"125"},"Angola"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"205"},"Anguilla"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"126"},"Antigua and Barbuda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"30"},"Argentina"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"31"},"Armenia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"127"},"Aruba"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"33"},"Australia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"24"},"Austria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"34"},"Azerbaijan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"128"},"Bahamas"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"98"},"Bahrain"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"118"},"Bangladesh"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"129"},"Barbados"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"35"},"Belarus"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"21"},"Belgium"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"130"},"Belize"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"131"},"Benin"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"132"},"Bermuda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"133"},"Bhutan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"36"},"Bolivia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"75"},"Bosnia-Herzegovina"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"134"},"Botswana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"3"},"Brazil"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"135"},"British Virgin Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"206"},"Brunei Darussalam"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"37"},"Bulgaria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"136"},"Burkina Faso"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"137"},"Burundi"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"138"},"Cambodia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"38"},"Cameroon"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"39"},"Canada"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"139"},"Cape Verde Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"140"},"Cayman Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"207"},"Central African Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"208"},"Chad"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"40"},"Chile"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"41"},"China PR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"141"},"Chinese Taipei"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"42"},"Colombia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"209"},"Comoros"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"143"},"Congo"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"142"},"Congo DR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"144"},"Cook Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"43"},"Costa Rica"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"44"},"Croatia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"120"},"Cuba"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"145"},"Cura\xE7ao"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"26"},"Cyprus"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"45"},"Czech Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"146"},"C\xF4te d'Ivoire"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"4"},"Denmark"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"147"},"Djibouti"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"210"},"Dominica"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"119"},"Dominican Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"46"},"Ecuador"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"99"},"Egypt"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"47"},"El Salvador"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"5"},"England"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"211"},"Equatorial Guinea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"212"},"Eritrea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"48"},"Estonia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"148"},"Ethiopia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"94"},"Faroe Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"149"},"Fiji"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"22"},"Finland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"10"},"France"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"150"},"French Guiana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"151"},"Gabon"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"152"},"Gambia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"95"},"Georgia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"6"},"Germany"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"113"},"Ghana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"213"},"Gibraltar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"109"},"Great Britain"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"25"},"Greece"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"153"},"Grenada"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"154"},"Guadeloupe"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"155"},"Guam"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"50"},"Guatemala"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"215"},"Guinea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"214"},"Guinea-Bissau"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"156"},"Guyana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"157"},"Haiti"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"51"},"Honduras"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"90"},"Hong Kong"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"52"},"Hungary"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"12"},"Iceland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"108"},"India"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"104"},"Indonesia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"53"},"Iran"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"105"},"Iraq"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"78"},"Ireland Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"54"},"Israel"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"2"},"Italy"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"110"},"Jamaica"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"19"},"Japan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"93"},"Jordan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"55"},"Kazakhstan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"158"},"Kenya"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"216"},"Kiribati"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"217"},"Korea DPR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"159"},"Korea Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"84"},"Kuwait"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"160"},"Kyrgyzstan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"56"},"Latvia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"117"},"Lebanon"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"161"},"Lesotho"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"219"},"Liberia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"162"},"Libya"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"220"},"Liechtenstein"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"13"},"Lithuania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"57"},"Luxembourg"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"122"},"Macao"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"49"},"Macedonia FYR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"163"},"Madagascar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"164"},"Malawi"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"86"},"Malaysia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"165"},"Maldives"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"166"},"Mali"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"58"},"Malta"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"167"},"Martinique"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"168"},"Mauritania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"169"},"Mauritius"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"221"},"Mayotte"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"59"},"Mexico"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"23"},"Moldova"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"236"},"Monaco"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"170"},"Mongolia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"88"},"Montenegro"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"222"},"Montserrat"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"96"},"Morocco"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"171"},"Mozambique"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"172"},"Myanmar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"173"},"Namibia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"174"},"Nepal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"15"},"Netherlands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"237"},"Netherlands Antilles"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"175"},"New Caledonia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"114"},"New Zealand"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"176"},"Nicaragua"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"177"},"Niger"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"178"},"Nigeria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"223"},"Northern Mariana Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"60"},"Norway"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"106"},"Oman"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"102"},"Pakistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"179"},"Palestine"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"101"},"Panama"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"180"},"Papua New Guinea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"61"},"Paraguay"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"62"},"Peru"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"112"},"Philippines"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"63"},"Poland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"27"},"Portugal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"181"},"Puerto Rico"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"97"},"Qatar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"65"},"Romania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",selected:"selected",value:"28"},"Russia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"183"},"Rwanda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"225"},"Samoa"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"115"},"San Marino"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"193"},"Sao Tome and Principe"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"87"},"Saudi Arabia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"14"},"Scotland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"184"},"Senegal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"66"},"Serbia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"185"},"Seychelles"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"186"},"Sierra Leone"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"89"},"Singapore"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"227"},"Sint Maarten"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"16"},"Slovakia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"67"},"Slovenia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"187"},"Solomon Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"228"},"Somalia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"68"},"South Africa"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"229"},"South Sudan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"7"},"Spain"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"188"},"Sri Lanka"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"189"},"St. Kitts and Nevis"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"230"},"St. Lucia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"231"},"St. Vincent and the Grenadines"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"111"},"Sudan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"190"},"Suriname"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"191"},"Swaziland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"17"},"Sweden"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"8"},"Switzerland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"192"},"Syria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"238"},"Taiwan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"103"},"Tajikistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"195"},"Tanzania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"69"},"Thailand"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"232"},"Timor-Leste"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"196"},"Togo"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"233"},"Tonga"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"197"},"Trinidad and Tobago"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"91"},"Tunisia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"70"},"Turkey"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"198"},"Turkmenistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"199"},"Turks and Caicos Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"200"},"Tuvalu"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"83"},"UAE"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"234"},"US Virgin Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"18"},"USA"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"201"},"Uganda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"71"},"Ukraine"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"82"},"Uruguay"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"85"},"Uzbekistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"202"},"Vanuatu"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"72"},"Venezuela"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"73"},"Vietnam"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"9"},"Wales"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"81"},"Yemen"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"203"},"Zambia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"235"},"Zanzibar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"204"},"Zimbabwe")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group conform col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-10 col-xs-12 text-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue",name:"commit",type:"submit",value:"Update"}))))));}}]);return PersonalSettings;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (PersonalSettings);
-
-/***/ }),
-/* 247 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Dashboard=function(_Component){_inherits(Dashboard,_Component);function Dashboard(){_classCallCheck(this,Dashboard);return _possibleConstructorReturn(this,(Dashboard.__proto__||Object.getPrototypeOf(Dashboard)).apply(this,arguments));}_createClass(Dashboard,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"change-password-title"},"Change the current email/password"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr",{className:"password-form-hr"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"editUserInfo row",id:"edit_betburger_user_106424",action:"https://www.betburger.com/users",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 no-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"betburger_user_email"},"Email")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoFocus:"autofocus",className:"form-control",value:"alex1992818@outlook.com",type:"text",name:"betburger_user[email]",id:"betburger_user_email"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 current-password-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"betburger_user_current_password"},"Current Password"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"(we need your current password to confirm your changes)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoComplete:"off",className:"form-control",type:"password",name:"betburger_user[current_password]",id:"betburger_user_current_password"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 new-password-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"betburger_user_password"},"New password"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"(leave blank if you don't want to change it)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoComplete:"off",className:"form-control",type:"password",name:"betburger_user[password]",id:"betburger_user_password"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group conform col-sm-6 col-md-12 password-confirmation-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 no-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"betburger_user_password_confirmation"},"Password confirmation")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoComplete:"off",className:"form-control",type:"password",name:"betburger_user[password_confirmation]",id:"betburger_user_password_confirmation"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group conform col-xs-12 password-update-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-10 col-xs-12 text-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue",name:"commit",type:"submit",value:"Update"}))))));}}]);return Dashboard;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
-
-/***/ }),
-/* 248 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var LoginButton=function(_Component){_inherits(LoginButton,_Component);function LoginButton(){_classCallCheck(this,LoginButton);return _possibleConstructorReturn(this,(LoginButton.__proto__||Object.getPrototypeOf(LoginButton)).apply(this,arguments));}_createClass(LoginButton,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"change-password-title"},"Betfair login"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row betfair-section-js"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr",{className:"password-form-hr"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12 betfair-section-css"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn btn-md green",href:"https://identitysso.betfair.com/view/vendor-login?client_id=51006&response_type=code&redirect_uri=betfair_token&rfr=29017&PI=29017&pi=partner29017"},"Betfair login"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-10 header"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"section"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"text-center"},"Unhappy?"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"picture margin20"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"services2",className:"img-responsive",src:"./myaccount/denied-093234a6f5d2ce89542553f4990e453f9cb0250dd16b02b2c9b19be89aee07bc.png"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"text-center"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"button_to",method:"post",action:"https://www.betburger.com/users"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"delete"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{"data-confirm":"Are you sure?",className:"btn red-btn",type:"submit",value:"Delete my account"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}))))));}}]);return LoginButton;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (LoginButton);
-
-/***/ }),
-/* 249 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var MyAccApi=function(_Component){_inherits(MyAccApi,_Component);function MyAccApi(){_classCallCheck(this,MyAccApi);return _possibleConstructorReturn(this,(MyAccApi.__proto__||Object.getPrototypeOf(MyAccApi)).apply(this,arguments));}_createClass(MyAccApi,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"api_tab"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"margin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,"API")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-12 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"form-inline"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"input-group"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"input-group-addon"},"Your API token:"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"text",name:"token",id:"token",disabled:"disabled",className:"form-control",placeholder:"You need to buy a subscription to access the API",size:"60"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn btn-primary",href:"https://www.betburger.com/prices"},"Tariffs")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row mb-25"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert hidden flashAlert forAlerts",role:"alert",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert alert-danger fade hide",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row mb-25"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-8 col-sm-8 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"API is a way to fetch hundreds of surebets per minute automatically. You can find out more here:"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{target:"_blank",href:"https://www.betburger.com/prices-api"},"Check out our API product page")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{target:"_blank",href:"https://www.betburger.com/manual/how-to-deal-with-api"},"Read through a data request sample article")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"Swagger documentation: ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-lv.betburger.com/doc.html",target:"_blank"},"Live surebets"),", ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-pr.betburger.com/doc.html",target:"_blank"},"Prematch surebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{target:"_blank",href:"https://www.betburger.com/terms"},"See our terms of use")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-8 col-sm-8 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"red"},"IMPORTANT!"),"This is your own private token. Do not share it with anyone!"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"If you need help and reading the documentation (",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-lv.betburger.com/doc.html",target:"_blank"},"live"),", ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-pr.betburger.com/doc.html",target:"_blank"},"prematch"),") didn\u2019t answer your question, ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/contact"},"submit a support ticket here"),"."))))));}}]);return MyAccApi;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (MyAccApi);
-
-/***/ }),
-/* 250 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__valuebets_valuebet_header__ = __webpack_require__(251);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var ValueBets=function(_Component){_inherits(ValueBets,_Component);function ValueBets(){_classCallCheck(this,ValueBets);return _possibleConstructorReturn(this,(ValueBets.__proto__||Object.getPrototypeOf(ValueBets)).apply(this,arguments));}_createClass(ValueBets,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{id:'valuebet'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__valuebets_valuebet_header__["a" /* default */],null));}}]);return ValueBets;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (ValueBets);
-
-/***/ }),
-/* 251 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var ValueBetHeader=function(_Component){_inherits(ValueBetHeader,_Component);function ValueBetHeader(){_classCallCheck(this,ValueBetHeader);return _possibleConstructorReturn(this,(ValueBetHeader.__proto__||Object.getPrototypeOf(ValueBetHeader)).apply(this,arguments));}_createClass(ValueBetHeader,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"container relative"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"centerLogo text-center"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"searchByEvent"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"search-form"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"search-icon",style:{display:"inline"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{id:"search-input",placeholder:"Search events...",type:"text"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"logo"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"text"},"BetBurger"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav",{className:"navbar navbar-default topNavbar"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"container"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"navbar-header"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-controls":"navbar","aria-expanded":"false",className:"navbar-toggle collapsed","data-target":"#navbar","data-toggle":"collapse",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"sr-only"},"Toggle navigation"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"navbar-collapse collapse",id:"navbar"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav navbar-nav navbar-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"prematchNav"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/arbs"},"Surebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"valuebetsNav"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/valuebets"},"Valuebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"apiNav"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/api"},"API")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/prices-valuebets"},"Pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/help"},"Help Center")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/profile"},"My Account")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown language-select drop-lang"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"dropdown-toggle drop-language-button","data-toggle":"dropdown",id:"drop-language",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"},"drop")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"drop-language",className:"dropdown-menu dropdown-language"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"actual",href:"https://www.betburger.com/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"English")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gb/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"Great Britain")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/es/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"es flags-lang"}),"Espa\xF1a")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/co/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"co flags-lang"}),"Colombia")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/de/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"de flags-lang"}),"Deutschland")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/at/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"at flags-lang"}),"\xD6sterreich")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gr/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"gr flags-lang"}),"\u0395\u03BB\u03BB\u03AC\u03B4\u03B1")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/it/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"it flags-lang"}),"Italy")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/fr/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"fr flags-lang"}),"France")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/pt/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"pt flags-lang"}),"Portugal")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/cn/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"cn flags-lang"}),"China")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/ro/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"ro flags-lang"}),"Romania")))))))));}}]);return ValueBetHeader;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (ValueBetHeader);
-
-/***/ }),
-/* 252 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__main_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_part_compile__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_part_header__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_part_headerbody__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_part_First__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_part_second__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_part_Third__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_part_Four__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_part_Footer__ = __webpack_require__(164);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Home=function(_Component){_inherits(Home,_Component);function Home(){_classCallCheck(this,Home);return _possibleConstructorReturn(this,(Home.__proto__||Object.getPrototypeOf(Home)).apply(this,arguments));}_createClass(Home,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'pricing-surebets'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__home_part_compile__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'home-top'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__home_part_header__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_part_headerbody__["a" /* default */],null)),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('main',{className:'home-main'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__home_part_First__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__home_part_second__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__home_part_Third__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__home_part_Four__["a" /* default */],null)),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__home_part_Footer__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'containerForBlockMessage'}));}}]);return Home;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Home);
-
-/***/ }),
-/* 253 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__ = __webpack_require__(48);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Header=function(_Component){_inherits(Header,_Component);function Header(){_classCallCheck(this,Header);return _possibleConstructorReturn(this,(Header.__proto__||Object.getPrototypeOf(Header)).apply(this,arguments));}_createClass(Header,[{key:'render',value:function render(){var _this2=this;return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('header',{className:'header',style:{display:"block"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'header_inner',style:{border_bottom:"1px solid #777b80"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo',href:'/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../../assets/img/logo.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo-mobile',href:'/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../../assets/img/logo.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'navbar-header'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'navbar-toggle','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('nav',{className:'collapse navbar-collapse bs-navbar-collapse',role:'navigation'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'text-center visible-sm visible-xs'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'bs-navbar-collapse__toggle glyphicon glyphicon-remove','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'nav-list-white'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'arbs_dropdown',type:'button'},' Surebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'arbs_dropdown',className:'dropdown-menu dropdown-profile dropdownhover-bottom'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/pricing'},'Surebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'valuebets_dropdown',type:'button'},'Valuebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'valuebets_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-valuebets'},'Valuebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets'},'Valuebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets/live'},'Valuebets Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'api_dropdown',type:'button'},'API'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'api_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-api'},'API pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api'},'API Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api/live'},'API Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:''},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/help'},'Help Center')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'signup logo_white ',href:'/public'},'My Account'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'actions'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown language-select drop-lang lang-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-expanded':'false','aria-haspopup':'true',className:'lang-btn dropdown-toggle drop-language-button','data-toggle':'dropdown',id:'drop-language',type:'button',style:{width:"24px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'English',src:'../../assets/img/en.png'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'drop-language',className:'dropdown-menu dropdown-language'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'actual',href:'https://www.betburger.com/'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'English',src:'../../assets/img/en.png'}),'English'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gb'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Great Britain',src:'../../assets/img/gb.png'}),'Great Britain'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/es'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Espa\xF1a',src:'../../assets/img/es.png'}),'Espa\xF1a'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/co'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Colombia',src:'../../assets/img/co.png'}),'Colombia'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/de'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Deutschland',src:'../../assets/img/de.png'}),'Deutschland'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/at'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'\xD6sterreich',src:'../../assets/img/at.png'}),'\xD6sterreich'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gr'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1',src:'../../assets/img/gr.png'}),'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/it'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Italy',src:'../../assets/img/it.png'}),'Italy'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/fr'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'France',src:'../../assets/img/fr.png'}),'France'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/pt'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Portugal',src:'../../assets/img/pt.png'}),'Portugal'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/cn'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'China',src:'../../assets/img/cn.png'}),'China'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/ro'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Romania',src:'../../assets/img/ro.png'}),'Romania'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'signin'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'btn green-btn',onClick:function onClick(){return _this2.props.userLogoutRequest();}},'Sign out'))))));}}]);return Header;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);var mapDispatchToProps={userLogoutRequest:__WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__["c" /* userLogoutRequest */]};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(null,mapDispatchToProps)(Header));
-
-/***/ }),
-/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module*/
 var Buffer = __webpack_require__(2).Buffer;
-var DataStream = __webpack_require__(99);
-var jwa = __webpack_require__(104);
-var Stream = __webpack_require__(34);
-var toString = __webpack_require__(154);
-var util = __webpack_require__(36);
+var DataStream = __webpack_require__(97);
+var jwa = __webpack_require__(102);
+var Stream = __webpack_require__(35);
+var toString = __webpack_require__(152);
+var util = __webpack_require__(37);
 
 function base64url(string, encoding) {
   return Buffer
@@ -44365,7 +44195,7 @@ module.exports = SignStream;
 
 
 /***/ }),
-/* 255 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44524,7 +44354,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 256 */
+/* 239 */
 /***/ (function(module, exports) {
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
@@ -44615,7 +44445,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 257 */
+/* 240 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -44626,7 +44456,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 258 */
+/* 241 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -44637,13 +44467,13 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 259 */
+/* 242 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 260 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44652,7 +44482,7 @@ module.exports = Array.isArray || function (arr) {
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Buffer = __webpack_require__(2).Buffer;
-var util = __webpack_require__(261);
+var util = __webpack_require__(244);
 
 function copyBuffer(src, target, offset) {
   src.copy(target, offset);
@@ -44728,13 +44558,13 @@ if (util && util.inspect && util.inspect.custom) {
 }
 
 /***/ }),
-/* 261 */
+/* 244 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 262 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -44790,7 +44620,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(263);
+__webpack_require__(246);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -44801,10 +44631,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 263 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -44994,10 +44824,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 264 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45030,10 +44860,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(103);
+var Transform = __webpack_require__(101);
 
 /*<replacement>*/
-var util = Object.create(__webpack_require__(27));
+var util = Object.create(__webpack_require__(28));
 util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
@@ -45050,35 +44880,35 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 265 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(51);
 
 
 /***/ }),
-/* 266 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(19);
 
 
 /***/ }),
-/* 267 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(50).Transform
 
 
 /***/ }),
-/* 268 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(50).PassThrough
 
 
 /***/ }),
-/* 269 */
+/* 252 */
 /***/ (function(module, exports) {
 
 module.exports = function isBuffer(arg) {
@@ -45089,7 +44919,7 @@ module.exports = function isBuffer(arg) {
 }
 
 /***/ }),
-/* 270 */
+/* 253 */
 /***/ (function(module, exports) {
 
 if (typeof Object.create === 'function') {
@@ -45118,7 +44948,7 @@ if (typeof Object.create === 'function') {
 
 
 /***/ }),
-/* 271 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45166,28 +44996,28 @@ bufferEq.restore = function() {
 
 
 /***/ }),
-/* 272 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = __webpack_require__(21)
-exports.createHash = exports.Hash = __webpack_require__(28)
-exports.createHmac = exports.Hmac = __webpack_require__(114)
+exports.createHash = exports.Hash = __webpack_require__(29)
+exports.createHmac = exports.Hmac = __webpack_require__(112)
 
-var algos = __webpack_require__(287)
+var algos = __webpack_require__(270)
 var algoKeys = Object.keys(algos)
 var hashes = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'].concat(algoKeys)
 exports.getHashes = function () {
   return hashes
 }
 
-var p = __webpack_require__(117)
+var p = __webpack_require__(115)
 exports.pbkdf2 = p.pbkdf2
 exports.pbkdf2Sync = p.pbkdf2Sync
 
-var aes = __webpack_require__(289)
+var aes = __webpack_require__(272)
 
 exports.Cipher = aes.Cipher
 exports.createCipher = aes.createCipher
@@ -45200,7 +45030,7 @@ exports.createDecipheriv = aes.createDecipheriv
 exports.getCiphers = aes.getCiphers
 exports.listCiphers = aes.listCiphers
 
-var dh = __webpack_require__(304)
+var dh = __webpack_require__(287)
 
 exports.DiffieHellmanGroup = dh.DiffieHellmanGroup
 exports.createDiffieHellmanGroup = dh.createDiffieHellmanGroup
@@ -45208,16 +45038,16 @@ exports.getDiffieHellman = dh.getDiffieHellman
 exports.createDiffieHellman = dh.createDiffieHellman
 exports.DiffieHellman = dh.DiffieHellman
 
-var sign = __webpack_require__(311)
+var sign = __webpack_require__(294)
 
 exports.createSign = sign.createSign
 exports.Sign = sign.Sign
 exports.createVerify = sign.createVerify
 exports.Verify = sign.Verify
 
-exports.createECDH = __webpack_require__(354)
+exports.createECDH = __webpack_require__(337)
 
-var publicEncrypt = __webpack_require__(357)
+var publicEncrypt = __webpack_require__(340)
 
 exports.publicEncrypt = publicEncrypt.publicEncrypt
 exports.privateEncrypt = publicEncrypt.privateEncrypt
@@ -45237,7 +45067,7 @@ exports.privateDecrypt = publicEncrypt.privateDecrypt
 //   }
 // })
 
-var rf = __webpack_require__(361)
+var rf = __webpack_require__(344)
 
 exports.randomFill = rf.randomFill
 exports.randomFillSync = rf.randomFillSync
@@ -45270,7 +45100,7 @@ exports.constants = {
 
 
 /***/ }),
-/* 273 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
@@ -45341,28 +45171,28 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 
 
 /***/ }),
-/* 274 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(106);
+exports = module.exports = __webpack_require__(104);
 exports.Stream = exports;
 exports.Readable = exports;
-exports.Writable = __webpack_require__(110);
+exports.Writable = __webpack_require__(108);
 exports.Duplex = __webpack_require__(23);
-exports.Transform = __webpack_require__(111);
-exports.PassThrough = __webpack_require__(280);
+exports.Transform = __webpack_require__(109);
+exports.PassThrough = __webpack_require__(263);
 exports.finished = __webpack_require__(54);
-exports.pipeline = __webpack_require__(281);
+exports.pipeline = __webpack_require__(264);
 
 
 /***/ }),
-/* 275 */
+/* 258 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 276 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45383,7 +45213,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var _require = __webpack_require__(4),
     Buffer = _require.Buffer;
 
-var _require2 = __webpack_require__(277),
+var _require2 = __webpack_require__(260),
     inspect = _require2.inspect;
 
 var custom = inspect && inspect.custom || 'inspect';
@@ -45578,13 +45408,13 @@ function () {
 }();
 
 /***/ }),
-/* 277 */
+/* 260 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 278 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45798,7 +45628,7 @@ module.exports = createReadableStreamAsyncIterator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 279 */
+/* 262 */
 /***/ (function(module, exports) {
 
 module.exports = function () {
@@ -45807,7 +45637,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 280 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45838,7 +45668,7 @@ module.exports = function () {
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(111);
+var Transform = __webpack_require__(109);
 
 __webpack_require__(1)(PassThrough, Transform);
 
@@ -45852,7 +45682,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 281 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45955,7 +45785,7 @@ function pipeline() {
 module.exports = pipeline;
 
 /***/ }),
-/* 282 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -46055,7 +45885,7 @@ module.exports = Sha
 
 
 /***/ }),
-/* 283 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -46160,7 +45990,7 @@ module.exports = Sha1
 
 
 /***/ }),
-/* 284 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46172,7 +46002,7 @@ module.exports = Sha1
  */
 
 var inherits = __webpack_require__(1)
-var Sha256 = __webpack_require__(112)
+var Sha256 = __webpack_require__(110)
 var Hash = __webpack_require__(24)
 var Buffer = __webpack_require__(2).Buffer
 
@@ -46219,11 +46049,11 @@ module.exports = Sha224
 
 
 /***/ }),
-/* 285 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(1)
-var SHA512 = __webpack_require__(113)
+var SHA512 = __webpack_require__(111)
 var Hash = __webpack_require__(24)
 var Buffer = __webpack_require__(2).Buffer
 
@@ -46282,7 +46112,7 @@ module.exports = Sha384
 
 
 /***/ }),
-/* 286 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46290,7 +46120,7 @@ module.exports = Sha384
 var inherits = __webpack_require__(1)
 var Buffer = __webpack_require__(2).Buffer
 
-var Base = __webpack_require__(14)
+var Base = __webpack_require__(15)
 
 var ZEROS = Buffer.alloc(128)
 var blocksize = 64
@@ -46335,22 +46165,22 @@ module.exports = Hmac
 
 
 /***/ }),
-/* 287 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(116)
+module.exports = __webpack_require__(114)
 
 
 /***/ }),
-/* 288 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {var Buffer = __webpack_require__(2).Buffer
 
-var checkParameters = __webpack_require__(118)
-var defaultEncoding = __webpack_require__(119)
-var sync = __webpack_require__(120)
-var toBuffer = __webpack_require__(121)
+var checkParameters = __webpack_require__(116)
+var defaultEncoding = __webpack_require__(117)
+var sync = __webpack_require__(118)
+var toBuffer = __webpack_require__(119)
 
 var ZERO_BUF
 var subtle = global.crypto && global.crypto.subtle
@@ -46448,17 +46278,17 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
   }), callback)
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 289 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DES = __webpack_require__(290)
+var DES = __webpack_require__(273)
 var aes = __webpack_require__(58)
 var aesModes = __webpack_require__(59)
-var desModes = __webpack_require__(303)
-var ebtk = __webpack_require__(38)
+var desModes = __webpack_require__(286)
+var ebtk = __webpack_require__(39)
 
 function createCipher (suite, password) {
   suite = suite.toLowerCase()
@@ -46524,11 +46354,11 @@ exports.listCiphers = exports.getCiphers = getCiphers
 
 
 /***/ }),
-/* 290 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var CipherBase = __webpack_require__(14)
-var des = __webpack_require__(291)
+var CipherBase = __webpack_require__(15)
+var des = __webpack_require__(274)
 var inherits = __webpack_require__(1)
 var Buffer = __webpack_require__(2).Buffer
 
@@ -46580,21 +46410,21 @@ DES.prototype._final = function () {
 
 
 /***/ }),
-/* 291 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.utils = __webpack_require__(122);
+exports.utils = __webpack_require__(120);
 exports.Cipher = __webpack_require__(57);
-exports.DES = __webpack_require__(123);
-exports.CBC = __webpack_require__(292);
-exports.EDE = __webpack_require__(293);
+exports.DES = __webpack_require__(121);
+exports.CBC = __webpack_require__(275);
+exports.EDE = __webpack_require__(276);
 
 
 /***/ }),
-/* 292 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46666,7 +46496,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
 
 
 /***/ }),
-/* 293 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46676,7 +46506,7 @@ var assert = __webpack_require__(7);
 var inherits = __webpack_require__(1);
 
 var Cipher = __webpack_require__(57);
-var DES = __webpack_require__(123);
+var DES = __webpack_require__(121);
 
 function EDEState(type, key) {
   assert.equal(key.length, 24, 'Invalid key length');
@@ -46727,16 +46557,16 @@ EDE.prototype._unpad = DES.prototype._unpad;
 
 
 /***/ }),
-/* 294 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MODES = __webpack_require__(59)
-var AuthCipher = __webpack_require__(127)
+var AuthCipher = __webpack_require__(125)
 var Buffer = __webpack_require__(2).Buffer
-var StreamCipher = __webpack_require__(128)
-var Transform = __webpack_require__(14)
-var aes = __webpack_require__(37)
-var ebtk = __webpack_require__(38)
+var StreamCipher = __webpack_require__(126)
+var Transform = __webpack_require__(15)
+var aes = __webpack_require__(38)
+var ebtk = __webpack_require__(39)
 var inherits = __webpack_require__(1)
 
 function Cipher (mode, key, iv) {
@@ -46847,7 +46677,7 @@ exports.createCipher = createCipher
 
 
 /***/ }),
-/* 295 */
+/* 278 */
 /***/ (function(module, exports) {
 
 exports.encrypt = function (self, block) {
@@ -46860,10 +46690,10 @@ exports.decrypt = function (self, block) {
 
 
 /***/ }),
-/* 296 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var xor = __webpack_require__(29)
+var xor = __webpack_require__(30)
 
 exports.encrypt = function (self, block) {
   var data = xor(block, self._prev)
@@ -46883,11 +46713,11 @@ exports.decrypt = function (self, block) {
 
 
 /***/ }),
-/* 297 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
-var xor = __webpack_require__(29)
+var xor = __webpack_require__(30)
 
 function encryptStart (self, data, decrypt) {
   var len = data.length
@@ -46922,7 +46752,7 @@ exports.encrypt = function (self, data, decrypt) {
 
 
 /***/ }),
-/* 298 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
@@ -46953,7 +46783,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 
 
 /***/ }),
-/* 299 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
@@ -47001,10 +46831,10 @@ exports.encrypt = function (self, chunk, decrypt) {
 
 
 /***/ }),
-/* 300 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(29)
+/* WEBPACK VAR INJECTION */(function(Buffer) {var xor = __webpack_require__(30)
 
 function getBlock (self) {
   self._prev = self._cipher.encryptBlock(self._prev)
@@ -47024,7 +46854,7 @@ exports.encrypt = function (self, chunk) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 301 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(2).Buffer
@@ -47119,16 +46949,16 @@ module.exports = GHASH
 
 
 /***/ }),
-/* 302 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var AuthCipher = __webpack_require__(127)
+var AuthCipher = __webpack_require__(125)
 var Buffer = __webpack_require__(2).Buffer
 var MODES = __webpack_require__(59)
-var StreamCipher = __webpack_require__(128)
-var Transform = __webpack_require__(14)
-var aes = __webpack_require__(37)
-var ebtk = __webpack_require__(38)
+var StreamCipher = __webpack_require__(126)
+var Transform = __webpack_require__(15)
+var aes = __webpack_require__(38)
+var ebtk = __webpack_require__(39)
 var inherits = __webpack_require__(1)
 
 function Decipher (mode, key, iv) {
@@ -47249,7 +47079,7 @@ exports.createDecipheriv = createDecipheriv
 
 
 /***/ }),
-/* 303 */
+/* 286 */
 /***/ (function(module, exports) {
 
 exports['des-ecb'] = {
@@ -47279,13 +47109,13 @@ exports['des-ede'] = {
 
 
 /***/ }),
-/* 304 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var generatePrime = __webpack_require__(129)
-var primes = __webpack_require__(309)
+/* WEBPACK VAR INJECTION */(function(Buffer) {var generatePrime = __webpack_require__(127)
+var primes = __webpack_require__(292)
 
-var DH = __webpack_require__(310)
+var DH = __webpack_require__(293)
 
 function getDiffieHellman (mod) {
   var prime = new Buffer(primes[mod].prime, 'hex')
@@ -47328,13 +47158,13 @@ exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 305 */
+/* 288 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 306 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -47389,7 +47219,7 @@ exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(307).Buffer;
+    Buffer = __webpack_require__(290).Buffer;
   } catch (e) {
   }
 
@@ -50771,39 +50601,39 @@ exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 307 */
+/* 290 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 308 */
+/* 291 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 309 */
+/* 292 */
 /***/ (function(module, exports) {
 
 module.exports = {"modp1":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a63a3620ffffffffffffffff"},"modp2":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece65381ffffffffffffffff"},"modp5":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca237327ffffffffffffffff"},"modp14":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aacaa68ffffffffffffffff"},"modp15":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a93ad2caffffffffffffffff"},"modp16":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c934063199ffffffffffffffff"},"modp17":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dcc4024ffffffffffffffff"},"modp18":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"}}
 
 /***/ }),
-/* 310 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var BN = __webpack_require__(130);
-var MillerRabin = __webpack_require__(131);
+/* WEBPACK VAR INJECTION */(function(Buffer) {var BN = __webpack_require__(128);
+var MillerRabin = __webpack_require__(129);
 var millerRabin = new MillerRabin();
 var TWENTYFOUR = new BN(24);
 var ELEVEN = new BN(11);
 var TEN = new BN(10);
 var THREE = new BN(3);
 var SEVEN = new BN(7);
-var primes = __webpack_require__(129);
+var primes = __webpack_require__(127);
 var randomBytes = __webpack_require__(21);
 module.exports = DH;
 
@@ -50963,17 +50793,17 @@ function formatReturnValue(bn, enc) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 311 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(61).Buffer
-var createHash = __webpack_require__(28)
-var stream = __webpack_require__(312)
+var createHash = __webpack_require__(29)
+var stream = __webpack_require__(295)
 var inherits = __webpack_require__(1)
-var sign = __webpack_require__(320)
-var verify = __webpack_require__(353)
+var sign = __webpack_require__(303)
+var verify = __webpack_require__(336)
 
-var algorithms = __webpack_require__(116)
+var algorithms = __webpack_require__(114)
 Object.keys(algorithms).forEach(function (key) {
   algorithms[key].id = Buffer.from(algorithms[key].id, 'hex')
   algorithms[key.toLowerCase()] = algorithms[key]
@@ -51061,28 +50891,28 @@ module.exports = {
 
 
 /***/ }),
-/* 312 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(132);
+exports = module.exports = __webpack_require__(130);
 exports.Stream = exports;
 exports.Readable = exports;
-exports.Writable = __webpack_require__(136);
+exports.Writable = __webpack_require__(134);
 exports.Duplex = __webpack_require__(26);
-exports.Transform = __webpack_require__(137);
-exports.PassThrough = __webpack_require__(318);
+exports.Transform = __webpack_require__(135);
+exports.PassThrough = __webpack_require__(301);
 exports.finished = __webpack_require__(62);
-exports.pipeline = __webpack_require__(319);
+exports.pipeline = __webpack_require__(302);
 
 
 /***/ }),
-/* 313 */
+/* 296 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 314 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51103,7 +50933,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var _require = __webpack_require__(4),
     Buffer = _require.Buffer;
 
-var _require2 = __webpack_require__(315),
+var _require2 = __webpack_require__(298),
     inspect = _require2.inspect;
 
 var custom = inspect && inspect.custom || 'inspect';
@@ -51298,13 +51128,13 @@ function () {
 }();
 
 /***/ }),
-/* 315 */
+/* 298 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 316 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51518,7 +51348,7 @@ module.exports = createReadableStreamAsyncIterator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 317 */
+/* 300 */
 /***/ (function(module, exports) {
 
 module.exports = function () {
@@ -51527,7 +51357,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 318 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51558,7 +51388,7 @@ module.exports = function () {
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(137);
+var Transform = __webpack_require__(135);
 
 __webpack_require__(1)(PassThrough, Transform);
 
@@ -51572,7 +51402,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 319 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51675,17 +51505,17 @@ function pipeline() {
 module.exports = pipeline;
 
 /***/ }),
-/* 320 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var Buffer = __webpack_require__(61).Buffer
-var createHmac = __webpack_require__(114)
+var createHmac = __webpack_require__(112)
 var crt = __webpack_require__(63)
 var EC = __webpack_require__(64).ec
-var BN = __webpack_require__(143)
-var parseKeys = __webpack_require__(40)
-var curves = __webpack_require__(150)
+var BN = __webpack_require__(141)
+var parseKeys = __webpack_require__(41)
+var curves = __webpack_require__(148)
 
 function sign (hash, key, hashType, signType, tag) {
   var priv = parseKeys(key)
@@ -51824,7 +51654,7 @@ module.exports.makeKey = makeKey
 
 
 /***/ }),
-/* 321 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -51879,7 +51709,7 @@ module.exports.makeKey = makeKey
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(322).Buffer;
+    Buffer = __webpack_require__(305).Buffer;
   } catch (e) {
   }
 
@@ -55261,28 +55091,28 @@ module.exports.makeKey = makeKey
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 322 */
+/* 305 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 323 */
+/* 306 */
 /***/ (function(module, exports) {
 
 module.exports = {"_args":[["elliptic@6.5.3","E:\\React\\better\\client"]],"_from":"elliptic@6.5.3","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.5.3","name":"elliptic","escapedName":"elliptic","rawSpec":"6.5.3","saveSpec":null,"fetchSpec":"6.5.3"},"_requiredBy":["/browserify-sign","/create-ecdh"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_spec":"6.5.3","_where":"E:\\React\\better\\client","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
 
 /***/ }),
-/* 324 */
+/* 307 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 325 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55291,7 +55121,7 @@ module.exports = {"_args":[["elliptic@6.5.3","E:\\React\\better\\client"]],"_fro
 var utils = __webpack_require__(8);
 var BN = __webpack_require__(11);
 var inherits = __webpack_require__(1);
-var Base = __webpack_require__(39);
+var Base = __webpack_require__(40);
 
 var assert = utils.assert;
 
@@ -56226,7 +56056,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
 
 
 /***/ }),
-/* 326 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56234,7 +56064,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
 
 var BN = __webpack_require__(11);
 var inherits = __webpack_require__(1);
-var Base = __webpack_require__(39);
+var Base = __webpack_require__(40);
 
 var utils = __webpack_require__(8);
 
@@ -56411,7 +56241,7 @@ Point.prototype.getX = function getX() {
 
 
 /***/ }),
-/* 327 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56420,7 +56250,7 @@ Point.prototype.getX = function getX() {
 var utils = __webpack_require__(8);
 var BN = __webpack_require__(11);
 var inherits = __webpack_require__(1);
-var Base = __webpack_require__(39);
+var Base = __webpack_require__(40);
 
 var assert = utils.assert;
 
@@ -56850,29 +56680,29 @@ Point.prototype.mixedAdd = Point.prototype.add;
 
 
 /***/ }),
-/* 328 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.sha1 = __webpack_require__(329);
-exports.sha224 = __webpack_require__(330);
-exports.sha256 = __webpack_require__(141);
-exports.sha384 = __webpack_require__(331);
-exports.sha512 = __webpack_require__(142);
+exports.sha1 = __webpack_require__(312);
+exports.sha224 = __webpack_require__(313);
+exports.sha256 = __webpack_require__(139);
+exports.sha384 = __webpack_require__(314);
+exports.sha512 = __webpack_require__(140);
 
 
 /***/ }),
-/* 329 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(10);
-var common = __webpack_require__(30);
-var shaCommon = __webpack_require__(140);
+var common = __webpack_require__(31);
+var shaCommon = __webpack_require__(138);
 
 var rotl32 = utils.rotl32;
 var sum32 = utils.sum32;
@@ -56945,14 +56775,14 @@ SHA1.prototype._digest = function digest(enc) {
 
 
 /***/ }),
-/* 330 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(10);
-var SHA256 = __webpack_require__(141);
+var SHA256 = __webpack_require__(139);
 
 function SHA224() {
   if (!(this instanceof SHA224))
@@ -56982,7 +56812,7 @@ SHA224.prototype._digest = function digest(enc) {
 
 
 /***/ }),
-/* 331 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56990,7 +56820,7 @@ SHA224.prototype._digest = function digest(enc) {
 
 var utils = __webpack_require__(10);
 
-var SHA512 = __webpack_require__(142);
+var SHA512 = __webpack_require__(140);
 
 function SHA384() {
   if (!(this instanceof SHA384))
@@ -57024,14 +56854,14 @@ SHA384.prototype._digest = function digest(enc) {
 
 
 /***/ }),
-/* 332 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(10);
-var common = __webpack_require__(30);
+var common = __webpack_require__(31);
 
 var rotl32 = utils.rotl32;
 var sum32 = utils.sum32;
@@ -57177,7 +57007,7 @@ var sh = [
 
 
 /***/ }),
-/* 333 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57231,7 +57061,7 @@ Hmac.prototype.digest = function digest(enc) {
 
 
 /***/ }),
-/* 334 */
+/* 317 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -58017,21 +57847,21 @@ module.exports = {
 
 
 /***/ }),
-/* 335 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var BN = __webpack_require__(11);
-var HmacDRBG = __webpack_require__(336);
+var HmacDRBG = __webpack_require__(319);
 var utils = __webpack_require__(8);
 var curves = __webpack_require__(65);
 var rand = __webpack_require__(60);
 var assert = utils.assert;
 
-var KeyPair = __webpack_require__(337);
-var Signature = __webpack_require__(338);
+var KeyPair = __webpack_require__(320);
+var Signature = __webpack_require__(321);
 
 function EC(options) {
   if (!(this instanceof EC))
@@ -58265,14 +58095,14 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
 
 
 /***/ }),
-/* 336 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var hash = __webpack_require__(66);
-var utils = __webpack_require__(138);
+var utils = __webpack_require__(136);
 var assert = __webpack_require__(7);
 
 function HmacDRBG(options) {
@@ -58385,7 +58215,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
 
 
 /***/ }),
-/* 337 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58510,7 +58340,7 @@ KeyPair.prototype.inspect = function inspect() {
 
 
 /***/ }),
-/* 338 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58683,7 +58513,7 @@ Signature.prototype.toDER = function toDER(enc) {
 
 
 /***/ }),
-/* 339 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58694,8 +58524,8 @@ var curves = __webpack_require__(65);
 var utils = __webpack_require__(8);
 var assert = utils.assert;
 var parseBytes = utils.parseBytes;
-var KeyPair = __webpack_require__(340);
-var Signature = __webpack_require__(341);
+var KeyPair = __webpack_require__(323);
+var Signature = __webpack_require__(324);
 
 function EDDSA(curve) {
   assert(curve === 'ed25519', 'only tested with ed25519 so far');
@@ -58808,7 +58638,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
 
 
 /***/ }),
-/* 340 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58910,7 +58740,7 @@ module.exports = KeyPair;
 
 
 /***/ }),
-/* 341 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58982,13 +58812,13 @@ module.exports = Signature;
 
 
 /***/ }),
-/* 342 */
+/* 325 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 343 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58996,9 +58826,9 @@ module.exports = Signature;
 // Fedor, you are amazing.
 
 
-var asn1 = __webpack_require__(144)
+var asn1 = __webpack_require__(142)
 
-exports.certificate = __webpack_require__(350)
+exports.certificate = __webpack_require__(333)
 
 var RSAPrivateKey = asn1.define('RSAPrivateKey', function () {
   this.seq().obj(
@@ -59117,20 +58947,20 @@ exports.signature = asn1.define('signature', function () {
 
 
 /***/ }),
-/* 344 */
+/* 327 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 345 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const encoders = __webpack_require__(146);
-const decoders = __webpack_require__(148);
+const encoders = __webpack_require__(144);
+const decoders = __webpack_require__(146);
 const inherits = __webpack_require__(1);
 
 const api = exports;
@@ -59187,7 +59017,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
 
 
 /***/ }),
-/* 346 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59195,7 +59025,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
 
 const inherits = __webpack_require__(1);
 
-const DEREncoder = __webpack_require__(147);
+const DEREncoder = __webpack_require__(145);
 
 function PEMEncoder(entity) {
   DEREncoder.call(this, entity);
@@ -59217,7 +59047,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
 
 
 /***/ }),
-/* 347 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59226,7 +59056,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
 const inherits = __webpack_require__(1);
 const Buffer = __webpack_require__(67).Buffer;
 
-const DERDecoder = __webpack_require__(149);
+const DERDecoder = __webpack_require__(147);
 
 function PEMDecoder(entity) {
   DERDecoder.call(this, entity);
@@ -59275,7 +59105,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
 
 
 /***/ }),
-/* 348 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59284,13 +59114,13 @@ PEMDecoder.prototype.decode = function decode(data, options) {
 const base = exports;
 
 base.Reporter = __webpack_require__(69).Reporter;
-base.DecoderBuffer = __webpack_require__(31).DecoderBuffer;
-base.EncoderBuffer = __webpack_require__(31).EncoderBuffer;
+base.DecoderBuffer = __webpack_require__(32).DecoderBuffer;
+base.EncoderBuffer = __webpack_require__(32).EncoderBuffer;
 base.Node = __webpack_require__(68);
 
 
 /***/ }),
-/* 349 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59318,7 +59148,7 @@ constants.der = __webpack_require__(70);
 
 
 /***/ }),
-/* 350 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59327,7 +59157,7 @@ constants.der = __webpack_require__(70);
 
 
 
-var asn = __webpack_require__(144)
+var asn = __webpack_require__(142)
 
 var Time = asn.define('Time', function () {
   this.choice({
@@ -59414,20 +59244,20 @@ module.exports = X509Certificate
 
 
 /***/ }),
-/* 351 */
+/* 334 */
 /***/ (function(module, exports) {
 
 module.exports = {"2.16.840.1.101.3.4.1.1":"aes-128-ecb","2.16.840.1.101.3.4.1.2":"aes-128-cbc","2.16.840.1.101.3.4.1.3":"aes-128-ofb","2.16.840.1.101.3.4.1.4":"aes-128-cfb","2.16.840.1.101.3.4.1.21":"aes-192-ecb","2.16.840.1.101.3.4.1.22":"aes-192-cbc","2.16.840.1.101.3.4.1.23":"aes-192-ofb","2.16.840.1.101.3.4.1.24":"aes-192-cfb","2.16.840.1.101.3.4.1.41":"aes-256-ecb","2.16.840.1.101.3.4.1.42":"aes-256-cbc","2.16.840.1.101.3.4.1.43":"aes-256-ofb","2.16.840.1.101.3.4.1.44":"aes-256-cfb"}
 
 /***/ }),
-/* 352 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED[\n\r]+DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)[\n\r]+([0-9A-z\n\r+/=]+)[\n\r]+/m
 var startRegex = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----/m
 var fullRegex = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----([0-9A-z\n\r+/=]+)-----END \1-----$/m
-var evp = __webpack_require__(38)
+var evp = __webpack_require__(39)
 var ciphers = __webpack_require__(58)
 var Buffer = __webpack_require__(2).Buffer
 module.exports = function (okey, password) {
@@ -59457,15 +59287,15 @@ module.exports = function (okey, password) {
 
 
 /***/ }),
-/* 353 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var Buffer = __webpack_require__(61).Buffer
-var BN = __webpack_require__(143)
+var BN = __webpack_require__(141)
 var EC = __webpack_require__(64).ec
-var parseKeys = __webpack_require__(40)
-var curves = __webpack_require__(150)
+var parseKeys = __webpack_require__(41)
+var curves = __webpack_require__(148)
 
 function verify (sig, hash, key, signType, tag) {
   var pub = parseKeys(key)
@@ -59547,11 +59377,11 @@ module.exports = verify
 
 
 /***/ }),
-/* 354 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var elliptic = __webpack_require__(64)
-var BN = __webpack_require__(355)
+var BN = __webpack_require__(338)
 
 module.exports = function createECDH (curve) {
   return new ECDH(curve)
@@ -59678,7 +59508,7 @@ function formatReturnValue (bn, enc, len) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 355 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -59733,7 +59563,7 @@ function formatReturnValue (bn, enc, len) {
 
   var Buffer;
   try {
-    Buffer = __webpack_require__(356).Buffer;
+    Buffer = __webpack_require__(339).Buffer;
   } catch (e) {
   }
 
@@ -63115,20 +62945,20 @@ function formatReturnValue (bn, enc, len) {
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
 
 /***/ }),
-/* 356 */
+/* 339 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 357 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.publicEncrypt = __webpack_require__(358)
-exports.privateDecrypt = __webpack_require__(360)
+exports.publicEncrypt = __webpack_require__(341)
+exports.privateDecrypt = __webpack_require__(343)
 
 exports.privateEncrypt = function privateEncrypt (key, buf) {
   return exports.publicEncrypt(key, buf, true)
@@ -63140,16 +62970,16 @@ exports.publicDecrypt = function publicDecrypt (key, buf) {
 
 
 /***/ }),
-/* 358 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parseKeys = __webpack_require__(40)
+var parseKeys = __webpack_require__(41)
 var randomBytes = __webpack_require__(21)
-var createHash = __webpack_require__(28)
-var mgf = __webpack_require__(151)
-var xor = __webpack_require__(152)
+var createHash = __webpack_require__(29)
+var mgf = __webpack_require__(149)
+var xor = __webpack_require__(150)
 var BN = __webpack_require__(71)
-var withPublic = __webpack_require__(153)
+var withPublic = __webpack_require__(151)
 var crt = __webpack_require__(63)
 var Buffer = __webpack_require__(2).Buffer
 
@@ -63234,22 +63064,22 @@ function nonZero (len) {
 
 
 /***/ }),
-/* 359 */
+/* 342 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 360 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parseKeys = __webpack_require__(40)
-var mgf = __webpack_require__(151)
-var xor = __webpack_require__(152)
+var parseKeys = __webpack_require__(41)
+var mgf = __webpack_require__(149)
+var xor = __webpack_require__(150)
 var BN = __webpack_require__(71)
 var crt = __webpack_require__(63)
-var createHash = __webpack_require__(28)
-var withPublic = __webpack_require__(153)
+var createHash = __webpack_require__(29)
+var withPublic = __webpack_require__(151)
 var Buffer = __webpack_require__(2).Buffer
 
 module.exports = function privateDecrypt (privateKey, enc, reverse) {
@@ -63351,7 +63181,7 @@ function compare (a, b) {
 
 
 /***/ }),
-/* 361 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63464,10 +63294,10 @@ function randomFillSync (buf, offset, size) {
   return actualFill(buf, offset, size)
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(3)))
 
 /***/ }),
-/* 362 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63475,7 +63305,7 @@ function randomFillSync (buf, offset, size) {
 
 var Buffer = __webpack_require__(2).Buffer;
 
-var getParamBytesForAlg = __webpack_require__(363);
+var getParamBytesForAlg = __webpack_require__(346);
 
 var MAX_OCTET = 0x80,
 	CLASS_UNIVERSAL = 0,
@@ -63661,7 +63491,7 @@ module.exports = {
 
 
 /***/ }),
-/* 363 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63691,16 +63521,16 @@ module.exports = getParamBytesForAlg;
 
 
 /***/ }),
-/* 364 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module*/
 var Buffer = __webpack_require__(2).Buffer;
-var DataStream = __webpack_require__(99);
-var jwa = __webpack_require__(104);
-var Stream = __webpack_require__(34);
-var toString = __webpack_require__(154);
-var util = __webpack_require__(36);
+var DataStream = __webpack_require__(97);
+var jwa = __webpack_require__(102);
+var Stream = __webpack_require__(35);
+var toString = __webpack_require__(152);
+var util = __webpack_require__(37);
 var JWS_REGEX = /^[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)?$/;
 
 function isObject(thing) {
@@ -63817,15 +63647,15 @@ module.exports = VerifyStream;
 
 
 /***/ }),
-/* 365 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var JsonWebTokenError = __webpack_require__(41);
-var NotBeforeError    = __webpack_require__(155);
-var TokenExpiredError = __webpack_require__(156);
-var decode            = __webpack_require__(98);
-var timespan          = __webpack_require__(157);
-var PS_SUPPORTED      = __webpack_require__(158);
+var JsonWebTokenError = __webpack_require__(42);
+var NotBeforeError    = __webpack_require__(153);
+var TokenExpiredError = __webpack_require__(154);
+var decode            = __webpack_require__(96);
+var timespan          = __webpack_require__(155);
+var PS_SUPPORTED      = __webpack_require__(156);
 var jws               = __webpack_require__(49);
 
 var PUB_KEY_ALGS = ['RS256', 'RS384', 'RS512', 'ES256', 'ES384', 'ES512'];
@@ -64048,7 +63878,7 @@ module.exports = function (jwtString, secretOrPublicKey, options, callback) {
 
 
 /***/ }),
-/* 366 */
+/* 349 */
 /***/ (function(module, exports) {
 
 /**
@@ -64216,7 +64046,7 @@ function plural(ms, msAbs, n, name) {
 
 
 /***/ }),
-/* 367 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {exports = module.exports = SemVer
@@ -65706,19 +65536,19 @@ function coerce (version) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 368 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var timespan = __webpack_require__(157);
-var PS_SUPPORTED = __webpack_require__(158);
+/* WEBPACK VAR INJECTION */(function(Buffer) {var timespan = __webpack_require__(155);
+var PS_SUPPORTED = __webpack_require__(156);
 var jws = __webpack_require__(49);
-var includes = __webpack_require__(369);
-var isBoolean = __webpack_require__(370);
-var isInteger = __webpack_require__(371);
-var isNumber = __webpack_require__(372);
-var isPlainObject = __webpack_require__(373);
-var isString = __webpack_require__(374);
-var once = __webpack_require__(375);
+var includes = __webpack_require__(352);
+var isBoolean = __webpack_require__(353);
+var isInteger = __webpack_require__(354);
+var isNumber = __webpack_require__(355);
+var isPlainObject = __webpack_require__(356);
+var isString = __webpack_require__(357);
+var once = __webpack_require__(358);
 
 var SUPPORTED_ALGS = ['RS256', 'RS384', 'RS512', 'ES256', 'ES384', 'ES512', 'HS256', 'HS384', 'HS512', 'none']
 if (PS_SUPPORTED) {
@@ -65919,7 +65749,7 @@ module.exports = function (payload, secretOrPrivateKey, options, callback) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
 
 /***/ }),
-/* 369 */
+/* 352 */
 /***/ (function(module, exports) {
 
 /**
@@ -66670,7 +66500,7 @@ module.exports = includes;
 
 
 /***/ }),
-/* 370 */
+/* 353 */
 /***/ (function(module, exports) {
 
 /**
@@ -66746,7 +66576,7 @@ module.exports = isBoolean;
 
 
 /***/ }),
-/* 371 */
+/* 354 */
 /***/ (function(module, exports) {
 
 /**
@@ -67017,7 +66847,7 @@ module.exports = isInteger;
 
 
 /***/ }),
-/* 372 */
+/* 355 */
 /***/ (function(module, exports) {
 
 /**
@@ -67102,7 +66932,7 @@ module.exports = isNumber;
 
 
 /***/ }),
-/* 373 */
+/* 356 */
 /***/ (function(module, exports) {
 
 /**
@@ -67247,7 +67077,7 @@ module.exports = isPlainObject;
 
 
 /***/ }),
-/* 374 */
+/* 357 */
 /***/ (function(module, exports) {
 
 /**
@@ -67348,7 +67178,7 @@ module.exports = isString;
 
 
 /***/ }),
-/* 375 */
+/* 358 */
 /***/ (function(module, exports) {
 
 /**
@@ -67648,15 +67478,15 @@ module.exports = once;
 
 
 /***/ }),
-/* 376 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(9);
-var bind = __webpack_require__(159);
-var Axios = __webpack_require__(378);
+var bind = __webpack_require__(157);
+var Axios = __webpack_require__(361);
 var defaults = __webpack_require__(73);
 
 /**
@@ -67690,15 +67520,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(163);
-axios.CancelToken = __webpack_require__(391);
-axios.isCancel = __webpack_require__(162);
+axios.Cancel = __webpack_require__(161);
+axios.CancelToken = __webpack_require__(374);
+axios.isCancel = __webpack_require__(160);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(392);
+axios.spread = __webpack_require__(375);
 
 module.exports = axios;
 
@@ -67707,7 +67537,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 377 */
+/* 360 */
 /***/ (function(module, exports) {
 
 /*!
@@ -67724,7 +67554,7 @@ module.exports = function isBuffer (obj) {
 
 
 /***/ }),
-/* 378 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67732,8 +67562,8 @@ module.exports = function isBuffer (obj) {
 
 var defaults = __webpack_require__(73);
 var utils = __webpack_require__(9);
-var InterceptorManager = __webpack_require__(386);
-var dispatchRequest = __webpack_require__(387);
+var InterceptorManager = __webpack_require__(369);
+var dispatchRequest = __webpack_require__(370);
 
 /**
  * Create a new instance of Axios
@@ -67810,7 +67640,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 379 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67829,13 +67659,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 380 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(161);
+var createError = __webpack_require__(159);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -67862,7 +67692,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 381 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67890,7 +67720,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 382 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67963,7 +67793,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 383 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68023,7 +67853,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 384 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68098,7 +67928,7 @@ module.exports = (
 
 
 /***/ }),
-/* 385 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68158,7 +67988,7 @@ module.exports = (
 
 
 /***/ }),
-/* 386 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68217,18 +68047,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 387 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(9);
-var transformData = __webpack_require__(388);
-var isCancel = __webpack_require__(162);
+var transformData = __webpack_require__(371);
+var isCancel = __webpack_require__(160);
 var defaults = __webpack_require__(73);
-var isAbsoluteURL = __webpack_require__(389);
-var combineURLs = __webpack_require__(390);
+var isAbsoluteURL = __webpack_require__(372);
+var combineURLs = __webpack_require__(373);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -68310,7 +68140,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 388 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68337,7 +68167,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 389 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68358,7 +68188,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 390 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68379,13 +68209,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 391 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(163);
+var Cancel = __webpack_require__(161);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -68443,7 +68273,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 392 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68475,6 +68305,180 @@ module.exports = function spread(callback) {
   };
 };
 
+
+/***/ }),
+/* 376 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var MaxmumSidebar=function(_Component){_inherits(MaxmumSidebar,_Component);function MaxmumSidebar(){_classCallCheck(this,MaxmumSidebar);return _possibleConstructorReturn(this,(MaxmumSidebar.__proto__||Object.getPrototypeOf(MaxmumSidebar)).apply(this,arguments));}_createClass(MaxmumSidebar,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-2 col-md-3 col-sm-10 col-xs-12",id:"sidebar1"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"bs-docs-sidebar sidebar-content hidden-xs hidden-sm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav nav-list sidebar bs-docs-sidenav affix-top"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dashboard","data-toggle":"pill",href:"https://www.betburger.com/profile#main"},"Dashboard")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"bookmakers","data-toggle":"pill",href:"https://www.betburger.com/profile#bookmakers"},"Bookmakers")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"exchanges","data-toggle":"pill",href:"https://www.betburger.com/profile#exchanges"},"Exchanges")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"currencies","data-toggle":"pill",href:"https://www.betburger.com/profile#currencies"},"Currencies")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"multifilter"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"multi","data-toggle":"pill",href:"https://www.betburger.com/profile#multi_filters"},"Multifilters")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"payments","data-toggle":"pill",href:"https://www.betburger.com/profile#payments"},"Payments")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"accounting","data-toggle":"pill",href:"https://www.betburger.com/profile#accounting"},"Accounting")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"password","data-toggle":"pill",href:"https://www.betburger.com/profile#settings_tab"},"Settings")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"api","data-toggle":"pill",href:"https://www.betburger.com/profile#api_tab"},"API"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"bitcoin-banners-cabinet"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/prices-api"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"",className:"img-responsive",src:"./myaccount/api_banner_bb-fcae8f07cbc06941f551a6f93c1e87357611e89a7adcaeb57a7d8d93c8bb9483.png"})))));}}]);return MaxmumSidebar;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (MaxmumSidebar);
+
+/***/ }),
+/* 377 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard_firstpart_js__ = __webpack_require__(378);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_secondpart_js__ = __webpack_require__(379);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Dashboard=function(_Component){_inherits(Dashboard,_Component);function Dashboard(){_classCallCheck(this,Dashboard);return _possibleConstructorReturn(this,(Dashboard.__proto__||Object.getPrototypeOf(Dashboard)).apply(this,arguments));}_createClass(Dashboard,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'active fade in tab-pane',id:'main'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'margin dashboardComponent',id:'cta'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert hidden flashAlert forAlerts',role:'alert',style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-hidden':'true',className:'glyphicon glyphicon-exclamation-sign'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert alert-danger fade hide',style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-hidden':'true',className:'glyphicon glyphicon-exclamation-sign'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'page-header title font'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h1',null,'My account'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{id:'margin-sm'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__dashboard_firstpart_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__dashboard_secondpart_js__["a" /* default */],null))));}}]);return Dashboard;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
+
+/***/ }),
+/* 378 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var DashboardFirstPart=function(_Component){_inherits(DashboardFirstPart,_Component);function DashboardFirstPart(){_classCallCheck(this,DashboardFirstPart);return _possibleConstructorReturn(this,(DashboardFirstPart.__proto__||Object.getPrototypeOf(DashboardFirstPart)).apply(this,arguments));}_createClass(DashboardFirstPart,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-sm-12 col-xs-12 feature",id:"isUnfrozen"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{id:"frozenAccount"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",null,"Account is frozen"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"During this time our service won\u2019t be available to you, but on resuming your subscription you will be able to use our service again. Your assets will stay untouched."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"counts row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"used"},"Used:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"0 day"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"left"},"Left:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"28 days")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row withForm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder col-static"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn btn-md btn-success",id:"unfreezButton",rel:"nofollow","data-method":"put",href:"https://www.betburger.com/profile/unfreeze"},"UnFreeze Account"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{acceptCharset:"UTF-8",action:"https://www.betburger.com/profile/freeze",id:"freezAccount",method:"post",onSubmit:"return false;"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"_method",type:"hidden",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"authenticity_token",type:"hidden",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",{className:"title-small"},"Freeze Account"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"You have an opportunity to \u201Cfreeze\u201D your subscription for a certain period during the year without losing any money.",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),"Minimum \u201Cfreezing\u201D period of your account is 1 week, maximum - 4 weeks.",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),"During this time our service won\u2019t be available to you, but on resuming your subscription you will be able to use our service again. Your assets will stay untouched."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-container"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"hide noFreezeAvailable row withForm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("b",null,"You have used all freezings")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"freezeFormAndCounts"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"counts row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"used"},"Used:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"0 day"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"left"},"Left:",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"count"},"28 days")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row withForm"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.dashboard.period"},"Period")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",_defineProperty({className:"freeze_days",id:"freeze_days"},"className","form-control"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"7"},"7 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"8"},"8 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"9"},"9 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"10"},"10 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"11"},"11 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"12"},"12 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"13"},"13 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"14"},"14 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"15"},"15 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"16"},"16 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"17"},"17 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"18"},"18 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"19"},"19 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"20"},"20 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"21"},"21 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"22"},"22 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"23"},"23 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"24"},"24 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"25"},"25 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"26"},"26 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"27"},"27 days"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"28"},"28 days"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-6"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn btn-md green",name:"commit",type:"submit",value:"Freeze Account"})))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"If you unfreeze your account before the stated time, you'll be additionally charged a one day subscription price."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped frozenLogs",id:"noRows"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{style:{width:"35%"}},"Frozen At"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Frozen Till"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Unfrozen At"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null)));}}]);return DashboardFirstPart;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (DashboardFirstPart);
+
+/***/ }),
+/* 379 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var DashboardSecondPart=function(_Component){_inherits(DashboardSecondPart,_Component);function DashboardSecondPart(){_classCallCheck(this,DashboardSecondPart);return _possibleConstructorReturn(this,(DashboardSecondPart.__proto__||Object.getPrototypeOf(DashboardSecondPart)).apply(this,arguments));}_createClass(DashboardSecondPart,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-sm-12 col-xs-12 feature"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",{className:"title-small"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.dashboard.my_subscription"},"My Subscription")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"active tab-pane",id:"main"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder paidInfo"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav nav-tabs paid-info-tabs",role:"tablist"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active",role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"arbsSubscription","data-toggle":"tab",href:"https://www.betburger.com/profile#arbsSubscription",role:"tab"},"Surebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"valuebetsSubscription","data-toggle":"tab",href:"https://www.betburger.com/profile#valuebetsSubscription",role:"tab"},"Valuebets"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-content"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane active fade in",id:"arbsSubscription",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped payment-info-table"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",null,"Package")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Pay Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Active till")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Prematch 30"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("time",{dateTime:"2020-10-30T07:20:45Z","data-local":"time","data-format":"%Y-%m-%d %H:%M:%S",title:"October 30, 2020 at 10:20am MST","data-localized":"","aria-label":"2020-10-30 10:20:45"},"2020-10-30 10:20:45")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"liveArbsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Free"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"liveArbsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn green btn-md marginTop10-xs",href:"https://www.betburger.com/prices?live_tariff_id=169&prematch_tariff_id=20"},"Extend subscription")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"valuebetsSubscription",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped payment-info-table"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",null,"Package")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Pay Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Active till")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Free"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"prematchValuebetsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"with_paid_info"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,"Free"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"liveValuebetsPaidTill","data-format":"YYYY-MM-DD HH:mm:ss","data-time":"0"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong",{className:"text-danger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"translation_missing",title:"translation missing: en.tariff.Not Payed"},"Not Payed")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn green btn-md marginTop10-xs",href:"https://www.betburger.com/prices-valuebets"},"Change subscription"))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3",{className:"title-small"},"Promo Codes"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"active tab-pane",id:"main"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder paidInfo promo-code"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{onSubmit:"return false;",className:"form-horizontal promocode-form",role:"form",action:"https://www.betburger.com/profile/promocode",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{colSpan:"2"},"Input your promocode for bonus / subscription activation")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"text",name:"promocode",id:"promocode",value:"",className:"form-control",style:{font_size:"small"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"with_active_button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{className:"btn green btn-md marginTop10-xs"},"Activate code")))))))));}}]);return DashboardSecondPart;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (DashboardSecondPart);
+
+/***/ }),
+/* 380 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var MultiFilter=function(_Component){_inherits(MultiFilter,_Component);function MultiFilter(){_classCallCheck(this,MultiFilter);return _possibleConstructorReturn(this,(MultiFilter.__proto__||Object.getPrototypeOf(MultiFilter)).apply(this,arguments));}_createClass(MultiFilter,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"fade tab-pane",id:"multi_filters"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"margin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert hidden staticTop",role:"alert"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert hidden flashAlert",role:"alert"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,"Multifilters"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav nav-tabs",role:"tablist"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"active",role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"prematchMultiFilters","data-toggle":"tab",href:"https://www.betburger.com/profile#prematchMultiFilters",role:"tab"},"Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"liveMultiFilters","data-toggle":"tab",href:"https://www.betburger.com/profile#liveMultiFilters",role:"tab"},"Live")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{role:"presentation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-controls":"valuebetFilters","data-toggle":"tab",href:"https://www.betburger.com/profile#valuebetFilters",role:"tab"},"Valuebet"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-content"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane active fade in",id:"prematchMultiFilters",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"ID"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"width200"},"Filter Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Edit"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Delete"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_411062"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"411062"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/prematch/411062/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder right addFilter"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue","data-type":"prematch","data-singe_filter":"false",name:"commit",type:"button",value:"Add filter"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"liveMultiFilters",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"ID"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"width200"},"Filter Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Edit"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Delete"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_370063"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"370063"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/live/370063/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue addFilter","data-type":"live","data-singe_filter":"false",name:"commit",type:"button",value:"Add filter"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"valuebetFilters",role:"tabpanel"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"ID"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"width200"},"Filter Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Type"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Edit"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",{className:"settings"},"Delete"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",{id:"valuebet-live"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_102591"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"102591"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"Live")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/live/102591/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",{id:"valuebet-prematch"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",{className:"multi_116271"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"filterId"},"116271"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"width200 bold filterTitle"},"default"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{"data-format":"MMMM DD, YYYY HH:mm","data-time":"1604064395"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"October 30, 2020 16:26")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-edit filter-edit",href:"https://www.betburger.com/multi_filters/prematch/116271/edit",title:"edit"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"edit-icon"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{className:"settings"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"ico-delete filter-delete","data-confirm":"Are you sure?","data-method":"delete","data-remote":"true",href:"https://www.betburger.com/profile#",rel:"nofollow"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"delete-icon"}))))))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"btn-holder right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn green addFilter","data-type":"valuebet-prematch","data-singe_filter":"false",name:"commit",type:"button",value:"Add Prematch filter"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue addFilter","data-type":"valuebet-live","data-singe_filter":"false",name:"commit",type:"button",value:"Add Live filter"})))))));}}]);return MultiFilter;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (MultiFilter);
+
+/***/ }),
+/* 381 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Payments=function(_Component){_inherits(Payments,_Component);function Payments(){_classCallCheck(this,Payments);return _possibleConstructorReturn(this,(Payments.__proto__||Object.getPrototypeOf(Payments)).apply(this,arguments));}_createClass(Payments,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"payments"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"margin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert alert-danger fade hide",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,"Payments")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"table-responsive"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("table",{className:"table table-striped",id:"profilePayments"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Date"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Payment Details"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Payment Method"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null,"Amount"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th",null))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td",{colSpan:"5",style:{text_align:"center"}},"You have never paid for our services.")))))))));}}]);return Payments;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Payments);
+
+/***/ }),
+/* 382 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Accounting=function(_Component){_inherits(Accounting,_Component);function Accounting(){_classCallCheck(this,Accounting);return _possibleConstructorReturn(this,(Accounting.__proto__||Object.getPrototypeOf(Accounting)).apply(this,arguments));}_createClass(Accounting,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"accounting"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert alert-danger fade hide",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"Accounting"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icomoon-expand toggle-screen-size"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"Accessable for paid users only")));}}]);return Accounting;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Accounting);
+
+/***/ }),
+/* 383 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__settings_js__ = __webpack_require__(384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personalsettings_js__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__changecurrent_js__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__loginbutton_js__ = __webpack_require__(387);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Setting=function(_Component){_inherits(Setting,_Component);function Setting(){_classCallCheck(this,Setting);return _possibleConstructorReturn(this,(Setting.__proto__||Object.getPrototypeOf(Setting)).apply(this,arguments));}_createClass(Setting,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'tab-pane fade',id:'settings_tab'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'margin',id:'cta'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert hidden flashAlert forAlerts',role:'alert'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-hidden':'',className:'glyphicon glyphicon-exclamation-sign'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'alert alert-danger fade flashAlert hide'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'close','data-dismiss':'alert'},'\xD7'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9 col-sm-12 col-xs-12'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'page-header title font'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h1',null,'Settings')))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'col-lg-10 col-md-9'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__settings_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__personalsettings_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__changecurrent_js__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__loginbutton_js__["a" /* default */],null)));}}]);return Setting;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Setting);
+
+/***/ }),
+/* 384 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Settings=function(_Component){_inherits(Settings,_Component);function Settings(){_classCallCheck(this,Settings);return _possibleConstructorReturn(this,(Settings.__proto__||Object.getPrototypeOf(Settings)).apply(this,arguments));}_createClass(Settings,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"package settings row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group direct_link_content info-holder col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"locale_en with_description",htmlFor:"#"},"Use a direct link"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"small"},"(Remove the checkmark if you do not want to move on to the bookmaker automatically)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"open-direct-links",action:"https://www.betburger.com/profile/direct_link",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"checkbox",name:"open_direct_links",id:"open_direct_links",value:"1",checked:"checked"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group zoom_content info-holder col-sm-6 col-md-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"#"},"Zoom settings"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"small"},"(Applying on arbs page)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"update-zoom",action:"https://www.betburger.com/profile/zoom",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",{name:"zoom",id:"zoom_settings",className:"form-control"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{selected:"selected",value:"100"},"100%"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"110"},"110%"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"120"},"120%")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group koef_format_content info-holder col-sm-6 col-md-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"#"},"Odds type"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i",{className:"small"},"(Applying on arbs page)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"update-koef-format",action:"https://www.betburger.com/profile/koef_format",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",{name:"koef_format",id:"koef_format_settings",className:"form-control"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{selected:"selected",value:"decimal"},"Decimal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{value:"hongkong"},"Hong Kong")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group email_me_content info-holder col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-labels with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"locale_en",htmlFor:"#"},"Get email notifications on promos, discounts and news")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-6 col-xs-12 text-left"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{id:"email_me_form",action:"https://www.betburger.com/profile/email_me",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"checkbox",name:"email_me",id:"email_me",value:"1",checked:"checked"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Loading...",className:"preLoading",src:"data:image/gif;base64,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",style:{display:"none"}}))))));}}]);return Settings;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Settings);
+
+/***/ }),
+/* 385 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var PersonalSettings=function(_Component){_inherits(PersonalSettings,_Component);function PersonalSettings(){_classCallCheck(this,PersonalSettings);return _possibleConstructorReturn(this,(PersonalSettings.__proto__||Object.getPrototypeOf(PersonalSettings)).apply(this,arguments));}_createClass(PersonalSettings,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"change-password-title"},"Personal Settings"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr",{className:"password-form-hr"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"editUserPersonal row",id:"edit_user",action:"https://www.betburger.com/profile/personal_settings",acceptCharset:"UTF-8","data-remote":"true",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 required"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"user_full_name"},"Full Name"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"enter your surname and first name")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"form-control",value:"Alex K",type:"text",name:"user[full_name]",id:"user_full_name"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 required"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"user_country_id"},"Country"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"choose your country of permanent residence")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select",{className:"form-control",disabled:"disabled",value:"28",name:"user[country_id]",id:"user_country_id"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"123"},"Afghanistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"74"},"Albania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"92"},"Algeria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"124"},"American Samoa"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"116"},"Andorra"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"125"},"Angola"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"205"},"Anguilla"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"126"},"Antigua and Barbuda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"30"},"Argentina"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"31"},"Armenia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"127"},"Aruba"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"33"},"Australia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"24"},"Austria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"34"},"Azerbaijan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"128"},"Bahamas"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"98"},"Bahrain"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"118"},"Bangladesh"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"129"},"Barbados"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"35"},"Belarus"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"21"},"Belgium"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"130"},"Belize"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"131"},"Benin"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"132"},"Bermuda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"133"},"Bhutan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"36"},"Bolivia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"75"},"Bosnia-Herzegovina"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"134"},"Botswana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"3"},"Brazil"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"135"},"British Virgin Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"206"},"Brunei Darussalam"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"37"},"Bulgaria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"136"},"Burkina Faso"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"137"},"Burundi"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"138"},"Cambodia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"38"},"Cameroon"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"39"},"Canada"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"139"},"Cape Verde Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"140"},"Cayman Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"207"},"Central African Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"208"},"Chad"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"40"},"Chile"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"41"},"China PR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"141"},"Chinese Taipei"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"42"},"Colombia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"209"},"Comoros"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"143"},"Congo"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"142"},"Congo DR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"144"},"Cook Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"43"},"Costa Rica"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"44"},"Croatia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"120"},"Cuba"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"145"},"Cura\xE7ao"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"26"},"Cyprus"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"45"},"Czech Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"146"},"C\xF4te d'Ivoire"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"4"},"Denmark"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"147"},"Djibouti"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"210"},"Dominica"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"119"},"Dominican Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"46"},"Ecuador"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"99"},"Egypt"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"47"},"El Salvador"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"5"},"England"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"211"},"Equatorial Guinea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"212"},"Eritrea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"48"},"Estonia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"148"},"Ethiopia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"94"},"Faroe Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"149"},"Fiji"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"22"},"Finland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"10"},"France"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"150"},"French Guiana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"151"},"Gabon"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"152"},"Gambia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"95"},"Georgia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"6"},"Germany"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"113"},"Ghana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"213"},"Gibraltar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"109"},"Great Britain"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"25"},"Greece"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"153"},"Grenada"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"154"},"Guadeloupe"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"155"},"Guam"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"50"},"Guatemala"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"215"},"Guinea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"214"},"Guinea-Bissau"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"156"},"Guyana"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"157"},"Haiti"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"51"},"Honduras"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"90"},"Hong Kong"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"52"},"Hungary"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"12"},"Iceland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"108"},"India"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"104"},"Indonesia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"53"},"Iran"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"105"},"Iraq"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"78"},"Ireland Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"54"},"Israel"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"2"},"Italy"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"110"},"Jamaica"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"19"},"Japan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"93"},"Jordan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"55"},"Kazakhstan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"158"},"Kenya"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"216"},"Kiribati"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"217"},"Korea DPR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"159"},"Korea Republic"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"84"},"Kuwait"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"160"},"Kyrgyzstan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"56"},"Latvia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"117"},"Lebanon"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"161"},"Lesotho"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"219"},"Liberia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"162"},"Libya"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"220"},"Liechtenstein"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"13"},"Lithuania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"57"},"Luxembourg"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"122"},"Macao"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"49"},"Macedonia FYR"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"163"},"Madagascar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"164"},"Malawi"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"86"},"Malaysia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"165"},"Maldives"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"166"},"Mali"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"58"},"Malta"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"167"},"Martinique"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"168"},"Mauritania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"169"},"Mauritius"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"221"},"Mayotte"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"59"},"Mexico"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"23"},"Moldova"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"236"},"Monaco"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"170"},"Mongolia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"88"},"Montenegro"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"222"},"Montserrat"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"96"},"Morocco"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"171"},"Mozambique"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"172"},"Myanmar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"173"},"Namibia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"174"},"Nepal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"15"},"Netherlands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"237"},"Netherlands Antilles"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"175"},"New Caledonia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"114"},"New Zealand"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"176"},"Nicaragua"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"177"},"Niger"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"178"},"Nigeria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"223"},"Northern Mariana Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"60"},"Norway"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"106"},"Oman"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"102"},"Pakistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"179"},"Palestine"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"101"},"Panama"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"180"},"Papua New Guinea"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"61"},"Paraguay"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"62"},"Peru"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"112"},"Philippines"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"63"},"Poland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"27"},"Portugal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"181"},"Puerto Rico"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"97"},"Qatar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"65"},"Romania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",selected:"selected",value:"28"},"Russia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"183"},"Rwanda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"225"},"Samoa"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"115"},"San Marino"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"193"},"Sao Tome and Principe"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"87"},"Saudi Arabia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"14"},"Scotland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"184"},"Senegal"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"66"},"Serbia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"185"},"Seychelles"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"186"},"Sierra Leone"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"89"},"Singapore"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"227"},"Sint Maarten"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"16"},"Slovakia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"67"},"Slovenia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"187"},"Solomon Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"228"},"Somalia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"68"},"South Africa"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"229"},"South Sudan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"7"},"Spain"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"188"},"Sri Lanka"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"189"},"St. Kitts and Nevis"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"230"},"St. Lucia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"231"},"St. Vincent and the Grenadines"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"111"},"Sudan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"190"},"Suriname"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"191"},"Swaziland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"true",value:"17"},"Sweden"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"8"},"Switzerland"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"192"},"Syria"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"238"},"Taiwan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"103"},"Tajikistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"195"},"Tanzania"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"69"},"Thailand"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"232"},"Timor-Leste"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"196"},"Togo"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"233"},"Tonga"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"197"},"Trinidad and Tobago"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"91"},"Tunisia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"70"},"Turkey"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"198"},"Turkmenistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"199"},"Turks and Caicos Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"200"},"Tuvalu"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"83"},"UAE"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"234"},"US Virgin Islands"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"18"},"USA"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"201"},"Uganda"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"71"},"Ukraine"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"82"},"Uruguay"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"85"},"Uzbekistan"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"202"},"Vanuatu"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"72"},"Venezuela"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"73"},"Vietnam"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"9"},"Wales"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"81"},"Yemen"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"203"},"Zambia"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"235"},"Zanzibar"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option",{"data-eur":"false",value:"204"},"Zimbabwe")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group conform col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-10 col-xs-12 text-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue",name:"commit",type:"submit",value:"Update"}))))));}}]);return PersonalSettings;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (PersonalSettings);
+
+/***/ }),
+/* 386 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Dashboard=function(_Component){_inherits(Dashboard,_Component);function Dashboard(){_classCallCheck(this,Dashboard);return _possibleConstructorReturn(this,(Dashboard.__proto__||Object.getPrototypeOf(Dashboard)).apply(this,arguments));}_createClass(Dashboard,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"change-password-title"},"Change the current email/password"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr",{className:"password-form-hr"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"editUserInfo row",id:"edit_betburger_user_106424",action:"https://www.betburger.com/users",acceptCharset:"UTF-8",method:"post"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{name:"utf8",type:"hidden",value:"\u2713"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"put"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 no-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"betburger_user_email"},"Email")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoFocus:"autofocus",className:"form-control",value:"alex1992818@outlook.com",type:"text",name:"betburger_user[email]",id:"betburger_user_email"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 current-password-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"betburger_user_current_password"},"Current Password"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"(we need your current password to confirm your changes)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoComplete:"off",className:"form-control",type:"password",name:"betburger_user[current_password]",id:"betburger_user_current_password"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group col-sm-6 col-md-12 new-password-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 with-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{className:"with_description",htmlFor:"betburger_user_password"},"New password"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"small"},"(leave blank if you don't want to change it)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoComplete:"off",className:"form-control",type:"password",name:"betburger_user[password]",id:"betburger_user_password"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group conform col-sm-6 col-md-12 password-confirmation-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 no-desc"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label",{htmlFor:"betburger_user_password_confirmation"},"Password confirmation")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-5 col-xs-12 setting_input"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{autoComplete:"off",className:"form-control",type:"password",name:"betburger_user[password_confirmation]",id:"betburger_user_password_confirmation"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"help-block hidden"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"info-holder form-group conform col-xs-12 password-update-holder"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-10 col-xs-12 text-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{className:"btn blue",name:"commit",type:"submit",value:"Update"}))))));}}]);return Dashboard;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Dashboard);
+
+/***/ }),
+/* 387 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var LoginButton=function(_Component){_inherits(LoginButton,_Component);function LoginButton(){_classCallCheck(this,LoginButton);return _possibleConstructorReturn(this,(LoginButton.__proto__||Object.getPrototypeOf(LoginButton)).apply(this,arguments));}_createClass(LoginButton,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"change-password-title"},"Betfair login"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row betfair-section-js"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr",{className:"password-form-hr"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9 col-sm-12 col-xs-12 betfair-section-css"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn btn-md green",href:"https://identitysso.betfair.com/view/vendor-login?client_id=51006&response_type=code&redirect_uri=betfair_token&rfr=29017&PI=29017&pi=partner29017"},"Betfair login"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-10 header"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"section"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4",{className:"text-center"},"Unhappy?"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"picture margin20"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"services2",className:"img-responsive",src:"./myaccount/denied-093234a6f5d2ce89542553f4990e453f9cb0250dd16b02b2c9b19be89aee07bc.png"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"text-center"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"button_to",method:"post",action:"https://www.betburger.com/users"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"_method",value:"delete"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{"data-confirm":"Are you sure?",className:"btn red-btn",type:"submit",value:"Delete my account"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"hidden",name:"authenticity_token",value:"GB0GDkXPyERGrgiKCS6rrNks71A1zfi+YtpiRh1d8RPxty3GUy4j2hOTrd7uqr6JN9g/h44BiunOw6IcaK8WGg=="}))))));}}]);return LoginButton;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (LoginButton);
+
+/***/ }),
+/* 388 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var MyAccApi=function(_Component){_inherits(MyAccApi,_Component);function MyAccApi(){_classCallCheck(this,MyAccApi);return _possibleConstructorReturn(this,(MyAccApi.__proto__||Object.getPrototypeOf(MyAccApi)).apply(this,arguments));}_createClass(MyAccApi,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"tab-pane fade",id:"api_tab"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"margin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-lg-10 col-md-9"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"page-header title font"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1",null,"API")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-12 col-sm-12 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form",{className:"form-inline"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"form-group"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"input-group"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"input-group-addon"},"Your API token:"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{type:"text",name:"token",id:"token",disabled:"disabled",className:"form-control",placeholder:"You need to buy a subscription to access the API",size:"60"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn btn-primary",href:"https://www.betburger.com/prices"},"Tariffs")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row mb-25"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert hidden flashAlert forAlerts",role:"alert",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"alert alert-danger fade hide",style:{margin_top:"10px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-hidden":"true",className:"glyphicon glyphicon-exclamation-sign"})))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row mb-25"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-8 col-sm-8 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"API is a way to fetch hundreds of surebets per minute automatically. You can find out more here:"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{target:"_blank",href:"https://www.betburger.com/prices-api"},"Check out our API product page")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{target:"_blank",href:"https://www.betburger.com/manual/how-to-deal-with-api"},"Read through a data request sample article")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"Swagger documentation: ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-lv.betburger.com/doc.html",target:"_blank"},"Live surebets"),", ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-pr.betburger.com/doc.html",target:"_blank"},"Prematch surebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{target:"_blank",href:"https://www.betburger.com/terms"},"See our terms of use")))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"row"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"col-md-8 col-sm-8 col-xs-12"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"red"},"IMPORTANT!"),"This is your own private token. Do not share it with anyone!"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p",null,"If you need help and reading the documentation (",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-lv.betburger.com/doc.html",target:"_blank"},"live"),", ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://rest-api-pr.betburger.com/doc.html",target:"_blank"},"prematch"),") didn\u2019t answer your question, ",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/contact"},"submit a support ticket here"),"."))))));}}]);return MyAccApi;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (MyAccApi);
+
+/***/ }),
+/* 389 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__valuebets_valuebet_header__ = __webpack_require__(390);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var ValueBets=function(_Component){_inherits(ValueBets,_Component);function ValueBets(){_classCallCheck(this,ValueBets);return _possibleConstructorReturn(this,(ValueBets.__proto__||Object.getPrototypeOf(ValueBets)).apply(this,arguments));}_createClass(ValueBets,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{id:'valuebet'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__valuebets_valuebet_header__["a" /* default */],null));}}]);return ValueBets;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (ValueBets);
+
+/***/ }),
+/* 390 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var ValueBetHeader=function(_Component){_inherits(ValueBetHeader,_Component);function ValueBetHeader(){_classCallCheck(this,ValueBetHeader);return _possibleConstructorReturn(this,(ValueBetHeader.__proto__||Object.getPrototypeOf(ValueBetHeader)).apply(this,arguments));}_createClass(ValueBetHeader,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"container relative"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"centerLogo text-center"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"searchByEvent"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"search-form"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"search-icon",style:{display:"inline"}}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input",{id:"search-input",placeholder:"Search events...",type:"text"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"logo"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"text"},"BetBurger"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav",{className:"navbar navbar-default topNavbar"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"container"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"navbar-header"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-controls":"navbar","aria-expanded":"false",className:"navbar-toggle collapsed","data-target":"#navbar","data-toggle":"collapse",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"sr-only"},"Toggle navigation"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"navbar-collapse collapse",id:"navbar"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav navbar-nav navbar-right"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"prematchNav"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/arbs"},"Surebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"valuebetsNav"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/valuebets"},"Valuebets")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"apiNav"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/api"},"API")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/prices-valuebets"},"Pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/help"},"Help Center")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/profile"},"My Account")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown language-select drop-lang"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{"aria-expanded":"false","aria-haspopup":"true",className:"dropdown-toggle drop-language-button","data-toggle":"dropdown",id:"drop-language",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"},"drop")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"drop-language",className:"dropdown-menu dropdown-language"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"actual",href:"https://www.betburger.com/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"English")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gb/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"en flags-lang"}),"Great Britain")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/es/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"es flags-lang"}),"Espa\xF1a")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/co/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"co flags-lang"}),"Colombia")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/de/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"de flags-lang"}),"Deutschland")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/at/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"at flags-lang"}),"\xD6sterreich")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gr/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"gr flags-lang"}),"\u0395\u03BB\u03BB\u03AC\u03B4\u03B1")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/it/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"it flags-lang"}),"Italy")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/fr/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"fr flags-lang"}),"France")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/pt/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"pt flags-lang"}),"Portugal")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/cn/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"cn flags-lang"}),"China")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/ro/valuebets"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"ro flags-lang"}),"Romania")))))))));}}]);return ValueBetHeader;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (ValueBetHeader);
+
+/***/ }),
+/* 391 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__main_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_part_compile__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_part_header__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_part_headerbody__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_part_First__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_part_second__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_part_Third__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_part_Four__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_part_Footer__ = __webpack_require__(164);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Home=function(_Component){_inherits(Home,_Component);function Home(){_classCallCheck(this,Home);return _possibleConstructorReturn(this,(Home.__proto__||Object.getPrototypeOf(Home)).apply(this,arguments));}_createClass(Home,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'pricing-surebets'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__home_part_compile__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'home-top'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__home_part_header__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_part_headerbody__["a" /* default */],null)),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('main',{className:'home-main'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__home_part_First__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__home_part_second__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__home_part_Third__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__home_part_Four__["a" /* default */],null)),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__home_part_Footer__["a" /* default */],null),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'containerForBlockMessage'}));}}]);return Home;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (Home);
+
+/***/ }),
+/* 392 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_actions_usersActions__ = __webpack_require__(27);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Header=function(_Component){_inherits(Header,_Component);function Header(){_classCallCheck(this,Header);return _possibleConstructorReturn(this,(Header.__proto__||Object.getPrototypeOf(Header)).apply(this,arguments));}_createClass(Header,[{key:'componentDidMount',value:function componentDidMount(){}},{key:'render',value:function render(){var _this2=this;console.log(this.props.isAuthenticated);var isAuthenticated=this.props.isAuthenticated;return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('header',{className:'header',style:{display:"block"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'header_inner',style:{border_bottom:"1px solid #777b80"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo',href:'/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../../assets/img/logo.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo-mobile',href:'/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../../assets/img/logo.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'navbar-header'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'navbar-toggle','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('nav',{className:'collapse navbar-collapse bs-navbar-collapse',role:'navigation'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'text-center visible-sm visible-xs'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'bs-navbar-collapse__toggle glyphicon glyphicon-remove','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'nav-list-white'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'arbs_dropdown',type:'button'},' Surebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'arbs_dropdown',className:'dropdown-menu dropdown-profile dropdownhover-bottom'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/pricing'},'Surebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'valuebets_dropdown',type:'button'},'Valuebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'valuebets_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-valuebets'},'Valuebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets'},'Valuebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets/live'},'Valuebets Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle logo_white','data-hover':'dropdown','data-toggle':'dropdown',id:'api_dropdown',type:'button'},'API'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'api_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-api'},'API pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api'},'API Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api/live'},'API Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:''},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/help'},'Help Center')),isAuthenticated==true&&__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'signup logo_white ',href:'/public'},'My Account'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'actions'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown language-select drop-lang lang-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-expanded':'false','aria-haspopup':'true',className:'lang-btn dropdown-toggle drop-language-button','data-toggle':'dropdown',id:'drop-language',type:'button',style:{width:"24px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'English',src:'../../assets/img/en.png'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'drop-language',className:'dropdown-menu dropdown-language'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'actual',href:'https://www.betburger.com/'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'English',src:'../../assets/img/en.png'}),'English'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gb'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Great Britain',src:'../../assets/img/gb.png'}),'Great Britain'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/es'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Espa\xF1a',src:'../../assets/img/es.png'}),'Espa\xF1a'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/co'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Colombia',src:'../../assets/img/co.png'}),'Colombia'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/de'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Deutschland',src:'../../assets/img/de.png'}),'Deutschland'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/at'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'\xD6sterreich',src:'../../assets/img/at.png'}),'\xD6sterreich'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gr'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1',src:'../../assets/img/gr.png'}),'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/it'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Italy',src:'../../assets/img/it.png'}),'Italy'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/fr'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'France',src:'../../assets/img/fr.png'}),'France'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/pt'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Portugal',src:'../../assets/img/pt.png'}),'Portugal'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/cn'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'China',src:'../../assets/img/cn.png'}),'China'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/ro'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Romania',src:'../../assets/img/ro.png'}),'Romania'))))),isAuthenticated==true&&__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'signin'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'btn green-btn',href:'javascript:void(0)',onClick:function onClick(){return _this2.props.userLogoutRequest();}},'Sign out')),isAuthenticated==false&&__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'signin'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'btn green-btn',href:'/signin'},'Login'))))));}}]);return Header;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);Header.propTypes={userLogoutRequest:__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,is_session:__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired};var mapDispatchToProps={userLogoutRequest:__WEBPACK_IMPORTED_MODULE_3__store_actions_usersActions__["c" /* userLogoutRequest */],is_session:__WEBPACK_IMPORTED_MODULE_3__store_actions_usersActions__["a" /* is_session */]};var mapStateToProps=function mapStateToProps(state){return{isAuthenticated:state.users.isAuthenticated};};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps,mapDispatchToProps)(Header));
 
 /***/ }),
 /* 393 */
@@ -68553,7 +68557,9 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var PricingHeader=function(_Component){_inherits(PricingHeader,_Component);function PricingHeader(){_classCallCheck(this,PricingHeader);return _possibleConstructorReturn(this,(PricingHeader.__proto__||Object.getPrototypeOf(PricingHeader)).apply(this,arguments));}_createClass(PricingHeader,[{key:"render",value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header",{className:"header",style:{display:"block"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"container"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"header_inner"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{alt:"Arbitrage betting service \u21161",className:"logo",href:"/",title:"BetBurger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"BETBURGER",src:"../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{alt:"Arbitrage betting service \u21161",className:"logo-mobile",href:"/",title:"BetBurger"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"BETBURGER",src:"../assets/img/bb-logo_without_background-7fb9aef50ec414c4da763d9789adcef46655dfc6aa31636824146d7de3d3b8c0.svg"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"navbar-header"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button",{className:"navbar-toggle","data-target":".bs-navbar-collapse","data-toggle":"collapse",type:"button"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"icon-bar"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav",{className:"collapse navbar-collapse bs-navbar-collapse",role:"navigation"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"text-center visible-sm visible-xs"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"bs-navbar-collapse__toggle glyphicon glyphicon-remove","data-target":".bs-navbar-collapse","data-toggle":"collapse",type:"button"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"nav-list-white"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown profile-dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-expanded":"false","aria-haspopup":"true",className:"account dropdown-toggle","data-hover":"dropdown","data-toggle":"dropdown",id:"arbs_dropdown",type:"button"},"Surebets"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"arbs_dropdown",className:"dropdown-menu dropdown-profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"user-menu"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"/pricing"},"Surebets pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"/bet"},"Surebets Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"/bet"},"Surebets Live")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown profile-dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-expanded":"false","aria-haspopup":"true",className:"account dropdown-toggle","data-hover":"dropdown","data-toggle":"dropdown",id:"valuebets_dropdown",type:"button"},"Valuebets"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"valuebets_dropdown",className:"dropdown-menu dropdown-profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"user-menu"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/prices-valuebets"},"Valuebets pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/valuebets"},"Valuebets Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/valuebets/live"},"Valuebets Live")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown profile-dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{"aria-expanded":"false","aria-haspopup":"true",className:"account dropdown-toggle","data-hover":"dropdown","data-toggle":"dropdown",id:"api_dropdown",type:"button"},"API"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"api_dropdown",className:"dropdown-menu dropdown-profile"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{className:"user-menu"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/prices-api"},"API pricing")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/api"},"API Prematch")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:"dropdown-item"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"dropdown-item",href:"https://www.betburger.com/api/live"},"API Live")))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",{className:""},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{href:"https://www.betburger.com/help"},"Help Center")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"signup  ",href:"/public"},"My Account"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"actions"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"dropdown language-select drop-lang lang-dropdown"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{"aria-expanded":"false","aria-haspopup":"true",className:"lang-btn dropdown-toggle drop-language-button","data-toggle":"dropdown",id:"drop-language",type:"button",style:{width:"24px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"English",src:"../assets/img/en-e9ca840a7fc16c0ce06d06c817a3460df10b970e31cd4697d3f1ecc163fba92b.png"}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul",{"aria-labelledby":"drop-language",className:"dropdown-menu dropdown-language"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"actual",href:"https://www.betburger.com/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"English",src:"../assets/img/en-e9ca840a7fc16c0ce06d06c817a3460df10b970e31cd4697d3f1ecc163fba92b.png"}),"English"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gb/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Great Britain",src:"../assets/img/gb-e9ca840a7fc16c0ce06d06c817a3460df10b970e31cd4697d3f1ecc163fba92b.png"}),"Great Britain"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/es/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Espa\xF1a",src:"../assets/img/es-3368be81f289225c6ca5a6d335f8c055d05b3f2b59a19103f5077af330ae4d55.png"}),"Espa\xF1a"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/co/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Colombia",src:"../assets/img/co-dcf94d097e684aa60acc5068600748d50bfdbf63a896750adeb5997e04e22db7.png"}),"Colombia"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/de/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Deutschland",src:"../assets/img/de-f7e8aeb27601678f9e8192d62035d82209426ff62740f9702253b49772ac6901.png"}),"Deutschland"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/at/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"\xD6sterreich",src:"../assets/img/at-14402110ba1c4368bd35f6561dc8c4aa37ec59ab752e088f528b539dd7874f69.png"}),"\xD6sterreich"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/gr/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"\u0395\u03BB\u03BB\u03AC\u03B4\u03B1",src:"../assets/img/gr-5997a84b33801a2d09679a78e48aac070ae9d4ccd682f8d44d021d6bc135557b.png"}),"\u0395\u03BB\u03BB\u03AC\u03B4\u03B1"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/it/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Italy",src:"../assets/img/it-58389b130f3ce74d5ffeca1502c644e7294c61a4b5c775158545ebcf3b84a03a.png"}),"Italy"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/fr/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"France",src:"../assets/img/fr-2b1eb480699f5c7fc6e7a1180fe91ef9aeaced7520cb73386ece9e6a76717ccc.png"}),"France"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/pt/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Portugal",src:"../assets/img/pt-b5ca5c7a62ca3b505407218ba69459819c9895cea47d674ef1d3d59777d86a48.png"}),"Portugal"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/cn/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"China",src:"../assets/img/cn-eb3e887790c183b2823dbe6c10deca9fb813e5f58649cb3ac3d179179fdd912c.png"}),"China"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li",null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"notactual",href:"https://www.betburger.com/ro/prices"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",{className:"lang-btn__flag lang-btn_long"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"Romania",src:"../assets/img/ro-a3006c31b24994321cf426eb6a1ce4b842bfc67664df344e936824d56ac440d2.png"}),"Romania"))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"signin"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{className:"btn green-btn ",rel:"nofollow","data-method":"delete",href:"https://www.betburger.com/users/sign_out"},"Sign out"))))));}}]);return PricingHeader;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (PricingHeader);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__ = __webpack_require__(27);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var PricingHeader=function(_Component){_inherits(PricingHeader,_Component);function PricingHeader(){_classCallCheck(this,PricingHeader);return _possibleConstructorReturn(this,(PricingHeader.__proto__||Object.getPrototypeOf(PricingHeader)).apply(this,arguments));}_createClass(PricingHeader,[{key:'render',value:function render(){var _this2=this;return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('header',{className:'header',style:{display:"block"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'container'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'header_inner'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo',href:'/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo-mobile',href:'/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../assets/img/bb-logo_without_background-7fb9aef50ec414c4da763d9789adcef46655dfc6aa31636824146d7de3d3b8c0.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'navbar-header'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'navbar-toggle','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'icon-bar'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('nav',{className:'collapse navbar-collapse bs-navbar-collapse',role:'navigation'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'text-center visible-sm visible-xs'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'bs-navbar-collapse__toggle glyphicon glyphicon-remove','data-target':'.bs-navbar-collapse','data-toggle':'collapse',type:'button'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'nav-list-white'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle','data-hover':'dropdown','data-toggle':'dropdown',id:'arbs_dropdown',type:'button'},'Surebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'arbs_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/pricing'},'Surebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'/bet'},'Surebets Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle','data-hover':'dropdown','data-toggle':'dropdown',id:'valuebets_dropdown',type:'button'},'Valuebets'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'valuebets_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-valuebets'},'Valuebets pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets'},'Valuebets Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/valuebets/live'},'Valuebets Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown profile-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{'aria-expanded':'false','aria-haspopup':'true',className:'account dropdown-toggle','data-hover':'dropdown','data-toggle':'dropdown',id:'api_dropdown',type:'button'},'API'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'api_dropdown',className:'dropdown-menu dropdown-profile'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'user-menu'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/prices-api'},'API pricing')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api'},'API Prematch')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:'dropdown-item'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'dropdown-item',href:'https://www.betburger.com/api/live'},'API Live')))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',{className:''},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/help'},'Help Center')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'signup  ',href:'/public'},'My Account'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'actions'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'dropdown language-select drop-lang lang-dropdown'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{'aria-expanded':'false','aria-haspopup':'true',className:'lang-btn dropdown-toggle drop-language-button','data-toggle':'dropdown',id:'drop-language',type:'button',style:{width:"24px"}},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'English',src:'../assets/img/en-e9ca840a7fc16c0ce06d06c817a3460df10b970e31cd4697d3f1ecc163fba92b.png'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{'aria-labelledby':'drop-language',className:'dropdown-menu dropdown-language'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'actual',href:'https://www.betburger.com/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'English',src:'../assets/img/en-e9ca840a7fc16c0ce06d06c817a3460df10b970e31cd4697d3f1ecc163fba92b.png'}),'English'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gb/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Great Britain',src:'../assets/img/gb-e9ca840a7fc16c0ce06d06c817a3460df10b970e31cd4697d3f1ecc163fba92b.png'}),'Great Britain'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/es/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Espa\xF1a',src:'../assets/img/es-3368be81f289225c6ca5a6d335f8c055d05b3f2b59a19103f5077af330ae4d55.png'}),'Espa\xF1a'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/co/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Colombia',src:'../assets/img/co-dcf94d097e684aa60acc5068600748d50bfdbf63a896750adeb5997e04e22db7.png'}),'Colombia'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/de/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Deutschland',src:'../assets/img/de-f7e8aeb27601678f9e8192d62035d82209426ff62740f9702253b49772ac6901.png'}),'Deutschland'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/at/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'\xD6sterreich',src:'../assets/img/at-14402110ba1c4368bd35f6561dc8c4aa37ec59ab752e088f528b539dd7874f69.png'}),'\xD6sterreich'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/gr/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1',src:'../assets/img/gr-5997a84b33801a2d09679a78e48aac070ae9d4ccd682f8d44d021d6bc135557b.png'}),'\u0395\u03BB\u03BB\u03AC\u03B4\u03B1'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/it/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Italy',src:'../assets/img/it-58389b130f3ce74d5ffeca1502c644e7294c61a4b5c775158545ebcf3b84a03a.png'}),'Italy'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/fr/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'France',src:'../assets/img/fr-2b1eb480699f5c7fc6e7a1180fe91ef9aeaced7520cb73386ece9e6a76717ccc.png'}),'France'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/pt/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Portugal',src:'../assets/img/pt-b5ca5c7a62ca3b505407218ba69459819c9895cea47d674ef1d3d59777d86a48.png'}),'Portugal'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/cn/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'China',src:'../assets/img/cn-eb3e887790c183b2823dbe6c10deca9fb813e5f58649cb3ac3d179179fdd912c.png'}),'China'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li',null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'notactual',href:'https://www.betburger.com/ro/prices'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'lang-btn__flag lang-btn_long'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'Romania',src:'../assets/img/ro-a3006c31b24994321cf426eb6a1ce4b842bfc67664df344e936824d56ac440d2.png'}),'Romania'))))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'signin'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{className:'btn green-btn ',rel:'nofollow','data-method':'delete',href:'javascriptp:void(0)',onClick:function onClick(){return _this2.props.userLogoutRequest();}},'Sign out'))))));}}]);return PricingHeader;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);var mapDispatchToProps={userLogoutRequest:__WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__["c" /* userLogoutRequest */],is_session:__WEBPACK_IMPORTED_MODULE_2__store_actions_usersActions__["a" /* is_session */]};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(null,mapDispatchToProps)(PricingHeader));
 
 /***/ }),
 /* 401 */
@@ -79481,7 +79487,7 @@ return jQuery;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arbs_css__ = __webpack_require__(407);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arbs_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__arbs_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_part_compile__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_part_compile__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sure_part_header__ = __webpack_require__(408);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sure_part_Message1__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__sure_part_Message2__ = __webpack_require__(410);
@@ -79579,7 +79585,7 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_querystring__ = __webpack_require__(417);
@@ -79793,8 +79799,8 @@ var objectKeys = Object.keys || function (obj) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_actions_betActions__ = __webpack_require__(421);
 var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Sport1=function(_Component){_inherits(Sport1,_Component);function Sport1(){_classCallCheck(this,Sport1);return _possibleConstructorReturn(this,(Sport1.__proto__||Object.getPrototypeOf(Sport1)).call(this));// this.state = {
@@ -79810,10 +79816,10 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getAllBookmarks; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getAllSports; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
-var options=function options(){return{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:5000'};};var getAllBookmarks=function getAllBookmarks(){return function(dispatch){__WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/api/bets/bookmarks','',{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:5000'}).then(function(res){res=res.data;localStorage.setItem('AllBookmarks',JSON.stringify(res.bookmarks));dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["a" /* GOT_ALL_BOOKMARKS */],bookmarks:res.bookmarks});});};};var getAllSports=function getAllSports(){return function(dispatch){__WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/api/bets/sports','',{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:5000'}).then(function(res){res=res.data;localStorage.setItem('AllSports',JSON.stringify(res.sports));dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["b" /* GOT_ALL_SPORTS */],sports:res.sports});});};};
+var options=function options(){return{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:3000'};};var getAllBookmarks=function getAllBookmarks(){return function(dispatch){__WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/api/bets/bookmarks','',{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:3000'}).then(function(res){res=res.data;localStorage.setItem('AllBookmarks',JSON.stringify(res.bookmarks));dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["a" /* GOT_ALL_BOOKMARKS */],bookmarks:res.bookmarks});});};};var getAllSports=function getAllSports(){return function(dispatch){__WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/api/bets/sports','',{headers:{'Content-Type':'application/json'},baseURL:'http://localhost:3000'}).then(function(res){res=res.data;localStorage.setItem('AllSports',JSON.stringify(res.sports));dispatch({type:__WEBPACK_IMPORTED_MODULE_0__actionTypes__["b" /* GOT_ALL_SPORTS */],sports:res.sports});});};};
 
 /***/ }),
 /* 422 */
@@ -79881,12 +79887,12 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__main_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_actions_usersActions__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_actions_usersActions__ = __webpack_require__(27);
 var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var SignIn=function(_Component){_inherits(SignIn,_Component);function SignIn(){_classCallCheck(this,SignIn);var _this=_possibleConstructorReturn(this,(SignIn.__proto__||Object.getPrototypeOf(SignIn)).call(this));_this.state={email:'',password:'',error:''};_this.handlePassChange=_this.handlePassChange.bind(_this);_this.handleUserChange=_this.handleUserChange.bind(_this);_this.handleSubmit=_this.handleSubmit.bind(_this);_this.dismissError=_this.dismissError.bind(_this);return _this;}_createClass(SignIn,[{key:'dismissError',value:function dismissError(){this.setState({error:''});}},{key:'handleSubmit',value:function handleSubmit(evt){evt.preventDefault();if(!this.state.email){return this.setState({error:'email is required'});}if(!this.state.password){return this.setState({error:'Password is required'});}var login_data={email:this.state.email,password:this.state.password};this.props.userLoginRequest(login_data);}},{key:'handleUserChange',value:function handleUserChange(evt){this.setState({email:evt.target.value});}},{key:'handlePassChange',value:function handlePassChange(evt){this.setState({password:evt.target.value});}},{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'pricing-surebets'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'s-wrapper'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{alt:'Arbitrage betting service \u21161',className:'logo',href:'https://www.betburger.com/',title:'BetBurger'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img',{alt:'BETBURGER',src:'../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg'})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'subtitle'},'Sign in'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'s-wrapper__inner'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('form',{className:'action-form',id:'new_session',role:'form',onSubmit:this.handleSubmit,method:'post'},this.state.error&&__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h3',{'data-test':'error',onClick:this.dismissError},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{onClick:this.dismissError},'\u2716'),this.state.error),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input',{name:'utf8',type:'hidden',value:'\u2713'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input',{type:'hidden',name:'authenticity_token',value:'jVj/nIN7AjdOjSNIlq1d2RlPvw4z0eTHB6k8UpjLl3y/wX85wKg3dYW0fOxDHEoTKGO6K/Ap6WBXMpVljuKyTw=='}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ul',{className:'form_errors_list'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'form-group required valid'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label',null,'Email address'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'form-group-input'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input',{className:'form-control',placeholder:'example@example.com',value:this.state.email,onChange:this.handleUserChange,error:'false',type:'text',name:'betburger_user[email]',id:'betburger_user_email'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'form-group required valid view'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label',null,'Password'),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'form-group-input'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input',{className:'form-control',value:this.state.password,onChange:this.handlePassChange,placeholder:'Password',error:'false',type:'password',name:'betburger_user[password]',id:'betburger_user_password'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'field-icon toggle-password',toggle:'#betburger_user_password'}))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'checkboxes-block'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'form-check form-check-center'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input',{name:'betburger_user[remember_me]',type:'hidden',value:'false'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input',{className:'form-check-input',type:'checkbox',value:'true',name:'betburger_user[remember_me]',id:'betburger_user_remember_me'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',{className:'custom-checkbox'}),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label',{className:'form-check-label'},'Remember me'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button',{className:'btn btn-submit submit',type:'submit'},'Sign in to my account'))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'support-links'},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p',null,'Don\'t have an account?',__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/users/sign_up'},'Create one here')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p',null,'Forgot your password?',__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/users/password/new'},'Reset password')),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p',null,'Didn\'t receive confirmation instructions?',__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:'https://www.betburger.com/users/confirmation/new'},'Send again')))));}}]);return SignIn;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);SignIn.propTypes={userLoginRequest:__WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func.isRequired};var mapStateToProps=function mapStateToProps(state){return{};};/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps,{userLoginRequest:__WEBPACK_IMPORTED_MODULE_4__store_actions_usersActions__["b" /* userLoginRequest */]})(SignIn));
 
 /***/ }),
@@ -79920,7 +79926,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__ = __webpack_require__(34);
 var initialState={bookmarks:[],sports:{}};var reducer=function reducer(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];switch(action.type){case __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__["a" /* GOT_ALL_BOOKMARKS */]:return Object.assign({},state,{bookmarks:action.bookmarks});case __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__["b" /* GOT_ALL_SPORTS */]:{return Object.assign({},state,{sports:action.sports});}default:return state;}};/* harmony default export */ __webpack_exports__["a"] = (reducer);
 
 /***/ }),
@@ -79928,11 +79934,11 @@ var initialState={bookmarks:[],sports:{}};var reducer=function reducer(){var sta
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken__);
-var validCredentials=function validCredentials(){var authorizationToken=localStorage.getItem('jwtToken');if(authorizationToken===null)return false;try{__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default.a.decode(authorizationToken);return true;}catch(err){return false;}};var initialState={isAuthenticated:validCredentials,authenticatedUsername:validCredentials()===false?'':__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default.a.decode(localStorage.getItem('jwtToken')).username};var reducer=function reducer(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];switch(action.type){case __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__["c" /* LOGIN_SUCCESSFUL */]:return{isAuthenticated:true,authenticatedUsername:action.authenticatedUsername};case __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__["d" /* LOGOUT_USER */]:{return{isAuthenticated:false,authenticatedUsername:''};}default:return state;}};/* harmony default export */ __webpack_exports__["a"] = (reducer);
+var validCredentials=function validCredentials(){var authorizationToken=localStorage.getItem('jwtToken');if(authorizationToken===null)return false;try{__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default.a.decode(authorizationToken);return true;}catch(err){return false;}};var initialState={isAuthenticated:validCredentials()===false?false:true,authenticatedUsername:validCredentials()===false?'':__WEBPACK_IMPORTED_MODULE_1_jsonwebtoken___default.a.decode(localStorage.getItem('jwtToken')).username};var reducer=function reducer(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];switch(action.type){case __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__["c" /* LOGIN_SUCCESSFUL */]:return{isAuthenticated:true,authenticatedUsername:action.authenticatedUsername};case __WEBPACK_IMPORTED_MODULE_0__actions_actionTypes__["d" /* LOGOUT_USER */]:{return{isAuthenticated:false,authenticatedUsername:''};}default:return state;}};/* harmony default export */ __webpack_exports__["a"] = (reducer);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.01b42002.js.map
+//# sourceMappingURL=main.5430d85d.js.map

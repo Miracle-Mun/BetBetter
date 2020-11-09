@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
+
+import PropTypes from 'prop-types';
+
 import { connect } from 'react-redux';
-import { userLogoutRequest } from '../../store/actions/usersActions';
+import {is_session, userLogoutRequest} from '../../store/actions/usersActions';
 
 class Header extends Component {
+
+  componentDidMount() {
+      
+  }
+
   render() {
+    console.log(this.props.isAuthenticated);
+    const isAuthenticated = this.props.isAuthenticated;
+    
+
     return (
-      <header className="header" style={{display:"block"}}>
+        <header className="header" style={{display:"block"}}>
         <div className="container">
           <div className="header_inner" style={{border_bottom: "1px solid #777b80",}}>
             <a alt="Arbitrage betting service №1" className="logo" href="/" title="BetBurger">
@@ -101,9 +113,11 @@ class Header extends Component {
                   <li className="">
                       <a href="https://www.betburger.com/help">Help Center</a>
                   </li>
-                  <li>
+                  {isAuthenticated == true &&
+                    <li>
                       <a className="signup logo_white " href="/public">My Account</a>
-                  </li>
+                    </li>
+                  }
                 </ul>
               </nav>
             </div>
@@ -202,19 +216,39 @@ class Header extends Component {
                   </li>                             
                 </ul>
               </div>
-              <div className="signin">
-                <div className="btn green-btn" onClick={()=>this.props.userLogoutRequest()}>Sign out</div>
-              </div>
+              {isAuthenticated == true&&
+                <div className="signin">
+                  <a className="btn green-btn" href="javascript:void(0)" onClick={()=>this.props.userLogoutRequest()}>Sign out</a>
+                </div>  
+              }
+              {
+                isAuthenticated == false&&
+                <div className="signin">
+                    <a className="btn green-btn" href="/signin">Login</a>
+                </div>
+              }
             </div>
           </div>
         </div>
-      </header>
+      </header> 
     );
   }
 }
 
+Header.propTypes = {
+  userLogoutRequest: PropTypes.func.isRequired,
+  is_session: PropTypes.func.isRequired
+};
+
 const mapDispatchToProps = {
-  userLogoutRequest
+  userLogoutRequest,
+  is_session
 }
 
-export default connect(null, mapDispatchToProps)(Header)
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.users.isAuthenticated
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

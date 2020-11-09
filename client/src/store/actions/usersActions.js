@@ -9,7 +9,7 @@ const options = data => {
             'Content-Type': 'application/json',
         },
         method: 'post',
-        baseURL:'http://localhost:5000',
+        baseURL:'http://localhost:3000',
         body: JSON.stringify(data)
     };
 };
@@ -41,7 +41,7 @@ export const userLoginRequest = (userLoginDetails) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            baseURL:'http://localhost:5000'
+            baseURL:'http://localhost:3000'
         })
         .then(res => {
             res = res.data;
@@ -51,7 +51,7 @@ export const userLoginRequest = (userLoginDetails) => {
                 delete res.token;
                 localStorage.setItem('jwtToken', token);
                 dispatch({ type: actionTypes.LOGIN_SUCCESSFUL, authorizationToken: token, authenticatedUsername: jwt.decode(token).username });
-                history.push("/");
+                history.push("/public");
             }else{
                 alert(res.errors);
             }

@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     database: "bet",
-    password: ""
+    password: "y+i5ED6_1"
 });
 
 const JWTSECRET = 'bezkoder-secret-key';

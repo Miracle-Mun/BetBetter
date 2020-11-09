@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { userLogoutRequest } from '../../store/actions/usersActions';
 
 class Header extends Component {
   render() {
@@ -255,8 +256,7 @@ class Header extends Component {
         
                         </li>
                         <li>
-                            <a className="signup" rel="nofollow" data-method="delete"
-                               href="https://www.betburger.com/users/sign_out">Sign out</a>
+                            <a className="signup" rel="nofollow" data-method="delete" href="javascript:void(0)" onClick={()=>this.props.userLogoutRequest()}>Sign out</a>
                         </li>
                     </ul>
                 </nav>
@@ -266,4 +266,8 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const mapDispatchToProps = {
+    userLogoutRequest
+}
+  
+export default connect(null, mapDispatchToProps)(Header)

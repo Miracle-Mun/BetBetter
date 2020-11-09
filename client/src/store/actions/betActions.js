@@ -7,7 +7,7 @@ const options = () => {
         headers: {
             'Content-Type': 'application/json'
         },
-        baseURL:'http://localhost:5000'
+        baseURL:'http://localhost:3000'
     };
 };
 
@@ -17,7 +17,7 @@ export const getAllBookmarks = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            baseURL:'http://localhost:5000'
+            baseURL:'http://localhost:3000'
         })
         .then(res => {
             res = res.data;
@@ -34,7 +34,7 @@ export const getAllSports = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            baseURL:'http://localhost:5000'
+            baseURL:'http://localhost:3000'
         })
         .then(res => {
             res = res.data;

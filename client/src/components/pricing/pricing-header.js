@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+import { is_session, userLogoutRequest } from '../../store/actions/usersActions';
+
 class PricingHeader extends Component {
   render() {
+    
     return (
+        
         <header className="header" style={{display:"block"}}>
             <div className="container">
                 <div className="header_inner">
@@ -231,7 +236,7 @@ class PricingHeader extends Component {
         
                         <div className="signin">
                             <a className="btn green-btn " rel="nofollow" data-method="delete"
-                               href="https://www.betburger.com/users/sign_out">Sign out</a>
+                               href="javascriptp:void(0)" onClick={()=>this.props.userLogoutRequest()}>Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -240,5 +245,9 @@ class PricingHeader extends Component {
     );
   }
 }
+const mapDispatchToProps = {
+    userLogoutRequest,
+    is_session
+}
 
-export default PricingHeader;
+export default connect(null, mapDispatchToProps)(PricingHeader)

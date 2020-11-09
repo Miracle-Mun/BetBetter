@@ -14,9 +14,8 @@ import SignIn from './components/SignIn';
 import {is_session} from './store/actions/usersActions';
 
 const RequireAuth = (data) => {
-    console.log('is_session',is_session())
     if (!is_session()) {
-      return <Redirect to={'/signin'} />;
+      return <Redirect to={'/'} />;
     }
     return data.children;
 };
@@ -27,8 +26,8 @@ class App extends Component {
             <Router history={history}>
                 <Switch>
                     <Route component={SignIn} path="/signin" />
+                    <Route component={MainHome} path="/" exact/>
                     <RequireAuth>
-                        <Route component={MainHome} path="/" exact/>
                         <Route component={Public} path="/public"/>
                         <Route component={ValueBets} path="/valuebets"/>
                         <Route component={Pricing} path="/pricing"/>

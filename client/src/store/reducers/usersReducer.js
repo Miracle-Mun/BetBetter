@@ -15,7 +15,7 @@ const validCredentials = () => {
 }
 
 const initialState = {
-    isAuthenticated: validCredentials,
+    isAuthenticated: validCredentials() === false ? false: true,
     authenticatedUsername: validCredentials() === false ? '' : jwt.decode(localStorage.getItem('jwtToken')).username
 };
 
