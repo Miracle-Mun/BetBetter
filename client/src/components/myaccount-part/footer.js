@@ -11,22 +11,22 @@ class Footer extends Component {
                         <div className="menu">
                             <ul>
                                 <li>
-                                    <a href="https://www.betburger.com/sport-arbitrage-betting">
+                                    <a href="#">
                                         What is Arbitrage Betting?
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/surebets">
+                                    <a href="#">
                                         What are Surebets?
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/valuebet">
+                                    <a href="#">
                                         What are Valuebets?
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://forum.betburger.com/">
+                                    <a href="#">
                                         Forum
                                     </a>
                                 </li>
@@ -35,34 +35,34 @@ class Footer extends Component {
                         <div className="menu">
                             <ul>
                                 <li>
-                                    <a href="https://www.betburger.com/arbs/live">Live arbs</a>
+                                    <a href="#">Live arbs</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/arbs">Prematch arbs</a>
+                                    <a href="#">Prematch arbs</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/valuebets">Valuebets</a>
+                                    <a href="#">Valuebets</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/compare">Odds Comparison</a>
+                                    <a href="#">Odds Comparison</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="menu">
                             <ul>
                                 <li>
-                                    <a href="https://www.betburger.com/contact">Contact us</a>
+                                    <a href="#">Contact us</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/surebet-calculator" title="Calculator">
+                                    <a href="#" title="Calculator">
                                         Calculator
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/bookmakers">Bookmakers</a>
+                                    <a href="#">Bookmakers</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/faq">
+                                    <a href="#">
                                         FAQ
                                     </a>
                                 </li>
@@ -71,10 +71,10 @@ class Footer extends Component {
                         <div className="menu">
                             <ul>
                                 <li>
-                                    <a href="https://www.betburger.com/news">Service News</a>
+                                    <a href="#">Service News</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.betburger.com/affiliates">Affiliate Program</a>
+                                    <a href="#">Affiliate Program</a>
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +82,7 @@ class Footer extends Component {
                 </div>
                 <div className="en_menu menu-v">
                     <div className="ogs_div">
-                        <a title="Online Gambling Support" href="https://www.betburger.com/online-gambling-support"><img
+                        <a title="Online Gambling Support" href="#"><img
                                 alt="Online Gambling Support"
                                 src="./myaccount/pgs-6855148a46ca72b9520b5654612e69fa5df821de0ac1f783f7d8b6c148003ac5.png"/>
                         </a><img
@@ -94,17 +94,17 @@ class Footer extends Component {
                 <div className="col-md-12">
                     <ul>
                         <li>
-                            <a href="https://www.betburger.com/privacy">Privacy Policy</a>
+                            <a href="#">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="https://www.betburger.com/terms">Terms of use</a>
+                            <a href="#">Terms of use</a>
                         </li>
                     </ul>
                 </div>
                 <div className="col-md-12">
                     <ul>
                         <li>
-                            <a className="youtube" href="https://www.youtube.com/channel/UCHH5BBx74t45cTnn8VcJ8fw"
+                            <a className="youtube" href="#"
                             target="_blank"></a>
                         </li>
                         <li>
@@ -112,10 +112,10 @@ class Footer extends Component {
                         <li>
                         </li>
                         <li>
-                            <a className="telegram" href="https://t.me/betburger" target="_blank"></a>
+                            <a className="telegram" href="#" target="_blank"></a>
                         </li>
                         <li>
-                            <a className="mail" href="mailto:support@betburger.com"></a>
+                            <a className="mail" href="#"></a>
                         </li>
                     </ul>
                 </div>
@@ -123,7 +123,7 @@ class Footer extends Component {
                     2013-2020 (с) BetBurger All rights reserved
                     <div>
                         <div className="col-md-12 owned_sign">
-                            www.betburger.com is owned and operated by Aspira Limited
+                            www.betbetter.fun is owned and operated by Aspira Limited
                         </div>
                     </div>
                 </div>

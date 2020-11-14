@@ -23,7 +23,7 @@ class MyAccApi extends Component {
                                     </div>
                                 </div>
                                 <a className="btn btn-primary"
-                                   href="https://www.betburger.com/prices">Tariffs</a>
+                                   href="/prices">Tariffs</a>
                             </form>
                         </div>
                     </div>
@@ -45,10 +45,10 @@ class MyAccApi extends Component {
                         <div className="col-md-8 col-sm-8 col-xs-12">
                             <p>API is a way to fetch hundreds of surebets per minute automatically. You can
                                 find out more here:</p>
-                            <p><a target="_blank" href="https://www.betburger.com/prices-api">Check out our
+                            <p><a target="_blank" href="#">Check out our
                                 API product page</a></p>
                             <p><a target="_blank"
-                                  href="https://www.betburger.com/manual/how-to-deal-with-api">Read through
+                                  href="#">Read through
                                 a data request sample article</a></p>
                             <p>
                                 Swagger documentation: <a href="https://rest-api-lv.betburger.com/doc.html"
@@ -56,7 +56,7 @@ class MyAccApi extends Component {
                                     href="https://rest-api-pr.betburger.com/doc.html" target="_blank">Prematch
                                 surebets</a>
                             </p>
-                            <p><a target="_blank" href="https://www.betburger.com/terms">See our terms of
+                            <p><a target="_blank" href="#">See our terms of
                                 use</a></p>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ class MyAccApi extends Component {
                                     href="https://rest-api-lv.betburger.com/doc.html"
                                     target="_blank">live</a>, <a
                                     href="https://rest-api-pr.betburger.com/doc.html" target="_blank">prematch</a>)
-                                didn’t answer your question, <a href="https://www.betburger.com/contact">submit
+                                didn’t answer your question, <a href="#">submit
                                     a support ticket here</a>.</p>
                         </div>
                     </div>

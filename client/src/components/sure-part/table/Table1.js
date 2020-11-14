@@ -37,7 +37,7 @@ class Table1 extends Component {
                                             title="Zorya Lugansk - AEK Athens">
                                             <a title="Compare odds: Zorya Lugansk - AEK Athens"
                                             target="_blank"
-                                            href="https://www.betburger.com/compare#sports/7/countries/11/leagues/9428/events/214433770">
+                                            href="#">
                                                 Zorya Lugansk - AEK Athens
                                                 <small><strong title="Game period: ">
                                                     [1st half]</strong>
@@ -54,23 +54,23 @@ class Table1 extends Component {
                                 </div>
                                 <div className="tableCell right_calcHeader">
                                     <div className="right_calcHeader_lines">
-                                        <a href="https://www.betburger.com/arbs#"
+                                        <a href="#"
                                         className="smallWindow inline_middle text-center halfWindow"
                                         title="Change calculator view">
                                             <i className="fas fa-expand-arrows-alt" style={{color:"white"}}></i></a>
-                                        <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                        <a href="#"
                                         className="newWindow inline_middle text-center"
                                         title="Open in new view">
                                             <i className="fas fa-share-square" style={{color:"white"}}></i></a>
                                     </div>
                                     <div className="right_calcHeader_lines">
-                                        <a href="https://www.betburger.com/arbs#"
+                                        <a href="#"
                                         className="reportWrongArb inline_middle text-center"
                                         title="Report about wrong arb">
                                             <i className="fas fa-bullhorn" style={{color:"white"}}></i>
                                         </a>
                                         <a id="drop_calc"
-                                        href="https://www.betburger.com/arbs#"
+                                        href="#"
                                         className="dropdown-toggle closeTrash inline_middle text-center"
                                         data-toggle="dropdown" title="Hide menu"
                                         role="button" aria-haspopup="true"
@@ -81,14 +81,14 @@ class Table1 extends Component {
                                         <ul className="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="drop_calc">
                                             <li>
-                                                <a href="https://www.betburger.com/arbs#"
+                                                <a href="#"
                                                 title="Hide arb"
                                                 data-id="f697fb91e3e507ca83f2150d91a6ebba"
                                                 className="hideArb">
                                                     Hide arb
                                                 </a></li>
                                             <li>
-                                                <a href="https://www.betburger.com/arbs#"
+                                                <a href="#"
                                                 title="Hide event"
                                                 data-id="214433770"
                                                 className="hideEvent">
@@ -96,7 +96,7 @@ class Table1 extends Component {
                                                 </a></li>
                                             <li role="separator" className="divider"></li>
                                             <li>
-                                                <a href="https://www.betburger.com/arbs#"
+                                                <a href="#"
                                                 title="Hide event in Pinnacle"
                                                 data-id="84466837"
                                                 className="hideBkEvent">
@@ -104,7 +104,7 @@ class Table1 extends Component {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.betburger.com/arbs#"
+                                                <a href="#"
                                                 title="Hide event in Sportmarket"
                                                 data-id="84477106"
                                                 className="hideBkEvent">
@@ -113,7 +113,7 @@ class Table1 extends Component {
                                             </li>
                                             <li role="separator" className="divider"></li>
                                             <li>
-                                                <a href="https://www.betburger.com/arbs#"
+                                                <a href="#"
                                                 title="Hide event in " data-id="84466837/84477106" className="hideAllBkEvent">
                                                     Hide event in
                                                     Pinnacle/Sportmarket
@@ -217,14 +217,14 @@ class Table1 extends Component {
                                                                                 <a className="excludeBookmakerEvent"
                                                                                 data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                                 data-bet_number="1"
-                                                                                href="https://www.betburger.com/arbs#"
+                                                                                href="#"
                                                                                 title="[missing &quot;en.arbs_page.delete_bet&quot; translation]"><span></span></a>
                                                                                 <span className="bookmaker">Pinnacle()</span>
                                                                             </div>
                                                                             <div className="directLinkListRow text-left padding2_5">
                                                                                 <a className="directLink"
                                                                                 target="_blank"
-                                                                                href="https://www.betburger.com/compare#sports/7/countries/11/leagues/9428/events/214433770?period=1&amp;market_id=3"
+                                                                                href="#"
                                                                                 title="Asian Handicap1(0)">
                                                                                     <span className="icomoon-redo2"></span></a>
                                                                             </div>
@@ -248,7 +248,7 @@ class Table1 extends Component {
                                         <div>
                                             <div className="content bookmakersSectionSingle">
                                                 <div multiple="" className="bookmakersSelect singleRow">
-                                                    <a className="excludeBookmakerEvent" data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA" data-bet_number="1" href="https://www.betburger.com/arbs#" title="Hide Bet"><span className="fa fa-close"></span></a>
+                                                    <a className="excludeBookmakerEvent" data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA" data-bet_number="1" href="#" title="Hide Bet"><span className="fa fa-close"></span></a>
                                                     <select className="input-xs singleSelect1 bg-color-" data-number="1" data-active="false">
                                                         <option className="bg-color-"
                                                                 selected=""
@@ -256,7 +256,7 @@ class Table1 extends Component {
                                                             Pinnacle: 2.02 ()
                                                         </option>
                                                     </select>
-                                                    <a href="https://www.betburger.com/arbs#" className="refreshOutcomeCalc" title="Refresh koef" data-bet_number="1">
+                                                    <a href="#" className="refreshOutcomeCalc" title="Refresh koef" data-bet_number="1">
                                                         <span title="Refresh outcome odds" className="fa fa-refresh"></span>
                                                     </a>
                                                 </div>
@@ -568,7 +568,7 @@ class Table1 extends Component {
                                                                                 <a className="excludeBookmakerEvent"
                                                                                 data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                                 data-bet_number="1"
-                                                                                href="https://www.betburger.com/arbs#"
+                                                                                href="#"
                                                                                 title="[missing &quot;en.arbs_page.delete_bet&quot; translation]"><span></span></a>
                                                                                 <span className="bookmaker">Pinnacle()</span>
                                                                             </div>
@@ -599,7 +599,7 @@ class Table1 extends Component {
                                         <div>
                                             <div className="content bookmakersSectionSingle">
                                                 <div multiple="" className="bookmakersSelect singleRow">
-                                                    <a className="excludeBookmakerEvent" data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA" data-bet_number="1" href="https://www.betburger.com/arbs#" title="Hide Bet"><span className="fa fa-close"></span></a>
+                                                    <a className="excludeBookmakerEvent" data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA" data-bet_number="1" href="#" title="Hide Bet"><span className="fa fa-close"></span></a>
                                                     <select className="input-xs singleSelect1 bg-color-" data-number="1" data-active="false">
                                                         <option className="bg-color-"
                                                                 selected=""
@@ -607,7 +607,7 @@ class Table1 extends Component {
                                                             Pinnacle: 2.02 ()
                                                         </option>
                                                     </select>
-                                                    <a href="https://www.betburger.com/arbs#" className="refreshOutcomeCalc" title="Refresh koef" data-bet_number="1">
+                                                    <a href="#" className="refreshOutcomeCalc" title="Refresh koef" data-bet_number="1">
                                                         <span title="Refresh outcome odds" className="fa fa-refresh"></span>
                                                     </a>
                                                 </div>
@@ -892,7 +892,7 @@ class Table1 extends Component {
                                                     <div className="refresh"></div>
                                                     <div className="checkboxCalcNewView showSection">
                                                         <a id="changeArbView"
-                                                            href="https://www.betburger.com/arbs#"
+                                                            href="#"
                                                             data-show="hide"
                                                             title="Arbs grouped by event">
                                                             <span className="icomoon-menu changeArbViewIco"
@@ -901,7 +901,7 @@ class Table1 extends Component {
                                                         </a>
                                                     </div>
                                                     <div className="copyToClickSection">
-                                                        <a href="https://www.betburger.com/arbs#"
+                                                        <a href="#"
                                                             className="copyToClick"
                                                             title="Copy" id="copy_button"
                                                             data-clipboard-text="05-11-2020 15:00 Soccer.Zorya Lugansk - AEK Athens (Europe. UEFA Europa League) [1st half] 1.00%Pinnacle	AH1(0)	2.02	50.00	USD	1.00 Sportmarket	AH2(0)	2.02	50.00	USD	1.00">
@@ -909,7 +909,7 @@ class Table1 extends Component {
                                                         </a>
                                                     </div>
                                                     <div className="saveToAccountingSection">
-                                                        <a href="https://www.betburger.com/arbs#"
+                                                        <a href="#"
                                                             className="saveToAccounting"
                                                             title="Save to accounting">
                                                             
@@ -917,7 +917,7 @@ class Table1 extends Component {
                                                         </a>
                                                     </div>
                                                     <div className="saveToAccountingSection">
-                                                        <a href="https://www.betburger.com/arbs#"
+                                                        <a href="#"
                                                             className="saveToAccounting"
                                                             title="Save to accounting">
                                                             
@@ -1138,12 +1138,12 @@ class Table1 extends Component {
                                         <div className="col-sm-height col-middle">
                                             <div className="inside">
                                                 <div className="content">
-                                                    <a href="https://www.betburger.com/arbs#"
+                                                    <a href="#"
                                                         className="placeBets"
                                                         title="Put stake">
                                                         <span className="fas fa-crosshairs"></span>
                                                     </a>
-                                                    <a href="https://www.betburger.com/arbs#"
+                                                    <a href="#"
                                                         className="calculateTotal"
                                                         title="Calculate">
                                                         <span className="fas fa-calculator"></span>

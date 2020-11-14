@@ -53,18 +53,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -145,7 +145,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -164,7 +164,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -180,7 +180,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -253,7 +253,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -272,7 +272,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -288,7 +288,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -338,18 +338,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -430,7 +430,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -449,7 +449,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -465,7 +465,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -538,7 +538,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -557,7 +557,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -573,7 +573,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -623,18 +623,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -715,7 +715,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -734,7 +734,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -750,7 +750,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -823,7 +823,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -842,7 +842,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -858,7 +858,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -908,18 +908,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -1000,7 +1000,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -1019,7 +1019,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1035,7 +1035,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1108,7 +1108,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -1127,7 +1127,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1143,7 +1143,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1193,18 +1193,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -1285,7 +1285,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -1304,7 +1304,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1320,7 +1320,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1393,7 +1393,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -1412,7 +1412,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1428,7 +1428,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1478,18 +1478,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -1570,7 +1570,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -1589,7 +1589,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1605,7 +1605,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1678,7 +1678,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -1697,7 +1697,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1713,7 +1713,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1763,18 +1763,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -1855,7 +1855,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -1874,7 +1874,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1890,7 +1890,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -1963,7 +1963,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -1982,7 +1982,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -1998,7 +1998,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -2048,18 +2048,18 @@ class Table3 extends Component {
                                                                                     <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                                                         <div className="inside">
                                                                                             <div className="content">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="ageTime">
                                                                                                     <span className="icomoon-clock"></span>
                                                                                                     1
                                                                                                     h
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="dropdown-toggle"
                                                                                                     title="Hide menu">
                                                                                                     <span className="icomoon-remove2"></span>
                                                                                                 </a>
-                                                                                                <a href="https://www.betburger.com/calculator?is_live=0#%7B%22arb%22:%7B%22id%22:%22f697fb91e3e507ca83f2150d91a6ebba%22,%22event_id%22:214433770,%22arb_formula_id%22:1,%22percent%22:1,%22started_at%22:1604606400,%22event_name%22:%22Zorya%20Lugansk%20-%20AEK%20Athens%22,%22league%22:%22Europe.%20UEFA%20Europa%20League%22,%22league_id%22:9428,%22sport_id%22:7,%22country_id%22:11,%22home_id%22:10248,%22away_id%22:4627,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_id%22:5%7D,%22live%22:false,%22bets%22:%5B%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84466837,%22bookmaker_id%22:1,%22period_id%22:5,%22bc_id%22:103,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:103,%22title%22:%22F-F1(0.0)%22,%22mv_id%22:17,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:5,%22value%22:0,%22reverse_id%22:330,%22reverse_value%22:null,%22etalon_id%22:103,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:17,%22title%22:%22F-F1%22,%22market_id%22:3,%22bet_variation_id%22:5,%22swap_id%22:18%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:1%7D,%7B%22home%22:%22FC%20Zorya%20Luhansk%22,%22away%22:%22AEK%20Athens%22,%22id%22:%22ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA%22,%22koef%22:2.02,%22commission%22:0,%22bookmaker_event_id%22:84477106,%22bookmaker_id%22:105,%22period_id%22:5,%22bc_id%22:330,%22direct_link%22:%22%22,%22koef_lay%22:0,%22is_lay%22:0,%22koef_commissed%22:2.02,%22period%22:%7B%22id%22:5,%22title%22:%221st%22,%22identifier%22:%221%22%7D,%22bet_combination%22:%7B%22id%22:330,%22title%22:%22F-F2(0.0)%22,%22mv_id%22:18,%22value_id%22:105,%22synonym_id%22:null,%22m_id%22:3,%22bv_id%22:6,%22value%22:0,%22reverse_id%22:103,%22reverse_value%22:null,%22etalon_id%22:330,%22created_at%22:1389619769,%22updated_at%22:1510297571,%22is_valid%22:true,%22pl1_id%22:null,%22pl2_id%22:null%7D,%22bet_value%22:%7B%22id%22:105,%22value%22:0%7D,%22market_variation%22:%7B%22id%22:18,%22title%22:%22F-F2%22,%22market_id%22:3,%22bet_variation_id%22:6,%22swap_id%22:17%7D,%22sport%22:%7B%22id%22:7,%22name%22:%22Soccer%22%7D,%22period_name_by_sport_t%22:%221st%20half%22,%22bet_path%22:%22/prices%22,%22bet_number%22:2%7D%5D%7D"
+                                                                                                <a href="#"
                                                                                                     className="standalone-calculator"
                                                                                                     title="Open in new view">
                                                                                                     <span className="brankic-pop-out"></span>
@@ -2140,7 +2140,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap1(0)">
@@ -2159,7 +2159,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-down
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -2175,7 +2175,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">
@@ -2248,7 +2248,7 @@ class Table3 extends Component {
                                                                                     <div className="col-xs-3 col-sm-height col-middle col-sm-height col-middle">
                                                                                         <div className="inside">
                                                                                             <div className="content text-center compareLinkContainer">
-                                                                                                <a href="https://www.betburger.com/arbs#"
+                                                                                                <a href="#"
                                                                                                     className="check_for_russia is_disabled-hbs"
                                                                                                     rel="nofollow"
                                                                                                     title="Asian Handicap2(0)">
@@ -2267,7 +2267,7 @@ class Table3 extends Component {
                                                                         <div className="content text-right relative outcomeKoef">
                                                                             <span className="icomoon-arrow-up
                                                                             gray "></span>
-                                                                            <a href="https://www.betburger.com/arbs#"
+                                                                            <a href="#"
                                                                                 className="koef check_for_russia is_disabled-hbs"
                                                                                 rel="nofollow"
                                                                                 koef_eu="2.02"
@@ -2283,7 +2283,7 @@ class Table3 extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="tableCell padding5px col-sm-height col-middle betExclude">
-                                                                    <a href="https://www.betburger.com/arbs#"
+                                                                    <a href="#"
                                                                         className="removeOutcome"
                                                                         data-id="ODQ0NzcxMDZ8MTgsMC4wLDUsMCwwLDA"
                                                                         title="Hide Bet">

@@ -60,7 +60,7 @@ class SignIn extends Component {
     return (
         <div className="pricing-surebets">
         <div className="s-wrapper">
-            <a alt="Arbitrage betting service №1" className="logo" href="https://www.betburger.com/" title="BetBurger">
+            <a alt="Arbitrage betting service №1" className="logo" href="/" title="BetBurger">
                 <img alt="BETBURGER" src="../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg" />
             </a>
             <span className="subtitle">Sign in</span>
@@ -107,15 +107,15 @@ class SignIn extends Component {
             <div className="support-links">
                 <p>
                 Don't have an account?
-                <a href="https://www.betburger.com/users/sign_up">Create one here</a>
+                <a href="#">Create one here</a>
                 </p>
                 <p>
                 Forgot your password?
-                <a href="https://www.betburger.com/users/password/new">Reset password</a>
+                <a href="#">Reset password</a>
                 </p>
                 <p>
                 Didn't receive confirmation instructions?
-                <a href="https://www.betburger.com/users/confirmation/new">Send again</a>
+                <a href="#">Send again</a>
                 </p>
             </div>
         </div>

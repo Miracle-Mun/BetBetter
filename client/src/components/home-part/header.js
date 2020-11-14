@@ -70,16 +70,16 @@ class Header extends Component {
                         <ul className="user-menu">
                           <li className="dropdown-item">
                               <a className="dropdown-item"
-                                  href="https://www.betburger.com/prices-valuebets">Valuebets
+                                  href="#">Valuebets
                                   pricing</a>
                           </li>
                           <li className="dropdown-item">
-                              <a className="dropdown-item" href="https://www.betburger.com/valuebets">Valuebets
+                              <a className="dropdown-item" href="#">Valuebets
                                   Prematch</a>
                           </li>
                           <li className="dropdown-item">
                               <a className="dropdown-item"
-                                  href="https://www.betburger.com/valuebets/live">Valuebets Live</a>
+                                  href="#">Valuebets Live</a>
                           </li>
                         </ul>
                       </ul>
@@ -95,15 +95,15 @@ class Header extends Component {
                       <ul aria-labelledby="api_dropdown" className="dropdown-menu dropdown-profile">
                           <ul className="user-menu">
                               <li className="dropdown-item">
-                                  <a className="dropdown-item" href="https://www.betburger.com/prices-api">API
+                                  <a className="dropdown-item" href="#">API
                                       pricing</a>
                               </li>
                               <li className="dropdown-item">
-                                  <a className="dropdown-item" href="https://www.betburger.com/api">API
+                                  <a className="dropdown-item" href="#">API
                                       Prematch</a>
                               </li>
                               <li className="dropdown-item">
-                                  <a className="dropdown-item" href="https://www.betburger.com/api/live">API
+                                  <a className="dropdown-item" href="#">API
                                       Live</a>
                               </li>
                           </ul>
@@ -111,7 +111,7 @@ class Header extends Component {
                     </div>
                   </li>
                   <li className="">
-                      <a href="https://www.betburger.com/help">Help Center</a>
+                      <a href="#">Help Center</a>
                   </li>
                   {isAuthenticated == true &&
                     <li>
@@ -131,89 +131,19 @@ class Header extends Component {
                         
                 <ul aria-labelledby="drop-language" className="dropdown-menu dropdown-language">
                   <li>
-                    <a className="actual" href="https://www.betburger.com/">
+                    <a className="actual" href="/">
                       <span className="lang-btn__flag lang-btn_long">
                         <img alt="English" src="../../assets/img/en.png" />English
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a className="notactual" href="https://www.betburger.com/gb">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Great Britain" src="../../assets/img/gb.png"/>Great Britain
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/es">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="España" src="../../assets/img/es.png"/>España
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/co">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Colombia" src="../../assets/img/co.png"/>Colombia
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/de">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Deutschland" src="../../assets/img/de.png"/>Deutschland
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/at">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Österreich" src="../../assets/img/at.png"/>Österreich
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/gr">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Ελλάδα" src="../../assets/img/gr.png"/>Ελλάδα
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/it">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Italy" src="../../assets/img/it.png"/>Italy
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/fr">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="France" src="../../assets/img/fr.png"/>France
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/pt">
+                    <a className="notactual" href="/pt">
                       <span className="lang-btn__flag lang-btn_long">
                         <img alt="Portugal" src="../../assets/img/pt.png"/>Portugal
                       </span>
                     </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/cn">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="China" src="../../assets/img/cn.png"/>China
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="notactual" href="https://www.betburger.com/ro">
-                      <span className="lang-btn__flag lang-btn_long">
-                        <img alt="Romania" src="../../assets/img/ro.png"/>Romania
-                      </span>
-                    </a>
-                  </li>                             
+                  </li>         
                 </ul>
               </div>
               {isAuthenticated == true&&

@@ -25,7 +25,7 @@ class First extends Component {
                                 <li>Predictable arbing</li>
                                 <li>Available in Prematch and Live</li>
                             </ul>
-                            <a className="btn red-btn" href="https://www.betburger.com/prices">See Surebets plans</a>
+                            <a className="btn red-btn" href="#">See Surebets plans</a>
                         </div>
                     </div>
                     <div className="col-sm-6">
@@ -41,7 +41,7 @@ class First extends Component {
                                 <li>Higher profits in the long run</li>
                                 <li>Available in Prematch and Live</li>
                             </ul>
-                            <a className="btn red-btn" href="https://www.betburger.com/prices-valuebets">See Valuebets plans</a>
+                            <a className="btn red-btn" href="#">See Valuebets plans</a>
                         </div>
                     </div>
                 </div>

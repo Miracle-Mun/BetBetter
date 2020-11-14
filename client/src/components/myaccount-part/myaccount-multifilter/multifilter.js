@@ -68,7 +68,7 @@ class MultiFilter extends Component {
                                                 </td>
                                                 <td className="settings">
                                                     <a className="ico-edit filter-edit"
-                                                       href="https://www.betburger.com/multi_filters/prematch/411062/edit"
+                                                       href="#"
                                                        title="edit">
                                                         <i className="edit-icon"></i>
                                                     </a>
@@ -77,7 +77,7 @@ class MultiFilter extends Component {
                                                     <a className="ico-delete filter-delete"
                                                        data-confirm="Are you sure?" data-method="delete"
                                                        data-remote="true"
-                                                       href="https://www.betburger.com/profile#"
+                                                       href="/public"
                                                        rel="nofollow">
                                                         <i className="delete-icon"></i>
                                                     </a>
@@ -124,7 +124,7 @@ class MultiFilter extends Component {
                                                 </td>
                                                 <td className="settings">
                                                     <a className="ico-edit filter-edit"
-                                                       href="https://www.betburger.com/multi_filters/live/370063/edit"
+                                                       href="#"
                                                        title="edit">
                                                         <i className="edit-icon"></i>
                                                     </a>
@@ -133,7 +133,7 @@ class MultiFilter extends Component {
                                                     <a className="ico-delete filter-delete"
                                                        data-confirm="Are you sure?" data-method="delete"
                                                        data-remote="true"
-                                                       href="https://www.betburger.com/profile#"
+                                                       href="/public"
                                                        rel="nofollow">
                                                         <i className="delete-icon"></i>
                                                     </a>
@@ -186,7 +186,7 @@ class MultiFilter extends Component {
                                                 </td>
                                                 <td className="settings">
                                                     <a className="ico-edit filter-edit"
-                                                       href="https://www.betburger.com/multi_filters/live/102591/edit"
+                                                       href="#"
                                                        title="edit">
                                                         <i className="edit-icon"></i>
                                                     </a>
@@ -195,7 +195,7 @@ class MultiFilter extends Component {
                                                     <a className="ico-delete filter-delete"
                                                        data-confirm="Are you sure?" data-method="delete"
                                                        data-remote="true"
-                                                       href="https://www.betburger.com/profile#"
+                                                       href="/public"
                                                        rel="nofollow">
                                                         <i className="delete-icon"></i>
                                                     </a>
@@ -223,7 +223,7 @@ class MultiFilter extends Component {
                                                 </td>
                                                 <td className="settings">
                                                     <a className="ico-edit filter-edit"
-                                                       href="https://www.betburger.com/multi_filters/prematch/116271/edit"
+                                                       href="#"
                                                        title="edit">
                                                         <i className="edit-icon"></i>
                                                     </a>
@@ -232,7 +232,7 @@ class MultiFilter extends Component {
                                                     <a className="ico-delete filter-delete"
                                                        data-confirm="Are you sure?" data-method="delete"
                                                        data-remote="true"
-                                                       href="https://www.betburger.com/profile#"
+                                                       href="/public"
                                                        rel="nofollow">
                                                         <i className="delete-icon"></i>
                                                     </a>

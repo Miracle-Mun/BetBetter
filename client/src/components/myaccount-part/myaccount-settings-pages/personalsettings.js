@@ -268,7 +268,7 @@ class PersonalSettings extends Component {
             <div className="info-holder form-group conform col-xs-12">
                 <div className="row">
                     <div className="col-md-10 col-xs-12 text-right">
-                        <input className="btn blue" name="commit" type="submit" value="Update" />
+                        <a className="btn blue" name="commit" href="/signin">Update</a>
                     </div>
                 </div>
             </div>

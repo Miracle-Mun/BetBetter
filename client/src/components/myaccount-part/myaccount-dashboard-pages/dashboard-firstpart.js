@@ -39,13 +39,13 @@ class DashboardFirstPart extends Component {
 
                             <a className="btn btn-md btn-success" id="unfreezButton" rel="nofollow"
                                data-method="put"
-                               href="https://www.betburger.com/profile/unfreeze">UnFreeze
+                               href="#">UnFreeze
                                 Account</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <form acceptCharset="UTF-8" action="https://www.betburger.com/profile/freeze"
+            <form acceptCharset="UTF-8" action="#"
                   id="freezAccount" method="post" onSubmit="return false;">
                 <div>
                     <input name="utf8" type="hidden" value="✓" />

@@ -9,7 +9,7 @@ const options = data => {
             'Content-Type': 'application/json',
         },
         method: 'post',
-        baseURL:'http://localhost:3000',
+        baseURL:'http://betbetter.fun',
         body: JSON.stringify(data)
     };
 };
@@ -41,7 +41,7 @@ export const userLoginRequest = (userLoginDetails) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            baseURL:'http://localhost:3000'
+            baseURL:'http://betbetter.fun'
         })
         .then(res => {
             res = res.data;

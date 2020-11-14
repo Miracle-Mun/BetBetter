@@ -21,75 +21,15 @@ class Header extends Component {
                         </button>
                         <ul aria-labelledby="drop-language-mobile" className="dropdown-menu dropdown-language">
                             <li>
-                                <a className="actual" href="https://www.betburger.com/arbs">
+                                <a className="actual" href="/bet">
                                     <span className="en flags-lang"></span>
                                     English
                                 </a>
                             </li>
                             <li>
-                                <a className="notactual" href="https://www.betburger.com/gb/arbs">
-                                    <span className="en flags-lang"></span>
-                                    Great Britain
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/es/arbs">
-                                    <span className="es flags-lang"></span>
-                                    España
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/co/arbs">
-                                    <span className="co flags-lang"></span>
-                                    Colombia
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/de/arbs">
-                                    <span className="de flags-lang"></span>
-                                    Deutschland
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/at/arbs">
-                                    <span className="at flags-lang"></span>
-                                    Österreich
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/gr/arbs">
-                                    <span className="gr flags-lang"></span>
-                                    Ελλάδα
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/it/arbs">
-                                    <span className="it flags-lang"></span>
-                                    Italy
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/fr/arbs">
-                                    <span className="fr flags-lang"></span>
-                                    France
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/pt/arbs">
+                                <a className="notactual" href="/pt_bet">
                                     <span className="pt flags-lang"></span>
                                     Portugal
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/cn/arbs">
-                                    <span className="cn flags-lang"></span>
-                                    China
-                                </a>
-                            </li>
-                            <li>
-                                <a className="notactual" href="https://www.betburger.com/ro/arbs">
-                                    <span className="ro flags-lang"></span>
-                                    Romania
                                 </a>
                             </li>
                         </ul>
@@ -105,13 +45,13 @@ class Header extends Component {
                             <a href="/bet">Surebets</a>
                         </li>
                         <li className="">
-                            <a href="https://www.betburger.com/prices-valuebets">Valuebets</a>
+                            <a href="#">Valuebets</a>
                         </li>
                         <li className="">
-                            <a href="https://www.betburger.com/prices-api">API</a>
+                            <a href="#">API</a>
                         </li>
                         <li className="">
-                            <a href="https://www.betburger.com/help">Help Center</a>
+                            <a href="#">Help Center</a>
                         </li>
                         <li className="dropdown language-select drop-lang">
                             <button aria-expanded="false" aria-haspopup="true" className="dropdown-toggle drop-language-button"
@@ -122,81 +62,21 @@ class Header extends Component {
                             </button>
                             <ul aria-labelledby="drop-language" className="dropdown-menu dropdown-language">
                                 <li>
-                                    <a className="actual" href="https://www.betburger.com/arbs">
+                                    <a className="actual" href="/bet">
                                         <span className="en flags-lang"></span>
                                         English
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="notactual" href="https://www.betburger.com/gb/arbs">
-                                        <span className="en flags-lang"></span>
-                                        Great Britain
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/es/arbs">
-                                        <span className="es flags-lang"></span>
-                                        España
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/co/arbs">
-                                        <span className="co flags-lang"></span>
-                                        Colombia
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/de/arbs">
-                                        <span className="de flags-lang"></span>
-                                        Deutschland
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/at/arbs">
-                                        <span className="at flags-lang"></span>
-                                        Österreich
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/gr/arbs">
-                                        <span className="gr flags-lang"></span>
-                                        Ελλάδα
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/it/arbs">
-                                        <span className="it flags-lang"></span>
-                                        Italy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/fr/arbs">
-                                        <span className="fr flags-lang"></span>
-                                        France
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/pt/arbs">
+                                    <a className="notactual" href="/pt_bet">
                                         <span className="pt flags-lang"></span>
                                         Portugal
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/cn/arbs">
-                                        <span className="cn flags-lang"></span>
-                                        China
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="notactual" href="https://www.betburger.com/ro/arbs">
-                                        <span className="ro flags-lang"></span>
-                                        Romania
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a className="signup" href="https://www.betburger.com/users/sign_in">Login</a>
+                            <a href="javascript:void(0)" onClick={()=>this.props.userLogoutRequest()}>Log out</a>
                         </li>
                     </ul>
                 </nav>

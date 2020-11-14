@@ -10,58 +10,58 @@ class Footer extends Component {
                     <div className="col-lg-9 col-md-12">
                         <ul className="footer-menu">
                             <li>
-                                <a href="https://www.betburger.com/sport-arbitrage-betting">
+                                <a href="#">
                                     What is Arbitrage Betting?
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/surebets">
+                                <a href="#">
                                     What are Surebets?
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/valuebet">
+                                <a href="#">
                                     What are Valuebets?
                                 </a>
                             </li>
                             <li>
-                                <a href="https://forum.betburger.com/">
+                                <a href="#">
                                     Forum
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/arbs/live">Live arbs</a>
+                                <a href="#">Live arbs</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/arbs">Prematch arbs</a>
+                                <a href="#">Prematch arbs</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/valuebets">Valuebets</a>
+                                <a href="#">Valuebets</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/compare">Odds Comparison</a>
+                                <a href="#">Odds Comparison</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/contact">Contact us</a>
+                                <a href="#">Contact us</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/surebet-calculator" title="Calculator">
+                                <a href="#" title="Calculator">
                                     Calculator
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/bookmakers">Bookmakers</a>
+                                <a href="#">Bookmakers</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/faq">
+                                <a href="#">
                                     FAQ
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/news">Service News</a>
+                                <a href="#">Service News</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/affiliates">Affiliate Program</a>
+                                <a href="#">Affiliate Program</a>
                             </li>
                         </ul>
                     </div>
@@ -87,24 +87,24 @@ class Footer extends Component {
                     </div>
                 </div>
                 <div className="bottom">
-                    <a alt="Arbitrage betting service №1" className="logo" href="https://www.betburger.com/" title="BetBurger">
+                    <a alt="Arbitrage betting service №1" className="logo" href="#" title="BetBurger">
                         <img alt="BETBURGER"
                             src="../assets/img/logo-ce.svg" />
                     </a>
                     <div className="bottom__center">
                         <ul>
                             <li>
-                                <a href="https://www.betburger.com/privacy">Privacy Policy</a>
+                                <a href="#">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="https://www.betburger.com/terms">Terms of use</a>
+                                <a href="#">Terms of use</a>
                             </li>
                         </ul>
                         <span>2013-2020 (с) BetBurger All rights reserved</span>
                         <span>www.betburger.com is owned and operated by Aspira Limited</span>
                     </div>
                     <div className="bottom__left">
-                        <a title="Online Gambling Support" href="https://www.betburger.com/online-gambling-support">
+                        <a title="Online Gambling Support" href="#">
                             <img
                                 alt="Online Gambling Support"
                                 src="../assets/img/gambling.png" />
