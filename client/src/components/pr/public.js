@@ -15,6 +15,7 @@ import MyAccountPayments from './myaccount-part/myaccount-payment-page/payment.j
 import MyAccountAccounting from './myaccount-part/myaccount-accounting-page/accounting.js';
 import MyAccountSetting from './myaccount-part/myaccount-settings-pages/setting.js';
 import MyAccountApi from './myaccount-part/myaccount-api/myaccapi.js';
+import MyFillterEdit from './myaccount-part/fillter-edit/fillteredit.js';
 
 
 class Public extends Component {

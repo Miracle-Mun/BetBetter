@@ -21,18 +21,6 @@ class TopNav extends Component {
                         <li className="prematchNav active">
                             <a href="/pt_bet">Surebets</a>
                         </li>
-                        <li className="valuebetsNav">
-                            <a href="#">Valuebets</a>
-                        </li>
-                        <li className="apiNav">
-                            <a href="#">API</a>
-                        </li>
-                        <li>
-                            <a href="#">Preços</a>
-                        </li>
-                        <li>
-                            <a href="#">Ajuda</a>
-                        </li>
                         <li>
                             <a  href="/pt_public">A Minha Conta</a>
                         </li>

@@ -13,9 +13,9 @@ class Halftwo extends Component {
                 <div className="content sectionContentJs height100" data-padding="20">
                     <div className="tableStyle height100" style={{height:"850px",overflow:"scroll"}}>
                         <Table1 />
-                        <Table2 />
-                        <Tablex />
-                        <Table4 />
+                            {/* <Table2 />
+                            <Tablex />
+                            <Table4 /> */}
                     </div>
                 </div>
             </div>

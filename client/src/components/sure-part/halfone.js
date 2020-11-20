@@ -35,18 +35,18 @@ class HalfOne extends Component {
     componentDidMount() {
         var search_filter = new Array;
         search_filter.push('412898');
-        
+        const apitoken = localStorage.getItem('apitoken');
         var data = {
-            per_page: 30,
+            per_page: 50,
             search_filter: search_filter,
-            access_token: 'eba00b6e28fd45f6b4eb9d180eb0f9ac'
+            access_token: apitoken
         }
 
         this.getData(data);
 
-        // setInterval(() => {
-        //     this.getData(data);
-        // }, 10000);
+        setInterval(() => {
+            this.getData(data);
+        }, 10000);
     }
   
     render() {
@@ -59,7 +59,7 @@ class HalfOne extends Component {
                                 <div className="row height100" id="leftArbList">
                                     <div className="col-xs-12 height100">
                                         <div id="arbsScroll" style={{touch_action: "none"}}>
-                                            <div className="scroller" style={{transform: "translate(0px, 0px) translateZ(0px)"}}>
+                                            <div className="scroller" style={{overflowY: "scroll",height:"1000px"}}>
                                                 <Sport1 betdata={this.state.betdata} arbsdata={this.state.arbsdata} />
                                             </div>
                                         </div>

@@ -7,6 +7,7 @@ const options = () => {
         headers: {
             'Content-Type': 'application/json'
         },
+        //baseURL:'http://localhost:3000'
         baseURL:'http://betbetter.fun'
     };
 };
@@ -17,6 +18,7 @@ export const getAllBookmarks = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -34,6 +36,7 @@ export const getAllSports = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {

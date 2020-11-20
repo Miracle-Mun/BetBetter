@@ -16,26 +16,26 @@ class MultiFilter extends Component {
                     </div>
                 </div>
                 <div className="col-lg-10 col-md-9 col-sm-12 col-xs-12">
-                    <ul className="nav nav-tabs" role="tablist">
-                        <li className="active" role="presentation">
-                            <a aria-controls="prematchMultiFilters" data-toggle="tab"
-                               href="https://www.betburger.com/profile#prematchMultiFilters" role="tab">
-                                Prematch
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a aria-controls="liveMultiFilters" data-toggle="tab"
-                               href="https://www.betburger.com/profile#liveMultiFilters" role="tab">
-                                Live
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a aria-controls="valuebetFilters" data-toggle="tab"
-                               href="https://www.betburger.com/profile#valuebetFilters" role="tab">
-                                Valuebet
-                            </a>
-                        </li>
-                    </ul>
+                        {/* <ul className="nav nav-tabs" role="tablist">
+                            <li className="active" role="presentation">
+                                <a aria-controls="prematchMultiFilters" data-toggle="tab"
+                                href="https://www.betburger.com/profile#prematchMultiFilters" role="tab">
+                                    Prematch
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="liveMultiFilters" data-toggle="tab"
+                                href="https://www.betburger.com/profile#liveMultiFilters" role="tab">
+                                    Live
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="valuebetFilters" data-toggle="tab"
+                                href="https://www.betburger.com/profile#valuebetFilters" role="tab">
+                                    Valuebet
+                                </a>
+                            </li>
+                        </ul> */}
                     <div className="tab-content">
                         <div className="tab-pane active fade in" id="prematchMultiFilters" role="tabpanel">
                             <br />
@@ -68,7 +68,7 @@ class MultiFilter extends Component {
                                                 </td>
                                                 <td className="settings">
                                                     <a className="ico-edit filter-edit"
-                                                       href="#"
+                                                       href="/public_filter_edit"
                                                        title="edit">
                                                         <i className="edit-icon"></i>
                                                     </a>

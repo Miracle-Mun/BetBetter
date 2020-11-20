@@ -10,22 +10,6 @@ class DashboardSecondPart extends Component {
             </h3>
             <div className="active tab-pane" id="main">
                 <div className="info-holder paidInfo">
-                    <ul className="nav nav-tabs paid-info-tabs" role="tablist">
-                        <li className="active" role="presentation">
-                            <a aria-controls="arbsSubscription" data-toggle="tab"
-                               href="https://www.betburger.com/profile#arbsSubscription"
-                               role="tab">
-                                Surebets
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a aria-controls="valuebetsSubscription" data-toggle="tab"
-                               href="https://www.betburger.com/profile#valuebetsSubscription"
-                               role="tab">
-                                Valuebets
-                            </a>
-                        </li>
-                    </ul>
                     <div className="tab-content">
                         <div className="tab-pane active fade in" id="arbsSubscription"
                              role="tabpanel">

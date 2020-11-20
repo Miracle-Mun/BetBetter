@@ -30,8 +30,7 @@ router.post('/sports', (req, res) => {
         }
         else{
             res.json({ status: false, errors: 'no records'});
-        }
-                
+        }         
     });
 });
 

@@ -16,7 +16,7 @@ class MultiFilter extends Component {
                     </div>
                 </div>
                 <div className="col-lg-10 col-md-9 col-sm-12 col-xs-12">
-                    <ul className="nav nav-tabs" role="tablist">
+                    {/* <ul className="nav nav-tabs" role="tablist">
                         <li className="active" role="presentation">
                             <a aria-controls="prematchMultiFilters" data-toggle="tab"
                                href="https://www.betburger.com/profile#prematchMultiFilters" role="tab">
@@ -36,7 +36,7 @@ class MultiFilter extends Component {
                 
                             </a>
                         </li>
-                    </ul>
+                    </ul> */}
                     <div className="tab-content">
                         <div className="tab-pane active fade in" id="prematchMultiFilters" role="tabpanel">
                             <br />
@@ -69,7 +69,7 @@ class MultiFilter extends Component {
                                                 </td>
                                                 <td className="settings">
                                                     <a className="ico-edit filter-edit"
-                                                       href="https://www.betburger.com/multi_filters/prematch/411062/edit"
+                                                       href="pt_public_fillter_edit"
                                                        title="edit">
                                                         <i className="edit-icon"></i>
                                                     </a>
@@ -78,7 +78,7 @@ class MultiFilter extends Component {
                                                     <a className="ico-delete filter-delete"
                                                        data-confirm="Are you sure?" data-method="delete"
                                                        data-remote="true"
-                                                       href="https://www.betburger.com/profile#"
+                                                       href="/pt_public_fillter_edit"
                                                        rel="nofollow">
                                                         <i className="delete-icon"></i>
                                                     </a>

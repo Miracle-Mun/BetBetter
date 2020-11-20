@@ -1,5 +1,5 @@
 /*
-SQLyog Ultimate v12.5.1 (64 bit)
+SQLyog Community v13.1.1 (64 bit)
 MySQL - 10.3.15-MariaDB : Database - bet
 *********************************************************************
 */
@@ -12,7 +12,7 @@ MySQL - 10.3.15-MariaDB : Database - bet
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`bet` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`bet` /*!40100 DEFAULT CHARACTER SET utf32 */;
 
 USE `bet`;
 
@@ -39,6 +39,37 @@ insert  into `bookmark`(`id`,`name`) values
 (24,'188bet'),
 (41,'Rivalo'),
 (78,'betway');
+
+/*Table structure for table `client` */
+
+DROP TABLE IF EXISTS `client`;
+
+CREATE TABLE `client` (
+  `id` int(11) DEFAULT NULL,
+  `client_id` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32;
+
+/*Data for the table `client` */
+
+insert  into `client`(`id`,`client_id`,`password`) values 
+(0,'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM','123213213213213213');
+
+/*Table structure for table `payment` */
+
+DROP TABLE IF EXISTS `payment`;
+
+CREATE TABLE `payment` (
+  `id` int(11) DEFAULT NULL,
+  `email` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `price` decimal(10,0) DEFAULT NULL,
+  `account_time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `payment` */
+
+insert  into `payment`(`id`,`email`,`price`,`account_time`) values 
+(1,'22',333,'2020-11-18 16:34:28');
 
 /*Table structure for table `sports` */
 
@@ -105,14 +136,20 @@ CREATE TABLE `user` (
   `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `emailVerifed` tinyint(1) DEFAULT NULL,
+  `Role` tinyint(1) DEFAULT 0,
+  `From` timestamp NULL DEFAULT current_timestamp(),
+  `To` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`name`,`username`,`email`,`password`,`emailVerifed`) values 
-(1,'Alex K','admin','admin@dev.com','admin123',0);
+insert  into `user`(`id`,`name`,`username`,`email`,`password`,`Role`,`From`,`To`) values 
+(0,'Alex K','admin','admin@dev.com','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',1,NULL,NULL),
+(66,'213','2323','1','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',0,'2020-11-10 15:32:24','2020-11-21 15:32:29'),
+(67,'232','123213','2','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',0,'2020-11-20 15:32:11','2020-11-20 15:32:11'),
+(68,'3434','4545','6556','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',0,'2020-11-20 15:32:16','2020-11-20 15:32:16'),
+(69,'Jang','Wangsun','jang@wang.com','$2a$10$IYX0s8C7K/aMNa9gFalzmuUbQ1S2VpdZSexfhgQ0YdF1MEZKPOfAG',0,'2020-11-20 16:32:43','2020-11-20 16:32:43');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -14986,6 +14986,10 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 .pricing-surebets .dropdown-menu.dropdown-language > ul > a {
   padding: 5px 10px;
 }
+
+.pricing-surebets .dropdown-menu.dropdown-language > ul > a > span{
+  float: left;
+}
 /* line 674, /app/app/assets/stylesheets/bb_prices.scss */
 .pricing-surebets .icon-logout {
   width: 18px;

@@ -42853,9 +42853,11 @@ html #arbs .pageContainer .arbs .arbContainer #sidebar-wrapper .subContainer .fi
   color: #a1a2a4;
 }
 /* line 2149, /app/app/assets/stylesheets/arbs.scss */
-html #arbs .pageContainer .arbs .arbContainer #sidebar-wrapper .subContainer .filterPanel .list .arbsOnPage, html #arbs .pageContainer .arbs .arbContainer #sidebar-wrapper .subContainer .filterPanel .list .bookiesInArb {
-  margin-top: 9px;
+html #arbs .pageContainer .arbs .arbContainer #sidebar-wrapper .subContainer .filterPanel .list .arbsOnPage, html #arbs .pageContainer .arbs .arbContainer #sidebar-wrapper .subContainer .filterPanel .bookiesInArb {
+  margin-top: 5px;
   display: block;
+  font-size: 12px;
+  color: #a1a2a4;
 }
 /* line 2153, /app/app/assets/stylesheets/arbs.scss */
 html #arbs .pageContainer .arbs .arbContainer #sidebar-wrapper .subContainer .filterPanel .list ul {

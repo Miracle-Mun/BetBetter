@@ -13,17 +13,9 @@ class PageContainer extends Component {
                             <ul>
                                 <li>
                                     <div className="radio">
-                                        <label htmlFor="isLiveArb">
-                                            <input type="radio" id="isLiveArb" name="is_live" value="true" />
-                                            Live
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="radio">
                                         <label htmlFor="isPrematchArb">
-                                            <input type="radio" id="isPrematchArb" name="is_live" value="false"
-                                                    checked=""/>
+                                            <input type="radio" id="isPrematchArb" name="is_live" value="true"
+                                                    checked="true"/>
                                             Prematch
                                         </label>
                                     </div>
@@ -42,68 +34,28 @@ class PageContainer extends Component {
                                 </div>
                             </ul>
                         </div>
-                        <span className="filterHeader sortedFilter">Definições:</span>
 
-                        <div className="list sortSettingsList">
-                            <ul className="sorting">
+                        <span className="filterHeader sortedFilter">Definições:</span>
+                        
+                        <span className="bookiesInArb">Tipo de cotas:</span>
+                        <div className="list zoomSettingsList">
+                            <ul className="zooming">
                                 <div className="selectContainer">
-                                    <select name="per_page" className="sortOption">
-                                        <option value="percent" selected="selected">Percentagem</option>
-                                        <option value="age">Idade</option>
-                                        <option value="beginningTime">Hora de início</option>
-                                        <option value="middles">Middles</option>
-                                        <option value="roi">ROI</option>
+                                    <select name="per_page" className="zoomOption">
+                                        <option value="decimal" selected="selected">Decimal</option>
+                                        <option value="hongkong">Hong Kong</option>
                                     </select>
                                 </div>
                             </ul>
                         </div>
-                        <span className="filterHeader">Settings:</span>
-                        <div className="settingsList list">
-                            <ul>
-                                <li><input type="checkbox" value="" id="auto_update" name="auto_update" checked=""/>
-                                    <label htmlFor="auto_update"><span className="checkbox"></span>
-                                        <p>Atual. autom.</p></label>
 
-                                </li>
-                                <li className="notification_sound_js"><input type="checkbox" value=""
-                                                                            id="notification_sound"
-                                                                            name="notification_sound"/>
-                                    <label htmlFor="notification_sound"><span className="checkbox"></span>
-                                        <p>Alertas de som</p></label>
-
-                                </li>
-                                <li><input type="checkbox" value="" id="notification_popup"
-                                            name="notification_popup"/>
-                                    <label htmlFor="notification_popup"><span className="checkbox"></span>
-                                        <p>Mostrar pop-ups</p></label>
-
-                                </li>
-                                <li><input type="checkbox" value="" id="grouped" name="grouped" checked=""/>
-                                    <label htmlFor="grouped"><span className="checkbox"></span>
-                                        <p>Surebet de grupo</p></label>
-
-                                </li>
-                                <li className="hiddenLi"><input type="hidden" value="" id="event_id" name="event_id"/>
-                                </li>
-                                <li className="hiddenLi"><input type="hidden" value="percent" id="sort_by"
-                                                            name="sort_by"/>
-                                </li>
-                            </ul>
-                            <span className="bookiesInArb">Surebets na página:</span>
-                            <div className="selectContainer">
-                                <select name="per_page" className="per_page">
-                                    <option value="10" selected="selected">10</option>
-                                    <option value="20">20</option>
-                                    <option value="30">30</option>
-                                </select>
-                            </div>
-                        </div>
-                        <span className="filterHeader">Tipo de cotas:</span>
+                       
+                        <span className="filterHeader">Filtros:</span>
                         <div className="filtersList list">
                             <a href="/pt_bet" className="filter-error-popup" data-toggle="popover" data-trigger="focus" data-content="Maximum %s active filters"></a>
                             <ul>
                                 <li><input type="checkbox" value="28783" id="sidebar_filter28783" name="demo"
-                                            checked=""/>
+                                            checked="true"/>
                                     <label title="demo" data-id="sidebar_filter28783" className="editLinkLabel">
                                         <span className="checkbox"></span>
                                         <p>demo</p>
@@ -112,6 +64,24 @@ class PageContainer extends Component {
                                         target="_blank">
                                         <span className="editLink"></span>
                                     </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <span className="filterHeader">Ocultas:</span>
+                        <div>
+                            <ul style={{textDecoration:"none",paddingInlineStart:"0px"}}>
+                                <li style={{lineHeight:"1"}}>
+                                    <a style={{color:"#3C92C5",fontSize:"12px"}} href="#">0</a><span style={{color:"#3C92C5",fontSize:"12px"}}> surebets</span>
+                                </li>
+                                <li style={{color:"#3C92C5",fontSize:"12px"}} style={{lineHeight:"1"}}>
+                                    <a href="#">0</a><span style={{color:"#3C92C5",fontSize:"12px"}}> eventos</span>
+                                </li>
+                                <li style={{lineHeight:"1"}}>
+                                    <a style={{color:"#3C92C5",fontSize:"12px"}} href="#">0</a><span /><span style={{color:"#3C92C5",fontSize:"12px"}}> resultados</span>
+                                </li>
+                                <li style={{lineHeight:"1"}}>
+                                    <span><a style={{color:"#3C92C5",fontSize:"12px"}} href="#">1</a></span><span style={{color:"#3C92C5",fontSize:"12px",lineHeight:"0.5"}}> eventos da casa de apostas</span>
                                 </li>
                             </ul>
                         </div>

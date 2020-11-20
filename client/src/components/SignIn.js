@@ -107,7 +107,7 @@ class SignIn extends Component {
             <div className="support-links">
                 <p>
                 Don't have an account?
-                <a href="#">Create one here</a>
+                <a href="/signup">Create one here</a>
                 </p>
                 <p>
                 Forgot your password?

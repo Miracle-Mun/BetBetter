@@ -18,33 +18,18 @@ class Sidebar extends Component {
                 <div className="navbar-collapse collapse" id="sub-navbar">
                     <ul className="nav navbar-nav profile-nav">
                         <li className="active">
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#main">Dashboard</a>
-                        </li>
-                        <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#bookmakers">Bookmakers</a>
-                        </li>
-                        <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#exchanges">Exchanges</a>
-                        </li>
-                        <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#currencies">Currencies</a>
+                            <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#main">Dashboard</a>
                         </li>
                         <li className="multifilter">
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#multi_filters">
+                            <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#multi_filters">
                                 Multifilters
                             </a>
                         </li>
                         <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#payments">Payments</a>
+                            <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#payments">Payments</a>
                         </li>
                         <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#accounting">Accounting</a>
-                        </li>
-                        <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#settings_tab">Settings</a>
-                        </li>
-                        <li>
-                            <a data-toggle="pill" href="https://www.betburger.com/profile#api_tab">API</a>
+                            <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#settings_tab">Settings</a>
                         </li>
                     </ul>
                 </div>

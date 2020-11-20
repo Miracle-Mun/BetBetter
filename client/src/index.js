@@ -9,12 +9,14 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 import betReducer from './store/reducers/betReducer';
 import usersReducer from './store/reducers/usersReducer';
+import adminReducer from './store/reducers/adminReducer';
 
 // import registerServiceWorker from './registerServiceWorker';
 
 const rootReducer = combineReducers({
     bets: betReducer,
-    users: usersReducer
+    users: usersReducer,
+    admin: adminReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

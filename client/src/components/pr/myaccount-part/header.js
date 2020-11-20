@@ -57,55 +57,8 @@ class Header extends Component {
                                     <li>
                                         <a className="dropdown-item" href="/pt_bet">Surebets Prematch</a>
                                     </li>
-                                    <li>
-                                        <a className="dropdown-item" href="/pt_bet">Surebets Live</a>
-                                    </li>
                                 </ul>
                             </div>
-                        </li>
-                        <li>
-                            <div className="dropdown">
-                                <button aria-expanded="false" aria-haspopup="true"
-                                        className="drop-pricing-button dropdown-toggle logo_white" data-hover="dropdown"
-                                        data-toggle="dropdown" id="valuebets_dropdown" type="button">
-                                    Valuebets
-                                </button>
-                                <ul aria-labelledby="valuebets_dropdown" className="dropdown-menu dropdown-prising">
-                                    <li>
-                                        <a className="dropdown-item" href="#">Valuebets
-                                            pricing</a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href="#">Apostas de valor Prematch</a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href="#">Apostas de valor Live</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="dropdown">
-                                <button aria-expanded="false" aria-haspopup="true"
-                                        className="drop-pricing-button dropdown-toggle logo_white" data-hover="dropdown"
-                                        data-toggle="dropdown" id="api_dropdown" type="button">
-                                    API
-                                </button>
-                                <ul aria-labelledby="api_dropdown" className="dropdown-menu dropdown-prising">
-                                    <li>
-                                        <a className="dropdown-item" href="#">API pricing</a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href="#">API Prematch</a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href="#">API Live</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="">
-                            <a href="#">Ajuda</a>
                         </li>
                         <li className="active">
                             <a className="signup logo_white " href="/public">A Minha Conta</a>
@@ -134,7 +87,7 @@ class Header extends Component {
         
                         </li>
                         <li>
-                            <a className="signup" rel="nofollow" data-method="delete" href="javascript:void(0)" onClick={()=>this.props.userLogoutRequest()}>Sign out</a>
+                            <a className="signup" rel="nofollow" data-method="delete" href="javascript:void(0)" onClick={()=>this.props.userLogoutRequest()}>Terminar sessão</a>
                         </li>
                     </ul>
                 </nav>

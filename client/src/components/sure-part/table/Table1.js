@@ -908,22 +908,6 @@ class Table1 extends Component {
                                                             <span className="icomoon-copy3"></span>
                                                         </a>
                                                     </div>
-                                                    <div className="saveToAccountingSection">
-                                                        <a href="#"
-                                                            className="saveToAccounting"
-                                                            title="Save to accounting">
-                                                            
-                                                            <span style={{fontSize:"20px"}} className="glyphicon glyphicon-duplicate"></span>
-                                                        </a>
-                                                    </div>
-                                                    <div className="saveToAccountingSection">
-                                                        <a href="#"
-                                                            className="saveToAccounting"
-                                                            title="Save to accounting">
-                                                            
-                                                            <span style={{fontSize:"20px"}} className="fas fa-medkit"></span>
-                                                        </a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1128,26 +1112,6 @@ class Table1 extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-height col-middle text-right calcKoef">
-                                    <div className="row-sm-height">
-                                        <div className="col-sm-height col-middle">
-                                            <div className="inside">
-                                                <div className="content">
-                                                    <a href="#"
-                                                        className="placeBets"
-                                                        title="Put stake">
-                                                        <span className="fas fa-crosshairs"></span>
-                                                    </a>
-                                                    <a href="#"
-                                                        className="calculateTotal"
-                                                        title="Calculate">
-                                                        <span className="fas fa-calculator"></span>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

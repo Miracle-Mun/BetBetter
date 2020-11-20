@@ -158,7 +158,7 @@ class Sport1 extends Component {
                                                                             <a className="copy-team-name copy-team-name-js"
                                                                                 title="Copy"
                                                                                 data-to-copy="FC Zorya Luhansk">
-                                                                                <span className="icomoon-copy3"><span class="glyphicon" style={{fontSize: "10px"}}>&#xe224;</span></span>
+                                                                                <span className="icomoon-copy3"><span className="glyphicon" style={{fontSize: "10px"}}>&#xe224;</span></span>
                                                                             </a>
                                                                             <div>
                                                                                 <a href="#"
@@ -195,13 +195,13 @@ class Sport1 extends Component {
                                                             <div className="content text-right relative outcomeKoef">
                                                                 {bets.diff==2 &&
                                                                     <span className="icomoon-arrow-down gray ">
-                                                                        <i style={{fontSize:"12px", marginRight: "3px", color: "red"}} class='fas'>&#xf309;</i>
+                                                                        <i style={{fontSize:"12px", marginRight: "3px", color: "red"}} className='fas'>&#xf309;</i>
                                                                     </span>
                                                                 }
                                                                 {
                                                                     bets.diff==1 &&
                                                                     <span className="icomoon-arrow-up gray ">
-                                                                        <i style={{fontSize:"12px", marginRight: "3px", color: "green"}} class='fas'>&#xf30c;</i>
+                                                                        <i style={{fontSize:"12px", marginRight: "3px", color: "green"}} className='fas'>&#xf30c;</i>
                                                                     </span>
                                                                 }                                                            
                                                                                                                                                   

@@ -13,9 +13,9 @@ class PersonalSettings extends Component {
                 <hr className="password-form-hr" />
             </div>
         </div>
-        <form className="editUserPersonal row" id="edit_user"
-              action="https://www.betburger.com/profile/personal_settings" acceptCharset="UTF-8"
-              data-remote="true" method="post"><input name="utf8" type="hidden" value="✓" /><input
+        <form className="editUserPersonal row" id="edit_user" action="https://www.betburger.com/profile/personal_settings" acceptCharset="UTF-8" data-remote="true" method="post">
+            <input name="utf8" type="hidden" value="✓" />
+            <input 
                 type="hidden" name="_method" value="put" />
             <div className="info-holder form-group col-sm-6 col-md-12 required">
                 <div className="row">

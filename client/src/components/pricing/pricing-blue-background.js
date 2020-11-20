@@ -1,6 +1,38 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import PropTypes from 'prop-types';
+import {getClientdata} from '../../store/actions/adminActions';
+import {GETPay} from '../../store/actions/adminActions';
+import { parseJSON } from 'jquery';
 class PricingBlueBackground extends Component {
+    constructor() {
+        super();
+        this.state = {
+          day: '1',
+        };
+        this.handledayChange = this.handledayChange.bind(this);
+        this.handlegetPayClick=this.handlegetPayClick.bind(this);
+    }
+
+    handlegetPayClick(evt) {
+        const data=localStorage.getItem('clientData');
+        console.log(data)
+        const client_data=this.state.day*3.33
+        this.props.GETPay(client_data);
+      }
+    
+      handledayChange(evt) {
+        this.setState({
+          day: evt.target.value,
+         
+        });
+      };
+      componentDidMount(){
+        this.props.getClientdata();
+        console.log(this.props.clientData)
+      }
+
   render() {
     return (
         <div className="blue-background">
@@ -16,7 +48,7 @@ class PricingBlueBackground extends Component {
                                     <div className="price-column__price">
                                         <div className="actual_price">
                                             <span className="currency">€</span>
-                                            <span className="price">99.99</span>
+                                            <span className="price">{this.state.day*3.33}</span>
                                         </div>
                                         <div className="old_price hidden"></div>
                                     </div>
@@ -27,12 +59,12 @@ class PricingBlueBackground extends Component {
                                         <span className="price-column__priceday">3.33/day</span>
                                     </div>
                                     <div className="price-column__select">
-                                        <select className="tariff-select" id="prematch-tariff">
-                                            <option value="18" data-duration="1">1 day</option>
-                                            <option value="19" data-duration="7">7 days</option>
-                                            <option value="20" data-duration="30">30 days</option>
-                                            <option value="31" data-duration="180">180 days</option>
-                                            <option value="32" data-duration="360">360 days</option>
+                                        <select className="tariff-select" id="prematch-tariff" onChange={this.handledayChange}>
+                                            <option value="1" data-duration="1" >1 day</option>
+                                            <option value="10" data-duration="10">10 days</option>
+                                            <option value="30" data-duration="30">30 days</option>
+                                            <option value="180" data-duration="180">180 days</option>
+                                            <option value="360" data-duration="360">360 days</option>
                                         </select>
                                     </div>
                                     <span className="price-column__item">Unlimited Surebets</span>
@@ -49,10 +81,13 @@ class PricingBlueBackground extends Component {
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <button className="btn green-btn pay-form pay-form-prematch">
-                                        Get full access
-                                        <img src="../assets/img/arrow_red-faf29b1a7ceae4afeb3d57abb105adb10e65f8bb154f76dbccc76e55b0740bc8.png" />
-                                    </button>
+                                    <div className="pay-form-prematch-live">
+                                        <button className="btn green-btn pay-form pay-form-prematch-live" onClick={this.handlegetPayClick}>
+                                            Get full access
+                                            <img src="../assets/img/arrow_red-faf29b1a7ceae4afeb3d57abb105adb10e65f8bb154f76dbccc76e55b0740bc8.png" />
+                                        </button>                   
+                                    </div>
+                                         
                                 </div>
                             </div>
                         </div>
@@ -95,10 +130,10 @@ class PricingBlueBackground extends Component {
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <button className="btn green-btn pay-form pay-form-live">
-                                        Get full access
-                                        <img src="../assets/img/arrow_red-faf29b1a7ceae4afeb3d57abb105adb10e65f8bb154f76dbccc76e55b0740bc8.png" />
-                                    </button>
+                                        <button className="btn green-btn pay-form pay-form-prematch-live">
+                                            Get full access
+                                            <img src="../assets/img/arrow_red-faf29b1a7ceae4afeb3d57abb105adb10e65f8bb154f76dbccc76e55b0740bc8.png" />
+                                        </button>    
                                 </div>
                             </div>
                         </div>
@@ -306,5 +341,10 @@ class PricingBlueBackground extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+    return {
+        clientData: state.admin.clientData,
+    }
+}
+export default connect(mapStateToProps, {getClientdata,GETPay})(PricingBlueBackground)
 
-export default PricingBlueBackground;

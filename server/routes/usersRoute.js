@@ -14,17 +14,20 @@ const validateEmail = (email) => {
 }
 
 const checkUserUniqueness = (field, value) => {
-    return { error, isUnique } = User.findOne({[field]: value}).exec()
-        .then(user => {
-            let res = {};
-            if (Boolean(user)) {
-                res = { error: { [field]: "This " + field + " is not available" }, isUnique: false };
-            } else {
-                res = { error: { [field]: "" }, isUnique: true };
-            }
-            return res;
-        })
-        .catch(err => console.log(err))
+    console.log(filed);
+    console.log(value);
+    var sql = "select * from `user` where `"+ field +"`= '" + value+ "'";
+    config.connection.query(sql, function(err, results){
+        console.log(results); 
+        let res={};   
+        if(results&&results.length>0){
+            res = { error: { [field]: "This " + field + " is not available" }, isUnique: false };
+        }
+        else{
+            res = { error: { [field]: "" }, isUnique: true };
+        }
+        return res;           
+     });   
 }
 
 router.post('/validate', async (req, res) => {
@@ -39,62 +42,60 @@ router.post('/validate', async (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
-    console.log(req.body.name);
     const name = req.body.name || '';
-    const username = req.body.username || '';
+    const username = req.body.user || '';
     const email = req.body.email || '';
     const password = req.body.password || '';
-    const confirmPassword = req.body.confirmPassword || '';
-
+    const confirmPassword = req.body.c_password || '';
     const reqBody = { name, username, email, password, confirmPassword };
-
-    let errors = {};
+    let passwords="";
+    var errors = {};
+    var flag=true;
     Object.keys(reqBody).forEach(async field => {
+        console.log(reqBody[field]);
+        console.log(field);
         if (reqBody[field] === '') {
-            errors = {...errors, [field]: 'This field is required'}
+            errors = {...errors, [field]:"This field is required"}
         }
         if (field === 'username' || field === 'email') {
             const value = reqBody[field];
-            const { error, isUnique } = await checkUserUniqueness(field, value);
-            if (!isUnique) {
-                errors = {...errors, ...error};
-            }
+            var sql = "select * from `user` where `"+ field +"`= '" + value+ "'";
+            config.connection.query(sql, function(err, results){
+                let res={};   
+                if(results.length>0){
+                    flag=false;
+                    res = { error: "This " + field + " is not available" , isUnique: false };             
+                }          
+             });
+            if (!flag) {
+                errors = {...errors, [field]:"This " + field + " is not available"};
+                flag=true;
+            }    
         }
+        config.connection.commit();
         if (field === 'email' && !validateEmail(reqBody[field])) {
             errors = {...errors, [field]: 'Not a valid Email'}
         }
-        if (field === 'password' && password !== '' && password < 4) {
-            errors = {...errors, [field]: 'Password too short'}
-        }
-        if (field === 'confirmPassword' && confirmPassword !== password) {
+        if (field === 'confirmPassword' && reqBody[field] !== reqBody['password']) {
             errors = {...errors, [field]: 'Passwords do not match'}
         }
     });
-
+    
     if (Object.keys(errors).length > 0) {
         res.json({ errors });
     } else {
-        const newUser = new User({
-            name: name,
-            username: username,
-            email: email,
-            password: password
-        });
-
-        // Generate the Salt
         bcrypt.genSalt(10, (err, salt) => {
             if(err) return err;
             // Create the hashed password
-            bcrypt.hash(newUser.password, salt, (err, hash) => {
+            bcrypt.hash(password, salt, (err, hash) => {
                 if(err) return err;
-                newUser.password = hash;
-                // Save the User
-                newUser.save(function(err){
-                    if(err) return err
-                    res.json({ success: 'success' });
-                });
+                var sql="INSERT INTO `user` (name, username, email, password) VALUES ('"+name+"' , '"+username+"' , '"+email+"' , '"+hash+"')";
+                config.connection.query(sql, function(err, results){  
+                    res.json({ Status:true });
+                 });  
             });
         });
+             
     }
 });
 
@@ -114,41 +115,33 @@ router.post('/login', (req, res) => {
     if (Object.keys(errors).length > 0) {
         res.json({ errors });
     } else {
-        var sql = "select * from `user` where `email` = '"+ email +"' and `password` = '"+ password +"'";
+        var sql = "select * from `user` where `email` = '"+ email +"'";
         config.connection.query(sql, function(err, results){    
             if(results&&results.length>0){
-                const token = jwt.sign({
-                    id: results[0].id,
-                    username: results[0].username
-                }, config.jwtSecret);
-                res.json({ status: true, token })
+                bcrypt.compare(password, results[0].password, (err, isMatch) => {
+                    if (err) return err;
+                    if (isMatch) {
+                        let pay_role=false;
+                        const current_date=new Date();
+                        if (results[0].To>current_date){
+                            pay_role=true;
+                            console.log(pay_role)
+                        }
+                        const token = jwt.sign({
+                            id: results[0].id,
+                            role:results[0].Role,
+                            username: results[0].username,
+                            limitdate:pay_role,
+                        }, config.jwtSecret);
+                        res.json({ status: true, token })
+                    }
+                });
             }
             else{
                 res.json({ status: false, errors: 'Invalid Username or Password'});
             }
                     
-         });
-
-        // User.findOne({username: username}, (err, user) => {
-        //     if (err) throw err;
-        //     if (Boolean(user)) {
-        //         // Match Password
-        //         bcrypt.compare(password, user.password, (err, isMatch) => {
-        //             if (err) return err;
-        //             if (isMatch) {
-        //                 const token = jwt.sign({
-        //                         id: user._id,
-        //                         username: user.username
-        //                     }, config.jwtSecret);
-        //                 res.json({ token, success: 'success' })
-        //             } else {
-        //                res.json({ errors: { invalidCredentials: 'Invalid Username or Password' } });
-        //             }
-        //         });
-        //     } else {
-        //         res.json({ errors: { invalidCredentials: 'Invalid Username or Password' } });
-        //     }
-        // });
+        });
     }
 });
 

@@ -18,99 +18,43 @@ class PricingHeader extends Component {
                         <img alt="BETBURGER"
                              src="../../assets/img/bb-logo_without_background-7fb9aef50ec414c4da763d9789adcef46655dfc6aa31636824146d7de3d3b8c0.svg" />
                     </a>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+              <div className="navbar-header">
+                <button className="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                </button>
+                  
+                <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                  <div className="text-center visible-sm visible-xs">
+                    <span className="bs-navbar-collapse__toggle glyphicon glyphicon-remove" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"></span>
+                  </div>
 
-            <div className="navbar-header">
-              <button className="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button">
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-                
-              <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <div className="text-center visible-sm visible-xs">
-                  <span className="bs-navbar-collapse__toggle glyphicon glyphicon-remove" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"></span>
-                </div>
-
-                <ul className="nav-list-white">
-                  <li>
-                    <div className="dropdown profile-dropdown">
-                      <a aria-expanded="false" aria-haspopup="true" className="account dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" id="arbs_dropdown" type="button"> Surebets
-                      </a>
-                      <ul aria-labelledby="arbs_dropdown" className="dropdown-menu dropdown-profile">
-                        <ul className="user-menu">
-                          <li className="dropdown-item">
-                            <a className="dropdown-item" href="/pt_pricing">Surebets pricing</a>
-                          </li>
-                          <li className="dropdown-item">
-                            <a className="dropdown-item" href="/pt_bet">Surebets Prematch</a>
-                          </li>
-                          <li className="dropdown-item">
-                            <a className="dropdown-item" href="/pt_bet">Surebets Live</a>
-                          </li>
-                        </ul>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="dropdown profile-dropdown">
-                      <a aria-expanded="false" aria-haspopup="true"
-                          className="account dropdown-toggle" data-hover="dropdown"
-                          data-toggle="dropdown" id="valuebets_dropdown" type="button">
-                          Valuebets
-                      </a>
-                      <ul aria-labelledby="valuebets_dropdown" className="dropdown-menu dropdown-profile">
-                        <ul className="user-menu">
-                          <li className="dropdown-item">
-                              <a className="dropdown-item"
-                                  href="#">Valuebets
-                                  pricing</a>
-                          </li>
-                          <li className="dropdown-item">
-                              <a className="dropdown-item" href="#">Apostas de valor Prematch</a>
-                          </li>
-                          <li className="dropdown-item">
-                              <a className="dropdown-item"
-                                  href="#">Apostas de valor Live</a>
-                          </li>
-                        </ul>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="dropdown profile-dropdown">
-                      <a aria-expanded="false" aria-haspopup="true"
-                          className="account dropdown-toggle" data-hover="dropdown"
-                          data-toggle="dropdown" id="api_dropdown" type="button">
-                          API
-                      </a>
-                      <ul aria-labelledby="api_dropdown" className="dropdown-menu dropdown-profile">
+                  <ul className="nav-list-white">
+                    <li>
+                      <div className="dropdown profile-dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" className="account dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" id="arbs_dropdown" type="button"> Surebets
+                        </a>
+                        <ul aria-labelledby="arbs_dropdown" className="dropdown-menu dropdown-profile">
                           <ul className="user-menu">
-                              <li className="dropdown-item">
-                                  <a className="dropdown-item" href="#">API
-                                      pricing</a>
-                              </li>
-                              <li className="dropdown-item">
-                                  <a className="dropdown-item" href="#">API
-                                      Prematch</a>
-                              </li>
-                              <li className="dropdown-item">
-                                  <a className="dropdown-item" href="#">API
-                                      Live</a>
-                              </li>
+                            <li className="dropdown-item">
+                              <a className="dropdown-item" href="/pt_pricing">Surebets pricing</a>
+                            </li>
+                            <li className="dropdown-item">
+                              <a className="dropdown-item" href="/pt_bet">Surebets Prematch</a>
+                            </li>
                           </ul>
-                      </ul>
-                    </div>
-                  </li>
-                  <li className="">
-                      <a href="#">Ajuda</a>
-                  </li>
+                        </ul>
+                      </div>
+                    </li>
                     <li>
                       <a className="signup logo_white " href="/pt_public">A Minha Conta</a>
                     </li>
-                </ul>
-              </nav>
-            </div>
-            <div className="actions">
+                  </ul>
+                </nav>
+              </div>
+              <div className="actions">
               <div className="dropdown language-select drop-lang lang-dropdown">
                 <span aria-expanded="false" aria-haspopup="true" className="lang-btn dropdown-toggle drop-language-button" data-toggle="dropdown" id="drop-language" type="button" style={{width: "24px"}}>
                   <span className="lang-btn__flag">
@@ -120,17 +64,17 @@ class PricingHeader extends Component {
                         
                 <ul aria-labelledby="drop-language" className="dropdown-menu dropdown-language">
                   <li>
-                    <a className="notactual" href="/pricing">
-                      <span className="lang-btn__flag lang-btn_long">
+                    <a style={{marginRight:"0px"}} className="notactual" href="/pricing">
+                      <div className="lang-btn__flag lang-btn_long">
                         <img alt="English" src="../../../assets/img/en.png" />English
-                      </span>
+                      </div>
                     </a>
                   </li>
                   <li>
-                    <a className="actual" href="/pt_pricing">
-                      <span className="lang-btn__flag lang-btn_long">
+                    <a style={{marginRight:"0px"}} className="actual" href="/pt_pricing">
+                      <div className="lang-btn__flag lang-btn_long">
                         <img alt="Portugal" src="../../../assets/img/pt.png"/>Portugal
-                      </span>
+                      </div>
                     </a>
                   </li>         
                 </ul>
@@ -138,6 +82,7 @@ class PricingHeader extends Component {
                 <div className="signin">
                   <a className="btn green-btn" href="javascript:void(0)" onClick={()=>this.props.userLogoutRequest()}>Terminar sessão</a>
                 </div>  
+            </div>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ class TopNav extends Component {
                         <li className="prematchNav active">
                             <a href="/bet">Surebets</a>
                         </li>
-                        <li className="valuebetsNav">
+                        {/* <li className="valuebetsNav">
                             <a href="#">Valuebets</a>
                         </li>
                         <li className="apiNav">
@@ -32,7 +32,7 @@ class TopNav extends Component {
                         </li>
                         <li>
                             <a href="#">Help Center</a>
-                        </li>
+                        </li> */}
                         <li>
                             <a  href="/public">My Account</a>
                         </li>

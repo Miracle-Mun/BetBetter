@@ -6,6 +6,7 @@ require('dotenv').config();
 
 const bets = require('./routes/betsRoute.js');
 const users = require('./routes/usersRoute.js');
+const admin = require('./routes/adminRoute.js');
 
 const config = require('./config.js');
 
@@ -48,6 +49,7 @@ app.use((req, res, next) => {
 
 app.use('/api/bets', bets);
 app.use('/api/users', users);
+app.use('/api/admin',admin);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
