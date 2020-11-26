@@ -76,4 +76,90 @@ router.post('/payments', (req, res) => {
     });
 });
 
+router.post('/setfilter', (req, res) => {
+    console.log("sdsd")
+    var sql="INSERT INTO `filter` (filter_name, filter_id) VALUES ('"+req.body.filter_name+"' , '"+req.body.filter_id+"')";
+    config.connection.query(sql, function(err, results){    
+        var sql = "select * from `filter`";
+        config.connection.query(sql, function(err, results){    
+            if(results&&results.length>0){
+                res.json({ filters: results });
+            }
+            else{
+                res.json({ status: false, errors: 'no records'});
+            }           
+        });                
+    });
+});
+
+router.post('/filters', (req, res) => {
+    var sql = "select * from `filter`";
+    config.connection.query(sql, function(err, results){ 
+        if(results&&results.length>0){
+            res.json({ filters: results });
+        }
+        else{
+            res.json({ status: false, errors: 'no records'});
+        }
+                
+    });
+});
+
+router.post('/price', (req, res) => {
+    var sql = "UPDATE `membership` SET price ='"+ req.body.price+"' WHERE id = '0'";
+    config.connection.query(sql, function(err, results){ 
+        var sql = "select * from `membership`";
+        config.connection.query(sql, function(err, results){ 
+        if(results&&results.length>0){
+            res.json({ price: results });
+        }
+        else{
+            res.json({ status: false, errors: 'no records'});
+        }        
+        });            
+    });
+});
+
+router.post('/getprice', (req, res) => {
+    var sql = "select * from `membership`";
+    config.connection.query(sql, function(err, results){ 
+        if(results&&results.length>0){
+            res.json({ price: results });
+        }
+        else{
+            res.json({ status: false, errors: 'no records'});
+        }
+                
+    });
+});
+
+router.post('/delfilter', (req, res) => {
+   
+    var sql = "DELETE FROM `filter` WHERE id = '"+req.body.id+"'";
+    config.connection.query(sql, function(err, results){ 
+        var sql = "select * from `filter`";
+        config.connection.query(sql, function(err, results){    
+            if(results&&results.length>0){
+                res.json({ filters: results });
+            }
+            else{
+                res.json({ status: false, errors: 'no records'});
+            }           
+        });                
+    });
+});
+
+router.post('/updateFreeze', (req, res) => {
+   console.log(req.body)
+    var sql = "UPDATE `user` SET freeze ='"+ req.body.freeze_day+"' WHERE id = '"+req.body.id+"'";
+    config.connection.query(sql, function(err, results){ 
+        if(results&&results.length>0){
+            res.json({ status:true });
+        }
+        else{
+            res.json({ status: false, errors: 'no records'});
+        }        
+    });
+});
+
 module.exports = router;

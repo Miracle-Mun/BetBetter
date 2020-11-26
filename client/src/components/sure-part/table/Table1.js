@@ -1,7 +1,83 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import PropTypes from 'prop-types';
+
+import { getAllBookmarks, getAllSports } from '../../../store/actions/betActions';
+import {setAllArbs} from '../../../store/actions/betActions'
+import { DelFilter } from '../../../store/actions/adminActions';
 class Table1 extends Component {
+    constructor() {
+        super();
+        this.state = {
+          bet1_price:50,
+          bet2_price:50,  
+          total_price: 100,
+        };
+        this.handleBet1Change = this.handleBet1Change.bind(this);
+        this.handleBet2Change = this.handleBet2Change.bind(this);
+        this.handleTotalChange=this.handleTotalChange.bind(this);
+        this.handleInputState=this.handleInputState.bind(this);
+      }
+
+    handleInputState(data){
+        this.setState({
+            bet1_price:data.bet1_p,
+            bet2_price:data.bet2_p
+        })
+    }
+
+    handleBet1Change(evt) {
+        this.setState({
+            bet1_price: evt.target.value,
+            bet2_price:this.state.total_price-evt.target.value
+        });
+    };
+
+    handleBet2Change(evt) {
+        this.setState({
+            bet2_price: evt.target.value,
+            bet1_price:this.state.total_price-evt.target.value
+        });
+    };
+    handleTotalChange(evt) {
+        this.setState({
+            total_price: evt.target.value,
+            bet1_price:evt.target.value-this.state.bet2_price
+        });
+    };
+    cleanDate1 (d) {
+        var print_Date = '';
+        d=new Date();
+        if(true){
+            print_Date=new Intl.DateTimeFormat('en-US', {month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(d)
+        }
+        return print_Date;
+    }
+    componentDidMount() {
+        this.props.getAllBookmarks();
+        this.props.getAllSports();
+    }
   render() {
+        const bookmarks = this.props.bookmarks;
+        const sports = this.props.sports;
+        const arbs=this.props.allarbs;
+        const bets=this.props.allbets;
+        let bet1={};
+        let bet2={};
+        let data={};
+        bets.map(bet => {
+            if(bet.id===arbs.bet1_id){
+                bet1=bet;
+            }
+            if(bet.id===arbs.bet2_id){
+                bet2=bet;
+            }   
+        });
+        data={
+            bet1_p:100/(bet1.koef+bet2.koef)*bet2.koef,
+            bet2_p:100/(bet1.koef+bet2.koef)*bet2.koef,
+        }
     return (
         <div className="tableRowStyle calcRow">
             <div className="row calculatorSection" style={{marginLeft:"-20px"}}>
@@ -21,34 +97,38 @@ class Table1 extends Component {
                                 <div className="tableCell left_calcHeader">
                                     <div className="left_calcHeader_top text-center">
                                         <div className="left_calcHeader_percent inline_middle text-left padding5px"
-                                            title="1.00%">1.00%
+                                            title="1.00%">{arbs.percent}%
                                         </div>
-                                        <div className="left_calcHeader_sport inline_middle text-left padding5px" title="Soccer">Soccer</div>
+                                        <div className="left_calcHeader_sport inline_middle text-left padding5px" title="Soccer">
+                                            {
+                                                sports.map(sport => {
+                                                    return (
+                                                        sport.id == arbs.sport_id && sport.name
+                                                    )  
+                                                })
+                                            }
+                                        </div>
                                     </div>
                                     <div className="left_calcHeader_bottom">
                                         <div className="left_calcHeader_time text-center">
-                                            05 Nov 15:00
+                                            {this.cleanDate1(arbs.started_at*1000)}
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div className="tableCell padding5px center_calcHeader text-left">
                                     <div className="center_calcHeader_top">
                                         <div className="center_calcHeader_event_name inline_middle"
                                             title="Zorya Lugansk - AEK Athens">
-                                            <a title="Compare odds: Zorya Lugansk - AEK Athens"
-                                            target="_blank"
-                                            href="#">
-                                                Zorya Lugansk - AEK Athens
-                                                <small><strong title="Game period: ">
-                                                    [1st half]</strong>
-                                                </small>
+                                            <a>
+                                                {bet2.bookmaker_event_name}
                                             </a>
                                         </div>
                                     </div>
                                     <div className="center_calcHeader_bottom">
                                         <div className="center_calcHeader_league inline_middle"
                                             title="Europe. UEFA Europa League">
-                                            Europe. UEFA Europa League
+                                            {bet2.bookmaker_league_name}
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +274,7 @@ class Table1 extends Component {
                                                     <a href="https://www.betburger.com/prices"
                                                     className="check_for_russia is_disabled-hbs"
                                                     rel="nofollow"
-                                                    title="Arb in FC Zorya Luhansk - AEK Athens">AH1(0)</a>
+                                                    title="Arb in FC Zorya Luhansk - AEK Athens"> {bet1.market_and_bet_type}({bet1.market_and_bet_type_param})</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -250,15 +330,17 @@ class Table1 extends Component {
                                                 <div multiple="" className="bookmakersSelect singleRow">
                                                     <a className="excludeBookmakerEvent" data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA" data-bet_number="1" href="#" title="Hide Bet"><span className="fa fa-close"></span></a>
                                                     <select className="input-xs singleSelect1 bg-color-" data-number="1" data-active="false">
-                                                        <option className="bg-color-"
-                                                                selected=""
-                                                                value="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA">
-                                                            Pinnacle: 2.02 ()
+                                                        <option className="bg-color-" selected="" value="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA">
+                                                        {
+                                                            bookmarks.map(bookmark => {
+                                                                return (
+                                                                    bookmark.id == bet1.bookmaker_id && bookmark.name+":("+bet1.koef.toFixed(2)+")"
+                                                                )  
+                                                            })
+                                                        }
+                                                        
                                                         </option>
                                                     </select>
-                                                    <a href="#" className="refreshOutcomeCalc" title="Refresh koef" data-bet_number="1">
-                                                        <span title="Refresh outcome odds" className="fa fa-refresh"></span>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>                                    
@@ -276,7 +358,7 @@ class Table1 extends Component {
                                                                 data-outcome_number="1"
                                                                 type="text"
                                                                 id="outcome1_koef"
-                                                                value="2.02"/>
+                                                                value={bet1.koef}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -298,7 +380,7 @@ class Table1 extends Component {
                                             <div className="inside">
                                                 <div className="content">
                                                     <span className="bold" title="2.02"
-                                                            id="outcome1_koef_static">2.02</span>
+                                                            id="outcome1_koef_static">{bet1.koef}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -307,7 +389,7 @@ class Table1 extends Component {
                                                 <div className="content">
                                                     <div className="form-group">
                                                         <input className="form-control input-xs stake input5spaces"
-                                                                type="text" value="0"
+                                                                type="text" value={this.state.bet1_price} onChange={this.handleBet1Change} 
                                                                 data-outcome_number="1"
                                                                 id="outcome1_stake"/>
                                                     </div>
@@ -325,111 +407,6 @@ class Table1 extends Component {
                                                                 selected="selected">
                                                             USD
                                                         </option>
-                                                        <option value="2">
-                                                            EUR
-                                                        </option>
-                                                        <option value="3">
-                                                            RUB
-                                                        </option>
-                                                        <option value="4">
-                                                            UAH
-                                                        </option>
-                                                        <option value="5">
-                                                            KZT
-                                                        </option>
-                                                        <option value="6">
-                                                            BYR
-                                                        </option>
-                                                        <option value="7">
-                                                            GBP
-                                                        </option>
-                                                        <option value="8">
-                                                            WMZ
-                                                        </option>
-                                                        <option value="9">
-                                                            WME
-                                                        </option>
-                                                        <option value="10">
-                                                            WMR
-                                                        </option>
-                                                        <option value="11">
-                                                            WMU
-                                                        </option>
-                                                        <option value="12">
-                                                            WMB
-                                                        </option>
-                                                        <option value="13">
-                                                            PLN
-                                                        </option>
-                                                        <option value="14">
-                                                            CAD
-                                                        </option>
-                                                        <option value="15">
-                                                            TRY
-                                                        </option>
-                                                        <option value="16">
-                                                            MDL
-                                                        </option>
-                                                        <option value="17">
-                                                            SEK
-                                                        </option>
-                                                        <option value="18">
-                                                            SGD
-                                                        </option>
-                                                        <option value="21">
-                                                            MYR
-                                                        </option>
-                                                        <option value="30">
-                                                            AUD
-                                                        </option>
-                                                        <option value="31">
-                                                            RON
-                                                        </option>
-                                                        <option value="35">
-                                                            BTC
-                                                        </option>
-                                                        <option value="38">
-                                                            DKK
-                                                        </option>
-                                                        <option value="41">
-                                                            BRL
-                                                        </option>
-                                                        <option value="47">
-                                                            BYN
-                                                        </option>
-                                                        <option value="50">
-                                                            mBT
-                                                        </option>
-                                                        <option value="56">
-                                                            NOK
-                                                        </option>
-                                                        <option value="60">
-                                                            GEL
-                                                        </option>
-                                                        <option value="66">
-                                                            CNY
-                                                        </option>
-                                                        <option value="67">
-                                                            MXN
-                                                        </option>
-                                                        <option value="68">
-                                                            JPY
-                                                        </option>
-                                                        <option value="69">
-                                                            PEN
-                                                        </option>
-                                                        <option value="70">
-                                                            COP
-                                                        </option>
-                                                        <option value="71">
-                                                            INR
-                                                        </option>
-                                                        <option value="72">
-                                                            HUF
-                                                        </option>
-                                                        <option value="73">
-                                                            CHF
-                                                        </option>
                                                     </select>
                                                     <input type="hidden"
                                                             name="outcome1_rate"
@@ -440,14 +417,7 @@ class Table1 extends Component {
                                         <div className="text-center floatLeft col-sm-height padding_left_5 col-middle withCheckboxes">
                                             <div className="inside">
                                                 <div className="content">
-                                                    <div className="radioCalc">
-                                                        <input type="radio" value="1"
-                                                                name="stake_fix"
-                                                                data-outcome_number="1"
-                                                                id="outcome1_stake_fix"/>
-                                                        <label htmlFor="outcome1_stake_fix"><i
-                                                                className="fa fa-circle-thin"></i></label>
-                                                    </div>
+                                                    
                                                     <div className="checkboxCalc">
                                                         <input type="checkbox"
                                                                 value="true"
@@ -524,7 +494,7 @@ class Table1 extends Component {
                                     <div className="inside">
                                         <div className="content">
                                             <div className="calcKoef" title="1.00"
-                                                    id="outcome1_revenue">1.00
+                                                    id="outcome1_revenue">{(this.state.bet1_price*bet1.koef-this.state.total_price).toFixed(3)}
                                             </div>
                                         </div>
                                     </div>
@@ -545,7 +515,7 @@ class Table1 extends Component {
                                                     <a href="https://www.betburger.com/prices"
                                                     className="check_for_russia is_disabled-hbs"
                                                     rel="nofollow"
-                                                    title="Arb in FC Zorya Luhansk - AEK Athens">AH1(0)</a>
+                                                    title="Arb in FC Zorya Luhansk - AEK Athens"> {bet2.market_and_bet_type}({bet2.market_and_bet_type_param})</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -601,15 +571,16 @@ class Table1 extends Component {
                                                 <div multiple="" className="bookmakersSelect singleRow">
                                                     <a className="excludeBookmakerEvent" data-id="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA" data-bet_number="1" href="#" title="Hide Bet"><span className="fa fa-close"></span></a>
                                                     <select className="input-xs singleSelect1 bg-color-" data-number="1" data-active="false">
-                                                        <option className="bg-color-"
-                                                                selected=""
-                                                                value="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA">
-                                                            Pinnacle: 2.02 ()
+                                                        <option className="bg-color-" selected="" value="ODQ0NjY4Mzd8MTcsMC4wLDUsMCwwLDA">
+                                                        {
+                                                            bookmarks.map(bookmark => {
+                                                                return (
+                                                                    bookmark.id == bet2.bookmaker_id && bookmark.name+":("+bet2.koef.toFixed(2)+")"
+                                                                )  
+                                                            })
+                                                        }
                                                         </option>
                                                     </select>
-                                                    <a href="#" className="refreshOutcomeCalc" title="Refresh koef" data-bet_number="1">
-                                                        <span title="Refresh outcome odds" className="fa fa-refresh"></span>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>                                    
@@ -627,7 +598,7 @@ class Table1 extends Component {
                                                                 data-outcome_number="1"
                                                                 type="text"
                                                                 id="outcome1_koef"
-                                                                value="2.02"/>
+                                                                value={bet2.koef}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -649,7 +620,7 @@ class Table1 extends Component {
                                             <div className="inside">
                                                 <div className="content">
                                                     <span className="bold" title="2.02"
-                                                            id="outcome1_koef_static">2.02</span>
+                                                            id="outcome1_koef_static">{bet2.koef}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -658,7 +629,7 @@ class Table1 extends Component {
                                                 <div className="content">
                                                     <div className="form-group">
                                                         <input className="form-control input-xs stake input5spaces"
-                                                                type="text" value="0"
+                                                                type="text" value={this.state.bet2_price} onChange={this.handleBet2Change}
                                                                 data-outcome_number="1"
                                                                 id="outcome1_stake"/>
                                                     </div>
@@ -676,111 +647,6 @@ class Table1 extends Component {
                                                                 selected="selected">
                                                             USD
                                                         </option>
-                                                        <option value="2">
-                                                            EUR
-                                                        </option>
-                                                        <option value="3">
-                                                            RUB
-                                                        </option>
-                                                        <option value="4">
-                                                            UAH
-                                                        </option>
-                                                        <option value="5">
-                                                            KZT
-                                                        </option>
-                                                        <option value="6">
-                                                            BYR
-                                                        </option>
-                                                        <option value="7">
-                                                            GBP
-                                                        </option>
-                                                        <option value="8">
-                                                            WMZ
-                                                        </option>
-                                                        <option value="9">
-                                                            WME
-                                                        </option>
-                                                        <option value="10">
-                                                            WMR
-                                                        </option>
-                                                        <option value="11">
-                                                            WMU
-                                                        </option>
-                                                        <option value="12">
-                                                            WMB
-                                                        </option>
-                                                        <option value="13">
-                                                            PLN
-                                                        </option>
-                                                        <option value="14">
-                                                            CAD
-                                                        </option>
-                                                        <option value="15">
-                                                            TRY
-                                                        </option>
-                                                        <option value="16">
-                                                            MDL
-                                                        </option>
-                                                        <option value="17">
-                                                            SEK
-                                                        </option>
-                                                        <option value="18">
-                                                            SGD
-                                                        </option>
-                                                        <option value="21">
-                                                            MYR
-                                                        </option>
-                                                        <option value="30">
-                                                            AUD
-                                                        </option>
-                                                        <option value="31">
-                                                            RON
-                                                        </option>
-                                                        <option value="35">
-                                                            BTC
-                                                        </option>
-                                                        <option value="38">
-                                                            DKK
-                                                        </option>
-                                                        <option value="41">
-                                                            BRL
-                                                        </option>
-                                                        <option value="47">
-                                                            BYN
-                                                        </option>
-                                                        <option value="50">
-                                                            mBT
-                                                        </option>
-                                                        <option value="56">
-                                                            NOK
-                                                        </option>
-                                                        <option value="60">
-                                                            GEL
-                                                        </option>
-                                                        <option value="66">
-                                                            CNY
-                                                        </option>
-                                                        <option value="67">
-                                                            MXN
-                                                        </option>
-                                                        <option value="68">
-                                                            JPY
-                                                        </option>
-                                                        <option value="69">
-                                                            PEN
-                                                        </option>
-                                                        <option value="70">
-                                                            COP
-                                                        </option>
-                                                        <option value="71">
-                                                            INR
-                                                        </option>
-                                                        <option value="72">
-                                                            HUF
-                                                        </option>
-                                                        <option value="73">
-                                                            CHF
-                                                        </option>
                                                     </select>
                                                     <input type="hidden"
                                                             name="outcome1_rate"
@@ -791,14 +657,7 @@ class Table1 extends Component {
                                         <div className="text-center floatLeft col-sm-height padding_left_5 col-middle withCheckboxes">
                                             <div className="inside">
                                                 <div className="content">
-                                                    <div className="radioCalc">
-                                                        <input type="radio" value="1"
-                                                                name="stake_fix"
-                                                                data-outcome_number="1"
-                                                                id="outcome1_stake_fix"/>
-                                                        <label htmlFor="outcome1_stake_fix"><span
-                                                                className="fa fa-circle-thin"></span></label>
-                                                    </div>
+                                                    
                                                     <div className="checkboxCalc">
                                                         <input type="checkbox"
                                                                 value="true"
@@ -875,7 +734,7 @@ class Table1 extends Component {
                                     <div className="inside">
                                         <div className="content">
                                             <div className="calcKoef" title="1.00"
-                                                    id="outcome1_revenue">1.00
+                                                    id="outcome1_revenue">{(this.state.bet2_price*bet2.koef-this.state.total_price).toFixed(3)}
                                             </div>
                                         </div>
                                     </div>
@@ -960,7 +819,7 @@ class Table1 extends Component {
                                                                         className="input-xs form-control stake input5spaces"
                                                                         id="total_stake"
                                                                         data-outcome_number="total"
-                                                                        value="100"/>
+                                                                        value={this.state.total_price} onChange={this.handleTotalChange}/>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -980,111 +839,6 @@ class Table1 extends Component {
                                                                         selected="selected">
                                                                     USD
                                                                 </option>
-                                                                <option value="2">
-                                                                    EUR
-                                                                </option>
-                                                                <option value="3">
-                                                                    RUB
-                                                                </option>
-                                                                <option value="4">
-                                                                    UAH
-                                                                </option>
-                                                                <option value="5">
-                                                                    KZT
-                                                                </option>
-                                                                <option value="6">
-                                                                    BYR
-                                                                </option>
-                                                                <option value="7">
-                                                                    GBP
-                                                                </option>
-                                                                <option value="8">
-                                                                    WMZ
-                                                                </option>
-                                                                <option value="9">
-                                                                    WME
-                                                                </option>
-                                                                <option value="10">
-                                                                    WMR
-                                                                </option>
-                                                                <option value="11">
-                                                                    WMU
-                                                                </option>
-                                                                <option value="12">
-                                                                    WMB
-                                                                </option>
-                                                                <option value="13">
-                                                                    PLN
-                                                                </option>
-                                                                <option value="14">
-                                                                    CAD
-                                                                </option>
-                                                                <option value="15">
-                                                                    TRY
-                                                                </option>
-                                                                <option value="16">
-                                                                    MDL
-                                                                </option>
-                                                                <option value="17">
-                                                                    SEK
-                                                                </option>
-                                                                <option value="18">
-                                                                    SGD
-                                                                </option>
-                                                                <option value="21">
-                                                                    MYR
-                                                                </option>
-                                                                <option value="30">
-                                                                    AUD
-                                                                </option>
-                                                                <option value="31">
-                                                                    RON
-                                                                </option>
-                                                                <option value="35">
-                                                                    BTC
-                                                                </option>
-                                                                <option value="38">
-                                                                    DKK
-                                                                </option>
-                                                                <option value="41">
-                                                                    BRL
-                                                                </option>
-                                                                <option value="47">
-                                                                    BYN
-                                                                </option>
-                                                                <option value="50">
-                                                                    mBT
-                                                                </option>
-                                                                <option value="56">
-                                                                    NOK
-                                                                </option>
-                                                                <option value="60">
-                                                                    GEL
-                                                                </option>
-                                                                <option value="66">
-                                                                    CNY
-                                                                </option>
-                                                                <option value="67">
-                                                                    MXN
-                                                                </option>
-                                                                <option value="68">
-                                                                    JPY
-                                                                </option>
-                                                                <option value="69">
-                                                                    PEN
-                                                                </option>
-                                                                <option value="70">
-                                                                    COP
-                                                                </option>
-                                                                <option value="71">
-                                                                    INR
-                                                                </option>
-                                                                <option value="72">
-                                                                    HUF
-                                                                </option>
-                                                                <option value="73">
-                                                                    CHF
-                                                                </option>
                                                             </select>
                                                             <input type="hidden"
                                                                     name="total_rate"
@@ -1095,26 +849,7 @@ class Table1 extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-sm-height col-middle withCheckboxes text-center floatLeft padding_left_5">
-                                            <div className="row-sm-height">
-                                                <div className="text-left col-sm-height col-middle">
-                                                    <div className="inside">
-                                                        <div className="content">
-                                                            <div className="radioCalc">
-                                                                <input type="radio"
-                                                                        value="total"
-                                                                        name="stake_fix"
-                                                                        className="radio"
-                                                                        id="total_stake_fix"
-                                                                        checked="checked"/>
-                                                                <label htmlFor="total_stake_fix"><span
-                                                                        className="radio_button_checked"></span></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1129,4 +864,18 @@ class Table1 extends Component {
   }
 }
 
-export default Table1;
+Table1.propTypes = {
+    getAllBookmarks: PropTypes.func.isRequired,
+    getAllSports: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => {
+    return {
+        bookmarks: state.bets.bookmarks,
+        sports: state.bets.sports,
+        allarbs:state.bets.allarbs,
+        allbets:state.bets.allbets
+    }
+}
+
+export default connect(mapStateToProps, {getAllBookmarks, getAllSports,setAllArbs})(Table1)

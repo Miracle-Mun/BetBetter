@@ -42,12 +42,16 @@ class payleft extends Component {
             sandbox:    client_data.client_id,
             production: '',
         }
+        const price=parseJSON(localStorage.getItem('memberprice')).price;
         return(
             
             <div className="select-payment-left">
                 <div className="select-payment-header">
                     <a alt="Arbitrage betting service №1" className="logo" href="/" title="BetBurger">
-                        <img alt="BETBURGER" src="../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg" />
+                        <img alt="BETBURGER" src="../assets/img/logo_black.png" />
+                    </a>
+                    <a alt="Arbitrage betting service №1" className="logo-mobile" href="/" title="BetBurger">
+                        <img alt="BETBURGER" src="../assets/img/logo_black.png" />
                     </a>
                 </div>
                 <div className="select-payment-inner">
@@ -63,7 +67,7 @@ class payleft extends Component {
                             </div>
                         <div className="select-payment-details-duration">
                             Duration:
-                            <strong>{localStorage.getItem('totalprice')/3.33}</strong> days
+                            <strong>{localStorage.getItem('totalprice')/price}</strong> days
                         </div>
                     </div>
                     <div className="select-payment-price">

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { is_session, userLogoutRequest } from '../../store/actions/usersActions';
-
+import jwt from 'jsonwebtoken';
 class PricingHeader extends Component {
   render() {
     
@@ -13,11 +13,11 @@ class PricingHeader extends Component {
                 <div className="header_inner">
                     <a alt="Arbitrage betting service №1" className="logo" href="/" title="BetBurger">
                         <img alt="BETBURGER"
-                             src="../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg" />
+                             src="../assets/img/logo_black.png" />
                     </a>
-                    <a alt="Arbitrage betting service №1" className="logo-mobile" href="/"title="BetBurger">"
+                    <a alt="Arbitrage betting service №1" className="logo-mobile" href="/"title="BetBurger">
                         <img alt="BETBURGER"
-                             src="../assets/img/bb-logo_without_background-7fb9aef50ec414c4da763d9789adcef46655dfc6aa31636824146d7de3d3b8c0.svg" />
+                             src="../assets/img/logo_black.png" />
                     </a>
                     <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
                         <div className="navbar-header">
@@ -52,9 +52,16 @@ class PricingHeader extends Component {
                                             </ul>
                                         </div>
                                     </li>
-                                    <li>
-                                        <a className="signup  " href="/public">My Account</a>
-                                    </li>
+                                    {jwt.decode(localStorage.getItem('jwtToken')).role===1 &&
+                                        <li>
+                                            <a className="signup logo_white " href="/admin">Admin</a>
+                                        </li>
+                                    }
+                                    {jwt.decode(localStorage.getItem('jwtToken')).role!=1 &&
+                                        <li>
+                                            <a className="signup logo_white " href="/public">My Account</a>
+                                        </li>
+                                    }
                                 </ul>
                             </nav>
                         </div>

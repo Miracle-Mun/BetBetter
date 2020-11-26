@@ -104,12 +104,6 @@ class Footer extends Component {
                         <span>www.betburger.com is owned and operated by Aspira Limited</span>
                     </div>
                     <div className="bottom__left">
-                        <a title="Online Gambling Support" href="#">
-                            <img
-                                alt="Online Gambling Support"
-                                src="../assets/img/gambling.png" />
-                        </a>
-                        <img src="../assets/img/plus18.png" />
                     </div>
                 </div>
             </div>

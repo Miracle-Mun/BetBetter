@@ -87,7 +87,7 @@ class SignUp extends Component {
         <div className="pricing-surebets">
         <div className="s-wrapper">
             <a alt="Arbitrage betting service №1" className="logo" href="/" title="BetBurger">
-                <img alt="BETBURGER" src="../assets/img/logo-ce6adc712c4db3a61a1e47681e6996115423fdb19d67bd685091c4c0682dd385.svg" />
+                <img alt="BETBURGER" src="../assets/img/logo_black.png" />
             </a>
             <span className="subtitle">Sign Up</span>
             <div className="s-wrapper__inner">

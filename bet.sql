@@ -21,10 +21,10 @@ USE `bet`;
 DROP TABLE IF EXISTS `bookmark`;
 
 CREATE TABLE `bookmark` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
 
 /*Data for the table `bookmark` */
 
@@ -45,9 +45,10 @@ insert  into `bookmark`(`id`,`name`) values
 DROP TABLE IF EXISTS `client`;
 
 CREATE TABLE `client` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `client_id` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
+  `password` varchar(255) DEFAULT NULL,
+  KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
 
 /*Data for the table `client` */
@@ -55,21 +56,56 @@ CREATE TABLE `client` (
 insert  into `client`(`id`,`client_id`,`password`) values 
 (0,'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM','123213213213213213');
 
+/*Table structure for table `filter` */
+
+DROP TABLE IF EXISTS `filter`;
+
+CREATE TABLE `filter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filter_name` varchar(255) DEFAULT NULL,
+  `filter_id` varchar(255) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf32;
+
+/*Data for the table `filter` */
+
+insert  into `filter`(`id`,`filter_name`,`filter_id`) values 
+(1,'bet','412898'),
+(46,'bet365','11111'),
+(47,'1xbet','222222');
+
+/*Table structure for table `membership` */
+
+DROP TABLE IF EXISTS `membership`;
+
+CREATE TABLE `membership` (
+  `id` int(11) NOT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf32;
+
+/*Data for the table `membership` */
+
+insert  into `membership`(`id`,`price`) values 
+(0,'123');
+
 /*Table structure for table `payment` */
 
 DROP TABLE IF EXISTS `payment`;
 
 CREATE TABLE `payment` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `price` decimal(10,0) DEFAULT NULL,
-  `account_time` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `account_time` timestamp NOT NULL DEFAULT current_timestamp(),
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `payment` */
 
 insert  into `payment`(`id`,`email`,`price`,`account_time`) values 
-(1,'22',333,'2020-11-18 16:34:28');
+(1,'22',333,'2020-11-18 16:34:28'),
+(2,'2',11,'2020-11-22 21:18:20');
 
 /*Table structure for table `sports` */
 
@@ -138,18 +174,18 @@ CREATE TABLE `user` (
   `password` varchar(255) DEFAULT NULL,
   `Role` tinyint(1) DEFAULT 0,
   `From` timestamp NULL DEFAULT current_timestamp(),
-  `To` timestamp NULL DEFAULT current_timestamp(),
+  `To_date` timestamp NULL DEFAULT current_timestamp(),
+  `freeze` int(11) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`name`,`username`,`email`,`password`,`Role`,`From`,`To`) values 
-(0,'Alex K','admin','admin@dev.com','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',1,NULL,NULL),
-(66,'213','2323','1','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',0,'2020-11-10 15:32:24','2020-11-21 15:32:29'),
-(67,'232','123213','2','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',0,'2020-11-20 15:32:11','2020-11-20 15:32:11'),
-(68,'3434','4545','6556','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',0,'2020-11-20 15:32:16','2020-11-20 15:32:16'),
-(69,'Jang','Wangsun','jang@wang.com','$2a$10$IYX0s8C7K/aMNa9gFalzmuUbQ1S2VpdZSexfhgQ0YdF1MEZKPOfAG',0,'2020-11-20 16:32:43','2020-11-20 16:32:43');
+insert  into `user`(`id`,`name`,`username`,`email`,`password`,`Role`,`From`,`To_date`,`freeze`) values 
+(0,'Alex K','admin','admin@dev.com','$2a$10$xrcnzu/.DeEKdvXe3g333ez.7EZdKIIhL5g25TVVwQUcmGo1uKyCG',1,NULL,'0000-00-00 00:00:00',0),
+(67,'Jhon M','User1','user1@dev.com','$2a$10$0vkSM62pmaEdi2wGBUSZeeIZe/Yeq8gwYljZLmLZ6Br2f6dPEsqqa',0,'2020-11-20 15:32:11','2021-05-28 12:55:31',0),
+(68,'Smith K','user2','user2@dev.com','$2a$10$Bg7uBAMywsBN.obe8lJwJ.AuPF0TqT4ytKL.vdMtz2.t.XpbdPLLG',0,'2020-11-20 15:32:16','2020-11-23 18:32:16',0),
+(71,'Beil M','user3','user3@dev.com','$2a$10$tJRGY2Ed8Pm9D7ByhL957.rKzbfT.aZ4yRhYDN48My7u6Rs/uipgG',0,'2020-11-24 06:27:57','2020-11-23 21:27:57',0);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

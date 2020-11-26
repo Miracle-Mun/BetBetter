@@ -29,30 +29,41 @@ class Users extends Component {
         const users = this.props.users;
         const tablebody=users.map(value => 
             <tr>
-                <td style={{text_align: "center"}}>
-                    {value.id}
-                </td>
-                <td style={{text_align: "center"}}>
-                    {value.name}
-                </td>
-                <td style={{text_align: "center"}}>
-                    {value.username}
-                </td>
-                <td style={{text_align: "center"}}>
-                    {value.email}
-                </td>
-                <td style={{text_align: "center"}}>
-                    {value.Role}
-                </td>
-                <td style={{text_align: "center"}}>
-                    {value.From}
-                </td>
-                <td style={{text_align: "center"}}>
-                    {value.To}
-                </td>
-                <td style={{text_align:"center"}}>
-                    {value.id!='0' &&<span id={value.id} onClick={this.handleDeleteClick}><i className="fa fa-close" id={value.id}/></span>}
-                </td>
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        {value.id}
+                    </td>
+                }
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        {value.name}
+                    </td>
+                }
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        {value.username}
+                    </td>
+                }
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        {value.email}
+                    </td>
+                }
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        {value.From}
+                    </td>
+                }
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        {value.To}
+                    </td>
+                }
+                {value.id!='0' &&
+                    <td style={{textAlign:"center"}}>
+                        <span id={value.id} onClick={this.handleDeleteClick}><i className="fa fa-close" id={value.id}/></span>
+                    </td>
+                }
             </tr>
         );
       return (
@@ -64,21 +75,20 @@ class Users extends Component {
 
                     </div>
                     <div className="page-header title font">
-                        <h1>User_Lists</h1>
+                        <h1>User Lists</h1>
                     </div>
                     <div>
                         <div className="table-responsive">
                             <table className="table table-striped" id="profilePayments">
                                 <thead>
                                     <tr>
-                                        <th style={{text_align: "center"}}>User_id</th>
-                                        <th style={{text_align: "center"}}>Name</th>
-                                        <th style={{text_align: "center"}}>User Name</th>
-                                        <th style={{text_align: "center"}}>Email</th>
-                                        <th style={{text_align: "center"}}>Role</th>
-                                        <th style={{text_align: "center"}}>From</th>
-                                        <th style={{text_align: "center"}}>To</th>
-                                        <th></th>
+                                        <th style={{textAlign:"center"}}>ID</th>
+                                        <th style={{textAlign:"center"}}>Name</th>
+                                        <th style={{textAlign:"center"}}>User Name</th>
+                                        <th style={{textAlign:"center"}}>Email</th>
+                                        <th style={{textAlign:"center"}}>From</th>
+                                        <th style={{textAlign:"center"}}>To</th>
+                                        <th style={{textAlign:"center"}}>Action</th>
                                     </tr>
                                 </thead>
                                 

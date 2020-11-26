@@ -1,10 +1,42 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types';
+import jwt from 'jsonwebtoken';
+import { SetFreeze } from '../../../../store/actions/adminActions';
+import { userLogoutRequest } from '../../../../store/actions/usersActions';
 
 class DashboardFirstPart extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+          day:'',
+          id:''
+        };    
+        this.handleSubmit = this.handleSubmit.bind(this);  
+      }
+    
+      handleSubmit(evt) {
+        evt.preventDefault();
+        console.log("requesrt");
+        const freeze_data = {
+            freeze_day:this.state.day,
+            id:this.state.id
+        }
+    
+        this.props.SetFreeze(freeze_data);
+        this.props.userLogoutRequest();
+      }
+    
   render() {
+    const ending=jwt.decode(localStorage.getItem('jwtToken')).Ending;
+    const end=new Date(ending).getTime();
+    const current_date=new Date().getTime();
+    const dif=(end-current_date)/(1000*3600*24);
+    this.state.day=parseInt(dif);
+    this.state.id=jwt.decode(localStorage.getItem('jwtToken')).id;
     return (
-        <div className="col-md-5 col-sm-12 col-xs-12 feature" id="isUnfrozen">
+        <div className="col-md-10 col-sm-12 col-xs-12 feature" id="isUnfrozen">
             <div id="frozenAccount">
                 <h3>A conta está bloqueada</h3>
                 <p>
@@ -43,7 +75,7 @@ class DashboardFirstPart extends Component {
                 </div>
             </div>
             <form acceptCharset="UTF-8" action="#"
-                  id="freezAccount" method="post" onSubmit="return false;">
+                  id="freezAccount" method="post" onSubmit={this.handleSubmit}>
                 <div>
                     <input name="utf8" type="hidden" value="✓" />
                     <input name="_method" type="hidden" value="put" />
@@ -69,18 +101,10 @@ class DashboardFirstPart extends Component {
                     <div className="freezeFormAndCounts">
                         <div className="counts row">
                             <div className="col-xs-6">
-                                <span className="used">
-                                    Utilizado:
-                                <span className="count">
-                                    6 dias
-                                </span>
-                                </span>
-                            </div>
-                            <div className="col-xs-6">
                                 <span className="left">
                                     Restante:
                                 <span className="count">
-                                    28 dias
+                                {this.state.day} dias
                                 </span>
                                 </span>
                             </div>
@@ -147,4 +171,8 @@ class DashboardFirstPart extends Component {
   }
 }
 
-export default DashboardFirstPart;
+const mapStateToProps = state => {
+    return {}
+}
+
+export default connect(mapStateToProps, {SetFreeze,userLogoutRequest})(DashboardFirstPart)

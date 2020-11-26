@@ -31,6 +31,14 @@ class Sidebar extends Component {
                             <a style={{marginRight:'0px'}} className="payments" data-toggle="pill"
                             href="https://www.betburger.com/profile#payment_tab">Payment</a>
                         </li>
+                        <li>
+                            <a style={{marginRight:'0px'}} className="api" data-toggle="pill"
+                           href="https://www.betburger.com/profile#filter_tab">Filter</a>
+                        </li>
+                        <li>
+                            <a style={{marginRight:'0px'}} className="currencies" data-toggle="pill"
+                            href="https://www.betburger.com/profile#membership_tab">Membership</a>
+                        </li>
                     </ul>
                 </div>
             </div>

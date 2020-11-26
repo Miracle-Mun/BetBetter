@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 import './main.css';
-
+import jwt from 'jsonwebtoken'
 import Compile from './home-part/compile';
 import HomeHeader from './home-part/header';
 import HeaderBody from './home-part/headerbody';
@@ -34,4 +34,6 @@ class Home extends Component {
   }
 }
 
-export default Home;
+
+export default (Home)
+

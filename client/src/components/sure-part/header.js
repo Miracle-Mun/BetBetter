@@ -44,15 +44,6 @@ class Header extends Component {
                         <li className="">
                             <a href="/bet">Surebets</a>
                         </li>
-                        <li className="">
-                            <a href="#">Valuebets</a>
-                        </li>
-                        <li className="">
-                            <a href="#">API</a>
-                        </li>
-                        <li className="">
-                            <a href="#">Help Center</a>
-                        </li>
                         <li className="dropdown language-select drop-lang">
                             <button aria-expanded="false" aria-haspopup="true" className="dropdown-toggle drop-language-button"
                                     data-toggle="dropdown" id="drop-language" type="button">

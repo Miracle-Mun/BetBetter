@@ -24,7 +24,6 @@ class Dashboard extends Component {
                 </div>
                 <div id="margin-sm">
                     <DashboardFirstPart/>
-                    <DashboardSecondPart/>
                 </div>
             </div>
         </div>

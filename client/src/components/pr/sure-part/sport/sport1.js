@@ -4,16 +4,28 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { getAllBookmarks, getAllSports } from '../../../../store/actions/betActions';
+import {setAllArbs} from '../../../../store/actions/betActions'
+import {setAllBets} from '../../../../store/actions/betActions'
 
 class Sport1 extends Component {
 
     constructor() {
         super();
-        // this.state = {
-        //     bookmarks: '',
-        //     sports: ''
-        // }
+        this.state = {
+            id: '',
+        }
+        this.handleArbClick = this.handleArbClick.bind(this);
     }
+
+    handleArbClick(evt) {
+        const key=evt.target.id;
+        const ArbsData={
+            arbs:this.props.arbsdata[key],
+            bets:this.props.betdata,
+        }
+        this.props.setAllArbs(ArbsData);
+        this.props.setAllBets(ArbsData);
+      };
 
     cleanDate (d) {
               
@@ -40,16 +52,16 @@ class Sport1 extends Component {
         console.log(bookmarks);
 
         if(arbsdata.length > 0){
-            betList = arbsdata.map(arbs => {
+            betList = arbsdata.map((arbs,key)=> {
                 return (
-                    <li className="arb_f697fb91e3e507ca83f2150d91a6ebba event_214433770">
-                        <div className="col-xs-12 arb-item-body-js">
+                    <li className="arb_f697fb91e3e507ca83f2150d91a6ebba event_214433770" >
+                        <div className="col-xs-12 arb-item-body-js" >
                             <div className="arbHead row relative">
                                 <div className="row-sm-height">
                                     <div className="absoluteLeft padding5px percent col-sm-height col-middle betPercent">
                                         <div className="inside">
                                             <div className="content">
-                                                <span>{arbs.percent}%</span>
+                                                <span id={key} onClick={this.handleArbClick}>{arbs.percent}%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -67,8 +79,8 @@ class Sport1 extends Component {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className="tableCell padding5px col-sm-height col-middle sportPeriod">
-                                                            <span className="sport" title="Soccer">
+                                                        <div className="tableCell padding5px col-sm-height col-middle sportPeriod" >
+                                                            <span className="sport" title="Soccer" id={key} onClick={this.handleArbClick} >
                                                                 {
                                                                     sports.map(sport => {
                                                                         return (
@@ -77,17 +89,12 @@ class Sport1 extends Component {
                                                                     })
                                                                 }
                                                             </span>
-                                                                                                           </div>
+                                                        </div>
                                                         <div className="tableCell col-sm-height relative col-middle text-left wrongItemsCell">
                                                         </div>
                                                         <div className="tableCell col-sm-height col-middle excludedContainer text-right">
                                                             <div className="inside">
-                                                                <div className="content">
-                                                                    <a href="#"
-                                                                    className="ageTime">
-                                                                        <span className="icomoon-clock"><i className="material-icons" style={{fontSize: "13px", marginRight: "3px",}}>&#xe192;</i></span>
-                                                                        1 h
-                                                                    </a>
+                                                                <div className="content" id={key} onClick={this.handleArbClick}>
                                                                     <a href="#"
                                                                     className="dropdown-toggle"
                                                                     title="Hide menu">
@@ -161,11 +168,7 @@ class Sport1 extends Component {
                                                                                 <span className="icomoon-copy3"><span className="glyphicon" style={{fontSize: "10px"}}>&#xe224;</span></span>
                                                                             </a>
                                                                             <div>
-                                                                                <a href="#"
-                                                                                    target="_blank"
-                                                                                    rel="nofollow"
-                                                                                    title="Arb in FC Zorya Luhansk - AEK Athens"
-                                                                                    arb_type_id="2">
+                                                                                <a>
                                                                                     {bets.bookmaker_event_name}
                                                                                 </a>
                                                                             </div>
@@ -235,7 +238,7 @@ class Sport1 extends Component {
             });
         } 
         return (
-            <ul>
+            <ul >
                 { betList }
             </ul>
         );
@@ -254,4 +257,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {getAllBookmarks, getAllSports})(Sport1)
+export default connect(mapStateToProps, {getAllBookmarks, getAllSports, setAllArbs,setAllBets})(Sport1)

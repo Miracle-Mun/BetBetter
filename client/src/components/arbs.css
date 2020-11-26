@@ -42358,8 +42358,8 @@ html #arbs .centerLogo a span {
 /* line 1715, /app/app/assets/stylesheets/arbs.scss */
 html #arbs .centerLogo a .logo {
   float: left;
-  background-image: url(../myaccount/logo_rectangle-a5f5cf602d5e9f55a5e1f3917e146258dbb98165b02fc67450cd04dd6a6994fe.svg);
-  padding: 17px 0px 17px 27px;
+  background-image: url(../myaccount/logo.png);
+  padding: 17px 0px 14px 31px;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 3px;

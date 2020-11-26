@@ -23,15 +23,12 @@ class Setting extends Component {
                 </div>
                 <div className="col-lg-10 col-md-9 col-sm-12 col-xs-12">
                     <div className="page-header title font">
-                        <h1>Definições</h1>
+                        <h1>Definições pessoais</h1>
                     </div>
                 </div>
             </div>
             <div className="col-lg-10 col-md-9">
-                <Settings />
-                <PersonalSettings />
                 <ChangeCurrent />
-                <LoginButton />
             </div>
         </div>
     );

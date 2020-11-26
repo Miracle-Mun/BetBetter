@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {getClientdata} from '../../../store/actions/adminActions';
 import {GETPay} from '../../../store/actions/adminActions';
+import {GETPrice} from '../../../store/actions/adminActions';
 import { parseJSON } from 'jquery';
 class PricingBlueBackground extends Component {
     constructor() {
@@ -17,8 +18,8 @@ class PricingBlueBackground extends Component {
 
     handlegetPayClick(evt) {
         const data=localStorage.getItem('clientData');
-        console.log(data)
-        const client_data=this.state.day*3.33
+        const price=parseJSON(localStorage.getItem('memberprice')).price;
+        const client_data=this.state.day*price
         this.props.GETPay(client_data);
       }
     
@@ -30,15 +31,18 @@ class PricingBlueBackground extends Component {
       };
       componentDidMount(){
         this.props.getClientdata();
+        this.props.GETPrice();
         console.log(this.props.clientData)
       }
   render() {
+    const price=parseJSON(localStorage.getItem('memberprice')).price;
     return (
         <div className="blue-background">
             <div className="container" id="price-container">
                 <div className="price-block">
                     <h2 className="secondary-title text-center">Ilimitado Surebets</h2>
                     <div className="row">
+                        <div className="col-md-4"></div>
                         <div className="col-md-4">
                             <div className="price-column" id="prematch">
                                 <span className="price-column__label prematch-label">Prematch</span>
@@ -47,7 +51,7 @@ class PricingBlueBackground extends Component {
                                     <div className="price-column__price">
                                         <div className="actual_price">
                                             <span className="currency">€</span>
-                                            <span className="price">{this.state.day*3.33}</span>
+                                            <span className="price">{this.state.day*price}</span>
                                         </div>
                                         <div className="old_price hidden"></div>
                                     </div>
@@ -55,7 +59,7 @@ class PricingBlueBackground extends Component {
                                     <div className="price-column__day">
                                         Only
                                         <span className="currency">€</span>
-                                        <span className="price-column__priceday">3.33/dia</span>
+                                        <span className="price-column__priceday">{price}/dia</span>
                                     </div>
                                     <div className="price-column__select">
                                         <select className="tariff-select" id="prematch-tariff" onChange={this.handledayChange}>
@@ -87,101 +91,8 @@ class PricingBlueBackground extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="price-column" id="live">
-                                <span className="price-column__label live-label">Live</span>
-                                <div>
-                                    <h4 className="price-column__title">live</h4>
-                                    <div className="price-column__price">
-                                        <div className="actual_price">
-                                            <span className="currency">€</span>
-                                            <span className="price">189.99</span>
-                                        </div>
-                                        <div className="old_price hidden"></div>
-                                    </div>
-                                    <div className="sale_details hidden"></div>
-                                    <div className="price-column__day">
-                                        Only
-                                        <span className="currency">€</span>
-                                        <span className="price-column__priceday">6.33/dias</span>
-                                    </div>
-                                    <div className="price-column__select">
-                                        <select className="tariff-select" id="live-tariff">
-                                            <option value="23" data-duration="1">1 dias</option>
-                                            <option value="24" data-duration="7">7 dias</option>
-                                            <option value="25" data-duration="30">30 dias</option>
-                                            <option value="33" data-duration="180">180 dias</option>
-                                            <option value="34" data-duration="360">360 dias</option>
-                                        </select>
-                                    </div>
-                                    <span className="price-column__item">Ilimitado Surebets</span>
-                                    <div className="price-column__details">
-                                        <span className="price-column__item">Funcionalidade melhorada:</span>
-                                        <ul className="green-list">
-                                            <li>Surebets</li>
-                                            <li>Serviço de comparação Live</li>
-                                            <li>Middles</li>
-                                            <li>Contabilidade</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="text-center">
-                                    <button className="btn green-btn pay-form pay-form-live">
-                                        Selecionar
-                                        <img src="../../assets/img/arrow_red-faf29b1a7ceae4afeb3d57abb105adb10e65f8bb154f76dbccc76e55b0740bc8.png" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="price-column" id="prematch-live">
-                                <span className="price-column__label prematch-live-label">Prematch + Live</span>
-                                <div>
-                                    <h4 className="price-column__title">prematch &amp; live</h4>
-                                    <div className="price-column__price">
-                                        <div className="actual_price">
-                                            <span className="currency">€</span>
-                                            <span className="price">239.99</span>
-                                        </div>
-                                        <div className="old_price hidden"></div>
-                                    </div>
-                                    <div className="sale_details hidden"></div>
-                                    <div className="price-column__day">
-                                        Only
-                                        <span className="currency">€</span>
-                                        <span className="price-column__priceday">8/dias</span>
-                                    </div>
-                                    <div className="price-column__select">
-                                        <select className="tariff-select" id="prematch-live-tariff">
-                                            <option value="18" data-live-id="23" data-duration="1">1 dias</option>
-                                            <option value="19" data-live-id="24" data-duration="7">7 dias</option>
-                                            <option value="20" data-live-id="25" data-duration="30">30 dias</option>
-                                            <option value="31" data-live-id="33" data-duration="180">180 dias</option>
-                                            <option value="32" data-live-id="34" data-duration="360">360 dias</option>
-                                        </select>
-                                    </div>
-                                    <span className="price-column__item">Ilimitado Surebets</span>
-                                    <div className="price-column__details">
-                                        <span className="price-column__item">Tudo de Prematch</span>
-                                    </div>
-                                    <div className="price-column__details">
-                                        <span className="price-column__item">Tudo de Live</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="price-column__sale">
-                                        <span className="red">Poupe 50%</span>
-                                        <span className="blue">On prematch</span>
-                                    </div>
-                                    <div className="text-center">
-                                        <button className="btn green-btn pay-form pay-form-prematch-live">
-                                            Selecionar
-                                            <img src="../../assets/img/arrow_red-faf29b1a7ceae4afeb3d57abb105adb10e65f8bb154f76dbccc76e55b0740bc8.png" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div className="col-md-4"></div>
+
                     </div>
                 </div>
                 <h2 className="secondary-title text-center">Incluído em todos os planos</h2>
@@ -343,4 +254,4 @@ const mapStateToProps = state => {
         clientData: state.admin.clientData,
     }
 }
-export default connect(mapStateToProps, {getClientdata,GETPay})(PricingBlueBackground);
+export default connect(mapStateToProps, {getClientdata,GETPay,GETPrice})(PricingBlueBackground);

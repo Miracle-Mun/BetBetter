@@ -55,7 +55,7 @@ router.post('/signup', (req, res) => {
         console.log(reqBody[field]);
         console.log(field);
         if (reqBody[field] === '') {
-            errors = {...errors, [field]:"This field is required"}
+            errors = {...errors, [field]:"This "+ field +" is required"}
         }
         if (field === 'username' || field === 'email') {
             const value = reqBody[field];
@@ -121,17 +121,28 @@ router.post('/login', (req, res) => {
                 bcrypt.compare(password, results[0].password, (err, isMatch) => {
                     if (err) return err;
                     if (isMatch) {
+                        var end_time=new Date(results[0].To_date)
+                        var c_time=new Date();
+                        c_time.setDate(c_time.getDate() + results[0].freeze);
                         let pay_role=false;
+                        if(c_time>end_time){
+                            end_time=c_time
+                        }
                         const current_date=new Date();
-                        if (results[0].To>current_date){
+                        if (end_time>current_date){
                             pay_role=true;
                             console.log(pay_role)
                         }
+                        console.log(end_time)
                         const token = jwt.sign({
                             id: results[0].id,
                             role:results[0].Role,
                             username: results[0].username,
+                            email:results[0].email,
+                            password:results[0].password,
                             limitdate:pay_role,
+                            Ending:end_time,
+                            freeze:results[0].freeze,
                         }, config.jwtSecret);
                         res.json({ status: true, token })
                     }
@@ -145,4 +156,30 @@ router.post('/login', (req, res) => {
     }
 });
 
+router.post('/update', async (req, res) => {
+    console.log(req.body)
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(req.body.password, salt, (err, hash) => {
+            if(err) return err;
+            var sql = "UPDATE `user` SET username ='"+ req.body.user+"', email='"+req.body.email+"', password='"+hash+"' WHERE id = '"+req.body.id+"'";
+            config.connection.query(sql, function(err, results){  
+                res.json({ tatus:true });
+            });  
+        });
+    });
+});
+
+router.post('/updatefreeze', async (req, res) => {
+    console.log(req.body)
+    if(req.body.freeze==0){
+        var sql = "UPDATE `user` SET To_date='"+req.body.end_time+"' WHERE id = '"+req.body.id+"'";
+    }
+    else{
+        var sql = "UPDATE `user` SET freeze='"+0+"' , To_date='"+req.body.end_time+"' WHERE id = '"+req.body.id+"'";
+    } 
+    console.log(sql)
+    config.connection.query(sql, function(err, results){  
+        res.json({ status:true });
+    });        
+});
 module.exports = router;

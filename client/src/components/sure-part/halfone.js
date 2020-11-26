@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import qs from 'querystring';
-
+import { parseJSON } from 'jquery';
 
 import Sport1 from './sport/sport1.js';
 
@@ -28,13 +28,16 @@ class HalfOne extends Component {
             this.setState({
                 arbsdata: result.data.arbs,
                 betdata: result.data.bets
+                
             });
+            
         })
     }
-
     componentDidMount() {
         var search_filter = new Array;
-        search_filter.push('412898');
+        const afilter=parseJSON(localStorage.getItem('apifilter')).filter_id
+        console.log(afilter)
+        search_filter.push(afilter);
         const apitoken = localStorage.getItem('apitoken');
         var data = {
             per_page: 50,

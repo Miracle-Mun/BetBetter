@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { is_session, userLogoutRequest } from '../../store/actions/usersActions';
+import jwt from 'jsonwebtoken';
 
 class TopNav extends Component {
   render() {
@@ -21,21 +22,16 @@ class TopNav extends Component {
                         <li className="prematchNav active">
                             <a href="/bet">Surebets</a>
                         </li>
-                        {/* <li className="valuebetsNav">
-                            <a href="#">Valuebets</a>
-                        </li>
-                        <li className="apiNav">
-                            <a href="#">API</a>
-                        </li>
-                        <li>
-                            <a href="#">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#">Help Center</a>
-                        </li> */}
-                        <li>
-                            <a  href="/public">My Account</a>
-                        </li>
+                        {jwt.decode(localStorage.getItem('jwtToken')).role===1 &&
+                            <li>
+                                <a className="signup logo_white " href="/admin">Admin</a>
+                            </li>
+                        }
+                        {jwt.decode(localStorage.getItem('jwtToken')).role!=1 &&
+                            <li>
+                                <a className="signup logo_white " href="/public">My Account</a>
+                            </li>
+                        }
                         <li className="dropdown language-select drop-lang">
                             <button aria-expanded="false" aria-haspopup="true" className="dropdown-toggle drop-language-button"
                                     data-toggle="dropdown" id="drop-language" type="button">

@@ -11,12 +11,6 @@ class MaxmumSidebar extends Component {
                         <a style={{marginRight:'0px'}} className="dashboard" data-toggle="pill" 
                         href="https://www.betburger.com/profile#main">Dashboard</a>
                     </li>
-                    <li className="multifilter">
-                        <a style={{marginRight:'0px'}} className="multi" data-toggle="pill"
-                           href="https://www.betburger.com/profile#multi_filters">
-                            Multifilters
-                        </a>
-                    </li>
                     <li>
                         <a style={{marginRight:'0px'}} className="payments" data-toggle="pill"
                            href="https://www.betburger.com/profile#payments">Payments</a>
@@ -26,10 +20,6 @@ class MaxmumSidebar extends Component {
                            href="https://www.betburger.com/profile#settings_tab">Settings</a>
                     </li>
                 </ul>
-                <div className="bitcoin-banners-cabinet">
-                    <a style={{marginRight:'0px'}} href="https://www.betburger.com/prices-api"><img alt="" className="img-responsive"
-                        src="./myaccount/api_banner_bb-fcae8f07cbc06941f551a6f93c1e87357611e89a7adcaeb57a7d8d93c8bb9483.png"/>
-                    </a></div>
             </div>
         </div>
     );

@@ -9981,9 +9981,9 @@ a:focus, button:focus {
 }
 /* line 34, /app/app/assets/stylesheets/partials/_layout.scss */
 .navbar.normal .navbar-header .navbar-brand.logo.bb_brand2 {
-  background-image: url(./assets/bb-logo_without_background-7fb9aef50ec414c4da763d9789adcef46655dfc6aa31636824146d7de3d3b8c0.svg);
-  background-size: auto 60px;
-  width: 60px;
+  background-image: url(./logo.png);
+  background-size: auto 40px;
+  width: 40px;
 }
 /* line 36, /app/app/assets/stylesheets/partials/_layout.scss */
 .navbar.normal .navbar-header .navbar-brand.logo.bb_brand2.on_promo {
@@ -10011,7 +10011,7 @@ a:focus, button:focus {
   background-size: 100%;
   background-position: center;
   padding: 34px 20px;
-  margin-right: 10px;
+  margin-right: 17px;
 }
 /* line 63, /app/app/assets/stylesheets/partials/_layout.scss */
 .navbar.normal .navbar-header .navbar-toggle {
@@ -10508,7 +10508,7 @@ a:focus, button:focus {
   background-repeat: no-repeat;
   background-position: center;
   padding: 34px 20px;
-  margin-right: 10px;
+  margin-right: 17px;
   background-image: url(/assets/logo-2f11b9a072ce78ddd6367a4ac46b192d828b9b863a3dffce6199ffaad31318a2.png);
   background-size: contain;
 }

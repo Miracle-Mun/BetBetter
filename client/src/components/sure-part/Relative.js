@@ -15,7 +15,7 @@ class Relative extends Component {
             <div>
                 <a href="/"><span className="logo"></span>
                     <span className="text">
-                        BetBurger
+                        BetBetter
                     </span>
                 </a>
             </div>

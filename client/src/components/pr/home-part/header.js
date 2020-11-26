@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
-
+import jwt from 'jsonwebtoken';
 import { connect } from 'react-redux';
 import {is_session, userLogoutRequest} from '../../../store/actions/usersActions';
 
@@ -56,7 +56,12 @@ class Header extends Component {
                           </ul>
                         </div>
                       </li>
-                      {isAuthenticated == true &&
+                      {isAuthenticated == true && jwt.decode(localStorage.getItem('jwtToken')).role===1 &&
+                      <li>
+                        <a className="signup logo_white " href="/admin">Admin</a>
+                      </li>
+                      }
+                      {isAuthenticated == true && jwt.decode(localStorage.getItem('jwtToken')).role!=1 &&
                         <li>
                           <a className="signup logo_white " href="/pt_public">A Minha Conta</a>
                         </li>

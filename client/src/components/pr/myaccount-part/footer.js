@@ -80,15 +80,6 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="en_menu menu-v">
-                    <div className="ogs_div">
-                        <a title="Online Gambling Support" href="#"><img
-                                alt="Online Gambling Support"
-                                src="../myaccount/pgs-6855148a46ca72b9520b5654612e69fa5df821de0ac1f783f7d8b6c148003ac5.png"/>
-                        </a><img
-                            src="../myaccount/18_plus-9320e0d5ec25458529346752e34bd2fa4db6b1ead986b1fd9e740dd8d81a968e.png"/>
-                    </div>
-                </div>
             </div>
             <div id="clients">
                 <div className="col-md-12">

@@ -41,18 +41,18 @@ class Payments extends Component {
 
                     </div>
                     <div className="page-header title font">
-                        <h1>API</h1>
+                        <h1>API Settings</h1>
                     </div>
                     <form className="row" id="form_api_token" role="form"  onSubmit={this.handleSubmit} method="post">
                         <div className="info-holder form-group col-sm-6 col-md-12 required">
                             <div className="row" style={{alignItems:"center", display:"flex"}}>
-                                <div className="col-md-2 col-xs-12">
-                                    <label>API_TOKEN:</label>  
+                                <div className="col-md-1 col-xs-12">
+                                    <label>TOKEN:</label>  
                                 </div>
-                                <div className="col-md-5 col-xs-12">
+                                <div className="col-md-9 col-xs-12">
                                     <input className="form-control"  type="text" name="api" id="api_token" value={this.state.token} onChange={this.handleTokenChange}/>
                                 </div>
-                                <div className="col-md-2 col-xs-12 text-right">
+                                <div className="col-md-2 col-xs-12">
                                     <input type="submit" className="btn blue" name="api" value="Update" />
                                 </div>
                             </div>

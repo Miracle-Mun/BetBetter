@@ -5,6 +5,7 @@ const initialState = {
     users:[],
     payments:[],
     clientData:[],
+    filters:[],
 };
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -28,7 +29,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 clientData: action.clientData
             };
-    
+        case actionTypes.GOT_FILTERS:
+            return{
+                ...state,
+                filters: action.filters
+            };
         default:
             return state;
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import jwt from 'jsonwebtoken';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -21,10 +21,10 @@ class Header extends Component {
         <div className="container">
           <div className="header_inner" style={{border_bottom: "1px solid #777b80",}}>
             <a alt="Arbitrage betting service №1" className="logo" href="/" title="BetBurger">
-              <img alt="BETBURGER" src="../../assets/img/logo.svg" />
+              <img alt="BETBURGER" src="../../assets/img/logo.png" />
             </a>
             <a alt="Arbitrage betting service №1" className="logo-mobile" href="/" title="BetBurger">
-              <img alt="BETBURGER" src="../../assets/img/logo.svg" />
+              <img alt="BETBURGER" src="../../assets/img/logo.png" />
             </a>
             <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
               <div className="navbar-header">
@@ -55,8 +55,13 @@ class Header extends Component {
                           </ul>
                         </ul>
                       </div>
-                    </li>
-                    {isAuthenticated == true &&
+                    </li> 
+                    {isAuthenticated == true && jwt.decode(localStorage.getItem('jwtToken')).role===1 &&
+                      <li>
+                        <a className="signup logo_white " href="/admin">Admin</a>
+                      </li>
+                    }
+                    {isAuthenticated == true && jwt.decode(localStorage.getItem('jwtToken')).role!=1 &&
                       <li>
                         <a className="signup logo_white " href="/public">My Account</a>
                       </li>

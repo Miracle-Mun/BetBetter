@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { parseJSON } from 'jquery';
 class PageContainer extends Component {
   render() {
     return (
@@ -58,7 +58,7 @@ class PageContainer extends Component {
                                             checked="true"/>
                                     <label title="demo" data-id="sidebar_filter28783" className="editLinkLabel">
                                         <span className="checkbox"></span>
-                                        <p>demo</p>
+                                        <p>{parseJSON(localStorage.getItem('apifilter')).filter_name}</p>
                                     </label>
                                     <a href="#" data-id="28783"
                                         target="_blank">

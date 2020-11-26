@@ -20,11 +20,6 @@ class Sidebar extends Component {
                         <li className="active">
                             <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#main">Dashboard</a>
                         </li>
-                        <li className="multifilter">
-                            <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#multi_filters">
-                                Multifilters
-                            </a>
-                        </li>
                         <li>
                             <a style={{marginRight:'0px'}} data-toggle="pill" href="https://www.betburger.com/profile#payments">Payments</a>
                         </li>

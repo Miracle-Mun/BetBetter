@@ -1,8 +1,40 @@
 import React, { Component } from 'react';
-
-
+import {getAllPayments} from '../../../../store/actions/adminActions';
+import { connect } from 'react-redux';
+import jwt from 'jsonwebtoken';
 class Payments extends Component {
+    componentDidMount() {
+        this.props.getAllPayments();
+    }   
   render() {
+    const payments = this.props.payments;
+    var id=jwt.decode(localStorage.getItem('jwtToken')).email;
+    console.log(id);
+    console.log(payments);
+    const tablebody=payments.map(value => 
+        <tr>
+            {id==value.email &&
+                <td style={{textAlign:"center"}}>
+                    {value.id}
+                </td>
+            }
+            {id==value.email &&
+                <td style={{textAlign:"center"}}>
+                    PayPal
+                </td>
+            }
+            {id==value.email &&
+                <td style={{textAlign:"center"}}>
+                    {value.price}
+                </td>
+            }
+            {id==value.email &&
+                <td style={{textAlign:"center"}}>
+                    {value.account_time}
+                </td>
+            }
+        </tr>       
+    );
     return (
         <div className="tab-pane fade" id="payments">
             <div className="margin">
@@ -19,21 +51,16 @@ class Payments extends Component {
                             <table className="table table-striped" id="profilePayments">
                                 <thead>
                                 <tr>
-                                    <th>Date</th>
-                                    <th>Detalhes do pagamento</th>
-                                    <th>Método de pagamento</th>
-                                    <th>Montante</th>
-                                    <th></th>
+                                    <th style={{textAlign:"center"}}>ID</th>
+                                    <th style={{textAlign:"center"}}>Método de pagamento</th>
+                                    <th style={{textAlign:"center"}}>Montante</th>
+                                    <th style={{textAlign:"center"}}>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
                                 <tbody>
-                                <tr>
-                                    <td colSpan="5" style={{text_align: "center",}}>
-                                        Você nunca pagou por nossos serviços.
-                                    </td>
-                                </tr>
+                                    {tablebody}
                                 </tbody>
                             </table>
                         </div>
@@ -45,4 +72,9 @@ class Payments extends Component {
   }
 }
 
-export default Payments;
+const mapStateToProps = state => {
+    return {
+        payments: state.admin.payments
+    }
+}
+export default connect(mapStateToProps, {getAllPayments})(Payments)

@@ -11,6 +11,8 @@ import MyAdminMaximumSideBar from './admin-part/max-sidebar.js';
 import MyAdminUserList from './admin-part/user-part/userlist.js';
 import MyAdminAPIList from './admin-part/apitoken-part/apitoken.js';
 import MyAdminPayList from './admin-part/payment-part/paymentlist.js';
+import MyAdminFilterList from './admin-part/Filter/filterlist.js';
+import MyMemberShipList from './admin-part/membership/membership.js';
 
 class Public extends Component {
   render() {
@@ -27,6 +29,8 @@ class Public extends Component {
                     <MyAdminUserList/>
                     <MyAdminAPIList/>
                     <MyAdminPayList/>
+                    <MyAdminFilterList/>
+                    <MyMemberShipList/>
                 </div>
               </div>
             </div>

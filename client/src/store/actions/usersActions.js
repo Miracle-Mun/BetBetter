@@ -9,7 +9,7 @@ const options = data => {
             'Content-Type': 'application/json',
         },
         method: 'post',
-        //baseURL:'http://localhost:3000'
+        //baseURL:'http://localhost:5000',
         baseURL:'http://betbetter.fun',
         body: JSON.stringify(data)
     };
@@ -69,7 +69,7 @@ export const userSignupRequest = (userSignUPDetails) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:3000'
+            //baseURL:'http://localhost:5000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -96,24 +96,26 @@ export const userSignupRequest = (userSignUPDetails) => {
     }
 }  
 
+
 export const userLoginRequest = (userLoginDetails) => {
     return dispatch => { 
         axios.post(`/api/users/login`, JSON.stringify(userLoginDetails), {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:3000'
+            //baseURL:'http://localhost:5000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
             res = res.data;
         
             if(res.status){
+                console.log("adadasd")
                 const token = res.token;
                 delete res.token;
                 localStorage.setItem('jwtToken', token);
                 dispatch({ type: actionTypes.LOGIN_SUCCESSFUL, authorizationToken: token, authenticatedUsername: jwt.decode(token).username });
-                console.log(jwt.decode(token));
+                
                 if(jwt.decode(token).role===1){
                     history.push("/admin");
                 }
@@ -146,9 +148,58 @@ export const userLoginRequest = (userLoginDetails) => {
 }
 
 export const userLogoutRequest = () => {
-    return dispatch => {
-        localStorage.removeItem('jwtToken');
-        localStorage.removeItem('BasicMERNStackAppMyArticles');
-        dispatch({ type: actionTypes.LOGOUT_USER });
+    const update={
+        id:jwt.decode(localStorage.getItem('jwtToken')).id,
+        end_time:jwt.decode(localStorage.getItem('jwtToken')).Ending,
+        freeze:jwt.decode(localStorage.getItem('jwtToken')).freeze,
+      }
+      return dispatch => { 
+        axios.post(`/api/users/updatefreeze`, JSON.stringify(update), {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            //baseURL:'http://localhost:5000'
+            baseURL:'http://betbetter.fun'
+        })
+        .then(res => {
+            localStorage.removeItem('jwtToken');
+            localStorage.removeItem('BasicMERNStackAppMyArticles');
+            dispatch({ type: actionTypes.LOGOUT_USER });
+        });
+    }
+}
+
+export const userupdateRequest = (userupdateDetails) => {
+    return dispatch => { 
+        axios.post(`/api/users/update`, JSON.stringify(userupdateDetails), {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            //baseURL:'http://localhost:5000'
+            baseURL:'http://betbetter.fun'
+        })
+        .then(res => {
+            res = res.data;
+            console.log(res)
+            if(res.Status){
+                history.push("/signin")
+            }
+        });
+    }
+}
+
+export const UpdateFreeze = (update) => {
+    return dispatch => { 
+        axios.post(`/api/users/updatefreeze`, JSON.stringify(update), {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            //baseURL:'http://localhost:5000'
+            baseURL:'http://betbetter.fun'
+        })
+        .then(res => {
+            res = res.data;
+            console.log(res)
+        });
     }
 }

@@ -39,7 +39,7 @@ class Header extends Component {
                     <a alt="Arbitrage betting service №1" className="bb_brand2 logo navbar-brand" href="/"
                        title="BetBurger"></a>
                     <a alt="Arbitrage betting service №1" className="navbar-brand" href="/"
-                       title="BetBurger">BetBurger</a>
+                       title="BetBurger">BetBetter</a>
                 </div>
                 <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                     <ul className="nav navbar-nav navbar-right">

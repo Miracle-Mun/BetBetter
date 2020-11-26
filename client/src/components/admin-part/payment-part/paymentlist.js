@@ -50,18 +50,19 @@ class Payments extends Component {
     
   render() {
     const payments = this.props.payments;
+    console.log(payments);
     const tablebody=payments.map(value => 
         <tr>
-            <td style={{text_align: "center"}}>
+            <td style={{textAlign:"center"}}>
                 {value.id}
             </td>
-            <td style={{text_align: "center"}}>
+            <td style={{textAlign:"center"}}>
                 {value.email}
             </td>
-            <td style={{text_align: "center"}}>
+            <td style={{textAlign:"center"}}>
                 {value.price}
             </td>
-            <td style={{text_align: "center"}}>
+            <td style={{textAlign:"center"}}>
                 {value.account_time}
             </td>
         </tr>
@@ -75,26 +76,24 @@ class Payments extends Component {
 
                     </div>
                     <div className="page-header title font">
-                        <h1>Payment</h1>
+                        <h1>Payment Settings</h1>
                     </div>
                     <form id="form_api_token" role="form"  onSubmit={this.handleSubmit} method="post">
                         <div className="row" style={{alignItems:"center", display:"flex"}}>
-                            <div className="col-md-2 col-xs-12">
-                                <label>MY_Client_ID:</label>  
+                            <div className="col-md-1 col-xs-12">
+                                <label>Client_ID:</label>  
                             </div>
-                            <div className="col-md-5 col-xs-12">
+                            <div className="col-md-6 col-xs-12">
                                 <input className="form-control"  type="text" name="account" id="account" value={this.state.client_id} onChange={this.handleIDChange}/>
                             </div>
                         </div>
                         <div className="row" style={{marginTop:"10px",alignItems:"center", display:"flex"}}>
-                            <div className="col-md-2 col-xs-12">
-                                <label>MY_SECRET:</label>  
+                            <div className="col-md-1 col-xs-12">
+                                <label>SECRET:</label>  
                             </div>
-                            <div className="col-md-5 col-xs-12">
+                            <div className="col-md-6 col-xs-12">
                                 <input className="form-control"  type="text" name="secret" id="secret" value={this.state.secret} onChange={this.handleSecChange}/>
                             </div>
-                        </div>
-                        <div className="row" style={{marginTop:"10px",alignItems:"center", display:"flex",justifyContent:"flex-end"}}>
                             <div className="col-md-4 col-xs-12 text-left">
                                 <input type="submit" className="btn blue" name="api" value="Update" />
                             </div>
@@ -105,10 +104,10 @@ class Payments extends Component {
                             <table className="table table-striped" id="profilePayments">
                                 <thead>
                                 <tr>
-                                    <th>Payment_id</th>
-                                    <th>From</th>
-                                    <th>Price</th>
-                                    <th>Payment Date</th>
+                                    <th style={{textAlign:"center"}}>ID</th>
+                                    <th style={{textAlign:"center"}}>UserName</th>
+                                    <th style={{textAlign:"center"}}>Price</th>
+                                    <th style={{textAlign:"center"}}>Payment Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
