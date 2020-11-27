@@ -18,36 +18,22 @@ class Table1 extends Component {
         this.handleBet1Change = this.handleBet1Change.bind(this);
         this.handleBet2Change = this.handleBet2Change.bind(this);
         this.handleTotalChange=this.handleTotalChange.bind(this);
-        this.handleKoef2Change=this.handleKoef2Change.bind(this);
-        this.handleKoef1Change=this.handleKoef1Change.bind(this);
       }
 
-      handleKoef1Change(evt) {
-
-        this.setState({
-          koef1: evt.target.value,
-          bet1_price:100/(this.state.koe1+this.state.koe1)*this.state.koe2
-        });
-      };
-      handleKoef2Change(evt) {
-        this.setState({
-          koef2: evt.target.value,
-          bet1_price:100/(this.state.koe1+this.state.koe2)*this.state.koe2
-        });
-      };
+      
       handleBet1Change(evt) {
         this.setState({
-          bet1_price: evt.target.value,
-          bet2_price:this.state.total_price-evt.target.value
+            bet1_price: evt.target.value,
+            total_price:parseFloat(this.state.bet2_price)+parseFloat(evt.target.value)
         });
-      };
-    
-      handleBet2Change(evt) {
+    };
+
+    handleBet2Change(evt) {
         this.setState({
-          bet2_price: evt.target.value,
-          bet1_price:this.state.total_price-evt.target.value
+            bet2_price: evt.target.value,
+            total_price:parseFloat(this.state.bet1_price)+parseFloat(evt.target.value)
         });
-      };
+    };
       handleTotalChange(evt) {
         this.setState({
           total_price: evt.target.value,
@@ -65,6 +51,25 @@ class Table1 extends Component {
     componentDidMount() {
         this.props.getAllBookmarks();
         this.props.getAllSports();
+    }
+    componentDidUpdate(prevProps, prevState){
+        if(this.props.allbets !== prevProps.allbets){
+            let bet1={};
+            let bet2={};
+            let data={};
+            this.props.allbets.map(bet => {
+                if(bet.id===this.props.allarbs.bet1_id){
+                    bet1=bet;
+                }
+                if(bet.id===this.props.allarbs.bet2_id){
+                    bet2=bet;
+                }   
+            });
+            this.setState({
+                bet1_price:(100/(bet1.koef+bet2.koef)*bet2.koef).toFixed(2),
+                bet2_price:(100/(bet1.koef+bet2.koef)*bet1.koef).toFixed(2),
+            })
+        }
     }
   render() {
         const bookmarks = this.props.bookmarks;

@@ -13,7 +13,7 @@ class Second extends Component {
                             potential mistakes while betting. Bookmakers do not see the source of the redirect, so your
                             browser activity remains undetectable.</p>
                         <a className="btn red-bordered-btn"
-                        href="https://www.betburger.com/manual/arb-helper-plugin-for-direct-link-to-bookmakers"
+                        href="#"
                         target="_blank">
                             <i className="icon icon-chrome"></i>
                             Find out more

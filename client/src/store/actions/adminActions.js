@@ -1,13 +1,14 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 import { history } from "../../history"
+// import { useToasts } from 'react-toast-notifications'
 
 const options = () => {
     return {
         headers: {
             'Content-Type': 'application/json'
         },
-        //baseURL:'http://localhost:5000'
+        //baseURL:'http://localhost:3000'
         baseURL:'http://betbetter.fun'
     };
 };
@@ -18,7 +19,7 @@ export const getAllUsers = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -38,7 +39,7 @@ export const DeleteUser = (user_id) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -56,7 +57,7 @@ export const getClientdata = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -73,13 +74,13 @@ export const GETPrice = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
             res = res.data;
             localStorage.setItem('memberprice', JSON.stringify(res.price[0]));
-            console.log(res);
+            dispatch({ type: actionTypes.GOT_PRICE, price: res.price[0].price});
         });
     }
 };
@@ -98,7 +99,7 @@ export const GETClient = (data) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -115,7 +116,7 @@ export const getAllPayments = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -133,7 +134,7 @@ export const getAllFilters= () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -145,13 +146,50 @@ export const getAllFilters= () => {
     }
 };
 
+// export const SetFilter = (data) => {
+//     return dispatch => { 
+//         axios.post(`/api/admin/setfilter`, JSON.stringify(data), {
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             //baseURL:'http://localhost:3000'
+//             baseURL:'http://betbetter.fun'
+//         })
+//         .then(res => {
+//             res = res.data;
+//             console.log(res);
+//             localStorage.setItem('filters', JSON.stringify(res.filters));
+//             dispatch({ type: actionTypes.GOT_FILTERS, filters: res.filters })
+//             history.push("/admin");
+//         });
+//     }
+// };
+
 export const SetFilter = (data) => {
     return dispatch => { 
         axios.post(`/api/admin/setfilter`, JSON.stringify(data), {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
+            baseURL:'http://betbetter.fun'
+        })
+        .then(res => {
+            res = res.data;
+            localStorage.setItem('filters', JSON.stringify(res.filters));
+            dispatch({ type: actionTypes.GOT_FILTERS, filters: res.filters })
+            history.push("/admin");
+        });
+    }
+};
+
+export const FilterActive = (data) => {
+    return dispatch => { 
+        axios.post(`/api/admin/filteractive`, JSON.stringify(data), {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -164,13 +202,37 @@ export const SetFilter = (data) => {
     }
 };
 
+export const UpdateFilter = (data) => {
+    return dispatch => { 
+        axios.post(`/api/admin/Updatefilter`, JSON.stringify(data), {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            //baseURL:'http://localhost:3000'
+            baseURL:'http://betbetter.fun'
+        })
+        .then(res => {
+            res = res.data;
+           if(res.status==true){
+            // useToasts.addToast("content", {
+            //         appearance: 'warning',
+            //         autoDismiss: true,
+            //       });
+            alert("Update Success!")
+           }
+        });
+    }
+};
+
+
+
 export const DelFilter= (filter_id) => {
     return dispatch => { 
         axios.post(`/api/admin/delfilter`, JSON.stringify(filter_id), {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -189,14 +251,14 @@ export const SetPrice = (price) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
             res = res.data;
             localStorage.setItem('memberprice', JSON.stringify(res.price[0]));
             console.log(res);
-            history.push('/admin');
+            history.push('/pricing');
         });
     }
 };
@@ -216,7 +278,7 @@ export const SetFreeze = (data) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {

@@ -6,6 +6,7 @@ const initialState = {
     payments:[],
     clientData:[],
     filters:[],
+    price:[],
 };
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -28,6 +29,11 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 clientData: action.clientData
+            };
+        case actionTypes.GOT_PRICE:
+            return{
+                ...state,
+                price: action.price
             };
         case actionTypes.GOT_FILTERS:
             return{

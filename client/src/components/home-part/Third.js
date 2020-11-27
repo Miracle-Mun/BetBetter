@@ -13,8 +13,8 @@ class Third extends Component {
                             <p>We decided to make our free arbitrage betting software more flexible for those who use
                                 different strategies. You don’t have to install any off-site programs on your computer. Just
                                 open your favorite browser and get to work!</p>
-                            <p>Moreover, BetBurger runs on smartphones and tablets! On the road, waiting for your friend or
-                                just have some free time – BetBurger is always around not to waste a minute!</p>
+                            <p>Moreover, betbetter runs on smartphones and tablets! On the road, waiting for your friend or
+                                just have some free time – betbetter is always around not to waste a minute!</p>
                             <div className="browsers">
                                 <img alt="browsers"
                                     src="../../assets/img/browsers.png" />

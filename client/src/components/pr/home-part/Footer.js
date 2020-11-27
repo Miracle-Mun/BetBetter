@@ -74,22 +74,22 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://t.me/betburger" target="_blank">
+                                <a href="#" target="_blank">
                                     <img alt="Telegram"
                                         src="../../assets/img/icon-telegram.png" />
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:support@betburger.com">
+                                <a href="#">
                                     <img alt="Mail" src="../../assets/img/icon-email.png" />
                                 </a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="bottom">
-                    <a alt="Arbitrage betting service №1" className="logo" href="#" title="BetBurger">
-                        <img alt="BETBURGER"
-                            src="../../assets/img/logo-ce.svg" />
+                    <a alt="Arbitrage betting service №1" className="logo" href="#" title="betbetter">
+                        <img alt="betbetter"
+                            src="../../assets/img/logo_black.png" />
                     </a>
                     <div className="bottom__center">
                         <ul>
@@ -100,7 +100,7 @@ class Footer extends Component {
                                 <a href="#">Termos de utilização</a>
                             </li>
                         </ul>
-                        <span>2013-2020 (с) BetBurger Todos os direitos reservados</span>
+                        <span>2013-2020 (с) betbetter Todos os direitos reservados</span>
                         <span>www.betbetter.fun é detido e administrado pela Aspira Limited</span>
                     </div>
                     <div className="bottom__left">

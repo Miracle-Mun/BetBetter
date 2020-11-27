@@ -40,7 +40,7 @@ router.post('/deluser', (req, res) => {
 
 router.post('/client', (req, res) => {
     console.log(req)
-    var sql = "UPDATE `client` SET client_id ='"+ req.body.id+"', password= '"+req.body.secret+"' WHERE id = '0'";
+    var sql = "UPDATE `Account` SET client_id ='"+ req.body.id+"', password= '"+req.body.secret+"' WHERE id = '0'";
     console.log(sql);
     config.connection.query(sql, function(err, results){    
             res.json({ status: 'true' });            
@@ -48,7 +48,7 @@ router.post('/client', (req, res) => {
 });
 
 
-router.post('/getclient', (req, res) => {
+router.post('/getAccount', (req, res) => {
     console.log("sdsd")
     var sql = "select * from `client` where id='0'";
     config.connection.query(sql, function(err, results){    
@@ -76,9 +76,26 @@ router.post('/payments', (req, res) => {
     });
 });
 
+// router.post('/setfilter', (req, res) => {
+//     console.log("sdsd")
+//     var sql="INSERT INTO `filter` (filter_name, filter_id) VALUES ('"+req.body.filter_name+"' , '"+req.body.filter_id+"')";
+//     config.connection.query(sql, function(err, results){    
+//         var sql = "select * from `filter`";
+//         config.connection.query(sql, function(err, results){    
+//             if(results&&results.length>0){
+//                 res.json({ filters: results });
+//             }
+//             else{
+//                 res.json({ status: false, errors: 'no records'});
+//             }           
+//         });                
+//     });
+// });
+
 router.post('/setfilter', (req, res) => {
-    console.log("sdsd")
-    var sql="INSERT INTO `filter` (filter_name, filter_id) VALUES ('"+req.body.filter_name+"' , '"+req.body.filter_id+"')";
+    
+    var sql="Update `filter` SET filter_name = '"+ req.body.filter_name +"', filter_id ='"+ req.body.filter_id +"' WHERE id = '"+ req.body.filter_no +"'";
+
     config.connection.query(sql, function(err, results){    
         var sql = "select * from `filter`";
         config.connection.query(sql, function(err, results){    
@@ -104,6 +121,37 @@ router.post('/filters', (req, res) => {
                 
     });
 });
+
+router.post('/Updatefilter', (req, res) => {
+    if(req.body.filter_id===''){
+        var sql="INSERT INTO `filter` (user_id,filter_name,bookmark_id,sports_id) VALUES ('"+req.body.user_id+"','"+req.body.filtername+"','"+req.body.bookmarks+"' , '"+req.body.sports+"')";    
+    }
+    else{
+        var sql = "UPDATE `filter` SET user_id ='"+ req.body.user_id+"', bookmark_id='"+req.body.bookmarks+"', sports_id='"+req.body.sports+"', filter_name='"+req.body.filtername+"' ,filter_id='' ,active='0' WHERE id = '"+req.body.filter_id+"'";
+    }
+    config.connection.query(sql, function(err, results){ 
+        res.json({ status: true, errors: 'no records'});
+                
+    });
+});
+
+router.post('/delfilter', (req, res) => {
+   
+    var sql = "DELETE FROM `filter` WHERE id = '"+req.body.id+"'";
+    config.connection.query(sql, function(err, results){ 
+        var sql = "select * from `filter`";
+        config.connection.query(sql, function(err, results){    
+            if(results&&results.length>0){
+                res.json({ filters: results });
+            }
+            else{
+                res.json({ status: false, errors: 'no records'});
+            }           
+        });                
+    });
+});
+
+
 
 router.post('/price', (req, res) => {
     var sql = "UPDATE `membership` SET price ='"+ req.body.price+"' WHERE id = '0'";
@@ -146,6 +194,35 @@ router.post('/delfilter', (req, res) => {
                 res.json({ status: false, errors: 'no records'});
             }           
         });                
+    });
+});
+
+router.post('/filteractive', (req, res) => {
+    console.log(req)
+    var query = "select * from `filter` where id = '"+req.body.id+"'";
+    config.connection.query(query, function(err, results){
+        if(results) {
+            active = results[0].active;
+            if(active == 1) {
+                active = 0;
+            }
+            else {
+                active = 1;
+            }
+
+            var sql = "Update `filter` set active = '"+ active +"' WHERE id = '"+req.body.id+"'";
+            config.connection.query(sql, function(err, results){    
+                var sql = "select * from `filter`";
+                config.connection.query(sql, function(err, results){    
+                    if(results&&results.length>0){
+                        res.json({ filters: results });
+                    }
+                    else{
+                        res.json({ status: false, errors: 'no records'});
+                    }           
+                });           
+            });
+        }
     });
 });
 

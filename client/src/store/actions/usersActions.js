@@ -9,7 +9,7 @@ const options = data => {
             'Content-Type': 'application/json',
         },
         method: 'post',
-        //baseURL:'http://localhost:5000',
+        //baseURL:'http://localhost:3000',
         baseURL:'http://betbetter.fun',
         body: JSON.stringify(data)
     };
@@ -69,7 +69,7 @@ export const userSignupRequest = (userSignUPDetails) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -103,7 +103,7 @@ export const userLoginRequest = (userLoginDetails) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -114,6 +114,7 @@ export const userLoginRequest = (userLoginDetails) => {
                 const token = res.token;
                 delete res.token;
                 localStorage.setItem('jwtToken', token);
+                localStorage.setItem('memberprice', 0.33);
                 dispatch({ type: actionTypes.LOGIN_SUCCESSFUL, authorizationToken: token, authenticatedUsername: jwt.decode(token).username });
                 
                 if(jwt.decode(token).role===1){
@@ -158,7 +159,7 @@ export const userLogoutRequest = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -175,7 +176,7 @@ export const userupdateRequest = (userupdateDetails) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {
@@ -194,7 +195,7 @@ export const UpdateFreeze = (update) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //baseURL:'http://localhost:5000'
+            //baseURL:'http://localhost:3000'
             baseURL:'http://betbetter.fun'
         })
         .then(res => {

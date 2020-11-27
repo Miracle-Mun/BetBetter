@@ -74,22 +74,22 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://t.me/betburger" target="_blank">
+                                <a href="#" target="_blank">
                                     <img alt="Telegram"
                                         src="../assets/img/icon-telegram.png" />
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:support@betburger.com">
+                                <a href="#">
                                     <img alt="Mail" src="../assets/img/icon-email.png" />
                                 </a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="bottom">
-                    <a alt="Arbitrage betting service №1" className="logo" href="#" title="BetBurger">
-                        <img alt="BETBURGER"
-                            src="../assets/img/logo-ce.svg" />
+                    <a alt="Arbitrage betting service №1" className="logo" href="#" title="betbetter">
+                        <img alt="betbetter"
+                            src="../assets/img/logo_black.png" />
                     </a>
                     <div className="bottom__center">
                         <ul>
@@ -100,8 +100,8 @@ class Footer extends Component {
                                 <a href="#">Terms of use</a>
                             </li>
                         </ul>
-                        <span>2013-2020 (с) BetBurger All rights reserved</span>
-                        <span>www.betburger.com is owned and operated by Aspira Limited</span>
+                        <span>2013-2020 (с) betbetter All rights reserved</span>
+                        <span>www.betbetter.com is owned and operated by Aspira Limited</span>
                     </div>
                     <div className="bottom__left">
                     </div>

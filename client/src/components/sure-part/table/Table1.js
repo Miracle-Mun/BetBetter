@@ -30,14 +30,14 @@ class Table1 extends Component {
     handleBet1Change(evt) {
         this.setState({
             bet1_price: evt.target.value,
-            bet2_price:this.state.total_price-evt.target.value
+            total_price:parseFloat(this.state.bet2_price)+parseFloat(evt.target.value)
         });
     };
 
     handleBet2Change(evt) {
         this.setState({
             bet2_price: evt.target.value,
-            bet1_price:this.state.total_price-evt.target.value
+            total_price:parseFloat(this.state.bet1_price)+parseFloat(evt.target.value)
         });
     };
     handleTotalChange(evt) {
@@ -57,6 +57,26 @@ class Table1 extends Component {
     componentDidMount() {
         this.props.getAllBookmarks();
         this.props.getAllSports();
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        if(this.props.allarbs !== prevProps.allarbs){
+            let bet1={};
+            let bet2={};
+            let data={};
+            this.props.allbets.map(bet => {
+                if(bet.id===this.props.allarbs.bet1_id){
+                    bet1=bet;
+                }
+                if(bet.id===this.props.allarbs.bet2_id){
+                    bet2=bet;
+                }   
+            });
+            this.setState({
+                bet1_price:(100/(bet1.koef+bet2.koef)*bet2.koef).toFixed(2),
+                bet2_price:(100/(bet1.koef+bet2.koef)*bet1.koef).toFixed(2),
+            })
+        }
     }
   render() {
         const bookmarks = this.props.bookmarks;
@@ -389,8 +409,8 @@ class Table1 extends Component {
                                                 <div className="content">
                                                     <div className="form-group">
                                                         <input className="form-control input-xs stake input5spaces"
-                                                                type="text" value={this.state.bet1_price} onChange={this.handleBet1Change} 
-                                                                data-outcome_number="1"
+                                                                type="text"  value={this.state.bet1_price} onChange={this.handleBet1Change} 
+                                                                data-outcome_number="1" 
                                                                 id="outcome1_stake"/>
                                                     </div>
                                                 </div>

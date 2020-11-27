@@ -5,6 +5,7 @@ export const GOT_ALL_USERS='GOT_ALL_USERS';
 export const GOT_PAYMENTS='GOT_PAYMENTS';
 export const GOT_FILTERS='GOT_FILTERS';
 export const GOT_CLIENT='GOT_CLIENT';
+export const GOT_PRICE='GOT_PRICE';
 export const GOT_ALL_ARBS='GOT_ALL_ARBS';
 export const GOT_ALL_BETS='GOT_ALL_BETS';
 

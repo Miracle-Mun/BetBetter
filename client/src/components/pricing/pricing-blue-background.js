@@ -35,8 +35,9 @@ class PricingBlueBackground extends Component {
       }
 
   render() {
-    const price=parseJSON(localStorage.getItem('memberprice')).price;
-    console.log(price)
+    //const price=parseJSON(localStorage.getItem('memberprice')).price;
+    const price=this.props.price;
+    console.log(this.props.price)
     return (
         <div className="blue-background">
             <div className="container" id="price-container">
@@ -255,6 +256,7 @@ class PricingBlueBackground extends Component {
 const mapStateToProps = state => {
     return {
         clientData: state.admin.clientData,
+        price:state.admin.price,
     }
 }
 export default connect(mapStateToProps, {getClientdata,GETPay,GETPrice})(PricingBlueBackground)

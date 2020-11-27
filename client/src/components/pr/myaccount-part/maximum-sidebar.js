@@ -22,6 +22,11 @@ class MaxmumSidebar extends Component {
                         <a style={{marginRight:'0px'}} className="password" data-toggle="pill"
                            href="https://www.betburger.com/profile#settings_tab">Definições</a>
                     </li>
+
+                    <li>
+                        <a style={{marginRight:'0px'}} className="multi" data-toggle="pill"
+                           href="https://www.betburger.com/profile#multi_filters">Filtros</a>
+                    </li>
                     
                 </ul>
             </div>

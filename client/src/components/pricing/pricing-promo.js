@@ -16,7 +16,7 @@ class PricingPromo extends Component {
                                     bets to place to win every time, no matter the sport or the game outcome.</p>
                                 <div className="buttons">
                                     <a className="btn red-btn scrollTo" data-scroll=".main-container"
-                                       href="https://www.betburger.com/prices#">
+                                       href="/prices">
                                         How does it work?
                                     </a>
                                 </div>

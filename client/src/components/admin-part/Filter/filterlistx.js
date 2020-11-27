@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { connect, connectAdvanced } from 'react-redux';
 
 import PropTypes from 'prop-types';
 import {getAllFilters} from '../../../store/actions/adminActions';
 import {SetFilter} from '../../../store/actions/adminActions';
 import {DelFilter} from '../../../store/actions/adminActions';
+import { render } from 'react-dom';
 class Filter extends Component {
     constructor() {
         super();
         this.state = {
           fliter_id: '',
           filter_name:'',
+          button_value:'',
+          button_values:[],
+          index: 1,
+          list_item: 0,
+          filters: [],
+          last_press: 10,
+          last_press_same: 0,
+          default_value:1,
+          Aindex:0,
         };
         this.handleFilterIDChange = this.handleFilterIDChange.bind(this);
         this.handleFilterNameChange = this.handleFilterNameChange.bind(this);
         this.handeFIlterDelClick=this.handeFIlterDelClick.bind(this);
         this.handeFilterActive=this.handeFilterActive.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.setAddButtonValue=this.setAddButtonValue.bind(this);
     }
 
     handleSubmit(evt) {
@@ -33,6 +44,7 @@ class Filter extends Component {
             filter_name:this.state.filter_name
         }
         this.props.SetFilter(filter_data);
+        this.state.index = 1
       }
     
       handleFilterIDChange(evt) {
@@ -47,32 +59,77 @@ class Filter extends Component {
       };
 
       handeFIlterDelClick(evt){
+        for (const [index, value] of this.state.button_values.entries()) {
+            if(index == evt.target.id - 1)
+            {
+                this.state.button_values[index] = this.state.button_values[index + 1];
+                console.log(this.state.button_values);
+            }
+        }
         const filter_id={
             id:evt.target.id,
         }
         this.props.DelFilter(filter_id);    
     }
 
+    
+
     handeFilterActive(evt){
-        console.log(this.state.button_value);
-        console.log(evt.target.id);
-        console.log(this.state.button_value[evt.target.id % 2])
+        this.state.index = 2;
+                
+        if(this.state.index != 1) {
+            for (const [index, value] of this.state.button_values.entries()) {
+                this.state.button_values[index] = "Active";
+            }
+        }
+        if(this.state.last_press != evt.target.id - 1 || this.state.last_press_same % 2 == 0)
+        {
+            this.state.button_values[evt.target.id - 1] = "Deactive";
+            this.state.last_press = evt.target.id - 1;
+            this.state.last_press_same = 0;
+        }
+        if(this.state.last_press == evt.target.id - 1)
+        {
+            this.state.last_press_same++;
+        }
         this.setState({
-            
+            value:this.state.button_values[evt.target.id - 1],
+            default_value:evt.target.id,
+            Aindex:evt.target.name
         });
     }
-   
+    setAddButtonValue(id){
+        if(this.state.index == 1) {
+            let aa = 0;
+            while(aa < id) {
+                if(this.state.default_value-1!=aa){
+                    this.state.button_values[aa] = "Active";
+                }
+                else{
+                    this.state.button_values[aa] = "Deactive";
+                }
+               
+                aa++;
+            }
+        }
+        console.log(this.state.button_values);
+    }
     componentDidMount() {
         this.props.getAllFilters();
+        
+        
     }
     
   render() {
-    const filters = this.props.filters;
-    const tablecontent=filters.map(value =>
-        <tr>
+    this.state.filters = this.props.filters;
+    localStorage.setItem('apifilter',JSON.stringify(this.props.filters[this.state.Aindex]))
+    console.log(localStorage.getItem('apifilter'))
+    const tablecontent=this.state.filters.map((value,index) =>
+        <tr key={value.id}>
             <td style={{textAlign:"center"}}>
                 {value.id}
             </td>
+            {this.setAddButtonValue(value.id)}
             <td style={{textAlign:"center"}}>
                 {value.filter_name}
             </td>
@@ -80,14 +137,15 @@ class Filter extends Component {
                 {value.filter_id}
             </td>
             <td style={{textAlign:"center"}}>
-                <input type="submit" className="btn danger" name="api" id={value.id} value="" onClick={this.handeFilterActive}/>
+                <input type="submit" className={`btn ${this.state.button_values[value.id-1] == 'Active' ? 'green' : 'danger'}`} name={index} id={value.id} value={this.state.button_values[value.id - 1]} onClick={this.handeFilterActive}/>
                 &nbsp;
-                <input type="submit" className="btn danger" name="api" id={value.id} value="Delete" onClick={this.handeFIlterDelClick}/>
+                {value.id==1&& <input type="submit" className="btn" disabled style={{backgroundColor:"#ef4059",color:"#fff"}} name="api" id={value.id} value="Delete" onClick={this.handeFIlterDelClick}/>}
+                {value.id!=1&& <input type="submit" className="btn" style={{backgroundColor:"#ef4059",color:"#fff"}} name="api" id={value.id} value="Delete" onClick={this.handeFIlterDelClick}/>}
             </td>
         </tr>
     );
     return (
-        <div className="tab-pane fade" id="1filter_tab">
+        <div className="tab-pane fade" id="3filter_tab">
             <div className="margin">
                 <div className="col-lg-10 col-md-9">
                     <div className="alert alert-danger fade hide" style={{margin_top: "10px",}}>

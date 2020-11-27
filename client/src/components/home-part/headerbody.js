@@ -12,7 +12,7 @@ class HeaderBody extends Component {
                         <p>Our service scans more than 100 bookies along with a great variety of sports. We analyze and
                             calculate surebets and all you have to do is to bet and make safe profit!</p>
                         <div className="buttons">
-                            <a className="btn red-btn scrollTo" data-scroll=".home-main" href="https://www.betburger.com/#">How
+                            <a className="btn red-btn scrollTo" data-scroll=".home-main" href="/">How
                                 it works</a>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ class HeaderBody extends Component {
                 </div>
             </div>
             <div className="home-note">
-                <span>BetBurger does not organize or conduct gambling.</span>
+                <span>betbetter does not organize or conduct gambling.</span>
                 <span>The information provided is for information purposes only.</span>
             </div>
         </div>

@@ -1,33 +1,39 @@
-import React, { Component } from 'react';
-import { connect, connectAdvanced } from 'react-redux';
+import React, { Component} from 'react';
+import { connect } from 'react-redux';
 
-import PropTypes from 'prop-types';
+import jwt from 'jsonwebtoken';
+
 import {getAllFilters} from '../../../store/actions/adminActions';
+import {getAllUsers} from '../../../store/actions/adminActions';
 import {SetFilter} from '../../../store/actions/adminActions';
 import {DelFilter} from '../../../store/actions/adminActions';
-import { render } from 'react-dom';
+import {FilterActive} from '../../../store/actions/adminActions';
+
+import { getAllBookmarks} from '../../../store/actions/betActions';
+import { getAllSports} from '../../../store/actions/betActions';
+
+
 class Filter extends Component {
     constructor() {
         super();
+
         this.state = {
-          fliter_id: '',
-          filter_name:'',
-          button_value:'',
-          button_values:[],
-          index: 1,
-          list_item: 0,
-          filters: [],
-          last_press: 10,
-          last_press_same: 0,
-          default_value:1,
-          Aindex:0,
+            filter_no: '',
+            fliter_id: '',
+            filter_name:'',
+            modal : true,
+            data_visible:"none",
+            filters_id:''
         };
+
         this.handleFilterIDChange = this.handleFilterIDChange.bind(this);
         this.handleFilterNameChange = this.handleFilterNameChange.bind(this);
-        this.handeFIlterDelClick=this.handeFIlterDelClick.bind(this);
-        this.handeFilterActive=this.handeFilterActive.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.setAddButtonValue=this.setAddButtonValue.bind(this);
+
+        this.handleFIlterDelClick=this.handleFIlterDelClick.bind(this);
+        this.handleFilterActive=this.handleFilterActive.bind(this);
+        this.handleFilterView=this.handleFilterView.bind(this);
+       
     }
 
     handleSubmit(evt) {
@@ -38,133 +44,224 @@ class Filter extends Component {
         } 
         if (!this.state.filter_name) {
             return this.setState({ error: ' is required' });
-          }
+        }
+
         const filter_data={
+            filter_no: this.state.filter_no,
             filter_id:this.state.filter_id,
             filter_name:this.state.filter_name
         }
+
         this.props.SetFilter(filter_data);
-        this.state.index = 1
-      }
+    }
     
-      handleFilterIDChange(evt) {
+    handleFilterIDChange(evt) {
         this.setState({
-          filter_id: evt.target.value,
+            filter_id: evt.target.value,
+            data_visible:"none"
         });
-      };
-      handleFilterNameChange(evt) {
+       
+    };
+
+    handleFilterNameChange(evt) {
         this.setState({
             filter_name: evt.target.value,
+            data_visible:"none"
         });
-      };
+    };
 
-      handeFIlterDelClick(evt){
-        for (const [index, value] of this.state.button_values.entries()) {
-            if(index == evt.target.id - 1)
-            {
-                this.state.button_values[index] = this.state.button_values[index + 1];
-                console.log(this.state.button_values);
-            }
+    handleFIlterDelClick(evt){
+        const filter_ids={
+            id: evt.target.id,
+            data_visible:"none"
         }
+        this.props.DelFilter(filter_ids);    
+    }
+
+    handleFilterActive(evt){
         const filter_id={
             id:evt.target.id,
+            data_visible:"none"
         }
-        this.props.DelFilter(filter_id);    
+        console.log(filter_id)
+        this.props.FilterActive(filter_id);
     }
 
-    
-
-    handeFilterActive(evt){
-        this.state.index = 2;
-                
-        if(this.state.index != 1) {
-            for (const [index, value] of this.state.button_values.entries()) {
-                this.state.button_values[index] = "Active";
-            }
-        }
-        if(this.state.last_press != evt.target.id - 1 || this.state.last_press_same % 2 == 0)
-        {
-            this.state.button_values[evt.target.id - 1] = "Deactive";
-            this.state.last_press = evt.target.id - 1;
-            this.state.last_press_same = 0;
-        }
-        if(this.state.last_press == evt.target.id - 1)
-        {
-            this.state.last_press_same++;
-        }
+    handleFilterUpdate(obj, evt) {
         this.setState({
-            value:this.state.button_values[evt.target.id - 1],
-            default_value:evt.target.id,
-            Aindex:evt.target.name
+            filter_no: obj[0],
+            filter_id: obj[1],
+            filter_name: obj[2],
+            data_visible:"none"
         });
     }
-    setAddButtonValue(id){
-        if(this.state.index == 1) {
-            let aa = 0;
-            while(aa < id) {
-                if(this.state.default_value-1!=aa){
-                    this.state.button_values[aa] = "Active";
-                }
-                else{
-                    this.state.button_values[aa] = "Deactive";
-                }
-               
-                aa++;
-            }
-        }
-        console.log(this.state.button_values);
+
+    handleFilterView(id,evt) {
+        this.setState({
+            filters_id:id,
+            data_visible:"block"
+        });
+        console.log(this.state.filter_id)
     }
+
     componentDidMount() {
         this.props.getAllFilters();
-        
-        
+        this.props.getAllUsers();
+        this.props.getAllSports();
+        this.props.getAllBookmarks();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(this.props.filters !== prevProps.filters) {
+            this.setState({
+                filter_no: "",
+                filter_id: "",
+                filter_name: "",
+                data_visible:"none"
+            });
+        }
     }
     
   render() {
-    this.state.filters = this.props.filters;
-    localStorage.setItem('apifilter',JSON.stringify(this.props.filters[this.state.Aindex]))
-    console.log(localStorage.getItem('apifilter'))
-    const tablecontent=this.state.filters.map((value,index) =>
+    const filters = this.props.filters;
+    const users = this.props.users;
+
+    const tablecontent = filters.map((value, index) =>
         <tr key={value.id}>
             <td style={{textAlign:"center"}}>
                 {value.id}
             </td>
-            {this.setAddButtonValue(value.id)}
+            {
+                users.map(user=>{
+                    if(value.user_id==user.id){
+                        return (
+                            <td style={{textAlign:"center"}}>
+                                {user.name}
+                            </td>
+                        );
+                    }
+                })
+            }
             <td style={{textAlign:"center"}}>
                 {value.filter_name}
             </td>
             <td style={{textAlign:"center"}}>
                 {value.filter_id}
             </td>
-            <td style={{textAlign:"center"}}>
-                <input type="submit" className={`btn ${this.state.button_values[value.id-1] == 'Active' ? 'green' : 'danger'}`} name={index} id={value.id} value={this.state.button_values[value.id - 1]} onClick={this.handeFilterActive}/>
-                &nbsp;
-                {value.id==1&& <input type="submit" className="btn" disabled style={{backgroundColor:"#ef4059",color:"#fff"}} name="api" id={value.id} value="Delete" onClick={this.handeFIlterDelClick}/>}
-                {value.id!=1&& <input type="submit" className="btn" style={{backgroundColor:"#ef4059",color:"#fff"}} name="api" id={value.id} value="Delete" onClick={this.handeFIlterDelClick}/>}
+            <td style={{textAlign:"right"}}>
+                <input type="button" className={`btn ${value.active == 1 ? 'green' : 'danger'}`} name={index} id={value.id} value={`${value.active == 1 ? 'Deactive' : 'Active'}`} onClick={this.handleFilterActive}/> &nbsp;   
+                <input type="button" className='btn blue' name={index} id={value.id} value="View" onClick={this.handleFilterView.bind(this,value.id)}/>&nbsp;
+                <input type="button" className='btn primary' name={index} id={value.id} value="Update" onClick={this.handleFilterUpdate.bind(this, [value.id, value.filter_id, value.filter_name])}/>&nbsp;
+                <input type="button" className="btn" style={{backgroundColor:"#ef4059",color:"#fff"}} name="api" id={value.id} value="Delete" onClick={this.handleFIlterDelClick}/>
             </td>
         </tr>
     );
+
+    const bookmarks=this.props.bookmarks;    
+
+    let bet_id = "";
+    filters.map(filter => {
+        if(filter.id === this.state.filters_id){
+            bet_id = filter.bookmark_id;
+            return;
+        }
+    });
+    let bets_id_arr = bet_id.split(':');
+    let bookmark_flag=false;
+    
+    const bookmark_content=bookmarks.map(bookmark => 
+        <div className="col-xs-6 col-md-3 order-item" data-order="10bet">
+            <div className="checkbox text-left">
+                {
+                    bookmark_flag=false,
+                        bets_id_arr.map(bet_id=>{
+                        if(bet_id==bookmark.id){
+                            bookmark_flag=true;
+                            return;
+                        }
+                    })
+                }
+                {
+                    bookmark_flag==true&&
+                    <input name="bookmark{bookmark.id}" value={bookmark.id} id="bk_{bookmark.id}" type="checkbox" checked="true"  data-indeterminate="true"/>
+                }
+                    {
+                    bookmark_flag==false&&
+                    <input name="bookmark{bookmark.id}" value={bookmark.id} id="bk_{bookmark.id}" type="checkbox"  disabled data-indeterminate="true"/>
+                }
+                <label className="text-left" for="bk_{bookmark.id}">
+                    <span className="custom_checkbox"></span>
+                    <p>{bookmark.name}</p>
+                </label>
+            </div>                                            
+        </div>
+    );
+
+    
+    const sports=this.props.sports;
+    
+    let sports_id = '';
+    filters.map(filter => {
+        if(filter.id === this.state.filters_id){
+            sports_id = filter.sports_id;
+            return;
+        }
+    });
+    console.log(this.state.filters_id)
+    console.log(sports_id)
+    let sports_id_arr = sports_id.split(':');
+    let sports_flag=false;
+
+    const sport_content=sports.map(sport => 
+        <div className="col-xs-6 col-md-3 order-item" data-order="10bet">
+            <div className="checkbox text-left">
+                {
+                    sports_flag=false,
+                        sports_id_arr.map(sport_id=>{
+                        if(sport_id==sport.id){
+                            sports_flag=true;
+                            return;
+                        }
+                    })
+                }
+                {
+                    sports_flag==true &&
+                    <input name="sport{sport.id}" value={sport.id} id="bk_{sport.id}" type="checkbox" checked="true"  data-indeterminate="true"/>
+                }
+                {
+                    sports_flag==false &&
+                    <input name="sport{sport.id}" value={sport.id} id="bk_{sport.id}" type="checkbox" disabled data-indeterminate="true"/>
+                }
+                <label className="text-left" for="bk_{sport.id}">
+                    <span className="custom_checkbox"></span>
+                    <p>{sport.name}</p>
+                </label>
+            </div>                                            
+        </div>
+    );
+
+
     return (
         <div className="tab-pane fade" id="filter_tab">
             <div className="margin">
                 <div className="col-lg-10 col-md-9">
                     <div className="alert alert-danger fade hide" style={{margin_top: "10px",}}>
                         <span aria-hidden="true" className="glyphicon glyphicon-exclamation-sign"></span>
-
                     </div>
                     <div className="page-header title font">
                         <h1>Filter</h1>
                     </div>
                     <form id="form_api_token" role="form"  onSubmit={this.handleSubmit} method="post">
                         <div className="row" style={{marginTop:"10px",alignItems:"center", display:"flex"}}>
+                            <input type="hidden" id="filter_no" value={this.state.filter_no} />
                             <div className="col-md-5 col-xs-12">
-                                <input className="form-control"  type="text" name="filter_id" id="filter_id" value={this.state.filter_name} onChange={this.handleFilterNameChange} placeholder="input filter name"/>
+                                <input className="form-control"  type="text" name="filter_name" id="filter_name" value={this.state.filter_name} onChange={this.handleFilterNameChange} placeholder="input filter name"/>
                             </div>
                             <div className="col-md-5 col-xs-12">
-                                <input className="form-control"  type="text" name="filter_name" id="filter_name" value={this.state.filter_id} onChange={this.handleFilterIDChange} placeholder="input filter id"/>
+                                <input className="form-control"  type="text" name="filter_id" id="filter_id" value={this.state.filter_id} onChange={this.handleFilterIDChange} placeholder="input filter id"/>
                             </div>
                             <div className="col-md-2 col-xs-12 text-left">
-                                <input type="submit" className="btn blue" name="filter" value="Add" />
+                                <input type="submit" className="btn blue" style={{width:"100%"}} name="filter" value="Update" />
                             </div>
                         </div>
                     </form>
@@ -174,17 +271,64 @@ class Filter extends Component {
                                 <thead>
                                 <tr>
                                     <th style={{textAlign:"center"}}>ID</th>
+                                    <th style={{textAlign:"center"}}>User</th>
                                     <th style={{textAlign:"center"}}>FilterName</th>
                                     <th style={{textAlign:"center"}}>FilterID</th>
                                     <th style={{textAlign:"center"}} >Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                </tbody>
-                                <tbody>
                                     {tablecontent}
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                    <div style={{display:this.state.data_visible}}> 
+                        <div className="row">
+                            <label className="col-sm-2 control-label col-xs-12 control-label pull-left labelBkTitle">
+                                    Bookmakers
+                                </label>
+                            <div className="filtersFormPage">
+                                <div className="form-horizontal" id="new_user_multi_filter">
+                                    <div className="col-sm-10">
+                                        <div className="bookmakers1_list">
+                                            <div className="sorted-list">
+                                                <div className="row order-list">
+                                                        {bookmark_content}           
+                                                    <div className="col-xs-6 col-md-3">
+                                                        <div className="checkbox">
+                                                            <label>&nbsp;</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div className="row">
+                            <label className="col-sm-2 control-label col-xs-12 control-label pull-left labelBkTitle">
+                                    Sports
+                            </label>
+                            <div className="filtersFormPage">
+                                <div className="form-horizontal" id="new_user_multi_filter">
+                                    <div className="col-sm-10">
+                                        <div className="bookmakers1_list">
+                                            <div className="sorted-list">
+                                                <div className="row order-list">
+                                                        {sport_content}           
+                                                    <div className="col-xs-6 col-md-3">
+                                                        <div className="checkbox">
+                                                            <label>&nbsp;</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -196,9 +340,12 @@ class Filter extends Component {
 
 const mapStateToProps = state => {
     return {
-        filters: state.admin.filters
+        filters: state.admin.filters,
+        users: state.admin.users,
+        bookmarks: state.bets.bookmarks,
+        sports: state.bets.sports
     }
 }
 
-export default connect(mapStateToProps, {getAllFilters,SetFilter,DelFilter})(Filter)
+export default connect(mapStateToProps, {getAllFilters, getAllUsers, SetFilter, FilterActive, DelFilter, getAllBookmarks, getAllSports})(Filter)
 

@@ -1,7 +1,31 @@
 import React, { Component } from 'react';
-import { parseJSON } from 'jquery';
+import { connect } from 'react-redux';
+import jwt from 'jsonwebtoken';
+import {getAllFilters} from '../../store/actions/adminActions'
 class PageContainer extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            filter_name:''
+        };
+    }
+    componentDidMount(){
+        this.props.getAllFilters();
+    }
   render() {
+      const filters=this.props.filters;
+      let filter_name='';
+      const user_id = jwt.decode(localStorage.getItem('jwtToken')).id;
+      filters.map(filter=>{
+        if(filter.user_id==user_id && filter.active==1){
+            filter_name=filter.filter_name;
+        }
+      });
+        if(filter_name==''){
+            filter_name="Demo";
+        }
+        console.log(filter_name);
     return (
         <div id="sidebar-wrapper" className=" fullHeight " style={{min_height: "650px"}}>
             <div className="subContainer height100">
@@ -56,7 +80,7 @@ class PageContainer extends Component {
                                             checked="true"/>
                                     <label title="demo" data-id="sidebar_filter28783" className="editLinkLabel">
                                         <span className="checkbox"></span>
-                                        <p>{parseJSON(localStorage.getItem('apifilter')).filter_name}</p>
+                                        <p>{filter_name}</p>
                                     </label>
                                     <a href="#" data-id="28783"
                                         target="_blank">
@@ -93,4 +117,9 @@ class PageContainer extends Component {
   }
 }
 
-export default PageContainer;
+const mapStateToProps = state => {
+    return { 
+        filters: state.admin.filters,
+    }
+}
+export default connect(mapStateToProps, {getAllFilters})(PageContainer)

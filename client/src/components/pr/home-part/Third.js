@@ -11,7 +11,7 @@ class Third extends Component {
                         <div className="promo-text_inner">
                             <h3 className="medium-title">Multiplataforma</h3>
                             <p>Decidimos tornar o nosso software grátis de apostas de arbitragem mais flexível para quem usa diferentes estratégias. Não tem de instalar qualquer programa adicional no computador. Basta abrir o seu navegador favorito e meter mãos à obra!</p>
-                            <p>Além disso, o BetBurger é compatível com smartphones e tablets! Se estiver fora de casa ou à espera de um amigo ou se tiver algum tempo livre – o BetBurguer está sempre consigo para que não perca nem um minuto!</p>
+                            <p>Além disso, o betbetter é compatível com smartphones e tablets! Se estiver fora de casa ou à espera de um amigo ou se tiver algum tempo livre – o BetBurguer está sempre consigo para que não perca nem um minuto!</p>
                             <div className="browsers">
                                 <img alt="browsers"
                                     src="../../../assets/img/browsers.png" />

@@ -146,12 +146,12 @@ class PricingContainer extends Component {
                     </div>
                 </div>
                 <div className="col-md-5 col-md-offset-1 info-text">
-                    <h2 className="secondary-title">BetBurger is rated 9.5/10</h2>
+                    <h2 className="secondary-title">betbetter is rated 9.5/10</h2>
                     <h6 className="sub-title">by the experts at ArbUsers.com</h6>
-                    <p>"for me betburger is way better than [competitor], I found [competitor] pretty useless... Im
-                        happy with betburger"</p>
-                    <p>"betburger is probably the best service"</p>
-                    <p>"I`m trying [BetBurger], it`s a really good tool even if my bookies are few"</p>
+                    <p>"for me betbetter is way better than [competitor], I found [competitor] pretty useless... Im
+                        happy with betbetter"</p>
+                    <p>"betbetter is probably the best service"</p>
+                    <p>"I`m trying [betbetter], it`s a really good tool even if my bookies are few"</p>
                 </div>
             </div>
             <div className="pricing-faq">
@@ -172,7 +172,7 @@ class PricingContainer extends Component {
                         </div>
                         <div className="pricing-faq__body" id="answer2">
                             Yes, the limited version of our core service is available for free. All you need to do is <a
-                                href="https://www.betburger.com/payments?live_tariff_id=169&amp;prematch_tariff_id=16">create
+                                href="https://www.betbetter.com/payments?live_tariff_id=169&amp;prematch_tariff_id=16">create
                             an account</a>. You’ll get access to Prematch and Live, but you’ll only see the surebets
                             limited to 1% profit with a delay (5 minutes for Prematch and 60 seconds for Live).
                         </div>
@@ -194,7 +194,7 @@ class PricingContainer extends Component {
                         <div className="pricing-faq__body" id="answer4">
                             Usually, your account is activated instantly. In case your payment is made through VISA or
                             MasterCard, the procedure may take a couple of hours. If you’re waiting for your account to
-                            be activated, we highly recommend checking out our <a href="https://www.betburger.com/wiki">Arbing
+                            be activated, we highly recommend checking out our <a href="https://www.betbetter.com/wiki">Arbing
                             Academy</a>, a free resource teaching you how to become a better arber.
                         </div>
                     </div>

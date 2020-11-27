@@ -4,6 +4,20 @@ import Sport from './sport-part.js';
 import Button from './button-part.js';
 
 class FilterEdit extends Component {
+    constructor() {
+        super();
+        this.state = {
+          token: '',
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(evt) {
+        evt.preventDefault();
+        console.log(evt);
+        console.log("dfdf");
+    }
+
 
     render(){
 
@@ -16,7 +30,7 @@ class FilterEdit extends Component {
                         </h1>
                     </div>
                     <div className="filterForms">
-                        <form acceptCharset="UTF-8" action="https://www.betburger.com/user_filters" className="form-horizontal" id="new_user_multi_filter" method="post">
+                        <form acceptCharset="UTF-8" onSubmit={this.handleSubmit} className="form-horizontal" id="filter_edit" method="post">
                             <Bet/>
                             <Sport/>
                             <Button/>

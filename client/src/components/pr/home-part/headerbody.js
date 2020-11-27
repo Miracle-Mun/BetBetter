@@ -53,7 +53,7 @@ class HeaderBody extends Component {
                 </div>
             </div>
             <div className="home-note">
-                <span>A BetBurger não organiza ou efetua jogos.</span>
+                <span>A betbetter não organiza ou efetua jogos.</span>
                 <span>As informações facultadas são apenas para fins informativos.</span>
             </div>
         </div>

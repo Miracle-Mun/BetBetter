@@ -136,7 +136,7 @@ class Filter extends Component {
         </tr>
     );
     return (
-        <div className="tab-pane fade" id="filter_tab">
+        <div className="tab-pane fade" id="2filter_tab">
             <div className="margin">
                 <div className="col-lg-10 col-md-9">
                     <div className="alert alert-danger fade hide" style={{margin_top: "10px",}}>

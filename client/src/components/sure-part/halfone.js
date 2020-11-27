@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import jwt from 'jsonwebtoken';
 import axios from 'axios';
 import qs from 'querystring';
 import { parseJSON } from 'jquery';
+import {getAllFilters} from '../../store/actions/adminActions'
 
 import Sport1 from './sport/sport1.js';
 
 class HalfOne extends Component {
     constructor() {
         super()
-
         this.state = {
             arbsdata: '',
-            betdata: ''
+            betdata: '',
+            search_filter:[],
+            filter_name:""
         }
     }
 
@@ -33,25 +36,42 @@ class HalfOne extends Component {
             
         })
     }
-    componentDidMount() {
-        var search_filter = new Array;
-        const afilter=parseJSON(localStorage.getItem('apifilter')).filter_id
-        console.log(afilter)
-        search_filter.push(afilter);
-        const apitoken = localStorage.getItem('apitoken');
-        var data = {
-            per_page: 50,
-            search_filter: search_filter,
-            access_token: apitoken
-        }
-
-        this.getData(data);
-
-        setInterval(() => {
+    componentDidUpdate(prevProps, prevState){
+        if(this.props.filters !== prevProps.filters){
+            const filters=this.props.filters;
+            const user_id = jwt.decode(localStorage.getItem('jwtToken')).id;
+            let filter_id='';
+            let filter_name='';
+            filters.map(filter=>{
+                if(filter.user_id==user_id && filter.active==1){
+                    filter_id=filter.filter_id;
+                }
+            });
+            if(filter_id==''){
+                filter_id=412898;
+            }
+            this.setState({
+                search_filter:[filter_id],
+                filter_name:filter_name,
+            })
+            const apitoken = localStorage.getItem('apitoken');
+            var data = {
+                per_page: 50,
+                search_filter: [filter_id],
+                access_token: apitoken
+            }
+            
             this.getData(data);
-        }, 10000);
+    
+            setInterval(() => {
+                this.getData(data);
+                console.log(data);
+            }, 10000);
+        }
     }
-  
+    componentDidMount() {
+        this.props.getAllFilters(); 
+    }
     render() {
         return (
             <div className="col-xs-6 col-sm-height col-top leftSection height100">
@@ -63,7 +83,7 @@ class HalfOne extends Component {
                                     <div className="col-xs-12 height100">
                                         <div id="arbsScroll" style={{touch_action: "none"}}>
                                             <div className="scroller" style={{overflowY: "scroll",height:"1000px"}}>
-                                                <Sport1 betdata={this.state.betdata} arbsdata={this.state.arbsdata} />
+                                                <Sport1 betdata={this.state.betdata} arbsdata={this.state.arbsdata}/>
                                             </div>
                                         </div>
                                     </div>
@@ -79,14 +99,9 @@ class HalfOne extends Component {
 
 const mapStateToProps = state => {
     return { 
-        //betdata: state.betdata,
+        filters: state.admin.filters,
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-      dispatch
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(HalfOne)
+export default connect(mapStateToProps, {getAllFilters})(HalfOne)
