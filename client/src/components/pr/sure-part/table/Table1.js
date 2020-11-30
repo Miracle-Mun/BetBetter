@@ -90,14 +90,14 @@ class Table1 extends Component {
         
     return (
         <div className="tableRowStyle calcRow">
-            <div className="row calculatorSection" style={{marginLeft:"-20px"}}>
+            <div className="row calculatorSection" >
                 <div className="message-container hide">
                     <span>
                         Saved
                     </span>
                 </div>
                 <div className="background-theme hide"></div>
-                <div className="arbsCalculatorComponent col-xs-12 withArb">
+                <div className="arbsCalculatorComponent col-xs-12 withArb" style={{padding:"0px"}}>
                     <div className="calculatorView smallCalcView">
                         <input type="hidden" name="formula" id="formula" value="[object Object]"/>
                         <input type="hidden" name="percent" id="percent" value="/" />

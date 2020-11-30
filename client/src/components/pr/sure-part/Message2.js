@@ -6,7 +6,7 @@ class Message2 extends Component {
     return (
         <div className="container relative forMessage">
             <div className="container relative forMessage">
-                <div className="freeInfo text-center" data-top="40" style={{display: "block"}}>
+                <div className="freeInfo text-center" data-top="40" style={{display: "none"}}>
                     <div className="content">
                         <div className="forFree"
                             title="Attention! Now you may see surebets limited to 1% and with a 900 sec delay. Get a subscription plan and use our service to its fullest potential!"
